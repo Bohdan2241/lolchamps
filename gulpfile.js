@@ -3,8 +3,14 @@ import sync from 'browser-sync';
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import stylelint from 'gulp-stylelint';
+import eslint from 'gulp-eslint-new';
 
 const sass = gulpSass(dartSass);
+
+export const lintScripts = () => gulp.src('./src/**/*.js')
+  .pipe(eslint())
+  .pipe(eslint.format())
+  .pipe(eslint.failAfterError());
 
 export const lintStyles = () => gulp.src('./src/scss/**/*.scss')
   .pipe(stylelint({
