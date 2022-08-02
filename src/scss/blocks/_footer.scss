@@ -1,6 +1,6 @@
 .footer-content {
   background-color: $black;
-  padding: 0px 0px 48px 0px;
+  padding: 0 0 48px;
   border-top: 2px solid #343434;
 }
 
@@ -50,12 +50,14 @@
   border-radius: 12px;
 }
 
+/* stylelint-disable no-descending-specificity */
 .footer-social-links a {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
+/* stylelint-enable no-descending-specificity */
 
 .footer-social-links svg {
   width: 16px;
@@ -67,7 +69,7 @@
 .footer-logos {
   display: flex;
   justify-content: center;
-  padding: 24px 0px 20px;
+  padding: 24px 0 20px;
 }
 
 .footer-logos svg {
@@ -88,7 +90,7 @@
 }
 
 .footer-legal-links {
-  padding: 24px 0px 28px;
+  padding: 24px 0 28px;
   font-weight: 700;
   font-size: 13px;
   letter-spacing: 0.08em;
@@ -102,12 +104,14 @@
   align-items: center;
 }
 
+/* stylelint-disable no-descending-specificity */
 .footer-legal-links a {
   display: block;
   padding: 8px 16px;
   color: $white;
   transition: all 0.2s linear;
 }
+/* stylelint-enable no-descending-specificity */
 
 .footer-legal-links a:hover {
   background-color: $dark;
@@ -120,7 +124,7 @@
 }
 
 .footer-game-rating {
-  padding: 12px 12px;
+  padding: 12px;
   background: #292929;
   border-radius: 8px;
 }
