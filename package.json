@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "pouchdb": "^7.3.0"
   },
   "devDependencies": {
     "browser-sync": "^2.27.10",
@@ -19,6 +20,7 @@
     "eslint-plugin-import": "^2.26.0",
     "gulp": "^4.0.2",
     "gulp-sass": "^5.1.0",
+    "pouchdb-browser": "^7.3.0",
     "sass": "^1.53.0",
     "stylelint": "^14.9.1",
     "stylelint-config-standard": "^26.0.0",

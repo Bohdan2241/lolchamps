@@ -1,3 +1,4 @@
 /node_modules
-/CNAME
-**.css
+src/css
+.vscode
+.DS_Store
