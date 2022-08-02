@@ -1,0 +1,250 @@
+.main-nav-wrapper {
+  margin-top: 75px;
+}
+
+.main-nav {
+  margin: 0 2%;
+}
+
+.main-nav-inner {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+.canvas-wrapper {
+  position: absolute;
+}
+
+.main-nav-canvas {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.main-nav-content {
+  height: 50px;
+  display: flex;
+}
+
+.search-container {
+  min-width: 138px;
+}
+
+.search-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  height: 100%;
+  cursor: pointer;
+}
+
+.search::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  right: 0;
+  width: 1px;
+  background-color: rgb(193, 193, 193);
+  transition: top 250ms ease 0s, bottom 250ms ease 0s;
+}
+
+.search-container:hover .search::before {
+  top: 0;
+  bottom: 0;
+}
+
+.search-value {
+  position: relative;
+  display: flex;
+  flex: 0 0 auto;
+  padding-left: 30px;
+}
+
+.search-value svg {
+  width: 19px;
+  height: 19px;
+  position: absolute;
+  left: 5px;
+  top: -5px;
+  transition: left 250ms ease 0s;
+}
+
+.search-value svg .st0 {
+  fill: rgb(194, 144, 45);
+}
+
+.search-value svg .st1 {
+  fill: none;
+  stroke: rgb(194, 144, 45);
+  stroke-width: 1.5;
+  stroke-miterlimit: 10;
+}
+
+.search-value input {
+  width: 50px;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.search-value input::placeholder {
+  text-transform: uppercase;
+  color: $black;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.search-value input:focus {
+  outline: none;
+}
+
+.search-container:hover .search-value svg {
+  left: 0;
+}
+
+.role-container {
+  flex: 1 0 auto;
+}
+
+.role-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.role-list li {
+  height: 100%;
+}
+
+.role-list button {
+  position: relative;
+  display: block;
+  height: 100%;
+  background-color: transparent;
+  padding: 0 10px;
+  border: none;
+  text-transform: uppercase;
+  color: rgb(202, 202, 202);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  transition: color 300ms ease 0s;
+  cursor: pointer;
+}
+
+.role-list button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: rgb(194, 144, 45);
+  transform: scale(0, 1);
+  transition: transform 300ms ease 0s;
+}
+
+.role-list button:hover {
+  color: $black;
+}
+
+.role-list button:hover::after {
+  transform: scale(0.2, 1);
+}
+
+.role-list .active-role {
+  color: $black;
+}
+
+.role-list .active-role::after {
+  transform: scale(1, 1) !important;
+}
+
+.difficalty-container {
+  min-width: 172px;
+  position: relative;
+  flex: 0 1 auto;
+  display: flex;
+  align-items: center;
+}
+
+.difficalty-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.difficalty {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 100%;
+  padding: 0 30px;
+  background-color: transparent;
+  justify-content: center;
+}
+
+.difficalty::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  width: 1px;
+  background-color: rgb(193, 193, 193);
+  transition: top 250ms ease 0s, bottom 250ms ease 0s;
+}
+
+.difficalty-container:hover .difficalty::before {
+  top: 0;
+  bottom: 0;
+}
+
+.difficalty-placeholder {
+  font-size: 10px;
+  font-weight: 600;
+  color: $black;
+  text-transform: uppercase;
+  // transition: color 250ms ease 0s;
+}
+
+.difficalty-indicator-arrow {
+  padding: 4px;
+  transition: transform 250ms ease 0s;
+}
+
+.difficalty-container:hover .difficalty-indicator-arrow {
+  transform: translate(5px, 0);
+}
+
+/* stylelint-disable no-descending-specificity */
+.difficalty-indicator-arrow svg {
+  width: 14px;
+  height: 11px;
+  color: rgb(194, 144, 45);
+}
+/* stylelint-enable no-descending-specificity */
+
+.difficalty-indicator-arrow svg .st0 {
+  fill: none;
+  stroke: currentColor;
+  stroke-miterlimit: 10;
+}
+
+.difficalty-indicator-arrow svg .st1 {
+  fill: currentColor;
+}

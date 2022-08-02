@@ -1,0 +1,34 @@
+.main-head-wrapper {
+  text-align: center;
+}
+
+.main-head {
+  margin: 0;
+  font-weight: normal;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.main-head span {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.main-head strong {
+  padding-bottom: 10px;
+  font-size: calc(61.82px + 3.03vw);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  line-height: 0.85;
+}
+
+.main-head-description {
+  max-width: 490px;
+  margin: 12px auto 0;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+}

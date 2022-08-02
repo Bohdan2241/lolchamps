@@ -2,7 +2,13 @@ install:
 	npm install
 
 lint:
-		npx eslint .
+	npx eslint .
 
 lintStyles:
-		npx stylelint "**/*.scss"
+	npx stylelint "**/*.scss"
+
+stylesFix:
+	npx stylelint "**/*.scss" --fix
+
+publish:
+	surge ./src
