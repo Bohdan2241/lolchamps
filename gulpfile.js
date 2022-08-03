@@ -10,7 +10,7 @@ const sass = gulpSass(dartSass);
 export const lintScripts = () => gulp.src('./src/**/*.js')
   .pipe(eslint())
   .pipe(eslint.format())
-  .pipe(eslint.failAfterError());
+  .pipe(eslint.failAfterError(false));
 
 export const lintStyles = () => gulp.src('./src/scss/**/*.scss')
   .pipe(stylelint({
@@ -39,11 +39,13 @@ export const server = () => {
 export const watch = () => {
   gulp.watch('./src/*.html').on('change', sync.reload);
   gulp.watch('./src/scss/**/*.scss', gulp.series(styles, lintStyles));
+  gulp.watch('./src/**/*.js', lintScripts).on('change', sync.reload);
 };
 
 export default gulp.series(
   styles,
   lintStyles,
+  lintScripts,
   gulp.parallel(
     watch,
     server,
