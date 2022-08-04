@@ -1,0 +1,167 @@
+{
+  "champions": [
+    {
+      "name": "Ahri",
+      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt1259276b6d1efa78/5db05fa86e8b0c6d038c5ca2/RiotX_ChampionList_ahri.jpg?quality=90&width=250",
+      "role": "mage",
+      "difficalty": "moderate"
+    },
+    {
+      "name": "Aphelios",
+      "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aphelios_0.jpg",
+      "role": "marksman",
+      "difficalty": "high"
+    },
+    {
+      "name": "Aatrox",
+      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt570145160dd39dca/5db05fa8347d1c6baa57be25/RiotX_ChampionList_aatrox.jpg?quality=90&width=250",
+      "role": "fighter",
+      "difficalty": "moderate"
+    },
+    {
+      "name": "Kha'Zix",
+      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt363d7d62846ffc87/5db05fd6e9effa6ba5295f9f/RiotX_ChampionList_khazix.jpg?quality=90&width=250",
+      "role": "assasin",
+      "difficalty": "moderate"
+    },
+    {
+      "name": "Nocturne",
+      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltfc73e3c7dda28d31/5db05ff2adc8656c7d24e7f0/RiotX_ChampionList_nocturne.jpg?quality=90&width=250",
+      "role": "assasin",
+      "difficalty": "moderate"
+    },
+    {
+      "name": "Talon",
+      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt20a737f99ebcd027/5db0600c89fb926b491ed829/RiotX_ChampionList_talon.jpg?quality=90&width=250",
+      "role": "assasin",
+      "difficalty": "moderate"
+    },
+    {
+      "name": "Twisted Fate",
+      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltaebcdb8b21d440a7/5db0600ce9effa6ba5295fb3/RiotX_ChampionList_twistedfate.jpg?quality=90&width=250",
+      "role": "mage",
+      "difficalty": "high"
+    },
+    {
+      "name": "Yasuo",
+      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt3a319fc884dc6880/5db0601c242f426df132f985/RiotX_ChampionList_yasuo.jpg?quality=90&width=250",
+      "role": "fighter",
+      "difficalty": "high"
+    },
+    {
+      "name": "Pantheon",
+      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt3f84c538bd36ef02/5db05ff17d28b76cfe43980d/RiotX_ChampionList_pantheon.jpg?quality=90&width=250",
+      "role": "fighter",
+      "difficalty": "moderate"
+    },
+    {
+      "name": "Zed",
+      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt402d6da485218720/5db0601de9effa6ba5295fc5/RiotX_ChampionList_zed.jpg?quality=90&width=250",
+      "role": "assasin",
+      "difficalty": "moderate"
+    },
+    {
+      "name": "Dr. Mundo",
+      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blte88a3d7e9e408904/61b1ea136a78b87751002a68/RiotX_ChampionList_drmundo_v2.jpg?quality=90&width=250",
+      "role": "tank",
+      "difficalty": "moderate"
+    },
+    {
+      "name": "Jinx",
+      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blta2cba784d9fad4b8/5db05fce89fb926b491ed817/RiotX_ChampionList_jinx.jpg?quality=90&width=250",
+      "role": "marksman",
+      "difficalty": "moderate"
+    },
+    {
+      "name": "Karthus",
+      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt69b8fad9d1e78514/5db05fd7df78486c826dcd0c/RiotX_ChampionList_karthus.jpg?quality=90&width=250",
+      "role": "mage",
+      "difficalty": "moderate"
+    },
+    {
+      "name": "Leblanc",
+      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt4aaf881bb90b509f/5db05fde6e8b0c6d038c5cae/RiotX_ChampionList_leblanc.jpg?quality=90&width=250",
+      "role": "assasin",
+      "difficalty": "high"
+    },
+    {
+      "name": "Lee sin",
+      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt075d278529811445/5db05fde6af83b6d7032c8fe/RiotX_ChampionList_leesin.jpg?quality=90&width=250",
+      "role": "fighter",
+      "difficalty": "moderate"
+    },
+    {
+      "name": "Tresh",
+      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt46555de3bfa94d44/5db0600b2140ec675d68f4b5/RiotX_ChampionList_thresh.jpg?quality=90&width=250",
+      "role": "support",
+      "difficalty": "moderate"
+    },
+    {
+      "name": "Lux",
+      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltb94b4161d8022c45/5db05fdfe9d7526ab429e53c/RiotX_ChampionList_lux.jpg?quality=90&width=250",
+      "role": "mage",
+      "difficalty": "moderate"
+    },
+    {
+      "name": "Anivia",
+      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt3d24a1482453088a/5db05fa8df78486c826dcce8/RiotX_ChampionList_anivia.jpg?quality=90&width=250",
+      "role": "mage",
+      "difficalty": "high"
+    },
+    {
+      "name": "Caitlyn",
+      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt014f4b6fc9bacd10/61b1eb901d158d4007de9685/RiotX_ChampionList_caitlyn_v2.jpg?quality=90&width=250",
+      "role": "marksman",
+      "difficalty": "moderate"
+    }
+    ,
+    {
+      "name": "Corki",
+      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltdd918c4d0a86347a/5db05fb1df78486c826dccee/RiotX_ChampionList_corki.jpg?quality=90&width=250",
+      "role": "marksman",
+      "difficalty": "moderate"
+    }
+    ,
+    {
+      "name": "Ezreal",
+      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt60f687c95425f73f/5db05fbd2dc72966da746704/RiotX_ChampionList_ezreal.jpg?quality=90&width=250",
+      "role": "marksman",
+      "difficalty": "moderate"
+    }
+    ,
+    {
+      "name": "Fizz",
+      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt6000fa69e03c25c0/5db05fbc56458c6b3fc17513/RiotX_ChampionList_fizz.jpg?quality=90&width=250",
+      "role": "assasin",
+      "difficalty": "moderate"
+    }
+    ,
+    {
+      "name": "Hecarim",
+      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blteb9ce5304ec48e19/5db05fc5df78486c826dccfa/RiotX_ChampionList_hecarim.jpg?quality=90&width=250",
+      "role": "fighter",
+      "difficalty": "moderate"
+    }
+    ,
+    {
+      "name": "Jax",
+      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt6b301613598c3f17/5db05fcf89fb926b491ed81d/RiotX_ChampionList_jax.jpg?quality=90&width=250",
+      "role": "fighter",
+      "difficalty": "moderate"
+    }
+    ,
+    {
+      "name": "Jhin",
+      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltbf6c70d9272a5a2a/5db05fcfe9d7526ab429e532/RiotX_ChampionList_jhin.jpg?quality=90&width=250",
+      "role": "marksman",
+      "difficalty": "moderate"
+    }
+    ,
+    {
+      "name": "Kayle",
+      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2c7675893b5c76bc/61b1ed442d06ff39b6c6336b/RiotX_ChampionList_kayle_v4.jpg?quality=90&width=250",
+      "role": "fighter",
+      "difficalty": "moderate"
+    }
+  ]
+}

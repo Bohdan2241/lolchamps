@@ -40,6 +40,7 @@ export const watch = () => {
   gulp.watch('./src/*.html').on('change', sync.reload);
   gulp.watch('./src/scss/**/*.scss', gulp.series(styles, lintStyles));
   gulp.watch('./src/**/*.js', lintScripts).on('change', sync.reload);
+  gulp.watch('./src/data/*.json').on('change', sync.reload);
 };
 
 export default gulp.series(
