@@ -2,166 +2,2775 @@
   "champions": [
     {
       "name": "Ahri",
-      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt1259276b6d1efa78/5db05fa86e8b0c6d038c5ca2/RiotX_ChampionList_ahri.jpg?quality=90&width=250",
+      "subtitle": "THE NINE-TAILED FOX",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt1259276b6d1efa78/5db05fa86e8b0c6d038c5ca2/RiotX_ChampionList_ahri.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_0.jpg",
       "role": "mage",
-      "difficalty": "moderate"
+      "difficalty": "moderate",
+      "description": "Innately connected to the latent power of Runeterra, Ahri is a vastaya who can reshape magic into orbs of raw energy. She revels in toying with her prey by manipulating their emotions before devouring their life essence. Despite her predatory nature, Ahri retains a sense of empathy as she receives flashes of memory from each soul she consumes.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/Ahri_SoulEater2.png",
+          "hotkey": "PASSIVE",
+          "name": "ESSENCE THEFT",
+          "description": "When Ahri strikes 9 enemies with her abilities, her next ability also heals her for each enemy hit.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0103/ability_0103_P1.webm"
+        },
+        {
+          "image": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0103/ability_0103_Q1.webm",
+          "hotkey": "q",
+          "name": "ORB OF DECEPTION",
+          "description": "Ahri sends out and pulls back her orb, dealing magic damage on the way out and true damage on the way back.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0103/ability_0103_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/AhriFoxFire.png",
+          "hotkey": "w",
+          "name": "FOX-FIRE",
+          "description": "Ahri gains a brief burst of Move Speed and releases three fox-fires, that lock onto and attack nearby enemies.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0103/ability_0103_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/AhriSeduce.png",
+          "hotkey": "e",
+          "name": "CHARM",
+          "description": "Ahri blows a kiss that damages and charms an enemy it encounters, instantly stopping movement abilities and causing them to walk harmlessly towards her.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0103/ability_0103_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/AhriTumble.png",
+          "hotkey": "r",
+          "name": "SPIRIT RUSH",
+          "description": "Ahri dashes forward and fires essence bolts, damaging nearby enemies. Spirit Rush can be cast up to three times before going on cooldown, and gains additional recasts when taking down enemy champions.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0103/ability_0103_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "ahri",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_0.jpg"
+          },
+          {
+            "name": "dynasty ahri",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_1.jpg"
+          },
+          {
+            "name": "midnight ahri",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_2.jpg"
+          },
+          {
+            "name": "foxfire ahri",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_3.jpg"
+          },
+          {
+            "name": "popstar ahri",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_4.jpg"
+          },
+          {
+            "name": "challenger ahri",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_5.jpg"
+          },
+          {
+            "name": "academy ahri",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_6.jpg"
+          }
+        ]
+      }
     },
     {
       "name": "Aphelios",
-      "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aphelios_0.jpg",
+      "subtitle": "THE WEAPON OF THE FAITHFUL",
+      "previewImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aphelios_0.jpg",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aphelios_0.jpg",
       "role": "marksman",
-      "difficalty": "high"
+      "difficalty": "high",
+      "description": "Emerging from moonlight's shadow with weapons drawn, Aphelios kills the enemies of his faith in brooding silence—speaking only through the certainty of his aim, and the firing of each gun. Though fueled by a poison that renders him mute, he is guided by his sister Alune. From her distant temple sanctuary, she pushes an arsenal of moonstone weapons into his hands. For as long as the moon shines overhead, Aphelios will never be alone.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/ApheliosP.png",
+          "hotkey": "PASSIVE",
+          "name": "THE HITMAN AND THE SEER",
+          "description": "Aphelios wields 5 Lunari Weapons made by his sister Alune. He has access to two at a time: one main-hand and one off-hand. Each weapon has a unique Basic Attack and Ability. Attacks and abilities consume a weapon's ammo. When out of ammo, Aphelios discards the weapon and Alune summons the next of the 5.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0523/ability_0523_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/ApheliosQ_ClientTooltipWrapper.png",
+          "hotkey": "q",
+          "name": "WEAPON ABILITES",
+          "description": "Aphelios has 5 different activated abilities, based on his main-hand weapon: Calibrum (Rifle): Long range shot that marks its target for a long-range follow-up attack. Severum (Scythe Pistol): Run fast while attacking nearby enemies with both weapons. Gravitum (Cannon): Root all enemies slowed by this weapon. Infernum (Flamethrower): Blast enemies in a cone and attack them with your off-hand weapon. Crescendum (Chakram): Deploy a sentry that shoots your off-hand weapon.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0523/ability_0523_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/ApheliosW.png",
+          "hotkey": "w",
+          "name": "PHASE",
+          "description": "Aphelios swaps his main-hand gun with his off-hand gun, replacing his basic attack and activated ability.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0523/ability_0523_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/ApheliosE_ClientTooltipWrapper.png",
+          "hotkey": "e",
+          "name": "WEAPON QUEUE SYSTEM",
+          "description": "Aphelios has no third ability. This slot shows the next weapon Alune will give him. Weapon order begins fixed but may change over game time -- when a weapon is out of ammo it goes to the end of the order.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0523/ability_0523_E1.jpg"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/ApheliosR.png",
+          "hotkey": "r",
+          "name": "MOONLIGHT VIGIL",
+          "description": "Fire a concentrated blast of moonlight that explodes on enemy champions. Applies the unique effect of Aphelios' main-hand gun.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0523/ability_0523_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "aphelios",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aphelios_0.jpg"
+          },
+          {
+            "name": "nightbringer aphelios",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aphelios_1.jpg"
+          },
+          {
+            "name": "lunar beast aphelios",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aphelios_9.jpg"
+          },
+          {
+            "name": "edg aphelios",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aphelios_18.jpg"
+          }
+        ]
+      }
     },
     {
       "name": "Aatrox",
-      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt570145160dd39dca/5db05fa8347d1c6baa57be25/RiotX_ChampionList_aatrox.jpg?quality=90&width=250",
+      "subtitle": "THE DARKIN BLADE",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt570145160dd39dca/5db05fa8347d1c6baa57be25/RiotX_ChampionList_aatrox.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg",
       "role": "fighter",
-      "difficalty": "moderate"
+      "difficalty": "moderate",
+      "description": "Once honored defenders of Shurima against the Void, Aatrox and his brethren would eventually become an even greater threat to Runeterra, and were defeated only by cunning mortal sorcery. But after centuries of imprisonment, Aatrox was the first to find freedom once more, corrupting and transforming those foolish enough to try and wield the magical weapon that contained his essence. Now, with stolen flesh, he walks Runeterra in a brutal approximation of his previous form, seeking an apocalyptic and long overdue vengeance.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/Aatrox_Passive.png",
+          "hotkey": "PASSIVE",
+          "name": "DEATHBRINGER STANCE",
+          "description": "Periodically, Aatrox's next basic attack deals bonus physical damage and heals him, based on the target's max health.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/AatroxQ.png",
+          "hotkey": "q",
+          "name": "THE DARKIN BLADE",
+          "description": "Aatrox slams his greatsword down, dealing physical damage. He can swing three times, each with a different area of effect",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/AatroxW.png",
+          "hotkey": "w",
+          "name": "INFERNAL CHAINS",
+          "description": "Aatrox smashes the ground, dealing damage to the first enemy hit. Champions and large monsters have to leave the impact area quickly or they will be dragged to the center and take the damage again.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/AatroxE.png",
+          "hotkey": "e",
+          "name": "UMBRAL DASH",
+          "description": "Passively, Aatrox heals when damaging enemy champions. On activation, he dashes in a direction.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/AatroxR.png",
+          "hotkey": "r",
+          "name": "WORLD ENDER",
+          "description": "Aatrox unleashes his demonic form, fearing nearby enemy minions and gaining attack damage, increased healing, and Move Speed. If he gets a takedown, this effect is extended.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "aatrox",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg"
+          },
+          {
+            "name": "justicar aatrox",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_1.jpg"
+          },
+          {
+            "name": "mecha aatrox",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_2.jpg"
+          },
+          {
+            "name": "sea hunter aatrox",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_3.jpg"
+          },
+          {
+            "name": "blood moon aatrox",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_7.jpg"
+          },
+          {
+            "name": "prestige blood moon aatrox",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_8.jpg"
+          },
+          {
+            "name": "viktorious aatrox",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_9.jpg"
+          }
+        ]
+      }
     },
     {
       "name": "Kha'Zix",
-      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt363d7d62846ffc87/5db05fd6e9effa6ba5295f9f/RiotX_ChampionList_khazix.jpg?quality=90&width=250",
+      "subtitle": "THE VOIDREAVER",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt363d7d62846ffc87/5db05fd6e9effa6ba5295f9f/RiotX_ChampionList_khazix.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Khazix_0.jpg",
       "role": "assasin",
-      "difficalty": "moderate"
+      "difficalty": "moderate",
+      "description": "The Void grows, and the Void adapts—in none of its myriad spawn are these truths more apparent than Kha'Zix. Evolution drives the core of this mutating horror, born to survive and to slay the strong. Where it struggles to do so, it grows new, more effective ways to counter and kill its prey. Initially a mindless beast, Kha'Zix's intelligence has developed as much as its form. Now, the creature plans out its hunts, and even utilizes the visceral terror it engenders in its victims.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/Khazix_P.png",
+          "hotkey": "PASSIVE",
+          "name": "UNSEEN THREAT",
+          "description": "Nearby enemies that are Isolated from their allies are marked. Kha'Zix's abilities have interactions with Isolated targets. When Kha'Zix is not visible to the enemy team, he gains Unseen Threat, causing his next basic attack against an enemy champion to deal bonus magic damage and slow them for a few seconds.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0121/ability_0121_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/KhazixQ.png",
+          "hotkey": "q",
+          "name": "TASTE THEIR FEAR",
+          "description": "Deals physical damage to the target. Damage increased on Isolated targets. If he chooses to Evolve Reaper Claws, this refunds a percent of it's cooldown against Isolated targets. Kha'Zix also gains increased range on his basic attacks and Taste Their Fear.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0121/ability_0121_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/KhazixW.png",
+          "hotkey": "w",
+          "name": "VOID SPIKE",
+          "description": "Kha'Zix fires exploding spikes that deal physical damage to enemies hit. Kha'Zix is healed if he is also within the explosion radius. If he chooses to Evolve Spike Racks, Void Spike now fires three spikes in a cone, slow enemies hit, and reveals enemy champions hit for 2 seconds. Isolated targets are slowed for extra.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0121/ability_0121_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/KhazixE.png",
+          "hotkey": "e",
+          "name": "LEAP",
+          "description": "Kha'Zix leaps to an area, dealing physical damage upon landing. If he chooses to Evolve Wings, Leap's range increases by 200 and the cooldown resets on champion kill or assist.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0121/ability_0121_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/KhazixR.png",
+          "hotkey": "r",
+          "name": "VOID ASSAULT",
+          "description": "Each rank allows Kha'Zix to evolve one of his abilities, giving it a unique additional effect. When activated, Kha'Zix becomes Invisible, triggering Unseen Threat and increasing Move Speed. If he chooses to Evolve Adaptive Cloaking, Void Assault gains increased Invisibility duration, and an additional use.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0121/ability_0121_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "kha'zix",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Khazix_1.jpg"
+          },
+          {
+            "name": "mecha kha'zix",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Khazix_2.jpg"
+          },
+          {
+            "name": "guardian of the sands kha'zix",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Khazix_3.jpg"
+          },
+          {
+            "name": "death blossom kha'zix",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Khazix_4.jpg"
+          },
+          {
+            "name": "dark star kha'zix",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Khazix_5.jpg"
+          },
+          {
+            "name": "championship kha'zix",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Khazix_11.jpg"
+          },
+          {
+            "name": "odyssey kha'zix",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Khazix_60.jpg"
+          }
+        ]
+      }
     },
     {
       "name": "Nocturne",
-      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltfc73e3c7dda28d31/5db05ff2adc8656c7d24e7f0/RiotX_ChampionList_nocturne.jpg?quality=90&width=250",
+      "subtitle": "THE ETERNAL NIGHTMARE",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltfc73e3c7dda28d31/5db05ff2adc8656c7d24e7f0/RiotX_ChampionList_nocturne.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nocturne_0.jpg",
       "role": "assasin",
-      "difficalty": "moderate"
+      "difficalty": "moderate",
+      "description": "A demonic amalgamation drawn from the nightmares that haunt every sentient mind, the thing known as Nocturne has become a primordial force of pure evil. It is liquidly chaotic in aspect, a faceless shadow with cold eyes and armed with wicked-looking blades. After freeing itself from the spirit realm, Nocturne descended upon the waking world, to feed upon the kind of terror that can only thrive in true darkness.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/Nocturne_UmbraBlades.png",
+          "hotkey": "PASSIVE",
+          "name": "UMBRA BLADES",
+          "description": "Every few seconds, Nocturne's next attack strikes surrounding enemies for bonus physical damage and heals himself. Nocturne's basic attacks reduce this cooldown.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0056/ability_0056_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/NocturneDuskbringer.png",
+          "hotkey": "q",
+          "name": "DUSKBRINGER",
+          "description": "Nocturne throws a shadow blade that deals damage, leaves a Dusk Trail, and causes champions to leave a Dusk Trail. While on the trail, Nocturne can move through units and has increased Move Speed and Attack Damage.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0056/ability_0056_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/NocturneShroudofDarkness.png",
+          "hotkey": "w",
+          "name": "SHROUD OF DARKNESS",
+          "description": "Nocturne empowers his blades, passively gaining Attack Speed. Activating Shroud of Darkness allows Nocturne to fade into the shadows, creating a magical barrier which blocks a single enemy ability and doubles his passive Attack Speed if successful.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0056/ability_0056_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/NocturneUnspeakableHorror.png",
+          "hotkey": "e",
+          "name": "UNSPEAKABLE HORROR",
+          "description": "Nocturne plants a nightmare into his target's mind, dealing damage each second and applying fear to the target if they do not get out of range by the end of the duration.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0056/ability_0056_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/NocturneParanoia.png",
+          "hotkey": "r",
+          "name": "PARANOIA",
+          "description": "Nocturne reduces the sight radius of all enemy champions and removes their ally vision in the process. He can then launch himself at a nearby enemy champion.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0056/ability_0056_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "nocturne",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nocturne_0.jpg"
+          },
+          {
+            "name": "frozen terror nocturne",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nocturne_1.jpg"
+          },
+          {
+            "name": "void nocturne",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nocturne_2.jpg"
+          },
+          {
+            "name": "ravager nocturne",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nocturne_3.jpg"
+          },
+          {
+            "name": "haunting nocturne",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nocturne_4.jpg"
+          },
+          {
+            "name": "eternum nocturne",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nocturne_5.jpg"
+          },
+          {
+            "name": "cursed revenant nocturne",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nocturne_6.jpg"
+          }
+        ]
+      }
     },
     {
       "name": "Talon",
-      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt20a737f99ebcd027/5db0600c89fb926b491ed829/RiotX_ChampionList_talon.jpg?quality=90&width=250",
+      "subtitle": "THE BLADE'S SHADOW",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt20a737f99ebcd027/5db0600c89fb926b491ed829/RiotX_ChampionList_talon.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Talon_0.jpg",
       "role": "assasin",
-      "difficalty": "moderate"
+      "difficalty": "moderate",
+      "description": "Talon is the knife in the darkness, a merciless killer able to strike without warning and escape before any alarm is raised. He carved out a dangerous reputation on the brutal streets of Noxus, where he was forced to fight, kill, and steal to survive. Adopted by the notorious Du Couteau family, he now plies his deadly trade at the empire's command, assassinating enemy leaders, captains, and heroes… as well as any Noxian foolish enough to earn the scorn of their masters.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/TalonP.png",
+          "hotkey": "PASSIVE",
+          "name": "BLADE'S END",
+          "description": "Talon's spells Wound champions and large monsters, stacking up to 3 times. When Talon attacks a champion with 3 stacks of Wound, they bleed for heavy damage over time.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0091/ability_0091_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/TalonQ.png",
+          "hotkey": "q",
+          "name": "NOXIAN DIPLOMACY",
+          "description": "Talon stabs the target unit. If they are within melee range, this attack deals critical damage. If they are outside melee range, Talon will leap at his target before stabbing them. Talon refunds some health and cooldown if this ability kills the target.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0091/ability_0091_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/TalonW.png",
+          "hotkey": "w",
+          "name": "RAKE",
+          "description": "Talon sends out a volley of daggers that then return back to him, dealing physical damage every time it passes through an enemy. The returning blades deal bonus damage and slow units hit.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0091/ability_0091_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/TalonE.png",
+          "hotkey": "e",
+          "name": "ASSASSIN'S PATH",
+          "description": "Talon vaults over any terrain or structure, up to a max distance. This ability has a low cooldown, but puts the used terrain on a long cooldown.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0091/ability_0091_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/TalonR.png",
+          "hotkey": "r",
+          "name": "SHADOW ASSAULT",
+          "description": "Talon disperses a ring of blades and becomes Invisible while gaining additional Move Speed. When Talon emerges from Invisibility, the blades converge on his location. Each time the blades move, Shadow Assault deals physical damage to enemies hit by at least one blade.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0091/ability_0091_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "talon",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Talon_0.jpg"
+          },
+          {
+            "name": "renegade talon",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Talon_1.jpg"
+          },
+          {
+            "name": "crimson elite talon",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Talon_2.jpg"
+          },
+          {
+            "name": "dragonblade talon",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Talon_3.jpg"
+          },
+          {
+            "name": "ssw talon",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Talon_4.jpg"
+          },
+          {
+            "name": "blood moon talon",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Talon_5.jpg"
+          },
+          {
+            "name": "enduring sword talon",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Talon_12.jpg"
+          }
+        ]
+      }
     },
     {
       "name": "Twisted Fate",
-      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltaebcdb8b21d440a7/5db0600ce9effa6ba5295fb3/RiotX_ChampionList_twistedfate.jpg?quality=90&width=250",
+      "subtitle": "THE CARD MASTER",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltaebcdb8b21d440a7/5db0600ce9effa6ba5295fb3/RiotX_ChampionList_twistedfate.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/TwistedFate_0.jpg",
       "role": "mage",
-      "difficalty": "high"
+      "difficalty": "high",
+      "description": "Twisted Fate is an infamous cardsharp and swindler who has gambled and charmed his way across much of the known world, earning the enmity and admiration of the rich and foolish alike. He rarely takes things seriously, greeting each day with a mocking smile and an insouciant swagger. In every possible way, Twisted Fate always has an ace up his sleeve.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/Cardmaster_SealFate.png",
+          "hotkey": "PASSIVE",
+          "name": "LOADED DICE",
+          "description": "Upon killing a unit, Twisted Fate rolls his 'lucky' dice receiving 1 to 6 bonus gold.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0004/ability_0004_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/WildCards.png",
+          "hotkey": "q",
+          "name": "WILD CARDS",
+          "description": "Twisted Fate throws three cards, dealing damage to each enemy unit they pass through.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0004/ability_0004_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/PickACard.png",
+          "hotkey": "w",
+          "name": "PICK A CARD",
+          "description": "Twisted Fate chooses a magic card from his deck, and uses that for his next attack, causing bonus effects.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0004/ability_0004_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/CardmasterStack.png",
+          "hotkey": "e",
+          "name": "STACKED DECK",
+          "description": "Every 4 attacks, Twisted Fate deals bonus damage. In addition, his Attack Speed is increased.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0004/ability_0004_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/Destiny.png",
+          "hotkey": "r",
+          "name": "DESTINY",
+          "description": "Twisted Fate predicts the fortunes of his foes, revealing all enemy champions and enabling the use of Gate, which teleports Twisted Fate to any target location in 1.5 seconds.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0004/ability_0004_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "twisted fate",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/TwistedFate_0.jpg"
+          },
+          {
+            "name": "pax twisted fate",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/TwistedFate_1.jpg"
+          },
+          {
+            "name": "jack of hearts twisted fate",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/TwistedFate_2.jpg"
+          },
+          {
+            "name": "the magnificent twisted fate",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/TwistedFate_3.jpg"
+          },
+          {
+            "name": "tango twisted fate",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/TwistedFate_4.jpg"
+          },
+          {
+            "name": "high noon twisted fate",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/TwistedFate_5.jpg"
+          },
+          {
+            "name": "musketeer twisted fate",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/TwistedFate_6.jpg"
+          }
+        ]
+      }
     },
     {
       "name": "Yasuo",
-      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt3a319fc884dc6880/5db0601c242f426df132f985/RiotX_ChampionList_yasuo.jpg?quality=90&width=250",
+      "subtitle": "THE UNFORGIVEN",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt3a319fc884dc6880/5db0601c242f426df132f985/RiotX_ChampionList_yasuo.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_0.jpg",
       "role": "fighter",
-      "difficalty": "high"
+      "difficalty": "high",
+      "description": "An Ionian of deep resolve, Yasuo is an agile swordsman who wields the air itself against his enemies. As a proud young man, he was falsely accused of murdering his master—unable to prove his innocence, he was forced to slay his own brother in self defense. Even after his master's true killer was revealed, Yasuo still could not forgive himself for all he had done, and now wanders his homeland with only the wind to guide his blade.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/Yasuo_Passive.png",
+          "hotkey": "PASSIVE",
+          "name": "WAY OF THE WANDERER",
+          "description": "Yasuo's Critical Strike Chance is increased. Additionally, Yasuo builds toward a shield whenever he is moving. The shield triggers when he takes damage from a champion or monster.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0157/ability_0157_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/YasuoQ1Wrapper.png",
+          "hotkey": "q",
+          "name": "STEEL TEMPEST",
+          "description": "Thrusts forward, damaging all enemies in a line. On hit, grants a stack of Gathering Storm for a few seconds. At 2 stacks, Steel Tempest fires a whirlwind that knocks Airborne. Steel Tempest is treated as a basic attack and scales with all the same things.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0157/ability_0157_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/YasuoW.png",
+          "hotkey": "w",
+          "name": "WIND WALL",
+          "description": "Creates a moving wall that blocks all enemy projectiles for 4 seconds.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0157/ability_0157_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/YasuoE.png",
+          "hotkey": "e",
+          "name": "SWEEPING BLADE",
+          "description": "Dashes through target enemy, dealing magic damage. Each cast increases your next dash's base Damage, up to a max amount. Cannot be re-cast on the same enemy for a few seconds. If Steel Tempest is cast while dashing, it will strike as a circle.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0157/ability_0157_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/YasuoR.png",
+          "hotkey": "r",
+          "name": "LAST BREATH",
+          "description": "Blinks to an Airborne enemy champion, dealing physical damage and holding all Airborne enemies in the area in the air. Grants maximum Flow but resets all stacks of Gathering Storm. For a moderate time afterwards, Yasuo's critical strikes gain significant Bonus Armor Penetration.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0157/ability_0157_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "yasuo",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_0.jpg"
+          },
+          {
+            "name": "high noon yasuo",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_1.jpg"
+          },
+          {
+            "name": "project: yasuo",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_2.jpg"
+          },
+          {
+            "name": "blood moon yasuo",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_3.jpg"
+          },
+          {
+            "name": "nightbringer yasuo",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_9.jpg"
+          },
+          {
+            "name": "odyssey yasuo",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_10.jpg"
+          },
+          {
+            "name": "battle boss yasuo",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_17.jpg"
+          }
+        ]
+      }
     },
     {
       "name": "Pantheon",
-      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt3f84c538bd36ef02/5db05ff17d28b76cfe43980d/RiotX_ChampionList_pantheon.jpg?quality=90&width=250",
+      "subtitle": "THE UNBREAKABLE SPEAR",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt3f84c538bd36ef02/5db05ff17d28b76cfe43980d/RiotX_ChampionList_pantheon.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Pantheon_0.jpg",
       "role": "fighter",
-      "difficalty": "moderate"
+      "difficalty": "moderate",
+      "description": "Once an unwilling host to the Aspect of War, Atreus survived when the celestial power within him was slain, refusing to succumb to a blow that tore stars from the heavens. In time, he learned to embrace the power of his own mortality, and the stubborn resilience that goes along with it. Atreus now opposes the divine as Pantheon reborn, his unbreakable will fueling the fallen Aspect's weapons on the field of battle.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/Pantheon_Passive.png",
+          "hotkey": "PASSIVE",
+          "name": "MORTAL WILL",
+          "description": "Every few spells or attacks, Pantheon's next spell is empowered.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0080/ability_0080_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/PantheonQ.png",
+          "hotkey": "q",
+          "name": "COMET SPEAR",
+          "description": "Pantheon either thrusts his spear or throws his spear in the chosen direction.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0080/ability_0080_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/PantheonW.png",
+          "hotkey": "w",
+          "name": "SHIELD VAULT",
+          "description": "Pantheon dashes to a target, damaging and stunning them.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0080/ability_0080_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/PantheonE.png",
+          "hotkey": "e",
+          "name": "AEGIS ASSAULT",
+          "description": "Pantheon sets his shield, becoming invulnerable to damage from the front and striking repeatedly with his spear.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0080/ability_0080_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/PantheonR.png",
+          "hotkey": "r",
+          "name": "GRAND STARFALL",
+          "description": "Pantheon composes himself and then leaps into the air, landing at a chosen location as a comet.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0080/ability_0080_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "pantheon",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Pantheon_0.jpg"
+          },
+          {
+            "name": "myrmidon pantheon",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Pantheon_1.jpg"
+          },
+          {
+            "name": "ruthless pantheon",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Pantheon_2.jpg"
+          },
+          {
+            "name": "perseus pantheon",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Pantheon_3.jpg"
+          },
+          {
+            "name": "full metal pantheon",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Pantheon_4.jpg"
+          },
+          {
+            "name": "glaive warrior pantheon",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Pantheon_5.jpg"
+          },
+          {
+            "name": "dragonslayer pantheon",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Pantheon_6.jpg"
+          }
+        ]
+      }
     },
     {
       "name": "Zed",
-      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt402d6da485218720/5db0601de9effa6ba5295fc5/RiotX_ChampionList_zed.jpg?quality=90&width=250",
+      "subtitle": "THE MASTER OF SHADOWS",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt402d6da485218720/5db0601de9effa6ba5295fc5/RiotX_ChampionList_zed.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_0.jpg",
       "role": "assasin",
-      "difficalty": "moderate"
+      "difficalty": "moderate",
+      "description": "Utterly ruthless and without mercy, Zed is the leader of the Order of Shadow, an organization he created with the intent of militarizing Ionia's magical and martial traditions to drive out Noxian invaders. During the war, desperation led him to unlock the secret shadow form—a malevolent spirit magic as dangerous and corrupting as it is powerful. Zed has mastered all of these forbidden techniques to destroy anything he sees as a threat to his nation, or his new order.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/shadowninja_P.png",
+          "hotkey": "PASSIVE",
+          "name": "CONTEMPT FOR THE WEAK",
+          "description": "Zed's basic attacks against low health targets deals bonus Magic Damage. This effect can only occur once every few seconds against the same enemy champion.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0238/ability_0238_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/ZedQ.png",
+          "hotkey": "q",
+          "name": "RAZOR SHURIKEN",
+          "description": "Zed and his shadows throw their shurikens. Each shuriken deals damage to every enemy hit.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0238/ability_0238_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/ZedW.png",
+          "hotkey": "w",
+          "name": "LIVING SHADOW",
+          "description": "Passive: Zed gains energy whenever he and his shadows strike an enemy with the same ability. Energy can only be gained once per cast ability. Active: Zed's shadow dashes forward, remaining in place for a few seconds. Reactivating Living Shadow will cause Zed to switch positions with this shadow.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0238/ability_0238_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/ZedE.png",
+          "hotkey": "e",
+          "name": "SHADOW SLASH",
+          "description": "Zed and his shadows slash, dealing damage to nearby enemies.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0238/ability_0238_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/ZedR.png",
+          "hotkey": "r",
+          "name": "DEATH MARK",
+          "description": "Zed becomes untargetable and dashes to an enemy champion, marking them. After 3 seconds the mark triggers, repeating a portion of all the damage Zed dealt to the target while they were marked.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0238/ability_0238_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "zed",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_0.jpg"
+          },
+          {
+            "name": "shockblabe zed",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_1.jpg"
+          },
+          {
+            "name": "skt t1 zed",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_2.jpg"
+          },
+          {
+            "name": "project: zed",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_3.jpg"
+          },
+          {
+            "name": "championship zed",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_10.jpg"
+          },
+          {
+            "name": "death sworn zed",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_11.jpg"
+          },
+          {
+            "name": "galaxy slayer zed",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_13.jpg"
+          }
+        ]
+      }
     },
     {
       "name": "Dr. Mundo",
-      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blte88a3d7e9e408904/61b1ea136a78b87751002a68/RiotX_ChampionList_drmundo_v2.jpg?quality=90&width=250",
+      "subtitle": "THE MADMAN OF ZAUN",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blte88a3d7e9e408904/61b1ea136a78b87751002a68/RiotX_ChampionList_drmundo_v2.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/DrMundo_0.jpg",
       "role": "tank",
-      "difficalty": "moderate"
+      "difficalty": "moderate",
+      "description": "Utterly mad, tragically homicidal, and horrifyingly purple, Dr. Mundo is what keeps many of Zaun's citizens indoors on particularly dark nights. Now a self-proclaimed physician, he was once a patient of Zaun's most infamous asylum. After \"curing\" the entire staff, Dr. Mundo established his practice in the empty wards that once treated him and began mimicking the highly unethical procedures he had so often experienced himself. With a full cabinet of medicines and zero medical knowledge, he now makes himself more monstrous with each injection and terrifies the hapless \"patients\" who wander near his office.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/DrMundo_P.Dr_Mundo_VGU.png",
+          "hotkey": "PASSIVE",
+          "name": "GOES WHERE HE PLEASES",
+          "description": "Dr. Mundo resists the first Immobilizing effect that hits him, instead losing Health and dropping a chemical cannister nearby. Dr. Mundo can pick it up by walking over it, restoring Health and reducing this Ability's Cooldown. Dr. Mundo also has significantly increased Health regeneration.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0036/ability_0036_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/DrMundoQ.png",
+          "hotkey": "q",
+          "name": "INFECTED BONESAW",
+          "description": "Dr. Mundo throws an infected bonesaw, dealing damage to the first enemy hit based on their current health and slowing them.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0036/ability_0036_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/DrMundoW.png",
+          "hotkey": "w",
+          "name": "HEART ZAPPER",
+          "description": "Dr. Mundo electrocutes himself, dealing persistent damage to nearby enemies and storing a portion of damage he takes. At the end of the duration or on Recast, Dr. Mundo deals a burst of damage to nearby enemies. If the burst hit an enemy, he heals a percentage of the stored damage.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0036/ability_0036_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/DrMundoE.png",
+          "hotkey": "e",
+          "name": "BLUNT FORCE TRAUMA",
+          "description": "Passive - Dr. Mundo gains bonus Attack Damage, increasing based on his missing Health. Active - Dr. Mundo slams his “medical” bag into an enemy, dealing additional damage based on his missing Health. If the enemy dies they are swatted away, dealing damage to enemies they pass through.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0036/ability_0036_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/DrMundoR.png",
+          "hotkey": "r",
+          "name": "MAXIMUM DOSAGE",
+          "description": "Dr. Mundo pumps himself with chemicals, instantly healing a percent of his missing Health. He then gains bonus Attack Damage and Move Speed, and regenerates a portion of his maximum Health over a long duration.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0036/ability_0036_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "dr. mundo",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/DrMundo_0.jpg"
+          },
+          {
+            "name": "toxic dr. mundo",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/DrMundo_1.jpg"
+          },
+          {
+            "name": "mr. mundoverse",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/DrMundo_2.jpg"
+          },
+          {
+            "name": "corporate dr. mundo",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/DrMundo_3.jpg"
+          },
+          {
+            "name": "mundo mundo",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/DrMundo_4.jpg"
+          },
+          {
+            "name": "executioner mundo",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/DrMundo_5.jpg"
+          },
+          {
+            "name": "rageborn mundo",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/DrMundo_6.jpg"
+          }
+        ]
+      }
     },
     {
       "name": "Jinx",
-      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blta2cba784d9fad4b8/5db05fce89fb926b491ed817/RiotX_ChampionList_jinx.jpg?quality=90&width=250",
+      "subtitle": "THE LOOSE CANNON",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blta2cba784d9fad4b8/5db05fce89fb926b491ed817/RiotX_ChampionList_jinx.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jinx_0.jpg",
       "role": "marksman",
-      "difficalty": "moderate"
+      "difficalty": "moderate",
+      "description": "A manic and impulsive criminal from Zaun, Jinx lives to wreak havoc without care for the consequences. With an arsenal of deadly weapons, she unleashes the loudest blasts and brightest explosions to leave a trail of mayhem and panic in her wake. Jinx despises boredom, and gleefully brings her own chaotic brand of pandemonium wherever she goes.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/Jinx_Passive.png",
+          "hotkey": "PASSIVE",
+          "name": "GET EXCITED!",
+          "description": "Jinx receives massively increased Move Speed and Attack Speed whenever she helps kill or destroy an enemy champions epic jungle monster, or structure.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0222/ability_0222_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/JinxQ.png",
+          "hotkey": "q",
+          "name": "SWITCHEROO!",
+          "description": "Jinx modifies her basic attacks by swapping between Pow-Pow, her minigun and Fishbones, her rocket launcher. Attacks with Pow-Pow grant Attack Speed, while attacks with Fishbones deal area of effect damage, gain increased range, but drain Mana and attack slower.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0222/ability_0222_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/JinxW.png",
+          "hotkey": "w",
+          "name": "ZAP!",
+          "description": "Jinx uses Zapper, her shock pistol, to fire a blast that deals damage to the first enemy hit, slowing and revealing it.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0222/ability_0222_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/JinxE.png",
+          "hotkey": "e",
+          "name": "FLAME CHOMPERS!",
+          "description": "Jinx throws out a line of snare grenades that explode after 5 seconds, lighting enemies on fire. Flame Chompers will bite enemy champions who walk over them, rooting them in place.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0222/ability_0222_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/JinxR.png",
+          "hotkey": "r",
+          "name": "SUPER MEGA DEATH ROCKET!",
+          "description": "Jinx fires a super rocket across the map that gains damage as it travels. The rocket will explode upon colliding with an enemy champion, dealing damage to it and surrounding enemies based on their missing Health.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0222/ability_0222_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "jinx",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jinx_0.jpg"
+          },
+          {
+            "name": "crime city jinx",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jinx_1.jpg"
+          },
+          {
+            "name": "firecracker jinx",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jinx_2.jpg"
+          },
+          {
+            "name": "zombie slayer jinx",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jinx_3.jpg"
+          },
+          {
+            "name": "star guardian jinx",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jinx_4.jpg"
+          },
+          {
+            "name": "ambitious elf jinx",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jinx_12.jpg"
+          },
+          {
+            "name": "odyssey jinx",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jinx_13.jpg"
+          }
+        ]
+      }
     },
     {
       "name": "Karthus",
-      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt69b8fad9d1e78514/5db05fd7df78486c826dcd0c/RiotX_ChampionList_karthus.jpg?quality=90&width=250",
+      "subtitle": "THE DEATHSINGER",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt69b8fad9d1e78514/5db05fd7df78486c826dcd0c/RiotX_ChampionList_karthus.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Karthus_0.jpg",
       "role": "mage",
-      "difficalty": "moderate"
+      "difficalty": "moderate",
+      "description": "The harbinger of oblivion, Karthus is an undying spirit whose haunting songs are a prelude to the horror of his nightmarish appearance. The living fear the eternity of undeath, but Karthus sees only beauty and purity in its embrace, a perfect union of life and death. When Karthus emerges from the Shadow Isles, it is to bring the joy of death to mortals, an apostle of the unliving.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/Karthus_Passive.png",
+          "hotkey": "PASSIVE",
+          "name": "DEATH DEFIED",
+          "description": "Upon dying, Karthus enters a spirit form that allows him to continue casting spells.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0030/ability_0030_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/KarthusLayWasteA1.png",
+          "hotkey": "q",
+          "name": "LAY WASTE",
+          "description": "Karthus unleashes a delayed blast at a location, dealing damage to nearby enemies. Deals increased damage to isolated enemies.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0030/ability_0030_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/KarthusWallOfPain.png",
+          "hotkey": "w",
+          "name": "WALL OF PAIN",
+          "description": "Karthus creates a passable screen of leeching energy. Any enemy units that walk through the screen have their Move Speed and Magic Resist reduced for a period.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0030/ability_0030_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/KarthusDefile.png",
+          "hotkey": "e",
+          "name": "DEFILE",
+          "description": "Karthus passively steals energy from his victims, gaining Mana on each kill. Alternatively, Karthus can surround himself in the souls of his prey, dealing damage to nearby enemies, but quickly draining his own Mana.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0030/ability_0030_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/KarthusFallenOne.png",
+          "hotkey": "r",
+          "name": "REQUIEM",
+          "description": "After channeling for 3 seconds, Karthus deals damage to all enemy champions.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0030/ability_0030_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "karthus",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Karthus_0.jpg"
+          },
+          {
+            "name": "phantom karthus",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Karthus_1.jpg"
+          },
+          {
+            "name": "statue of karthus",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Karthus_2.jpg"
+          },
+          {
+            "name": "grim reaper karthus",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Karthus_3.jpg"
+          },
+          {
+            "name": "pentakill karthus",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Karthus_4.jpg"
+          },
+          {
+            "name": "fnatic karthus",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Karthus_5.jpg"
+          },
+          {
+            "name": "karthus lightsbane",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Karthus_9.jpg"
+          }
+        ]
+      }
     },
     {
       "name": "Leblanc",
-      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt4aaf881bb90b509f/5db05fde6e8b0c6d038c5cae/RiotX_ChampionList_leblanc.jpg?quality=90&width=250",
+      "subtitle": "THE DECEIVER",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt4aaf881bb90b509f/5db05fde6e8b0c6d038c5cae/RiotX_ChampionList_leblanc.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Leblanc_0.jpg",
       "role": "assasin",
-      "difficalty": "high"
+      "difficalty": "high",
+      "description": "Mysterious even to other members of the Black Rose cabal, LeBlanc is but one of many names for a pale woman who has manipulated people and events since the earliest days of Noxus. Using her magic to mirror herself, the sorceress can appear to anyone, anywhere, and even be in many places at once. Always plotting just out of sight, LeBlanc's true motives are as inscrutable as her shifting identity.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/LeBlancP.png",
+          "hotkey": "PASSIVE",
+          "name": "MIRROR IMAGE",
+          "description": "When LeBlanc drops below 40% Health, she becomes invisible for 1 second and creates a Mirror Image that deals no damage and lasts for up to 8 seconds.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0007/ability_0007_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/LeblancQ.png",
+          "hotkey": "q",
+          "name": "SIGIL OF MALICE",
+          "description": "LeBlanc projects a sigil, dealing damage and marking the target for 3.5 seconds. Damaging the marked target with an ability detonates the sigil, dealing additional damage.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0007/ability_0007_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/LeblancW.png",
+          "hotkey": "w",
+          "name": "DISTORTION",
+          "description": "LeBlanc dashes to a location, dealing damage to enemies near her destination. For the next 4 seconds, activate Distortion again to return LeBlanc to her starting location.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0007/ability_0007_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/LeblancE.png",
+          "hotkey": "e",
+          "name": "ETHEREAL CHAINS",
+          "description": "LeBlanc launches a chain that shackles the first enemy hit. If the target remains shackled for 1.5 seconds, LeBlanc roots them and deals additional damage.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0007/ability_0007_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/LeblancR.png",
+          "hotkey": "r",
+          "name": "MIMIC",
+          "description": "LeBlanc casts a mimicked version of one of her basic spells.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0007/ability_0007_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "leblanc",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Leblanc_0.jpg"
+          },
+          {
+            "name": "wicked leblanc",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Leblanc_1.jpg"
+          },
+          {
+            "name": "prestigious leblanc",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Leblanc_2.jpg"
+          },
+          {
+            "name": "mistletoe leblanc",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Leblanc_3.jpg"
+          },
+          {
+            "name": "ravenborn leblanc",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Leblanc_4.jpg"
+          },
+          {
+            "name": "elderwood leblanc",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Leblanc_5.jpg"
+          },
+          {
+            "name": "program leblanc",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Leblanc_12.jpg"
+          }
+        ]
+      }
     },
     {
       "name": "Lee sin",
-      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt075d278529811445/5db05fde6af83b6d7032c8fe/RiotX_ChampionList_leesin.jpg?quality=90&width=250",
+      "subtitle": "THE BLIND MONK",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt075d278529811445/5db05fde6af83b6d7032c8fe/RiotX_ChampionList_leesin.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/LeeSin_0.jpg",
       "role": "fighter",
-      "difficalty": "moderate"
+      "difficalty": "moderate",
+      "description": "A master of Ionia's ancient martial arts, Lee Sin is a principled fighter who channels the essence of the dragon spirit to face any challenge. Though he lost his sight many years ago, the warrior-monk has devoted his life to protecting his homeland against any who would dare upset its sacred balance. Enemies who underestimate his meditative demeanor will endure his fabled burning fists and blazing roundhouse kicks.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/LeeSinPassive.png",
+          "hotkey": "PASSIVE",
+          "name": "FLURRY",
+          "description": "After Lee Sin uses an ability, his next 2 basic attacks gain Attack Speed and return Energy.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0064/ability_0064_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/BlindMonkQOne.png",
+          "hotkey": "q",
+          "name": "SONIC WAVE / RESONATING STRIKE",
+          "description": "Sonic Wave: Lee Sin projects a discordant wave of sound to locate his enemies, dealing physical damage to the first enemy it encounters. If Sonic Wave hits, Lee Sin can cast Resonating Strike for the next 3 seconds. Resonating Strike: Lee Sin dashes to the enemy hit by Sonic Wave, dealing physical damage based on the target's missing Health.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0064/ability_0064_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/BlindMonkWOne.png",
+          "hotkey": "w",
+          "name": "SAFEGUARD / IRON WILL",
+          "description": "Safeguard: Lee Sin rushes to target ally, shielding himself from damage. If the ally is a champion, they are also shielded. After using Safeguard, Lee Sin can cast Iron Will for the next 3 seconds. Iron Will: Lee Sin's intense training allows him to thrive in battle. For 4 seconds, Lee Sin gains Life Steal and Spell Vamp.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0064/ability_0064_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/BlindMonkEOne.png",
+          "hotkey": "e",
+          "name": "TEMPEST / CRIPPLE",
+          "description": "Tempest: Lee Sin smashes the ground, sending out a shockwave that deals magic damage and reveals enemy units hit. If Tempest hits an enemy, Lee Sin can cast cripple for the next 3 seconds. Cripple: Lee Sin cripples nearby enemies damaged by Tempest, reducing their Move Speed for 4 seconds. Move Speed recovers gradually over the duration.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0064/ability_0064_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/BlindMonkRKick.png",
+          "hotkey": "r",
+          "name": "DRAGON'S RAGE",
+          "description": "Lee Sin performs a powerful roundhouse kick launching his target back, dealing physical damage to the target and any enemies they collide with. Enemies the target collides with are knocked into the air for a short duration. This technique was taught to him by Jesse Perring, although Lee Sin does not kick players off the map.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0064/ability_0064_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "lee sin",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/LeeSin_0.jpg"
+          },
+          {
+            "name": "traditional lee sin",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/LeeSin_1.jpg"
+          },
+          {
+            "name": "acolyte lee sin",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/LeeSin_2.jpg"
+          },
+          {
+            "name": "dragon fist lee sin",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/LeeSin_3.jpg"
+          },
+          {
+            "name": "muay thai lee sin",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/LeeSin_4.jpg"
+          },
+          {
+            "name": "pool party lee sin",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/LeeSin_5.jpg"
+          },
+          {
+            "name": "skt t1 lee sin",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/LeeSin_6.jpg"
+          }
+        ]
+      }
     },
     {
-      "name": "Tresh",
-      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt46555de3bfa94d44/5db0600b2140ec675d68f4b5/RiotX_ChampionList_thresh.jpg?quality=90&width=250",
+      "name": "Thresh",
+      "subtitle": "THE CHAIN WARDEN",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt46555de3bfa94d44/5db0600b2140ec675d68f4b5/RiotX_ChampionList_thresh.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Thresh_0.jpg",
       "role": "support",
-      "difficalty": "moderate"
+      "difficalty": "moderate",
+      "description": "Sadistic and cunning, Thresh is an ambitious and restless spirit of the Shadow Isles. Once the custodian of countless arcane secrets, he was undone by a power greater than life or death, and now sustains himself by tormenting and breaking others with slow, excruciating inventiveness. His victims suffer far beyond their brief mortal coil as Thresh wreaks agony upon their souls, imprisoning them in his unholy lantern to torture for all eternity.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/Thresh_Passive.png",
+          "hotkey": "PASSIVE",
+          "name": "DAMNATION",
+          "description": "Thresh can harvest the souls of enemies that die near him, permanently granting him Armor and Ability Power.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0412/ability_0412_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/ThreshQ.png",
+          "hotkey": "q",
+          "name": "DEATH SENTENCE",
+          "description": "Thresh binds an enemy in chains and pulls them toward him. Activating this ability a second time pulls Thresh to the enemy.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0412/ability_0412_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/ThreshW.png",
+          "hotkey": "w",
+          "name": "DARK PASSAGE",
+          "description": "Thresh throws out a lantern that shields nearby allied Champions from damage. Allies can click the lantern to dash to Thresh.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0412/ability_0412_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/ThreshE.png",
+          "hotkey": "e",
+          "name": "FLAY",
+          "description": "Thresh's attacks wind up, dealing more damage the longer he waits between attacks. When activated, Thresh sweeps his chain, knocking all enemies hit in the direction of the blow.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0412/ability_0412_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/ThreshRPenta.png",
+          "hotkey": "r",
+          "name": "THE BOX",
+          "description": "A prison of walls that slow and deal damage if broken.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0412/ability_0412_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "thresh",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Thresh_0.jpg"
+          },
+          {
+            "name": "deep terror thresh",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Thresh_1.jpg"
+          },
+          {
+            "name": "championship thresh",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Thresh_2.jpg"
+          },
+          {
+            "name": "blood moon thresh",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Thresh_3.jpg"
+          },
+          {
+            "name": "ssw thresh",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Thresh_4.jpg"
+          },
+          {
+            "name": "dark star thresh",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Thresh_5.jpg"
+          },
+          {
+            "name": "high noon thresh",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Thresh_6.jpg"
+          }
+        ]
+      }
     },
     {
       "name": "Lux",
-      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltb94b4161d8022c45/5db05fdfe9d7526ab429e53c/RiotX_ChampionList_lux.jpg?quality=90&width=250",
+      "subtitle": "THE LADY OF LUMINOSITY",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltb94b4161d8022c45/5db05fdfe9d7526ab429e53c/RiotX_ChampionList_lux.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lux_0.jpg",
       "role": "mage",
-      "difficalty": "moderate"
+      "difficalty": "moderate",
+      "description": "Luxanna Crownguard hails from Demacia, an insular realm where magical abilities are viewed with fear and suspicion. Able to bend light to her will, she grew up dreading discovery and exile, and was forced to keep her power secret, in order to preserve her family's noble status. Nonetheless, Lux's optimism and resilience have led her to embrace her unique talents, and she now covertly wields them in service of her homeland.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/LuxIlluminatingFraulein.png",
+          "hotkey": "PASSIVE",
+          "name": "ILLUMINATION",
+          "description": "Lux's damaging spells charge the target with energy for a few seconds. Lux's next attack ignites the energy, dealing bonus magic damage (depending on Lux's level) to the target.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0099/ability_0099_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/LuxLightBinding.png",
+          "hotkey": "q",
+          "name": "LIGHT BINDING",
+          "description": "Lux releases a sphere of light that binds and deals damage to up to two enemy units.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0099/ability_0099_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/LuxPrismaticWave.png",
+          "hotkey": "w",
+          "name": "PRISMATIC BARRIER",
+          "description": "Lux throws her wand and bends the light around any friendly target it touches, protecting them from enemy damage.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0099/ability_0099_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/LuxLightStrikeKugel.png",
+          "hotkey": "e",
+          "name": "LUCENT SINGULARITY",
+          "description": "Fires an anomaly of twisted light to an area, which slows nearby enemies. Lux can detonate it to damage enemies in the area of effect.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0099/ability_0099_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/LuxR.png",
+          "hotkey": "r",
+          "name": "FINAL SPARK",
+          "description": "After gathering energy, Lux fires a beam of light that deals damage to all targets in the area. In addition, triggers Lux's passive ability and refreshes the Illumination debuff duration.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0099/ability_0099_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "lux",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lux_0.jpg"
+          },
+          {
+            "name": "sorceress lux",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lux_1.jpg"
+          },
+          {
+            "name": "spellthief lux",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lux_2.jpg"
+          },
+          {
+            "name": "commando lux",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lux_3.jpg"
+          },
+          {
+            "name": "imperial lux",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lux_4.jpg"
+          },
+          {
+            "name": "steel legion lux",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lux_5.jpg"
+          },
+          {
+            "name": "star guardian lux",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lux_6.jpg"
+          }
+        ]
+      }
     },
     {
       "name": "Anivia",
-      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt3d24a1482453088a/5db05fa8df78486c826dcce8/RiotX_ChampionList_anivia.jpg?quality=90&width=250",
+      "subtitle": "THE CRYOPHOENIX",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt3d24a1482453088a/5db05fa8df78486c826dcce8/RiotX_ChampionList_anivia.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Anivia_0.jpg",
       "role": "mage",
-      "difficalty": "high"
+      "difficalty": "high",
+      "description": "Anivia is a benevolent winged spirit who endures endless cycles of life, death, and rebirth to protect the Freljord. A demigod born of unforgiving ice and bitter winds, she wields those elemental powers to thwart any who dare disturb her homeland. Anivia guides and protects the tribes of the harsh north, who revere her as a symbol of hope, and a portent of great change. She fights with every ounce of her being, knowing that through her sacrifice, her memory will endure, and she will be reborn into a new tomorrow.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/Anivia_P.png",
+          "hotkey": "PASSIVE",
+          "name": "REBIRTH",
+          "description": "Upon taking fatal damage, Anivia reverts to an egg and is reborn with full health.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0034/ability_0034_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/FlashFrost.png",
+          "hotkey": "q",
+          "name": "FLASH FROST",
+          "description": "Anivia brings her wings together and summons a sphere of ice that flies towards her opponents, chilling and damaging anyone in its path. When the sphere explodes it does moderate damage in a radius, stunning anyone in the area.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0034/ability_0034_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/Crystallize.png",
+          "hotkey": "w",
+          "name": "CRYSTALLIZE",
+          "description": "Anivia condenses the moisture in the air into an impassable wall of ice to block all movement. The wall only lasts a short duration before it melts.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0034/ability_0034_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/Frostbite.png",
+          "hotkey": "e",
+          "name": "FROSTBITE",
+          "description": "With a flap of her wings, Anivia blasts a freezing gust of wind at her target, dealing damage. If the target was recently hit by Flash Frost or damaged by a fully formed Glacial Storm, the damage they take is doubled.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0034/ability_0034_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/GlacialStorm.png",
+          "hotkey": "r",
+          "name": "GLACIAL STORM",
+          "description": "Anivia summons a driving rain of ice and hail to damage her enemies and slow their advance.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0034/ability_0034_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "anivia",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Anivia_0.jpg"
+          },
+          {
+            "name": "team spirit anivia",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Anivia_1.jpg"
+          },
+          {
+            "name": "bird of prey anivia",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Anivia_2.jpg"
+          },
+          {
+            "name": "noxus hunter anivia",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Anivia_3.jpg"
+          },
+          {
+            "name": "hextech anivia",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Anivia_4.jpg"
+          },
+          {
+            "name": "blackfrost anivia",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Anivia_5.jpg"
+          },
+          {
+            "name": "prehistoric anivia",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Anivia_6.jpg"
+          }
+        ]
+      }
     },
     {
       "name": "Caitlyn",
-      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt014f4b6fc9bacd10/61b1eb901d158d4007de9685/RiotX_ChampionList_caitlyn_v2.jpg?quality=90&width=250",
+      "subtitle": "THE SHERIFF OF PILTOVER",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt014f4b6fc9bacd10/61b1eb901d158d4007de9685/RiotX_ChampionList_caitlyn_v2.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg",
       "role": "marksman",
-      "difficalty": "moderate"
-    }
-    ,
+      "difficalty": "moderate",
+      "description": "aaRenowned as its finest peacekeeper, Caitlyn is also Piltover's best shot at ridding the city of its elusive criminal elements. She is often paired with Vi, acting as a cool counterpoint to her partner's more impetuous nature. Even though she carries a one-of-a-kind hextech rifle, Caitlyn's most powerful weapon is her superior intellect, allowing her to lay elaborate traps for any lawbreakers foolish enough to operate in the City of Progress.aaaa",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/Caitlyn_Headshot.png",
+          "hotkey": "PASSIVE",
+          "name": "HEADSHOT",
+          "description": "Every few basic attacks, or against a target she has trapped or netted, Caitlyn will fire a headshot dealing bonus damage that scales with her critical strike chance. On trapped or netted targets, Caitlyn's Headshot attack range is doubled.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0051/ability_0051_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/CaitlynQ.png",
+          "hotkey": "q",
+          "name": "PILTOVER PEACEMAKER",
+          "description": "Caitlyn revs up her rifle for 1 second to unleash a penetrating shot that deals physical damage (deals less damage to subsequent targets).",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0051/ability_0051_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/CaitlynW.png",
+          "hotkey": "w",
+          "name": "YORDLE SNAP TRAP",
+          "description": "Caitlyn sets a trap that, when sprung, reveals and immobilizes the enemy champion for 1.5 seconds, granting Caitlyn an empowered Headshot.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0051/ability_0051_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/CaitlynE.png",
+          "hotkey": "e",
+          "name": "90 CALIBER NET",
+          "description": "Caitlyn fires a heavy net to slow her target. The recoil knocks Caitlyn back.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0051/ability_0051_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/CaitlynR.png",
+          "hotkey": "r",
+          "name": "ACE IN THE HOLE",
+          "description": "Caitlyn takes time to line up the perfect shot, dealing massive damage to a single target at a huge range. Enemy champions can intercept the bullet for their ally.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0051/ability_0051_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "caitlyn",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg"
+          },
+          {
+            "name": "resistance caitlyn",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_1.jpg"
+          },
+          {
+            "name": "sheriff caitlyn",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_2.jpg"
+          },
+          {
+            "name": "safari caitlyn",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_3.jpg"
+          },
+          {
+            "name": "arctic warfare caitlyn",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_4.jpg"
+          },
+          {
+            "name": "officer caitlyn",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_5.jpg"
+          },
+          {
+            "name": "headhunter caitlyn",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_6.jpg"
+          }
+        ]
+      }
+    },
     {
       "name": "Corki",
-      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltdd918c4d0a86347a/5db05fb1df78486c826dccee/RiotX_ChampionList_corki.jpg?quality=90&width=250",
+      "subtitle": "THE DARING BOMBARDIER",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltdd918c4d0a86347a/5db05fb1df78486c826dccee/RiotX_ChampionList_corki.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Corki_0.jpg",
       "role": "marksman",
-      "difficalty": "moderate"
-    }
-    ,
+      "difficalty": "moderate",
+      "description": "The yordle pilot Corki loves two things above all others: flying, and his glamorous mustache... though not necessarily in that order. After leaving Bandle City, he settled in Piltover and fell in love with the wondrous machines he found there. He dedicated himself to the development of flying contraptions, leading an aerial defense force of seasoned veterans known as the Screaming Yipsnakes. Calm under fire, Corki patrols the skies around his adopted home, and has never encountered a problem that a good missile barrage couldn't solve.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/Corki_RapidReload.png",
+          "hotkey": "PASSIVE",
+          "name": "HEXTECH MUNITIONS",
+          "description": "A percentage of Corki's basic attack damage is converted into magic damage. Corki can occasionally retrieve The Package inside his base, granting him Move Speed and an empowered cast of Valkyrie.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0042/ability_0042_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/PhosphorusBomb.png",
+          "hotkey": "q",
+          "name": "PHOSPHORUS BOMB",
+          "description": "Corki fires a flash bomb at a target location, dealing magic damage to enemies in the area. This attack additionally reveals units in the area for a duration.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0042/ability_0042_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/CarpetBomb.png",
+          "hotkey": "w",
+          "name": "VALKYRIE",
+          "description": "Corki flies a short distance, dropping bombs that create a trail of fire that damages opponents who remain in it.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0042/ability_0042_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/GGun.png",
+          "hotkey": "e",
+          "name": "GATLING GUN",
+          "description": "Corki's gatling gun rapidly fires in a cone in front of him, dealing damage and reducing enemy Armor and Magic Resist.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0042/ability_0042_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/MissileBarrage.png",
+          "hotkey": "r",
+          "name": "MISSILE BARRAGE",
+          "description": "Corki fires a missile toward his target location that explodes on impact, dealing damage to enemies in an area. Corki stores missiles over time, up to a maximum. Every 3rd missile fired will be a Big One, dealing extra damage.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0042/ability_0042_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "corki",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Corki_0.jpg"
+          },
+          {
+            "name": "ufo corki",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Corki_1.jpg"
+          },
+          {
+            "name": "ice toboggan corki",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Corki_2.jpg"
+          },
+          {
+            "name": "red baron corki",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Corki_3.jpg"
+          },
+          {
+            "name": "hot rod corki",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Corki_4.jpg"
+          },
+          {
+            "name": "urfrider corki",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Corki_5.jpg"
+          },
+          {
+            "name": "dragonwing corki",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Corki_6.jpg"
+          }
+        ]
+      }
+    },
     {
       "name": "Ezreal",
-      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt60f687c95425f73f/5db05fbd2dc72966da746704/RiotX_ChampionList_ezreal.jpg?quality=90&width=250",
+      "subtitle": "THE PRODIGAL EXPLORER",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt60f687c95425f73f/5db05fbd2dc72966da746704/RiotX_ChampionList_ezreal.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ezreal_0.jpg",
       "role": "marksman",
-      "difficalty": "moderate"
-    }
-    ,
+      "difficalty": "moderate",
+      "description": "A dashing adventurer, unknowingly gifted in the magical arts, Ezreal raids long-lost catacombs, tangles with ancient curses, and overcomes seemingly impossible odds with ease. His courage and bravado knowing no bounds, he prefers to improvise his way out of any situation, relying partially on his wits, but mostly on his mystical Shuriman gauntlet, which he uses to unleash devastating arcane blasts. One thing is for sure—whenever Ezreal is around, trouble isn't too far behind. Or ahead. Probably everywhere.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/Ezreal_RisingSpellForce.png",
+          "hotkey": "PASSIVE",
+          "name": "RISING SPELL FORCE",
+          "description": "Ezreal gains increasing Attack Speed each time he successfully hits a spell, stacking up to 5 times.",
+          "video": ""
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/EzrealQ.png",
+          "hotkey": "q",
+          "name": "MYSTIC SHOT",
+          "description": "Ezreal fires a damaging bolt of energy which reduces all of his cooldowns slightly if it strikes an enemy unit.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0081/ability_0081_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/EzrealW.png",
+          "hotkey": "w",
+          "name": "ESSENCE FLUX",
+          "description": "Ezreal fires an orb that sticks to the first champion or objective hit. If Ezreal hits an enemy with the orb, it detonates and deals damage.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0081/ability_0081_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/EzrealE.png",
+          "hotkey": "e",
+          "name": "ARCANE SHIFT",
+          "description": "Ezreal teleports to a target nearby location and fires a homing bolt which strikes the nearest enemy unit. Prioritizes enemies stuck with Essence Flux.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0081/ability_0081_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/EzrealR.png",
+          "hotkey": "r",
+          "name": "TRUESHOT BARRAGE",
+          "description": "Ezreal winds up before firing a powerful barrage of energy that deals massive damage to each unit it passes through (damage is reduced for minions and non-epic monsters).",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0081/ability_0081_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "ezreal",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ezreal_0.jpg"
+          },
+          {
+            "name": "nottingham ezreal",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ezreal_1.jpg"
+          },
+          {
+            "name": "striker ezreal",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ezreal_2.jpg"
+          },
+          {
+            "name": "frosted ezreal",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ezreal_3.jpg"
+          },
+          {
+            "name": "explorer ezreal",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ezreal_4.jpg"
+          },
+          {
+            "name": "pulsefire ezreal",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ezreal_5.jpg"
+          },
+          {
+            "name": "tpa ezreal",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ezreal_6.jpg"
+          }
+        ]
+      }
+    },
     {
       "name": "Fizz",
-      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt6000fa69e03c25c0/5db05fbc56458c6b3fc17513/RiotX_ChampionList_fizz.jpg?quality=90&width=250",
+      "subtitle": "THE TIDAL TRICKSTER",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt6000fa69e03c25c0/5db05fbc56458c6b3fc17513/RiotX_ChampionList_fizz.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Fizz_0.jpg",
       "role": "assasin",
-      "difficalty": "moderate"
-    }
-    ,
+      "difficalty": "moderate",
+      "description": "Fizz is an amphibious yordle, who dwells among the reefs surrounding Bilgewater. He often retrieves and returns the tithes cast into the sea by superstitious captains, but even the saltiest of sailors know better than to cross him—for many are the tales of those who have underestimated this slippery character. Often mistaken for some manner of capricious ocean spirit, he seems able to command the beasts of the deep, and delights in confounding his allies and enemies alike.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/Fizz_P.png",
+          "hotkey": "PASSIVE",
+          "name": "NIMBLE FIGHTER",
+          "description": "Fizz can move through units and takes a flat amount of reduced damage from all sources",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0105/ability_0105_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/FizzQ.png",
+          "hotkey": "q",
+          "name": "URCHIN STRIKE",
+          "description": "Fizz dashes through his target, dealing magic damage and applying on hit effects.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0105/ability_0105_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/FizzW.png",
+          "hotkey": "w",
+          "name": "SEASTONE TRIDENT",
+          "description": "Fizz's attacks bleed his enemies, dealing magic damage over several seconds. Fizz can empower his next attack to deal bonus damage and empower his further attacks for a short time.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0105/ability_0105_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/FizzE.png",
+          "hotkey": "e",
+          "name": "PLAYFUL / TRICKSTER",
+          "description": "Fizz hops into the air, landing gracefully upon his spear and becoming untargetable. From this position, Fizz can either slam the ground or choose to jump again before smashing back down.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0105/ability_0105_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/FizzR.png",
+          "hotkey": "r",
+          "name": "CHUM THE WATERS",
+          "description": "Fizz tosses a fish in a direction that attaches to any champion that touches it, slowing the target. After a short delay, a shark erupts from the ground, knocking up the target and knocking any nearby enemies aside. All enemies hit are dealt magic damage and slowed.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0105/ability_0105_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "fizz",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Fizz_0.jpg"
+          },
+          {
+            "name": "atlantean fizz",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Fizz_1.jpg"
+          },
+          {
+            "name": "tundra fizz",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Fizz_2.jpg"
+          },
+          {
+            "name": "fisherman fizz",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Fizz_3.jpg"
+          },
+          {
+            "name": "void fizz",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Fizz_4.jpg"
+          },
+          {
+            "name": "cottontail fizz",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Fizz_8.jpg"
+          },
+          {
+            "name": "super galaxy fizz",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Fizz_9.jpg"
+          }
+        ]
+      }
+    },
     {
       "name": "Hecarim",
-      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blteb9ce5304ec48e19/5db05fc5df78486c826dccfa/RiotX_ChampionList_hecarim.jpg?quality=90&width=250",
+      "subtitle": "THE SHADOW OF WAR",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blteb9ce5304ec48e19/5db05fc5df78486c826dccfa/RiotX_ChampionList_hecarim.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Hecarim_0.jpg",
       "role": "fighter",
-      "difficalty": "moderate"
-    }
-    ,
+      "difficalty": "moderate",
+      "description": "Hecarim is a spectral fusion of man and beast, cursed to ride down the souls of the living for all eternity. When the Blessed Isles fell into shadow, this proud knight was obliterated by the destructive energies of the Ruination, along with all his cavalry and their mounts. Now, whenever the Black Mist reaches out across Runeterra, he leads their devastating charge, reveling in the slaughter and crushing the foe beneath his armored hooves.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/Hecarim_Passive.png",
+          "hotkey": "PASSIVE",
+          "name": "WARPATH",
+          "description": "Hecarim gains Attack Damage equal to a percentage of his bonus Move Speed.",
+          "video": ""
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/HecarimRapidSlash.png",
+          "hotkey": "q",
+          "name": "RAMPAGE",
+          "description": "Hecarim cleaves nearby enemies dealing physical damage. If Hecarim damages at least one enemy, he increases the damage and lowers the cooldown of subsequent Rampages.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0120/ability_0120_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/HecarimW.png",
+          "hotkey": "w",
+          "name": "SPIRIT OF DREAD",
+          "description": "Hecarim deals magic damage to nearby enemies for a short duration. Hecarim gains Health equal to a percentage of any damage those enemies suffer.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0120/ability_0120_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/HecarimRamp.png",
+          "hotkey": "e",
+          "name": "DEVASTATING CHARGE",
+          "description": "Hecarim gains increasing Move Speed and can move through units for a short duration. His next attack knocks the target back and deals additional physical damage based on the distance he has traveled since activating the ability.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0120/ability_0120_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/HecarimUlt.png",
+          "hotkey": "r",
+          "name": "ONSLAUGHT OF SHADOWS",
+          "description": "Hecarim summons spectral riders and charges forward, dealing magic damage in a line. Hecarim creates a shockwave when he finishes his charge, causing nearby enemies to flee in terror.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0120/ability_0120_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "hecarim",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Hecarim_0.jpg"
+          },
+          {
+            "name": "blood knight hecarim",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Hecarim_1.jpg"
+          },
+          {
+            "name": "reaper hecarim",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Hecarim_2.jpg"
+          },
+          {
+            "name": "headless hecarim",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Hecarim_3.jpg"
+          },
+          {
+            "name": "arcade hecarim",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Hecarim_4.jpg"
+          },
+          {
+            "name": "elderwood hecarim",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Hecarim_5.jpg"
+          },
+          {
+            "name": "worldbreaker hecarim",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Hecarim_6.jpg"
+          }
+        ]
+      }
+    },
     {
       "name": "Jax",
-      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt6b301613598c3f17/5db05fcf89fb926b491ed81d/RiotX_ChampionList_jax.jpg?quality=90&width=250",
+      "subtitle": "GRANDMASTER AT ARMS",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt6b301613598c3f17/5db05fcf89fb926b491ed81d/RiotX_ChampionList_jax.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jax_0.jpg",
       "role": "fighter",
-      "difficalty": "moderate"
-    }
-    ,
+      "difficalty": "moderate",
+      "description": "Unmatched in both his skill with unique armaments and his biting sarcasm, Jax is the last known weapons master of Icathia. After his homeland was laid low by its own hubris in unleashing the Void, Jax and his kind vowed to protect what little remained. As magic now rises in the world, this slumbering threat stirs once more, and Jax roams Valoran, wielding the last light of Icathia and testing all warriors he meets to see if any are strong enough to stand beside him...",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/Armsmaster_MasterOfArms.png",
+          "hotkey": "PASSIVE",
+          "name": "RELENTLESS ASSAULT",
+          "description": "Jax's consecutive basic attacks continuously increase his Attack Speed.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0024/ability_0024_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/JaxLeapStrike.png",
+          "hotkey": "q",
+          "name": "LEAP STRIKE",
+          "description": "Jax leaps toward a unit. If they are an enemy, he strikes them with his weapon.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0024/ability_0024_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/JaxEmpowerTwo.png",
+          "hotkey": "w",
+          "name": "EMPOWER",
+          "description": "Jax charges his weapon with energy, causing his next attack to deal additional damage.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0024/ability_0024_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/JaxCounterStrike.png",
+          "hotkey": "e",
+          "name": "COUNTER STRIKE",
+          "description": "Jax's combat prowess allows him to dodge all incoming attacks for a short duration and then quickly counterattack, stunning all surrounding enemies.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0024/ability_0024_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/JaxRelentlessAssault.png",
+          "hotkey": "r",
+          "name": "GRANDMASTER'S MIGHT",
+          "description": "Every third consecutive attack deals additional Magic Damage. Additionally, Jax can activate this ability to strengthen his resolve, increasing his Armor and Magic Resist for a short duration.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0024/ability_0024_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "jax",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jax_0.jpg"
+          },
+          {
+            "name": "the mighty jax",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jax_1.jpg"
+          },
+          {
+            "name": "vandal jax",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jax_2.jpg"
+          },
+          {
+            "name": "angler jax",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jax_3.jpg"
+          },
+          {
+            "name": "pax jax",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jax_4.jpg"
+          },
+          {
+            "name": "jaximus",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jax_5.jpg"
+          },
+          {
+            "name": "temple jax",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jax_6.jpg"
+          }
+        ]
+      }
+    },
     {
       "name": "Jhin",
-      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltbf6c70d9272a5a2a/5db05fcfe9d7526ab429e532/RiotX_ChampionList_jhin.jpg?quality=90&width=250",
+      "subtitle": "THE VIRTUOSO",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltbf6c70d9272a5a2a/5db05fcfe9d7526ab429e532/RiotX_ChampionList_jhin.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jhin_0.jpg",
       "role": "marksman",
-      "difficalty": "moderate"
-    }
-    ,
+      "difficalty": "moderate",
+      "description": "Jhin is a meticulous criminal psychopath who believes murder is art. Once an Ionian prisoner, but freed by shadowy elements within Ionia's ruling council, the serial killer now works as their cabal's assassin. Using his gun as his paintbrush, Jhin creates works of artistic brutality, horrifying victims and onlookers. He gains a cruel pleasure from putting on his gruesome theater, making him the ideal choice to send the most powerful of messages: terror.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/Jhin_P.png",
+          "hotkey": "PASSIVE",
+          "name": "WHISPER",
+          "description": "Jhin's hand cannon, Whisper, is a precise instrument designed to deal superior damage. It fires at a fixed rate and carries only four shots. Jhin imbues the final bullet with dark magics to critically strike and deal bonus execute damage. Whenever Whisper crits, it inspires Jhin with a burst of Move Speed.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0202/ability_0202_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/JhinQ.png",
+          "hotkey": "q",
+          "name": "DANCING GRENADE",
+          "description": "Jhin launches a magical cartridge at an enemy. It can hit up to four targets and gains damage each time it kills.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0202/ability_0202_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/JhinW.png",
+          "hotkey": "w",
+          "name": "DEADLY FLOURISH",
+          "description": "Jhin brandishes his cane, firing a single shot with incredible range. It pierces through minions and monsters, but stops on the first champion hit. If the target was recently struck by Jhin's allies, lotus traps, or damaged by Jhin, they are rooted.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0202/ability_0202_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/JhinE.png",
+          "hotkey": "e",
+          "name": "CAPTIVE AUDIENCE",
+          "description": "Jhin places an invisible lotus trap that blooms when walked over. It slows nearby enemies before dealing damage with an explosion of serrated petals. Beauty in Death - When Jhin kills an enemy champion, a lotus trap will bloom near their corpse.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0202/ability_0202_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/JhinR.png",
+          "hotkey": "r",
+          "name": "CURTAIN CALL",
+          "description": "Jhin channels, transforming Whisper into a shoulder-mounted mega-cannon. It is able to fire 4 super shots at extreme range that pierce through minions and monsters, but stop on the first champion impacted. Whisper cripples enemies hit, which slows them and deals execute damage. The 4th shot is perfectly crafted, epically powerful, and guaranteed to critically strike.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0202/ability_0202_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "jhin",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jhin_0.jpg"
+          },
+          {
+            "name": "high noon jhin",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jhin_1.jpg"
+          },
+          {
+            "name": "blood moon jhin",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jhin_2.jpg"
+          },
+          {
+            "name": "skt t1 jhin",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jhin_3.jpg"
+          },
+          {
+            "name": "project: jhin",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jhin_4.jpg"
+          },
+          {
+            "name": "dark cosmic jhin",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jhin_5.jpg"
+          },
+          {
+            "name": "shan hai scrolls jhin",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jhin_14.jpg"
+          }
+        ]
+      }
+    },
     {
       "name": "Kayle",
-      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2c7675893b5c76bc/61b1ed442d06ff39b6c6336b/RiotX_ChampionList_kayle_v4.jpg?quality=90&width=250",
+      "subtitle": "THE RIGHTEOUS",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2c7675893b5c76bc/61b1ed442d06ff39b6c6336b/RiotX_ChampionList_kayle_v4.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kayle_0.jpg",
       "role": "fighter",
-      "difficalty": "moderate"
+      "difficalty": "moderate",
+      "description": "Born to a Targonian Aspect at the height of the Rune Wars, Kayle honored her mother's legacy by fighting for justice on wings of divine flame. She and her twin sister Morgana were the protectors of Demacia for many years—until Kayle became disillusioned with the repeated failings of mortals, and abandoned this realm altogether. Still, legends are told of her punishing the unjust with her fiery swords, and many hope that she will one day return…",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/Kayle_P.png",
+          "hotkey": "PASSIVE",
+          "name": "DIVINE ASCENT",
+          "description": "Kayle's attacks are empowered by the heavens as she levels up and spends skill points. Her wings are lit aflame as she progressively gains Attack Speed, Move Speed, Attack Range, and waves of fire on her attacks.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0010/ability_0010_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/KayleQ.png",
+          "hotkey": "q",
+          "name": "RADIANT BLAST",
+          "description": "Kayle conjures a portal, summoning a celestial sword that pierces through enemies, slowing, damaging, and reducing the resistances of all hit.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0010/ability_0010_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/KayleW.png",
+          "hotkey": "w",
+          "name": "CELESTIAL BLESSING",
+          "description": "Blessed by the divine, Kayle heals and grants Move Speed to herself and the nearest ally.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0010/ability_0010_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/KayleE.png",
+          "hotkey": "e",
+          "name": "STARFIRE SPELLBLADE",
+          "description": "Passive: Kayle's celestial sword, Virtue, deals bonus magic damage to enemies she attacks. Active: Kayle's next attack smites her target with celestial fire, dealing bonus damage proportionate to their missing health.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0010/ability_0010_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/KayleR.png",
+          "hotkey": "r",
+          "name": "DIVINE JUDGMENT",
+          "description": "Kayle makes an ally invulnerable and calls upon former Aspects of Justice to purify the area around her target with a holy rain of swords.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0010/ability_0010_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "kayle",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kayle_0.jpg"
+          },
+          {
+            "name": "silver kayle",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kayle_1.jpg"
+          },
+          {
+            "name": "virdian kayle",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kayle_2.jpg"
+          },
+          {
+            "name": "transcended kayle",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kayle_3.jpg"
+          },
+          {
+            "name": "battleborn kayle",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kayle_4.jpg"
+          },
+          {
+            "name": "judgment kayle",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kayle_5.jpg"
+          },
+          {
+            "name": "aether wing kayle",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kayle_6.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Brand",
+      "subtitle": "THE BURNING VENGEANCE",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltc8ca2e9bba653dda/5db05fb2dc674266df3d5d30/RiotX_ChampionList_brand.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Brand_0.jpg",
+      "role": "mage",
+      "difficalty": "moderate",
+      "description": "Once a tribesman of the icy Freljord named Kegan Rodhe, the creature known as Brand is a lesson in the temptation of greater power. Seeking one of the legendary World Runes, Kegan betrayed his companions and seized it for himself—and, in an instant, the man was no more. His soul burned away, his body a vessel of living flame, Brand now roams Valoran in search of other Runes, swearing revenge for wrongs he could never possibly have suffered in a dozen mortal lifetimes.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/BrandP.png",
+          "hotkey": "PASSIVE",
+          "name": "BLAZE",
+          "description": "Brand's spells light his targets ablaze, dealing damage over 4 seconds, stacking up to 3 times. If Brand kills an enemy while it is ablaze he regains mana. When Blaze reaches max stacks on a Champion or large monster, it becomes unstable. It detonates in 2 seconds, applying spell effects and dealing massive damage in an area around the victim.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0063/ability_0063_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/BrandQ.png",
+          "hotkey": "q",
+          "name": "SEAR",
+          "description": "Brand launches a ball of fire forward that deals magic damage. If the target is ablaze, Sear will stun the target for 1.5 seconds.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0063/ability_0063_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/BrandW.png",
+          "hotkey": "w",
+          "name": "PILLAR OF FLAME",
+          "description": "After a short delay, Brand creates a Pillar of Flame at a target area, dealing magic damage to enemy units within the area. Units that are ablaze take an additional 25% damage.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0063/ability_0063_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/BrandE.png",
+          "hotkey": "e",
+          "name": "CONFLAGRATION",
+          "description": "Brand conjures a powerful blast at his target that spreads to nearby enemies, dealing magic damage. If the target is ablaze, Conflagration's spread is doubled.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0063/ability_0063_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/BrandR.png",
+          "hotkey": "r",
+          "name": "PYROCLASM",
+          "description": "Brand unleashes a devastating torrent of fire that bounces up to 5 times off of Brand and nearby enemies, dealing magic damage to enemies each time bounce. Bounces prioritize stacking Blaze to max on Champions. If a target is ablaze, Pyroclasm will briefly slow them.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0063/ability_0063_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "brand",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Brand_0.jpg"
+          },
+          {
+            "name": "apocalyptic brand",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Brand_1.jpg"
+          },
+          {
+            "name": "vandal brand",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Brand_2.jpg"
+          },
+          {
+            "name": "crycode brand",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Brand_3.jpg"
+          },
+          {
+            "name": "zombie brand",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Brand_4.jpg"
+          },
+          {
+            "name": "spirit brand",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Brand_5.jpg"
+          },
+          {
+            "name": "battle boss brand",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Brand_6.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Gragas",
+      "subtitle": "THE RABBLE ROUSER",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt795841adba722f85/5db05fc43a326d6df6c0e7b9/RiotX_ChampionList_gragas.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Gragas_0.jpg",
+      "role": "fighter",
+      "difficalty": "moderate",
+      "description": "Equal parts jolly and imposing, Gragas is a massive, rowdy brewmaster on his own quest for the perfect pint of ale. Hailing from parts unknown, he now searches for rare ingredients among the unblemished wastes of the Freljord, trying each recipe as he goes. Often intoxicated and extremely impulsive, he is legendary for the brawls he starts, which often end in all-night parties and widespread property damage. Any appearance from Gragas must surely foreshadow drinking and destruction—in that order.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/GragasPassiveHeal.png",
+          "hotkey": "PASSIVE",
+          "name": "HAPPY HOUR",
+          "description": "Gragas periodically heals upon using a skill.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0079/ability_0079_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/GragasQ.png",
+          "hotkey": "q",
+          "name": "BARREL ROLL",
+          "description": "Gragas rolls his cask to a location, which can be activated to explode or will explode on its own after 4 seconds. The potency of the explosion increases over time. Enemies struck by the blast have their Move Speed slowed.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0079/ability_0079_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/GragasW.png",
+          "hotkey": "w",
+          "name": "DRUNKEN RAGE",
+          "description": "Gragas guzzles down brew from his cask for 1 second. After finishing, he becomes drunkenly empowered, dealing magic damage to all nearby enemies on his next basic attack and reducing damage received.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0079/ability_0079_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/GragasE.png",
+          "hotkey": "e",
+          "name": "BODY SLAM",
+          "description": "Gragas charges to a location and collides with the first enemy unit he comes across, dealing damage to all nearby enemy units and stunning them.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0079/ability_0079_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/GragasR.png",
+          "hotkey": "r",
+          "name": "EXPLOSIVE CASK",
+          "description": "Gragas hurls his cask to a location, dealing damage and knocking back enemies caught in the blast radius.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0079/ability_0079_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "gragas",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Gragas_0.jpg"
+          },
+          {
+            "name": "scuba gragas",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Gragas_1.jpg"
+          },
+          {
+            "name": "hillbilly gragas",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Gragas_2.jpg"
+          },
+          {
+            "name": "santa gragas",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Gragas_3.jpg"
+          },
+          {
+            "name": "gragas, esq.",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Gragas_4.jpg"
+          },
+          {
+            "name": "vandal gragas",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Gragas_5.jpg"
+          },
+          {
+            "name": "oktoberfest gragas",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Gragas_6.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Heimerginger",
+      "subtitle": "THE REVERED INVENTOR",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltd30d85446d154070/5db05fc57d28b76cfe4397ef/RiotX_ChampionList_heimerdinger.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Heimerdinger_0.jpg",
+      "role": "mage",
+      "difficalty": "high",
+      "description": "A brilliant yet eccentric yordle scientist, Professor Cecil B. Heimerdinger is one of the most innovative and esteemed inventors Piltover has ever known. Relentless in his work to the point of neurotic obsession, he thrives on answering the universe's most impenetrable questions. Though his theories often appear opaque and esoteric, Heimerdinger has crafted some of Piltover's most miraculous—not to mention lethal—machinery, and constantly tinkers with his inventions to make them even more efficient.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/Heimerdinger_Passive.png",
+          "hotkey": "PASSIVE",
+          "name": "HEXTECH AFFINITY",
+          "description": "Gain Move Speed while near allied towers and turrets deployed by Heimerdinger.",
+          "video": ""
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/HeimerdingerQ.png",
+          "hotkey": "q",
+          "name": "H-28 G EVOLUTION TURRET",
+          "description": "Heimerdinger lays down a rapid-fire cannon turret equipped with a secondary pass-through beam attack (turrets deal half damage to towers).",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0074/ability_0074_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/HeimerdingerW.png",
+          "hotkey": "w",
+          "name": "HEXTECH MICRO-ROCKETS",
+          "description": "Heimerdinger fires long-range rockets that converge on his cursor.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0074/ability_0074_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/HeimerdingerE.png",
+          "hotkey": "e",
+          "name": "CH-2 ELECTRON STORM GRENADE",
+          "description": "Heimerdinger lobs a grenade at a location, dealing damage to enemy units, as well as stunning anyone directly hit and slowing surrounding units.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0074/ability_0074_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/HeimerdingerR.png",
+          "hotkey": "r",
+          "name": "UPGRADE!!!",
+          "description": "Heimerdinger invents an upgrade, causing his next spell to have increased effects.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0074/ability_0074_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "heimerdinger",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Heimerdinger_0.jpg"
+          },
+          {
+            "name": "alien invader heimerdinger",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Heimerdinger_1.jpg"
+          },
+          {
+            "name": "blast zone heimerdinger",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Heimerdinger_2.jpg"
+          },
+          {
+            "name": "piltover customs heimerdinger",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Heimerdinger_3.jpg"
+          },
+          {
+            "name": "snowmerdinger",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Heimerdinger_4.jpg"
+          },
+          {
+            "name": "hazmat heimerdinger",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Heimerdinger_5.jpg"
+          },
+          {
+            "name": "dragon trainer heimerdinger",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Heimerdinger_6.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Lucian",
+      "subtitle": "THE PURIFIER",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt3db0d62352b0b4f1/5db05fdf6e8b0c6d038c5cb4/RiotX_ChampionList_lucian.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lucian_0.jpg",
+      "role": "marksman",
+      "difficalty": "moderate",
+      "description": "Lucian, a Sentinel of Light, is a grim hunter of undying spirits, pursuing them relentlessly and annihilating them with his twin relic pistols. After the wraith Thresh slew his wife, Lucian embarked on the path of vengeance—but even with her return to life, his rage is undiminished. Merciless and single-minded, Lucian will stop at nothing to protect the living from the long-dead horrors of the Black Mist.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/Lucian_Passive.png",
+          "hotkey": "PASSIVE",
+          "name": "LIGHTSLINGER",
+          "description": "Whenever Lucian uses an ability, his next attack becomes a double-shot. When Lucian is empowered by another Ally, his next 2 basic attacks will deal bonus magic damage.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0236/ability_0236_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/LucianQ.png",
+          "hotkey": "q",
+          "name": "PIERCING LIGHT",
+          "description": "Lucian shoots a bolt of piercing light through a target.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0236/ability_0236_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/LucianW.png",
+          "hotkey": "w",
+          "name": "ARDENT BLAZE",
+          "description": "Lucian shoots a missile that explodes in a star shape, marking and briefly revealing enemies. Lucian gains Move Speed for attacking marked enemies.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0236/ability_0236_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/LucianE.png",
+          "hotkey": "e",
+          "name": "RELENTLESS PURSUIT",
+          "description": "Lucian quickly dashes a short distance. Lightslinger attacks reduce Relentless Pursuit's cooldown.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0236/ability_0236_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/LucianR.png",
+          "hotkey": "r",
+          "name": "THE CULLING",
+          "description": "Lucian unleashes a torrent of shots from his weapons.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0236/ability_0236_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "lucian",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lucian_0.jpg"
+          },
+          {
+            "name": "hired gun lucian",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lucian_1.jpg"
+          },
+          {
+            "name": "striker lucian",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lucian_2.jpg"
+          },
+          {
+            "name": "project: lucian",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lucian_6.jpg"
+          },
+          {
+            "name": "heartseeker lucian",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lucian_7.jpg"
+          },
+          {
+            "name": "high noon lucian",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lucian_8.jpg"
+          },
+          {
+            "name": "demacia vice lucian",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lucian_9.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Malzahar",
+      "subtitle": "THE PROPHET OF THE VOID",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltd58a3a2bf5035834/5db05fde0b39e86c2f83dc1f/RiotX_ChampionList_malzahar.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Malzahar_0.jpg",
+      "role": "mage",
+      "difficalty": "moderate",
+      "description": "A zealous seer dedicated to the unification of all life, Malzahar truly believes the newly emergent Void to be the path to Runeterra's salvation. In the desert wastes of Shurima, he followed the voices that whispered in his mind, all the way to ancient Icathia. Amidst the ruins of that land, he gazed into the dark heart of the Void itself, and was gifted new power and purpose. Malzahar now sees himself as a shepherd, empowered to bring others into the fold… or to release the voidling creatures that dwell beneath.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/Malzahar_Passive.png",
+          "hotkey": "PASSIVE",
+          "name": "VOID SHIFT",
+          "description": "When he hasn't recently taken damage or been crowd controlled, Malzahar gains massive damage reduction and crowd control immunity, lingering for a short period after taking damage.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0090/ability_0090_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/MalzaharQ.png",
+          "hotkey": "q",
+          "name": "CALL OF THE VOID",
+          "description": "Malzahar opens up two portals to the Void. After a short delay, they fire projectiles that deal Magic Damage and silence enemy champions.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0090/ability_0090_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/MalzaharW.png",
+          "hotkey": "w",
+          "name": "VOID SWARM",
+          "description": "Malzahar summons Voidlings to attack nearby enemies.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0090/ability_0090_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/MalzaharE.png",
+          "hotkey": "e",
+          "name": "MALEFIC VISIONS",
+          "description": "Malzahar infects his target's mind with cruel visions of their demise, dealing damage over time. Using Malzahar's other spells on the target will refresh the visions. If the target dies while afflicted by the visions, they pass on to a nearby enemy unit and Malzahar gains Mana. Malzahar's Voidlings are attracted to affected units.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0090/ability_0090_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/MalzaharR.png",
+          "hotkey": "r",
+          "name": "NETHER GRASP",
+          "description": "Malzahar channels the essence of the Void to suppress an enemy champion over a zone of damaging negative energy.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0090/ability_0090_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "Malzahar",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Malzahar_0.jpg"
+          },
+          {
+            "name": "Vizier malzahar",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Malzahar_1.jpg"
+          },
+          {
+            "name": "shadow prince malzahar",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Malzahar_2.jpg"
+          },
+          {
+            "name": "djin malzahar",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Malzahar_3.jpg"
+          },
+          {
+            "name": "overlord malzahar",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Malzahar_4.jpg"
+          },
+          {
+            "name": "snow day malzahar",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Malzahar_5.jpg"
+          },
+          {
+            "name": "battle boss malzahar",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Malzahar_6.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Nami",
+      "subtitle": "THE TIDECALLER",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nami_0.jpg",
+      "role": "support",
+      "difficalty": "moderate",
+      "description": "A headstrong young vastaya of the seas, Nami was the first of the Marai tribe to leave the waves and venture onto dry land, when their ancient accord with the Targonians was broken. With no other option, she took it upon herself to complete the sacred ritual that would ensure the safety of her people. Amidst the chaos of this new age, Nami faces an uncertain future with grit and determination, using her Tidecaller staff to summon the strength of the oceans themselves.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/NamiPassive.png",
+          "hotkey": "PASSIVE",
+          "name": "SURGING TIDES",
+          "description": "When Nami's Abilities hit allied champions they gain Move Speed for a short duration.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0267/ability_0267_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/NamiQ.png",
+          "hotkey": "q",
+          "name": "AQUA PRISON",
+          "description": "Sends a bubble to a target area, dealing damage and stunning all enemies on impact.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0267/ability_0267_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/NamiW.png",
+          "hotkey": "w",
+          "name": "EBB AND FLOW",
+          "description": "Unleashes a stream of water that bounces back and forth between allied and enemy champions, healing allies and damaging enemies.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0267/ability_0267_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/NamiE.png",
+          "hotkey": "e",
+          "name": "TIDECALLER'S BLESSING",
+          "description": "Empowers an allied champion for a short duration. The ally's basic attacks and spells deal bonus magic damage and slow the target.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0267/ability_0267_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/NamiR.png",
+          "hotkey": "r",
+          "name": "TIDAL WAVE",
+          "description": "Summons a massive Tidal Wave that knocks up, slows, and damages enemies. Allies hit gain double the effect of Surging Tides.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0267/ability_0267_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "nami",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nami_0.jpg"
+          },
+          {
+            "name": "koi nami",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nami_1.jpg"
+          },
+          {
+            "name": "river spirit nami",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nami_2.jpg"
+          },
+          {
+            "name": "urf the name-tee",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nami_3.jpg"
+          },
+          {
+            "name": "deep sea nami",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nami_7.jpg"
+          },
+          {
+            "name": "skt t1 nami",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nami_8.jpg"
+          },
+          {
+            "name": "program nami",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nami_9.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Orianna",
+      "subtitle": "THE LADY OF CLOCKWORK",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt3318fc0e8103706d/5db05ff02140ec675d68f4a7/RiotX_ChampionList_orianna.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Orianna_0.jpg",
+      "role": "mage",
+      "difficalty": "moderate",
+      "description": "Once a curious girl of flesh and blood, Orianna is now a technological marvel comprised entirely of clockwork. She became gravely ill after an accident in the lower districts of Zaun, and her failing body had to be replaced with exquisite artifice, piece by piece. Accompanied by an extraordinary brass sphere she built for companionship and protection, Orianna is now free to explore the wonders of Piltover, and beyond.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/OriannaPassive.png",
+          "hotkey": "PASSIVE",
+          "name": "CLOCKWORK WINDUP",
+          "description": "Orianna's Attacks deal additional magic damage. This damage increases the more Orianna Attacks the same target.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0061/ability_0061_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/OrianaIzunaCommand.png",
+          "hotkey": "q",
+          "name": "COMMAND: ATTACK",
+          "description": "Orianna commands her Ball to fire toward a target location, dealing magic damage to targets along the way (deals less damage to subsequent targets). Her Ball remains at the target location after.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0061/ability_0061_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/OrianaDissonanceCommand.png",
+          "hotkey": "w",
+          "name": "COMMAND: DISSONANCE",
+          "description": "Orianna commands her Ball to release a pulse of energy, dealing magic damage around it. This leaves a field behind that speeds up allies and slows enemies.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0061/ability_0061_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/OrianaRedactCommand.png",
+          "hotkey": "e",
+          "name": "COMMAND: PROTECT",
+          "description": "Orianna commands her Ball to attach to an allied champion, Shielding them and dealing magic damage to any enemies it passes through on the way. Additionally, the Ball grants additional Armor and Magic Resist to the champion it is attached to.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0061/ability_0061_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/OrianaDetonateCommand.png",
+          "hotkey": "r",
+          "name": "COMMAND: SHOCKWAVE",
+          "description": "Orianna commands her Ball to unleash a shockwave, dealing magic damage and launching nearby enemies towards the Ball after a short delay.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0061/ability_0061_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "orianna",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Orianna_0.jpg"
+          },
+          {
+            "name": "gothic orianna",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Orianna_1.jpg"
+          },
+          {
+            "name": "sewn chaos orianna",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Orianna_2.jpg"
+          },
+          {
+            "name": "bladecraft orianna",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Orianna_3.jpg"
+          },
+          {
+            "name": "tpa orianna",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Orianna_4.jpg"
+          },
+          {
+            "name": "winter wonder orianna",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Orianna_5.jpg"
+          },
+          {
+            "name": "Heartseeker orianna",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Orianna_6.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Poppy",
+      "subtitle": "KEEPER OF THE HAMMER",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt0df0f7bcaf851737/5db05ff1242f426df132f973/RiotX_ChampionList_poppy.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Poppy_0.jpg",
+      "role": "tank",
+      "difficalty": "moderate",
+      "description": "Runeterra has no shortage of valiant champions, but few are as tenacious as Poppy. Bearing the legendary hammer of Orlon, a weapon twice her size, this determined yordle has spent untold years searching in secret for the fabled “Hero of Demacia,” said to be its rightful wielder. Until then, she dutifully charges into battle, pushing back the kingdom's enemies with every whirling strike.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/Poppy_Passive.png",
+          "hotkey": "PASSIVE",
+          "name": "IRON AMBASSADOR",
+          "description": "Poppy throws her buckler that bounces off the target. Poppy can pick it up to gain a temporary shield.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0078/ability_0078_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/PoppyQ.png",
+          "hotkey": "q",
+          "name": "HAMMER SHOCK",
+          "description": "Poppy swings her hammer, dealing damage and creating a zone that will slow enemies and explode after a delay.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0078/ability_0078_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/PoppyW.png",
+          "hotkey": "w",
+          "name": "STEADFAST PRESENCE",
+          "description": "Poppy passively gains Armor and Magic Resist. This bonus increases when she is low on Health. Poppy can activate Steadfast Presence to gain Move Speed and stop enemy dashes around her. If a dash is stopped, the enemy is slowed and grounded.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0078/ability_0078_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/PoppyE.png",
+          "hotkey": "e",
+          "name": "HEROIC CHARGE",
+          "description": "Poppy dashes to the target and pushes it back. If the target is pushed into a wall, it is stunned.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0078/ability_0078_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/PoppyR.png",
+          "hotkey": "r",
+          "name": "KEEPER'S VERDICT",
+          "description": "Poppy channels a hammer strike that knocks enemies very far away.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0078/ability_0078_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "Poppy",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Poppy_0.jpg"
+          },
+          {
+            "name": "Noxus Poppy",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Poppy_1.jpg"
+          },
+          {
+            "name": "LolliPoppy",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Poppy_2.jpg"
+          },
+          {
+            "name": "Blacksmith Poppy",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Poppy_3.jpg"
+          },
+          {
+            "name": "Ragdoll Poppy",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Poppy_4.jpg"
+          },
+          {
+            "name": "Battle regalia Poppy",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Poppy_5.jpg"
+          },
+          {
+            "name": "Scarlet hammer Poppy",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Poppy_6.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Azir",
+      "subtitle": "THE EMPEROR OF THE SANDS",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt0e3f847946232167/5db05fa889fb926b491ed7ff/RiotX_ChampionList_azir.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Azir_0.jpg",
+      "role": "mage",
+      "difficalty": "high",
+      "description": "Azir was a mortal emperor of Shurima in a far distant age, a proud man who stood at the cusp of immortality. His hubris saw him betrayed and murdered at the moment of his greatest triumph, but now, millennia later, he has been reborn as an Ascended being of immense power. With his buried city risen from the sand, Azir seeks to restore Shurima to its former glory.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/passive/Azir_Passive.png",
+          "hotkey": "PASSIVE",
+          "name": "SHURIMA'S LEGACY",
+          "description": "Azir can summon the Disc of the Sun from the ruins of allied or enemy turrets.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0268/ability_0268_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/AzirQWrapper.png",
+          "hotkey": "q",
+          "name": "CONQUERING SANDS",
+          "description": "Azir sends all Sand Soldiers towards a location. Sand Soldiers deal magic damage to enemies they pass through and apply a slow for 1 second.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0268/ability_0268_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/AzirW.png",
+          "hotkey": "w",
+          "name": "ARISE!",
+          "description": "AziThe",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0268/ability_0268_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/AzirEWrapper.png",
+          "hotkey": "e",
+          "name": "SHIFTING SANDS",
+          "description": "Azir shields himself briefly and dashes to one of his Sand Soldiers, damaging enemies. If he hits an enemy champion, he instantly readies a new Sand Soldier for deployment and halts his dash.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0268/ability_0268_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/AzirR.png",
+          "hotkey": "r",
+          "name": "EMPEROR'S DIVIDE",
+          "description": "Azir summons a wall of soldiers which charge forward, knocking back and damaging enemies.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0268/ability_0268_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "Azir",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Azir_0.jpg"
+          },
+          {
+            "name": "Galactic Azir",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Azir_1.jpg"
+          },
+          {
+            "name": "Gravelord Azir",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Azir_2.jpg"
+          },
+          {
+            "name": "Skt t1 Azir",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Azir_3.jpg"
+          },
+          {
+            "name": "Warring Kingdoms Azir",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Azir_4.jpg"
+          },
+          {
+            "name": "Galactic Azir",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Azir_5.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "aaaaaa",
+      "subtitle": "aaaaaa",
+      "previewImage": "aaaaaa",
+      "largeImage": "aaaaaa",
+      "role": "aaaaaa",
+      "difficalty": "aaaaaa",
+      "description": "aaaaaa",
+      "abilities": [
+        {
+          "image": "aaaaaa",
+          "hotkey": "PASSIVE",
+          "name": "aaaaaa",
+          "description": "aaaaaa",
+          "video": "aaaaaa"
+        },
+        {
+          "image": "aaaaaa",
+          "hotkey": "q",
+          "name": "aaaaaa",
+          "description": "aaaaaa",
+          "video": "aaaaaa"
+        },
+        {
+          "image": "aaaaaa",
+          "hotkey": "w",
+          "name": "aaaaaa",
+          "description": "aaaaaa",
+          "video": "aaaaaa"
+        },
+        {
+          "image": "aaaaaa",
+          "hotkey": "e",
+          "name": "aaaaaa",
+          "description": "aaaaaa",
+          "video": "aaaaaa"
+        },
+        {
+          "image": "aaaaaa",
+          "hotkey": "r",
+          "name": "aaaaaa",
+          "description": "aaaaaa",
+          "video": "aaaaaa"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "aaaaaa",
+            "image": "aaaaaa"
+          },
+          {
+            "name": "aaaaaa",
+            "image": "aaaaaa"
+          }
+        ]
+      }
     }
   ]
 }

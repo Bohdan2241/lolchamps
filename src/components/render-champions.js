@@ -1,45 +1,48 @@
 import data from '../data/champions.json' assert { type: "json" };
 
-// const delayMultiplayer = (extraDelay) => {
-//   const startDelay = 0;
-//   return startDelay + extraDelay;
-// };
-// let initial = 0; // global var!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! remove this
+const delayMultiplayer = (extraDelay) => {
+  const startDelay = 0;
+  return startDelay + extraDelay;
+};
+
+const delayStep = 50;
+let initial = -(delayStep); // global var!!!
 
 const creatingItems = (champions, container) => {
   // eslint-disable-next-line no-unused-vars
   const creatingItem = champions.forEach((champion) => {
     const { name } = champion;
-    const imageLink = champion.image;
+    const imageLink = champion.previewImage;
+    const championLink = `/champions/${name}`;
+    const delay = delayMultiplayer(initial += delayStep);
 
-    const a = document.createElement('a');
-    a.classList.add('champions-list-item', 'champions-list-item-hidden');
-    // const delayStep = 10;
-    // const newDelay = delayMultiplayer(initial += delayStep);
-    // a.setAttribute('delay', newDelay);
-    container.append(a);
+    const itemLink = document.createElement('a');
+    itemLink.classList.add('champions-list-item', 'champions-list-item-hidden');
+    itemLink.setAttribute('href', championLink);
+    itemLink.setAttribute('delay', delay);
+    container.append(itemLink);
     setTimeout(() => {
-      a.classList.add('champions-list-item-visibile');
-      a.classList.remove('champions-list-item-hidden');
-    }, 150);
+      itemLink.classList.add('champions-list-item-visibile');
+      itemLink.classList.remove('champions-list-item-hidden');
+    }, delay);
 
-    const span1 = document.createElement('span');
-    span1.classList.add('item-image-container');
-    a.append(span1);
+    const itemImageContainer = document.createElement('span');
+    itemImageContainer.classList.add('item-image-container');
+    itemLink.append(itemImageContainer);
 
-    const image = document.createElement('img');
-    image.classList.add('item-image');
-    image.setAttribute('src', imageLink);
-    span1.append(image);
+    const itemImage = document.createElement('img');
+    itemImage.classList.add('item-image');
+    itemImage.setAttribute('src', imageLink);
+    itemImageContainer.append(itemImage);
 
-    const span2 = document.createElement('span');
-    span2.classList.add('item-name');
-    a.append(span2);
+    const itemName = document.createElement('span');
+    itemName.classList.add('item-name');
+    itemLink.append(itemName);
 
-    const span3 = document.createElement('span');
-    span3.classList.add('item-text');
-    span3.textContent = name;
-    span2.append(span3);
+    const itemText = document.createElement('span');
+    itemText.classList.add('item-text');
+    itemText.textContent = name;
+    itemName.append(itemText);
   });
 };
 
@@ -74,20 +77,27 @@ const roleSort = (champions, type) => champions.filter((champion) => {
 });
 
 export const render = (dataChampions, type = 'all') => {
-  const container = document.querySelector('.champions-list');
-  container.innerHTML = '';
   const { champions } = dataChampions;
+  const container = document.querySelector('.champions-list');
+
+  container.innerHTML = '';
+
   let sortedArr = defaultSort(champions);
   if (type !== 'all') {
     sortedArr = roleSort(champions, type);
   }
 
+  // No champions match the filter criteria.
   const message = document.querySelector('.champions-list-message');
   message.style.display = 'none';
   if (!sortedArr.length) {
     message.style.display = 'block';
   }
+
   creatingItems(sortedArr, container);
+
+  // delay global var
+  initial = 0;
 };
 
 export default () => {
