@@ -1,4 +1,5 @@
 import data from './getData.js';
+// import { getChampionName } from './render-champion-page.js';
 
 const delayMultiplayer = (extraDelay) => {
   const startDelay = 0;
@@ -15,6 +16,7 @@ const creatingItems = (champions, container) => {
     const { name } = champion;
     const imageLink = champion.previewImage;
     const championLink = `/${name}`;
+    // const championLink = '/champion';
     const delay = delayMultiplayer(initial += delayStep);
 
     const itemLink = document.createElement('a');
@@ -81,24 +83,26 @@ export const render = (dataChampions, type = 'all') => {
   const { champions } = dataChampions;
   const container = document.querySelector('.champions-list');
 
-  container.innerHTML = '';
+  if (container) {
+    container.innerHTML = '';
 
-  let sortedArr = defaultSort(champions);
-  if (type !== 'all') {
-    sortedArr = roleSort(champions, type);
+    let sortedArr = defaultSort(champions);
+    if (type !== 'all') {
+      sortedArr = roleSort(champions, type);
+    }
+
+    // No champions match the filter criteria.
+    const message = document.querySelector('.champions-list-message');
+    message.style.display = 'none';
+    if (!sortedArr.length) {
+      message.style.display = 'block';
+    }
+
+    creatingItems(sortedArr, container);
+
+    // delay global var
+    initial = 0;
   }
-
-  // No champions match the filter criteria.
-  const message = document.querySelector('.champions-list-message');
-  message.style.display = 'none';
-  if (!sortedArr.length) {
-    message.style.display = 'block';
-  }
-
-  creatingItems(sortedArr, container);
-
-  // delay global var
-  initial = 0;
 };
 
 export default () => {

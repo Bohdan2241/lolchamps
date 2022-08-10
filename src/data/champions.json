@@ -2713,64 +2713,6 @@
           }
         ]
       }
-    },
-    {
-      "name": "aaaaaa",
-      "subtitle": "aaaaaa",
-      "previewImage": "aaaaaa",
-      "largeImage": "aaaaaa",
-      "role": "aaaaaa",
-      "difficalty": "aaaaaa",
-      "description": "aaaaaa",
-      "abilities": [
-        {
-          "image": "aaaaaa",
-          "hotkey": "PASSIVE",
-          "name": "aaaaaa",
-          "description": "aaaaaa",
-          "video": "aaaaaa"
-        },
-        {
-          "image": "aaaaaa",
-          "hotkey": "q",
-          "name": "aaaaaa",
-          "description": "aaaaaa",
-          "video": "aaaaaa"
-        },
-        {
-          "image": "aaaaaa",
-          "hotkey": "w",
-          "name": "aaaaaa",
-          "description": "aaaaaa",
-          "video": "aaaaaa"
-        },
-        {
-          "image": "aaaaaa",
-          "hotkey": "e",
-          "name": "aaaaaa",
-          "description": "aaaaaa",
-          "video": "aaaaaa"
-        },
-        {
-          "image": "aaaaaa",
-          "hotkey": "r",
-          "name": "aaaaaa",
-          "description": "aaaaaa",
-          "video": "aaaaaa"
-        }
-      ],
-      "skins": {
-        "available": [
-          {
-            "name": "aaaaaa",
-            "image": "aaaaaa"
-          },
-          {
-            "name": "aaaaaa",
-            "image": "aaaaaa"
-          }
-        ]
-      }
     }
   ]
 }
