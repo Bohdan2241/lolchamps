@@ -1,5 +1,5 @@
 import { render } from './render-champions.js';
-import data from '../data/champions.json' assert { type: "json" };
+import data from './getData.js';
 
 const tabsContol = () => {
   const buttons = document.querySelectorAll('.role-btn');
@@ -8,8 +8,8 @@ const tabsContol = () => {
     button.addEventListener('click', () => {
       buttons.forEach((item) => item.classList.remove('role-active'));
       button.classList.add('role-active');
-      const button1 = document.querySelector('.role-active');
-      const target = button1.innerHTML.toLowerCase();
+      const activeButton = document.querySelector('.role-active');
+      const target = activeButton.innerHTML.toLowerCase();
       render(data, target);
     });
   });

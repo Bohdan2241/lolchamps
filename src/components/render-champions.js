@@ -1,4 +1,4 @@
-import data from '../data/champions.json' assert { type: "json" };
+import data from './getData.js';
 
 const delayMultiplayer = (extraDelay) => {
   const startDelay = 0;
@@ -11,9 +11,10 @@ let initial = -(delayStep); // global var!!!
 const creatingItems = (champions, container) => {
   // eslint-disable-next-line no-unused-vars
   const creatingItem = champions.forEach((champion) => {
+    // console.log(champion);
     const { name } = champion;
     const imageLink = champion.previewImage;
-    const championLink = `/champions/${name}`;
+    const championLink = `/${name}`;
     const delay = delayMultiplayer(initial += delayStep);
 
     const itemLink = document.createElement('a');
