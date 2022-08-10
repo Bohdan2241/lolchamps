@@ -1,7 +1,7 @@
 install:
 	npm install
 
-lint:
+lintScripts:
 	npx eslint .
 
 lintStyles:
