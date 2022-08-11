@@ -15,8 +15,8 @@ const creatingItems = (champions, container) => {
     // console.log(champion);
     const { name } = champion;
     const imageLink = champion.previewImage;
-    const championLink = `/${name}`;
-    // const championLink = '/champion';
+    // const championLink = `/${name}`;
+    const championLink = '/champion.html';
     const delay = delayMultiplayer(initial += delayStep);
 
     const itemLink = document.createElement('a');

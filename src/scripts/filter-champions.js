@@ -1,5 +1,5 @@
 import { render } from './render-champions.js';
-import { getChampionName } from './render-champion-page.js';
+import { renderChampionPage } from './render-champion-page.js';
 import data from './getData.js';
 
 const tabsContol = () => {
@@ -13,7 +13,7 @@ const tabsContol = () => {
       const target = activeButton.innerHTML.toLowerCase();
       render(data, target);
       // update links list for creating champion's page
-      getChampionName();
+      renderChampionPage(data);
     });
   });
 };
