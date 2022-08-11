@@ -2,6 +2,6 @@
 Makefile
 package-lock.json
 package.json
-/scss/
+/src/
 README.md
 gulpfile.js

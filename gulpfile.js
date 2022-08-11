@@ -49,8 +49,10 @@ export const html = () => gulp.src('./src/*.html')
   .pipe(gulp.dest('./dist/'));
 
 export const json = () => gulp.src('./src/data/*.json')
-  .pipe(gulp.dest('./dist/'));
+  .pipe(gulp.dest('./dist/data'));
 
+export const cname = () => gulp.src('./src/CNAME')
+  .pipe(gulp.dest('./dist'));
 // export const server = () => {
 //   sync.init({
 //     server: {
@@ -86,6 +88,8 @@ export const build = (cb) => gulp.series(
     gulp.series(lintScripts, scripts),
     gulp.series(lintStyles, styles),
     html,
+    json,
+    cname,
   ),
 )(cb);
 

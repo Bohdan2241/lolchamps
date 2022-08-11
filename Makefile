@@ -7,8 +7,5 @@ lintScripts:
 lintStyles:
 	npx stylelint "**/*.scss"
 
-stylesFix:
-	npx stylelint "**/*.scss" --fix
-
 publish:
-	surge ./src
+	surge ./dist
