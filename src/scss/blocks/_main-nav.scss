@@ -288,7 +288,8 @@
   transition: background-color 300ms ease 0s;
 }
 
-.difficalty-dropdown-content .difficalty-single-value-container:hover {
+.difficalty-dropdown-content .difficalty-single-value-container:hover,
+.difficalty-dropdown-content .difficalty-single-value-container:focus {
   background-color: rgba(221, 221, 221, 50%);
 }
 
@@ -337,6 +338,11 @@
   height: 11px;
   color: rgb(194, 144, 45);
 }
+
+.difficalty-indicator-arrow-open svg {
+  transform: rotate(180deg);
+  color: rgb(178, 178, 178);
+}
 /* stylelint-enable no-descending-specificity */
 
 .difficalty-indicator-arrow svg .st0 {
@@ -347,4 +353,8 @@
 
 .difficalty-indicator-arrow svg .st1 {
   fill: currentColor;
+}
+
+.display-block {
+  display: block;
 }

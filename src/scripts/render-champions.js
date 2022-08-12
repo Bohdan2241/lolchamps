@@ -79,7 +79,26 @@ const roleSort = (champions, type) => champions.filter((champion) => {
   return role === champion.role ? champion : false;
 });
 
-export const render = (dataChampions, type = 'all') => {
+const difficaltySort = (champions, numDifficalty) => champions.filter((champion) => {
+  let difficalty = '';
+  switch (numDifficalty) {
+    case 2:
+      difficalty = 'low';
+      break;
+    case 1:
+      difficalty = 'moderate';
+      break;
+    case 0:
+      difficalty = 'high';
+      break;
+    default:
+      throw new Error('Unexpected difficalty');
+  }
+
+  return difficalty === champion.difficalty ? champion : false;
+});
+
+export const render = (dataChampions, type = 'all', difficalty = 'all') => {
   const { champions } = dataChampions;
   const container = document.querySelector('.champions-list');
 
@@ -90,6 +109,9 @@ export const render = (dataChampions, type = 'all') => {
     if (type !== 'all') {
       sortedArr = roleSort(champions, type);
     }
+    if (difficalty !== 'all') {
+      sortedArr = difficaltySort(champions, difficalty);
+    } // fix work of 2 filters
 
     // No champions match the filter criteria.
     const message = document.querySelector('.champions-list-message');
