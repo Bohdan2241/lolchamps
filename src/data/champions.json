@@ -2713,6 +2713,396 @@
           }
         ]
       }
+    },
+    {
+      "name": "Varus",
+      "subtitle": "THE ARROW OF RETRIBUTION",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt596158d85a8360d1/5db060132dc72966da74671a/RiotX_ChampionList_varus.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Varus_0.jpg",
+      "role": "marksman",
+      "difficalty": "low",
+      "description": "One of the ancient darkin, Varus was a deadly killer who loved to torment his foes, driving them almost to insanity before delivering the killing arrow. He was imprisoned at the end of the Great Darkin War, but escaped centuries later in the remade flesh of two Ionian hunters—they had unwittingly released him, cursed to bear the bow containing his bound essence. Varus now seeks out those who trapped him, in order to enact his brutal vengeance, but the mortal souls within still resist him every step of the way.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/passive/VarusPassive.png",
+          "hotkey": "PASSIVE",
+          "name": "LIVING VENGEANCE",
+          "description": "On kill or assist, Varus temporarily gains Attack Speed. This bonus is larger if the enemy is a champion.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0110/ability_0110_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/VarusQ.png",
+          "hotkey": "q",
+          "name": "PIERCING ARROW",
+          "description": "Varus readies and then fires a powerful shot that gains extra range and damage the longer he spends preparing to fire.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0110/ability_0110_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/VarusW.png",
+          "hotkey": "w",
+          "name": "BLIGHTED QUIVER",
+          "description": "Passive: Varus' basic attacks deal bonus magic damage and apply Blight. Varus' other abilities detonate Blight, dealing magic damage based on the target's maximum Health. Active: Varus empowers his next Piercing Arrow.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0110/ability_0110_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/VarusE.png",
+          "hotkey": "e",
+          "name": "HAIL OF ARROWS",
+          "description": "Varus fires a hail of arrows that deal physical damage and desecrate the ground. Desecrated ground slows enemies' Move Speed and reduces their self healing and regeneration.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0110/ability_0110_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/VarusR.png",
+          "hotkey": "r",
+          "name": "CHAIN OF CORRUPTION",
+          "description": "Varus flings out a damaging tendril of corruption that immobilizes the first enemy champion hit and then spreads towards nearby uninfected champions, immobilizing them too on contact.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0110/ability_0110_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "varus",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Varus_0.jpg"
+          },
+          {
+            "name": "blight crystal varus",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Varus_1.jpg"
+          },
+          {
+            "name": "arclight varus",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Varus_2.jpg"
+          },
+          {
+            "name": "arctic ops varus",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Varus_3.jpg"
+          },
+          {
+            "name": "heartseeker varus",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Varus_4.jpg"
+          },
+          {
+            "name": "varus swiftbolt",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Varus_5.jpg"
+          },
+          {
+            "name": "dark star varus",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Varus_6.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Malphite",
+      "subtitle": "SHARD OF THE MONOLITH",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt4d3b4a7e4c44ced7/5db05fdeadc8656c7d24e7e2/RiotX_ChampionList_malaphite.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Malphite_0.jpg",
+      "role": "tank",
+      "difficalty": "low",
+      "description": "A massive creature of living stone, Malphite struggles to impose blessed order on a chaotic world. Birthed as a servitor-shard to an otherworldly obelisk known as the Monolith, he used his tremendous elemental strength to maintain and protect his progenitor, but ultimately failed. The only survivor of the destruction that followed, Malphite now endures Runeterra's soft folk and their fluid temperaments, while struggling to find a new role worthy of the last of his kind.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/passive/Malphite_GraniteShield.png",
+          "hotkey": "PASSIVE",
+          "name": "GRANITE SHIELD",
+          "description": "Malphite is shielded by a layer of rock which absorbs damage up to 10% of his maximum Health. If Malphite has not been hit for a few seconds, this effect recharges.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0054/ability_0054_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/SeismicShard.png",
+          "hotkey": "q",
+          "name": "SEISMIC SHARD",
+          "description": "Malphite sends a shard of the earth through the ground at his foe, dealing damage upon impact and stealing Move Speed for 3 seconds.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0054/ability_0054_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/Obduracy.png",
+          "hotkey": "w",
+          "name": "THUNDERCLAP",
+          "description": "Malphite attacks with such force that it creates a sonic boom. For the next few seconds, his attacks create aftershocks in front of him.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0054/ability_0054_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/Landslide.png",
+          "hotkey": "e",
+          "name": "GROUND SLAM",
+          "description": "Malphite slams the ground, sending out a shockwave that deals magic damage based on his Armor and reduces the Attack Speed of enemies for a short duration.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0054/ability_0054_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/UFSlash.png",
+          "hotkey": "r",
+          "name": "UNSTOPPABLE FORCE",
+          "description": "Malphite launches himself to a location at high speed, damaging enemies and knocking them into the air.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0054/ability_0054_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "malphite",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Malphite_0.jpg"
+          },
+          {
+            "name": "shamrock malphite",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Malphite_1.jpg"
+          },
+          {
+            "name": "coral reef malphite",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Malphite_2.jpg"
+          },
+          {
+            "name": "marble malphite",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Malphite_3.jpg"
+          },
+          {
+            "name": "obsidian malphite",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Malphite_4.jpg"
+          },
+          {
+            "name": "glacial malphite",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Malphite_5.jpg"
+          },
+          {
+            "name": "mecha malphite",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Malphite_6.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Olaf",
+      "subtitle": "THE BERSERKER",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blte922bda45062964b/5db05ff0a6470d6ab91ce5a6/RiotX_ChampionList_olaf.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Olaf_0.jpg",
+      "role": "fighter",
+      "difficalty": "low",
+      "description": "An unstoppable force of destruction, the axe-wielding Olaf wants nothing but to die in glorious combat. Hailing from the brutal Freljordian peninsula of Lokfar, he once received a prophecy foretelling his peaceful passing—a coward's fate, and a great insult among his people. Seeking death, and fueled by rage, he rampaged across the land, slaughtering scores of great warriors and legendary beasts in search of any opponent who could stop him. Now a brutal enforcer for the Winter's Claw, he seeks his end in the great wars to come.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/passive/Olaf_Passive.png",
+          "hotkey": "PASSIVE",
+          "name": "BERSERKER RAGE",
+          "description": "Olaf gains Attack Speed and Life Steal based on his missing Health.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0002/ability_0002_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/OlafAxeThrowCast.png",
+          "hotkey": "q",
+          "name": "UNDERTOW",
+          "description": "Olaf throws an axe into the ground at a target location, dealing damage to enemies it passes through and reducing their Armor and Move Speed. If Olaf picks up the axe, the ability's cooldown is reset.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0002/ability_0002_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/OlafFrenziedStrikes.png",
+          "hotkey": "w",
+          "name": "TOUGH IT OUT",
+          "description": "Olaf's Attack Speed is increased, he reduces incoming damage, and he gains a Shield.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0002/ability_0002_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/OlafRecklessStrike.png",
+          "hotkey": "e",
+          "name": "RECKLESS SWING",
+          "description": "Olaf attacks with such force that it deals true damage to his target and himself, refunding the Health cost if he destroys the target.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0002/ability_0002_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/OlafRagnarok.png",
+          "hotkey": "r",
+          "name": "RAGNAROK",
+          "description": "Olaf passively gains increased armor and magic resist. He can activate this ability to become immune to disables for as long as he keeps attacking.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0002/ability_0002_R1.jpg"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "olaf",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Olaf_0.jpg"
+          },
+          {
+            "name": "forsaken olaf",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Olaf_1.jpg"
+          },
+          {
+            "name": "glacial olaf",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Olaf_2.jpg"
+          },
+          {
+            "name": "brolaf",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Olaf_3.jpg"
+          },
+          {
+            "name": "pentakill olaf",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Olaf_4.jpg"
+          },
+          {
+            "name": "marauder olaf",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Olaf_5.jpg"
+          },
+          {
+            "name": "butcher olaf",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Olaf_6.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Wukong",
+      "subtitle": "THE MONKEY KING",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltaf44673e1a16af30/5db05fe87d28b76cfe439807/RiotX_ChampionList_monkeyking.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/MonkeyKing_0.jpg",
+      "role": "fighter",
+      "difficalty": "low",
+      "description": "Wukong is a vastayan trickster who uses his strength, agility, and intelligence to confuse his opponents and gain the upper hand. After finding a lifelong friend in the warrior known as Master Yi, Wukong became the last student of the ancient martial art known as Wuju. Armed with an enchanted staff, Wukong seeks to prevent Ionia from falling to ruin.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/passive/MonkeyKingStoneSkin.png",
+          "hotkey": "PASSIVE",
+          "name": "STONE SKIN",
+          "description": "Wukong gains stacking armor and max health regeneration while fighting champions and monsters.",
+          "video": ""
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/MonkeyKingDoubleAttack.png",
+          "hotkey": "q",
+          "name": "CRUSHING BLOW",
+          "description": "Wukong's next attack gains attack range, deals bonus damage, and reduces the target's armor for a few seconds.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0062/ability_0062_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/MonkeyKingDecoy.png",
+          "hotkey": "w",
+          "name": "WARRIOR TRICKSTER",
+          "description": "Wukong becomes Invisible and dashes in a direction, leaving behind a clone that will attack nearby enemies.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0062/ability_0062_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/MonkeyKingNimbus.png",
+          "hotkey": "e",
+          "name": "NIMBUS STRIKE",
+          "description": "Wukong dashes to a targeted enemy and sends out images to attack enemies near his target, dealing damage to each enemy struck.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0062/ability_0062_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/MonkeyKingSpinToWin.png",
+          "hotkey": "r",
+          "name": "CYCLONE",
+          "description": "Wukong's extends his staff and spins it around repeatedly, gaining Move Speed. Enemies struck take damage and are knocked up.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0062/ability_0062_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "wukong",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/MonkeyKing_0.jpg"
+          },
+          {
+            "name": "volcanic wukong",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/MonkeyKing_1.jpg"
+          },
+          {
+            "name": "general wukong",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/MonkeyKing_2.jpg"
+          },
+          {
+            "name": "jade dragon wukong",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/MonkeyKing_3.jpg"
+          },
+          {
+            "name": "underworld wukong",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/MonkeyKing_4.jpg"
+          },
+          {
+            "name": "radiant wukong",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/MonkeyKing_5.jpg"
+          },
+          {
+            "name": "lancer stratus wukong",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/MonkeyKing_6.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Lissandra",
+      "subtitle": "THE ICE WITCH",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt08f869e897566c5b/5db05fdf7d28b76cfe439801/RiotX_ChampionList_lissandra.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lissandra_0.jpg",
+      "role": "mage",
+      "difficalty": "moderate",
+      "description": "Lissandra's magic twists the pure power of ice into something dark and terrible. With the force of her black ice, she does more than freeze—she impales and crushes those who oppose her. To the terrified denizens of the north, she is known only as ''The Ice Witch.'' The truth is much more sinister: Lissandra is a corruptor of nature who plots to unleash an ice age on the world.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/passive/Lissandra_Passive.png",
+          "hotkey": "PASSIVE",
+          "name": "ICEBORN SUBJUGATION",
+          "description": "When an enemy champion dies near Lissandra they become a Frozen Thrall. Frozen Thralls slow nearby enemies and then, after a delay, shatter from the intense cold, dealing magic damage to nearby targets.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0127/ability_0127_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/LissandraQ.png",
+          "hotkey": "q",
+          "name": "ICE SHARD",
+          "description": "Throws a spear of ice that shatters when it hits an enemy, dealing magic damage and slowing Move Speed. Shards pass through the target, dealing the same damage to other enemies hit.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0127/ability_0127_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/LissandraW.png",
+          "hotkey": "w",
+          "name": "RING OF FROST",
+          "description": "Freezes nearby enemies in ice, dealing magic damage and rooting them.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0127/ability_0127_W1.jpg"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/LissandraE.png",
+          "hotkey": "e",
+          "name": "GLACIAL PATH",
+          "description": "Lissandra creates an ice claw that deals magic damage. Reactivating this ability transports Lissandra to the claw's current location.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0127/ability_0127_E1.jpg"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/LissandraR.png",
+          "hotkey": "r",
+          "name": "FROZEN TOMB",
+          "description": "If cast on an enemy champion, the target is frozen solid, stunning it. If cast on Lissandra, she encases herself in dark ice, healing herself while becoming untargetable and invulnerable. Dark ice then emanates from the target dealing magic damage to enemies and slowing Move Speed.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0127/ability_0127_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "lissandra",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lissandra_0.jpg"
+          },
+          {
+            "name": "bloodstone lissandra",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lissandra_1.jpg"
+          },
+          {
+            "name": "blade queen lissandra",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lissandra_2.jpg"
+          },
+          {
+            "name": "program lissandra",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lissandra_3.jpg"
+          },
+          {
+            "name": "coven lissandra",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lissandra_4.jpg"
+          },
+          {
+            "name": "dark cosmic lissandra",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lissandra_12.jpg"
+          },
+          {
+            "name": "porcelain lissandra",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lissandra_23.jpg"
+          }
+        ]
+      }
     }
   ]
 }
