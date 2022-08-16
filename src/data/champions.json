@@ -3103,6 +3103,516 @@
           }
         ]
       }
+    },
+    {
+      "name": "Gwen",
+      "subtitle": "THE HALLOWED SEAMSTRESS",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt7a3d6c549708c048/607496eb1f74bb759da6a062/RiotX_ChampionList_gwen.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Gwen_0.jpg",
+      "role": "fighter",
+      "difficalty": "moderate",
+      "description": "A former doll transformed and brought to life by magic, Gwen wields the very tools that once created her. She carries the weight of her maker's love with every step, taking nothing for granted. At her command is the Hallowed Mist, an ancient and protective magic that has blessed Gwen's scissors, needles, and sewing thread. So much is new to her, but Gwen remains joyfully determined to fight for the good that survives in a broken world.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/passive/Gwen_Passive.png",
+          "hotkey": "PASSIVE",
+          "name": "A THOUSAND CUTS",
+          "description": "Gwen's attacks deal bonus magic damage based on the targets health. She heals for a portion of the damage dealt to champions by this effect.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0887/ability_0887_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/GwenQ.png",
+          "hotkey": "q",
+          "name": "SNIP SNIP!",
+          "description": "Gwen snips her scissors in a cone up to 6 times dealing magic damage. Gwen deals true damage to units in the center and applies her passive to them on each snip.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0887/ability_0887_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/GwenW.png",
+          "hotkey": "w",
+          "name": "HALLOWED MIST",
+          "description": "Gwen summons mist that protects her from enemies outside of it. She can only be targeted by enemies who enter the mist.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0887/ability_0887_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/GwenE.png",
+          "hotkey": "e",
+          "name": "SKIP 'N SLASH",
+          "description": "Gwen dashes a short distance then gains Attack Speed, attack range, and magic damage On-Hit for a few seconds. If she hits an enemy during that time, this Ability's cooldown is partially refunded.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0887/ability_0887_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/GwenR.png",
+          "hotkey": "r",
+          "name": "NEEDLEWORK",
+          "description": "Gwen hurls a needle that slows enemies hit, deals magic damage, and applies A Thousand Cuts to champions hit. This ability can be cast up to two more times, with each cast throwing additional needles and dealing more damage. Gwen must hit an enemy between each cast to unlock the next one.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0887/ability_0887_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "gwen",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Gwen_0.jpg"
+          },
+          {
+            "name": "space groove gwen",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Gwen_1.jpg"
+          },
+          {
+            "name": "cafe cuties gwen",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Gwen_11.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Viego",
+      "subtitle": "THE RUINED KING",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt17591d0be6f2888f/600f2aee5ad9610f6cb7880c/RiotX_ChampionList_viego.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Viego_0.jpg",
+      "role": "assasin",
+      "difficalty": "moderate",
+      "description": "Once ruler of a long-lost kingdom, Viego perished over a thousand years ago when his attempt to bring his wife back from the dead triggered the magical catastrophe known as the Ruination. Transformed into a powerful, unliving wraith tortured by an obsessive longing for his centuries-dead queen, Viego now stands as the Ruined King, controlling the deadly Harrowings as he scours Runeterra for anything that might one day restore her, and destroying all in his path as the Black Mist pours endlessly from his cruel, broken heart.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/passive/Viego_Passive.png",
+          "hotkey": "PASSIVE",
+          "name": "SOVEREIGN'S DOMINATION",
+          "description": "Enemies who fall before Viego become wraiths. By attacking a wraith, Viego temporarily seizes control of the dead enemy's body, healing for a percentage of his target's max health and gaining access to their basic abilities and items. He replaces their Ultimate with a free cast of his own.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0234/ability_0234_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/ViegoQ.png",
+          "hotkey": "q",
+          "name": "BLADE OF THE RUINED KING",
+          "description": "Viego's spectral blade passively deals bonus percent current Health damage On-Hit and strikes twice vs. enemies he recently hit with an Ability, stealing Health. Viego can activate this Ability to thrust his zweihander forward, impaling enemies in front of him.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0234/ability_0234_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/ViegoW.png",
+          "hotkey": "w",
+          "name": "SPECTRAL MAW",
+          "description": "Viego charges up before dashing forward, releasing a ball of concentrated Black Mist that stuns the first enemy hit.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0234/ability_0234_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/ViegoE.png",
+          "hotkey": "e",
+          "name": "HARROWED PATH",
+          "description": "Viego commands the Black Mist to haunt and surround a piece of terrain. Viego can hide in the Mist as a wraith, gaining camouflage, Move Speed, and Attack Speed.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0234/ability_0234_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/ViegoR.png",
+          "hotkey": "r",
+          "name": "HEARTBREAKER",
+          "description": "Viego teleports to a nearby location and executes an enemy champion on arrival, piercing their heart and causing a destructive shockwave around them that knocks away their allies.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0234/ability_0234_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "viego",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Viego_0.jpg"
+          },
+          {
+            "name": "lunar beast viego",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Viego_0.jpg"
+          },
+          {
+            "name": "dissonance of pentakill viego",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Viego_10.jpg"
+          },
+          {
+            "name": "edg viego",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Viego_19.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Yone",
+      "subtitle": "THE UNFORGOTTEN",
+      "previewImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yone_0.jpg",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yone_0.jpg",
+      "role": "assasin",
+      "difficalty": "high",
+      "description": "In life, he was Yone—half-brother of Yasuo, and renowned student of his village's sword school. But upon his death at the hands of his brother, he found himself hunted by a malevolent entity of the spirit realm, and was forced to slay it with its own sword. Now, cursed to wear its demonic mask upon his face, Yone tirelessly hunts all such creatures in order to understand what he has become.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/passive/YonePassive.png",
+          "hotkey": "PASSIVE",
+          "name": "WAY OF THE HUNTER",
+          "description": "Yone deals magic damage with every second Attack. In addition, his critical strike chance is increased.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0777/ability_0777_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/YoneQ.png",
+          "hotkey": "q",
+          "name": "MORTAL STEEL",
+          "description": "Thrusts forward, damaging all enemies in a line. On hit, grants a stack of Gathering Storm for a few seconds. At 2 stacks, Mortal Steel dashes Yone forward with a gust of wind knocking enemies Airborne. Mortal Steel is treated as a basic attack and scales with all the same things.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0777/ability_0777_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/YoneW.png",
+          "hotkey": "w",
+          "name": "SPIRIT CLEAVE",
+          "description": "Cleaves forward, damaging all enemies in a cone. Grants a shield to Yone, the value is increased by the number of champions hit by the swipe. Spirit Cleave's cooldown and cast time scale with attack speed.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0777/ability_0777_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/YoneE.png",
+          "hotkey": "e",
+          "name": "SOUL UNBOUND",
+          "description": "Yone's spirit leaves his body behind, gaining Move Speed. When this skill ends, Yone's spirit is forced back to his body and he repeats a portion of the damage he dealt as a spirit.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0777/ability_0777_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/YoneR.png",
+          "hotkey": "r",
+          "name": "FATE SEALED",
+          "description": "Yone blinks behind the last champion in a line with a slash so powerful it pulls all enemies hit towards him.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0777/ability_0777_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "yone",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yone_0.jpg"
+          },
+          {
+            "name": "yone",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yone_1.jpg"
+          },
+          {
+            "name": "yone",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yone_10.jpg"
+          },
+          {
+            "name": "yone",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yone_19.jpg"
+          },
+          {
+            "name": "yone",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yone_26.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ziggs",
+      "subtitle": "THE HEXPLOSIVES EXPERT",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt0f8c12d54d8ecd28/5db0602289fb926b491ed835/RiotX_ChampionList_ziggs.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ziggs_0.jpg",
+      "role": "mage",
+      "difficalty": "moderate",
+      "description": "With a love of big bombs and short fuses, the yordle Ziggs is an explosive force of nature. As an inventor's assistant in Piltover, he was bored by his predictable life and befriended a mad, blue-haired bomber named Jinx. After a wild night on the town, Ziggs took her advice and moved to Zaun, where he now explores his fascinations more freely, terrorizing the chem-barons and regular citizens alike in his never ending quest to blow stuff up.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/passive/ZiggsPassiveReady.png",
+          "hotkey": "PASSIVE",
+          "name": "SHORT FUSE",
+          "description": "Periodically, Ziggs' next basic attack deals bonus magic damage. This cooldown is reduced whenever Ziggs uses an ability.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0115/ability_0115_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/ZiggsQ.png",
+          "hotkey": "q",
+          "name": "BOUNCING BOMB",
+          "description": "Ziggs throws a bouncing bomb that deals magic damage.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0115/ability_0115_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/ZiggsW.png",
+          "hotkey": "w",
+          "name": "SATCHEL CHARGE",
+          "description": "Ziggs flings an explosive charge that detonates after 4 seconds, or when this ability is activated again. The explosion deals magic damage to enemies, knocking them away. Ziggs is also knocked away, but takes no damage. Ziggs can use the Satchel to hexplode vulnerable enemy turrets.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0115/ability_0115_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/ZiggsE.png",
+          "hotkey": "e",
+          "name": "HEXPLOSIVE MINEFIELD",
+          "description": "Ziggs scatters proximity mines that detonate on enemy contact, dealing magic damage and slowing. Successive mine detonations on the same target deal reduced damage.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0115/ability_0115_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/ZiggsR.png",
+          "hotkey": "r",
+          "name": "MEGA INFERNO BOMB",
+          "description": "Ziggs deploys his ultimate creation, the Mega Inferno Bomb, hurling it an enormous distance. Enemies in the primary blast zone take more damage than those farther away.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0115/ability_0115_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "ziggs",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ziggs_0.jpg"
+          },
+          {
+            "name": "mad scientist ziggs",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ziggs_1.jpg"
+          },
+          {
+            "name": "major ziggs",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ziggs_2.jpg"
+          },
+          {
+            "name": "pool party ziggs",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ziggs_3.jpg"
+          },
+          {
+            "name": "snow day ziggs",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ziggs_4.jpg"
+          },
+          {
+            "name": "master arcanist ziggs",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ziggs_5.jpg"
+          },
+          {
+            "name": "battle boss ziggs",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ziggs_6.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Veigar",
+      "subtitle": "THE TINY MASTER OF EVIL",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltda2b568b0c3e5847/5db06014e9effa6ba5295fb9/RiotX_ChampionList_veigar.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Veigar_0.jpg",
+      "role": "mage",
+      "difficalty": "moderate",
+      "description": "An enthusiastic master of dark sorcery, Veigar has embraced powers that few mortals dare approach. As a free-spirited inhabitant of Bandle City, he longed to push beyond the limitations of yordle magic, and turned instead to arcane texts that had been hidden away for thousands of years. Now a stubborn creature with an endless fascination for the mysteries of the universe, Veigar is often underestimated by others—but even though he believes himself truly evil, he possesses an inner morality that leads some to question his deeper motivations.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/passive/VeigarEntropy.png",
+          "hotkey": "PASSIVE",
+          "name": "PHENOMENAL EVIL POWER",
+          "description": "Veigar is the greatest Evil to ever strike at the hearts of Runeterra - and he's only getting bigger! Striking an enemy Champion with a spell or scoring a takedown grants Veigar permanently increased Ability Power.",
+          "video": ""
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/VeigarBalefulStrike.png",
+          "hotkey": "q",
+          "name": "BALEFUL STRIKE",
+          "description": "Veigar unleashes a bolt of dark energy that deals magic damage to the first two enemies hit. Units killed by this bolt grant Veigar some ability power permanently.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0045/ability_0045_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/VeigarDarkMatter.png",
+          "hotkey": "w",
+          "name": "DARK MATTER",
+          "description": "Veigar calls a great mass of dark matter to fall from the sky to the target location, dealing magic damage when it lands. Stacks of Phenomenal Evil reduce Dark Matter's cooldown.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0045/ability_0045_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/VeigarEventHorizon.png",
+          "hotkey": "e",
+          "name": "EVENT HORIZON",
+          "description": "Veigar twists the edges of space, creating a cage that Stuns enemies that pass through.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0045/ability_0045_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/VeigarR.png",
+          "hotkey": "r",
+          "name": "PRIMORDIAL BURST",
+          "description": "Blasts target enemy champion, dealing a large amount of magic damage, increasing based on the target's missing health.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0045/ability_0045_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "veigar",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Veigar_0.jpg"
+          },
+          {
+            "name": "white mage veigar",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Veigar_1.jpg"
+          },
+          {
+            "name": "curling veigar",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Veigar_2.jpg"
+          },
+          {
+            "name": "veigar greybeard",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Veigar_3.jpg"
+          },
+          {
+            "name": "leprechaun veigar",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Veigar_4.jpg"
+          },
+          {
+            "name": "baron von veigar",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Veigar_5.jpg"
+          },
+          {
+            "name": "superb villain veigar",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Veigar_6.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Twitch",
+      "subtitle": "THE PLAGUE RAT",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt674dca7d5611ebb0/5db060159481396d6bdd01be/RiotX_ChampionList_twitch.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Twitch_0.jpg",
+      "role": "marksman",
+      "difficalty": "moderate",
+      "description": "A Zaunite plague rat by birth, but a connoisseur of filth by passion, Twitch is not afraid to get his paws dirty. Aiming a chem-powered crossbow at the gilded heart of Piltover, he has vowed to show those in the city above just how filthy they really are. Always a sneaky sneak, when he's not rooting around in the Sump, he's digging deep into other people's garbage for discarded treasures… and perhaps a moldy sandwich.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/passive/Twitch_Passive.png",
+          "hotkey": "PASSIVE",
+          "name": "DEADLY VENOM",
+          "description": "Twitch's basic attacks infect the target, dealing true damage each second.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0029/ability_0029_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/TwitchHideInShadows.png",
+          "hotkey": "q",
+          "name": "AMBUSH",
+          "description": "Twitch becomes Camouflaged for a short duration and gains Move Speed. When leaving Camouflage, Twitch gains Attack Speed for a short duration. When an enemy champion with Deadly Venom dies, Ambush's cooldown is reset.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0029/ability_0029_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/TwitchVenomCask.png",
+          "hotkey": "w",
+          "name": "VENOM CASK",
+          "description": "Twitch hurls a cask of venom that explodes in an area, slowing targets and applying deadly venom to the target.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0029/ability_0029_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/TwitchExpunge.png",
+          "hotkey": "e",
+          "name": "CONTAMINATE",
+          "description": "Twitch wreaks further havoc on poisoned enemies with a blast of his vile diseases.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0029/ability_0029_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/TwitchFullAutomatic.png",
+          "hotkey": "r",
+          "name": "SPRAY AND PRAY",
+          "description": "Twitch unleashes the full power of his crossbow, shooting bolts over a great distance that pierce all enemies caught in their path.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0029/ability_0029_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "twitch",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Twitch_0.jpg"
+          },
+          {
+            "name": "kingpin twitch",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Twitch_1.jpg"
+          },
+          {
+            "name": "whistler village twitch",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Twitch_2.jpg"
+          },
+          {
+            "name": "medieval twitch",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Twitch_3.jpg"
+          },
+          {
+            "name": "crime city twitch",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Twitch_4.jpg"
+          },
+          {
+            "name": "vandal twitch",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Twitch_5.jpg"
+          },
+          {
+            "name": "pickpocket twitch",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Twitch_6.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Vi",
+      "subtitle": "THE PILTOVER ENFORCER",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt3bd79abf330fc807/5db06014dc674266df3d5d56/RiotX_ChampionList_vi.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Vi_0.jpg",
+      "role": "fighter",
+      "difficalty": "moderate",
+      "description": "Once a criminal from the mean streets of Zaun, Vi is a hotheaded, impulsive, and fearsome woman with only a very loose respect for authority figures. Growing up all but alone, Vi developed finely honed survival instincts as well as a wickedly abrasive sense of humor. Now working with the Wardens of Piltover to keep the peace, she wields mighty hextech gauntlets that can punch through walls and suspects with equal ease.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/passive/ViPassive.png",
+          "hotkey": "PASSIVE",
+          "name": "BLAST SHIELD",
+          "description": "Vi charges a shield over time. The shield can be activated by hitting an enemy with an ability.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0254/ability_0254_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/ViQ.png",
+          "hotkey": "q",
+          "name": "VAULT BREAKER",
+          "description": "Vi charges her gauntlets and unleashes a vault shattering punch, carrying her forward. Enemies she hits are knocked back and receive a stack of Denting Blows.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0254/ability_0254_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/ViW.png",
+          "hotkey": "w",
+          "name": "DENTING BLOWS",
+          "description": "Vi's punches break her opponent's Armor, dealing bonus damage and granting her Attack Speed.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0254/ability_0254_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/ViE.png",
+          "hotkey": "e",
+          "name": "RELENTLESS FORCE",
+          "description": "Vi's next attack blasts through her target, dealing damage to enemies behind it.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0254/ability_0254_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/ViR.png",
+          "hotkey": "r",
+          "name": "CEASE AND DESIST",
+          "description": "Vi runs down an enemy, knocking aside anyone in the way. When she reaches her target she knocks it into the air, jumps after it, and slams it back into the ground.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0254/ability_0254_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "vi",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Vi_0.jpg"
+          },
+          {
+            "name": "neon strike vi",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Vi_1.jpg"
+          },
+          {
+            "name": "officer vi",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Vi_2.jpg"
+          },
+          {
+            "name": "debonair vi",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Vi_3.jpg"
+          },
+          {
+            "name": "demon vi",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Vi_4.jpg"
+          },
+          {
+            "name": "warring kingdoms vi",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Vi_5.jpg"
+          },
+          {
+            "name": "project: vi",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Vi_11.jpg"
+          }
+        ]
+      }
     }
   ]
 }
