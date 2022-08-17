@@ -1,5 +1,6 @@
 import data from './getData.js';
-// import { getChampionName } from './render-champion-page.js';
+// eslint-disable-next-line import/no-cycle
+import renderChampionPage from './render-champion-page.js';
 
 const delayMultiplayer = (extraDelay) => {
   const startDelay = 0;
@@ -15,8 +16,8 @@ const creatingItems = (champions, container) => {
     // console.log(champion);
     const { name } = champion;
     const imageLink = champion.previewImage;
-    // const championLink = `/${name}`;
-    const championLink = '/champion.html';
+    const championLink = `/${name}`;
+    // const championLink = '/champion.html';
     const delay = delayMultiplayer(initial += delayStep);
 
     const itemLink = document.createElement('a');
@@ -121,7 +122,7 @@ export const render = (dataChampions, type = 'all', difficalty = 'all') => {
     }
 
     creatingItems(sortedArr, container);
-
+    renderChampionPage();
     // delay global var
     initial = 0;
   }
