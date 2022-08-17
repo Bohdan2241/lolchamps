@@ -94,6 +94,7 @@ export const build = (cb) => gulp.series(
     html,
     json,
     cname,
+    favicon,
   ),
 )(cb);
 
