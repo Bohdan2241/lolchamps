@@ -45,6 +45,7 @@ export const styles = async () => gulp.src('./src/scss/**/*.scss')
   .pipe(gulp.dest('./dist/css/'))
   .pipe(sync.stream());
 
+// add copy task
 export const html = () => gulp.src('./src/*.html')
   .pipe(gulp.dest('./dist/'));
 
@@ -52,6 +53,9 @@ export const json = () => gulp.src('./src/data/*.json')
   .pipe(gulp.dest('./dist/data'));
 
 export const cname = () => gulp.src('./src/CNAME')
+  .pipe(gulp.dest('./dist'));
+
+export const favicon = () => gulp.src('./src/*.ico')
   .pipe(gulp.dest('./dist'));
 // export const server = () => {
 //   sync.init({
