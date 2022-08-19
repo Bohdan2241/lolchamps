@@ -2,7 +2,7 @@ import { render } from './render-champions.js';
 // import { renderChampionPage } from './render-champion-page.js';
 import data from './getData.js';
 
-const tabsContol = () => {
+const filterChampions = () => {
   const buttons = document.querySelectorAll('.role-btn');
 
   buttons.forEach((button) => {
@@ -18,6 +18,4 @@ const tabsContol = () => {
   });
 };
 
-export default () => {
-  tabsContol();
-};
+export default filterChampions;

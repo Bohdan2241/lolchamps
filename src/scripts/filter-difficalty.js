@@ -1,6 +1,7 @@
 import { render } from './render-champions.js';
 import data from './getData.js';
 
+// fix this (close button => toggle)
 const toggleDropDownMenu = () => {
   const dropDownContent = document.querySelector('.difficalty-dropdown-content');
   const menu = document.querySelector('.difficalty');
@@ -21,7 +22,7 @@ const toggleDropDownMenu = () => {
 
 const dropDown = () => {
   const controller = document.querySelector('.difficalty-container');
-  // const closeIcon = document.querySelector('.difficalty-indicator-clear');
+
   if (controller) {
     controller.addEventListener('click', () => {
       toggleDropDownMenu();
@@ -29,7 +30,45 @@ const dropDown = () => {
   }
 };
 
-const getDificalty = () => {
+const fillDifficaltyIcon = (numDificalty) => {
+  const difficaltyMap = {
+    2: 1,
+    1: 2,
+    0: 3,
+  };
+
+  const parent = document.querySelector('[data-testid="difficalty-nav:container"]');
+  const indicators = parent.children;
+
+  for (let i = 0; i < indicators.length; i += 1) {
+    indicators[i].className = '';
+    if (i >= difficaltyMap[numDificalty]) {
+      indicators[i].classList.add('difficalty-value-item-empty');
+    } else {
+      indicators[i].classList.add('difficalty-value-item');
+    }
+  }
+};
+
+const filtredDifficaltyContent = (numDificalty) => {
+  const difficaltyPlaceholder = document.querySelector('.difficalty-placeholder');
+  difficaltyPlaceholder.style.display = 'none';
+  const difficaltySingleValue = document.querySelector('.difficalty-single-value');
+  difficaltySingleValue.style.display = 'block';
+  const difficaltyIndicatorClear = document.querySelector('.difficalty-indicator-clear');
+  difficaltyIndicatorClear.style.display = 'flex';
+
+  fillDifficaltyIcon(numDificalty);
+
+  difficaltyIndicatorClear.addEventListener('click', () => {
+    difficaltyPlaceholder.style.display = 'block';
+    difficaltySingleValue.style.display = 'none';
+    difficaltyIndicatorClear.style.display = 'none';
+    // toggleDropDownMenu();
+  });
+};
+
+const filterDifficalty = () => {
   dropDown();
   const menuButtons = document.querySelectorAll('.difficalty-dropdown-content > .difficalty-single-value-container');
   menuButtons.forEach((menuButton) => {
@@ -38,16 +77,10 @@ const getDificalty = () => {
       const granParent = granParentCollection.item(0);
       const parent = granParent.querySelector('.difficalty-value-container');
       const numDificalty = (parent.querySelectorAll('.difficalty-value-item-empty')).length;
-      console.log(numDificalty, 'give');
+      filtredDifficaltyContent(numDificalty);
       render(data, 'all', numDificalty);
     });
   });
 };
 
-// getDificalty(data);
-
-export default getDificalty;
-
-// export default () => {
-//   dropDown();
-// };
+export default filterDifficalty;

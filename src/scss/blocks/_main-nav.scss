@@ -253,6 +253,7 @@
 }
 
 .difficalty-value-item {
+  box-sizing: content-box;
   display: inline-block;
   width: 30.6667%;
   height: 100%;
@@ -263,8 +264,24 @@
   transform: skewX(-40deg);
 }
 
+.difficalty-value-item:last-child {
+  padding-right: 0;
+}
+
 .difficalty-value-item-empty {
+  box-sizing: content-box;
+  display: inline-block;
+  width: 30.6667%;
+  height: 100%;
+  padding-right: 4%;
   opacity: 0.2;
+  background-color: rgb(8, 215, 247);
+  background-clip: content-box;
+  transform: skewX(-40deg);
+}
+
+.difficalty-value-item-empty:last-child {
+  padding-right: 0;
 }
 
 .difficalty-dropdown-content {
@@ -353,8 +370,4 @@
 
 .difficalty-indicator-arrow svg .st1 {
   fill: currentColor;
-}
-
-.display-block {
-  display: block;
 }

@@ -9,7 +9,7 @@
   text-transform: uppercase;
 }
 
-.main-head span {
+.main-head-intro {
   display: block;
   font-size: 1.5rem;
   line-height: 1;
@@ -17,12 +17,18 @@
   letter-spacing: 0.1em;
 }
 
-.main-head strong {
-  padding-bottom: 10px;
+.main-head-title {
+  display: block;
   font-size: calc(61.82px + 3.03vw);
   font-weight: 800;
   letter-spacing: 0.03em;
   line-height: 0.85;
+}
+
+.main-head-title span {
+  display: block;
+  padding: 0 15px 10px;
+  margin-bottom: -10px;
 }
 
 .main-head-description {

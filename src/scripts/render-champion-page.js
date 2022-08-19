@@ -1,5 +1,3 @@
-/* eslint-disable no-useless-concat */
-// import { cloneDeep } from 'lodash';
 // eslint-disable-next-line import/no-cycle
 import { render } from './render-champions.js';
 import data from './getData.js';
@@ -19,20 +17,22 @@ const pickRoleIcon = (role) => {
 
 const fillDifficaltyIcon = (difficalty, container) => {
   const difficaltyMap = {
-    low: 1,
-    moderate: 2,
-    high: 3,
+    low: 0,
+    moderate: 1,
+    high: 2,
   };
 
   const indicators = container.children;
 
   for (let i = 0; i < indicators.length; i += 1) {
-    indicators[i].classList.add('difficalty-value-item-empty');
-  }
-
-  const count = difficaltyMap[difficalty];
-  for (let i = 0; i < count; i += 1) {
-    indicators[i].classList.remove('difficalty-value-item-empty');
+    console.log(i, difficalty, difficaltyMap[difficalty]);
+    if (i <= difficaltyMap[difficalty]) {
+      console.log('if');
+      indicators[i].classList.add('difficalty-value-item');
+    } else {
+      console.log('else');
+      indicators[i].classList.add('difficalty-value-item-empty');
+    }
   }
 };
 
@@ -74,7 +74,7 @@ const createLinks = (links, name) => {
   links[2].setAttribute('href', `https://www.probuilds.net/champions/details/${name}`);
 };
 
-const creatingItems = (championObj) => {
+const creatingOverwiev = (championObj) => {
   const introImages = document.querySelectorAll('.background-image, .section-inner-img');
   introImages.forEach((introImage) => {
     const image = introImage;
@@ -109,6 +109,17 @@ const creatingItems = (championObj) => {
   createLinks(links, championObj.name);
 };
 
+const creatingAbilities = (championObj) => {
+  const roleicon = document.querySelector('[data-testid="abilities:backgroundicon"]');
+  roleicon.innerHTML = pickRoleIcon(championObj.role);
+  // console.log(championObj);
+};
+
+const creatingItems = (championObj) => {
+  creatingOverwiev(championObj);
+  creatingAbilities(championObj);
+};
+
 // is it right?
 const resetActiveTab = () => {
   const buttons = document.querySelectorAll('.role-btn');
@@ -120,6 +131,16 @@ const resetActiveTab = () => {
   });
 };
 
+const resetDifficalty = () => {
+  const difficaltyPlaceholder = document.querySelector('.difficalty-placeholder');
+  const difficaltySingleValue = document.querySelector('.difficalty-single-value');
+  const difficaltyIndicatorClear = document.querySelector('.difficalty-indicator-clear');
+  difficaltyPlaceholder.style.display = 'block';
+  difficaltySingleValue.style.display = 'none';
+  difficaltyIndicatorClear.style.display = 'none';
+  // toggleDropDownMenu();
+};
+
 const goTop = () => window.scrollTo(0, 0);
 
 const backToList = () => {
@@ -127,11 +148,12 @@ const backToList = () => {
   button.addEventListener('click', () => {
     const championsList = document.querySelector('.main');
     championsList.style.display = 'block';
-    const championPage = document.querySelector('.overview');
+    const championPage = document.querySelector('.champion-page');
     championPage.style.display = 'none';
 
     render(data);
     resetActiveTab();
+    resetDifficalty();
     goTop();
   });
 };
@@ -154,7 +176,7 @@ const renderChampionPage = (dataChampions) => {
 
       const championsList = document.querySelector('.main');
       championsList.style.display = 'none';
-      const championPage = document.querySelector('.overview');
+      const championPage = document.querySelector('.champion-page');
       championPage.style.display = 'block';
 
       goTop();

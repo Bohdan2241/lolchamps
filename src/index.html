@@ -81,12 +81,22 @@
       </div>
     </header>
   </div>
+
   <div id="root">
-    <main class="main">
+
+    <section class="main">
       <section class="main-head-wrapper">
         <h1 class="main-head">
-          <span>CHOOSE YOUR</span>
-          <strong>CHAMPION</strong>
+          <span class="main-head-intro">
+            <div class="display-inline">
+              <span>CHOOSE YOUR</span>
+            </div>
+          </span>
+          <strong class="main-head-title">
+            <div class="display-inline">
+              <span>CHAMPION</span>
+            </div>
+          </strong>
         </h1>
         <p class="main-head-description">
           With more than 140 champions, you’ll find the perfect match for your playstyle. Master one, or master them
@@ -151,10 +161,10 @@
                       <div class="difficalty-single-value">
                         <div class="difficalty-single-value-container">
                           <span class="difficalty-value-wrapper">
-                            <span class="difficalty-value-container">
-                              <span class="difficalty-value-item"></span>
-                              <span class="difficalty-value-item"></span>
-                              <span class="difficalty-value-item"></span>
+                            <span data-testid="difficalty-nav:container" class="difficalty-value-container">
+                              <span class=""></span>
+                              <span class=""></span>
+                              <span class=""></span>
                             </span>
                           </span>
                         </div>
@@ -165,8 +175,8 @@
                         <span class="difficalty-value-wrapper">
                           <span class="difficalty-value-container">
                             <span class="difficalty-value-item"></span>
-                            <span class="difficalty-value-item difficalty-value-item-empty"></span>
-                            <span class="difficalty-value-item difficalty-value-item-empty"></span>
+                            <span class="difficalty-value-item-empty"></span>
+                            <span class="difficalty-value-item-empty"></span>
                           </span>
                         </span>
                       </div>
@@ -175,7 +185,7 @@
                           <span class="difficalty-value-container">
                             <span class="difficalty-value-item"></span>
                             <span class="difficalty-value-item"></span>
-                            <span class="difficalty-value-item difficalty-value-item-empty"></span>
+                            <span class="difficalty-value-item-empty"></span>
                           </span>
                         </span>
                       </div>
@@ -219,121 +229,150 @@
         </div>
         <div class="champions-list"></div>
       </section>
-    </main>
-    <section class="overview">
-      <div class="background-asset">
-        <div class="background-image-container">
-          <img alt="" class="background-image">
-        </div>
-      </div>
-      <div class="wrapper-section">
-        <div class="section-title">
-          <div class="title-text-container">
-            <div class="title-text">
-              Overview
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section-inner">
-        <div class="foreground-asset">
-          <img alt="" class="section-inner-img">
-        </div>
-        <div class="wrapper-details">
-          <div class="details-container">
-            <canvas class="champion-title-canvas"></canvas>
-          </div>
-          <div class="wrapper-details-name">
-            <div class="details-name-container">
-              <h1 class="main-head">
-                <span data-testid="overview:subtitle">THE NINE-TAILED FOX</span>
-                <strong data-testid="overview:name">AHRI</strong>
-              </h1>
-            </div>
-          </div>
-          <div class="info-container">
-            <div class="info-specs">
-              <ul class="specs-list">
-                <li class="specs-item">
-                  <div class="specs-item-icon">
-                    <svg data-testid="overview:roleicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
-                      class="style__StyledSpecsIcon-sc-8gkpub-17-c dnNsJq"></svg>
-                  </div>
-                  <div class="specs-item-type">
-                    Role
-                  </div>
-                  <div data-testid="overview:role" class="specs-item-value">
-                    Mage
-                  </div>
-                </li>
-                <li class="specs-item">
-                  <div class="specs-item-icon">
-                    <span class="difficalty-icon-value-wrapper">
-                      <span data-testid="overview:difficaltyicon" class="difficalty-icon-value-container">
-                        <span class="difficalty-icon-value-item difficalty-value-item-empty"></span>
-                        <span class="difficalty-icon-value-item difficalty-value-item-empty"></span>
-                        <span class="difficalty-icon-value-item difficalty-value-item-empty"></span>
-                      </span>
-                    </span>
-                  </div>
-                  <div class="specs-item-type">
-                    DIFFICULTY
-                  </div>
-                  <div data-testid="overview:difficalty" class="specs-item-value">
-                    Moderate
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="info-divider"></div>
-            <div class="info-desc">
-              <p data-testid="overview:description">
-                <!-- <button data-testid="overview:seemorebutton">See More</button> -->
-              </p>
-            </div>
-          </div>
-          <div class="wrapper-links-info">
-            <div class="links-info-container">
-              <p class="links-info-label">
-                Champion Mastery
-              </p>
-              <ul class="links-info-list">
-                <li class="info-list-item">
-                  <a data-testid="overview:link-0" class="info-list-link">u.gg</a>
-                </li>
-                <li class="info-list-item">
-                  <a data-testid="overview:link-1" class="info-list-link">op.gg</a>
-                </li>
-                <li class="info-list-item">
-                  <a data-testid="overview:link-2" class="info-list-link">probuilds.net</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="champions-button-container">
-          <div class="wrap-champions-button-canvas">
-            <canvas class="champions-button-canvas"></canvas>
-          </div>
-          <button data-testid="overview:championlistbutton" class="champions-button">
-            <span class="champions-button-text">Champions list</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 15"
-              class="style__ChampionsButtonIcon-sc-8gkpub-21 bhnjsa">
-              <path
-                d="M12.8 8.4V4.8S13 1.1 7 0h-.1c-6 1.1-5.8 4.8-5.8 4.8v3.6c0 1.9-.8 2.5-.8 2.5C1.5 15.3 4.5 15 4.5 15c-1.6-2.1 0-5.8 0-5.8-2.3-.3-1.9-2.7-1.7-3.4 0 0 2.2-.1 3.3 1.6v4.2l.9.9.8-.8V7.5c1.2-1.8 3.3-1.7 3.3-1.6.2.7.6 3.1-1.7 3.3 0 0 1.6 3.8 0 5.8 0 0 3 .3 4.2-4.1.1 0-.8-.6-.8-2.5z">
-              </path>
-            </svg>
-          </button>
-        </div>
-      </div>
-      <svg width="17" height="58" fill="none" xmlns="http://www.w3.org/2000/svg"
-        class="style__ScrollIndicator-sc-8gkpub-29 bqGcqn">
-        <path d="M8.065 39.333l-5.02 5.02 5.02 5.021 5.02-5.02-5.02-5.02z"></path>
-        <path d="M8.065 44.379L5.59 46.854l2.475 2.474 2.475-2.474-2.475-2.475z"></path>
-        <path d="M4.6 47.8l-1.5 1.5 5 5 5-5-1.5-1.5M8.1 4.2v30"></path>
-      </svg>
     </section>
+
+    <section class="champion-page">
+
+      <section class="overview">
+        <div class="background-asset">
+          <div class="background-image-container">
+            <img alt="" class="background-image">
+          </div>
+        </div>
+        <div class="wrapper-section">
+          <div class="section-title">
+            <div class="title-text-container">
+              <div class="title-text">
+                Overview
+              </div>
+            </div>
+          </div>
+          <div class="section-content"></div>
+        </div>
+        <div class="section-inner">
+          <div class="foreground-asset">
+            <img alt="" class="section-inner-img">
+          </div>
+          <div class="wrapper-details">
+            <div class="details-container">
+              <canvas class="champion-title-canvas"></canvas>
+            </div>
+            <div class="wrapper-details-name">
+              <div class="details-name-container">
+                <h1 class="main-head">
+                  <span class="main-head-intro">
+                    <div class="display-inline">
+                      <span data-testid="overview:subtitle"></span>
+                    </div>
+                  </span>
+                  <strong class="main-head-title">
+                    <div class="display-inline">
+                      <span data-testid="overview:name"></span>
+                    </div>
+                  </strong>
+                </h1>
+              </div>
+            </div>
+            <div class="info-container">
+              <div class="info-specs">
+                <ul class="specs-list">
+                  <li class="specs-item">
+                    <div class="specs-item-icon">
+                      <svg data-testid="overview:roleicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
+                        class="style__StyledSpecsIcon-sc-8gkpub-17-c dnNsJq"></svg>
+                    </div>
+                    <div class="specs-item-type">
+                      Role
+                    </div>
+                    <div data-testid="overview:role" class="specs-item-value">
+                      Mage
+                    </div>
+                  </li>
+                  <li class="specs-item">
+                    <div class="specs-item-icon">
+                      <span class="difficalty-icon-value-wrapper">
+                        <span data-testid="overview:difficaltyicon" class="difficalty-icon-value-container">
+                          <span class=""></span>
+                          <span class=""></span>
+                          <span class=""></span>
+                        </span>
+                      </span>
+                    </div>
+                    <div class="specs-item-type">
+                      DIFFICULTY
+                    </div>
+                    <div data-testid="overview:difficalty" class="specs-item-value">
+                      Moderate
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="info-divider"></div>
+              <div class="info-desc">
+                <p data-testid="overview:description">
+                  <!-- <button data-testid="overview:seemorebutton">See More</button> -->
+                </p>
+              </div>
+            </div>
+            <div class="wrapper-links-info">
+              <div class="links-info-container">
+                <p class="links-info-label">
+                  Champion Mastery
+                </p>
+                <ul class="links-info-list">
+                  <li class="info-list-item">
+                    <a data-testid="overview:link-0" class="info-list-link">u.gg</a>
+                  </li>
+                  <li class="info-list-item">
+                    <a data-testid="overview:link-1" class="info-list-link">op.gg</a>
+                  </li>
+                  <li class="info-list-item">
+                    <a data-testid="overview:link-2" class="info-list-link">probuilds.net</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="champions-button-container">
+            <div class="wrap-champions-button-canvas">
+              <canvas class="champions-button-canvas"></canvas>
+            </div>
+            <button data-testid="overview:championlistbutton" class="champions-button">
+              <span class="champions-button-text">Champions list</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 15"
+                class="style__ChampionsButtonIcon-sc-8gkpub-21 bhnjsa">
+                <path
+                  d="M12.8 8.4V4.8S13 1.1 7 0h-.1c-6 1.1-5.8 4.8-5.8 4.8v3.6c0 1.9-.8 2.5-.8 2.5C1.5 15.3 4.5 15 4.5 15c-1.6-2.1 0-5.8 0-5.8-2.3-.3-1.9-2.7-1.7-3.4 0 0 2.2-.1 3.3 1.6v4.2l.9.9.8-.8V7.5c1.2-1.8 3.3-1.7 3.3-1.6.2.7.6 3.1-1.7 3.3 0 0 1.6 3.8 0 5.8 0 0 3 .3 4.2-4.1.1 0-.8-.6-.8-2.5z">
+                </path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <svg width="17" height="58" fill="none" xmlns="http://www.w3.org/2000/svg" class="champion-page-scroll">
+          <path d="M8.065 39.333l-5.02 5.02 5.02 5.021 5.02-5.02-5.02-5.02z"></path>
+          <path d="M8.065 44.379L5.59 46.854l2.475 2.474 2.475-2.474-2.475-2.475z"></path>
+          <path d="M4.6 47.8l-1.5 1.5 5 5 5-5-1.5-1.5M8.1 4.2v30"></path>
+        </svg>
+      </section>
+
+      <section class="abilities">
+        <div class="content-wrapper">Abilities</div>
+        <div class="abilities-background-icon">
+          <svg data-testid="abilities:backgroundicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <path
+              d="M67.84 56.35v5.5c8.62-8.62 14.37 0 14.37 0C112.14 40.78 90.35 2 90.35 2s-.72 17.24-15.08 27.77v16.52c-.24 4.79-3.84 7.9-7.43 10.06M17.79 62.09s4.07-6.46 10.78-2.63L20.91 48.2l6.7-16c-17.24-10.54-18-29.93-18-29.93S-12.14 41 17.79 62.09M26.89 83.89l5.51-18.68-.24-.48L19.23 77.9A17.78 17.78 0 017.5 83.17H3l-1 2.39 12 11.5zM92.27 83.89a16.24 16.24 0 01-11.74-5.27L68.8 66.88l3.83 17.72L85.8 98l12-11.49-1-2.4zM55.87 42.7c0 .24-.24.48-.24.71h.72c5.75.48 7.66 2.64 9.1 7.67a9.35 9.35 0 002.39-1.92c1-1 1.68-1.67 1.68-2.63V28.09a2 2 0 00-1.68-1.92l-31.37-5.74H36a2.39 2.39 0 00-2.39 2.39v6.71l24.9 3.35z">
+            </path>
+            <path
+              d="M60.18 54c-1.2-5.27-1.44-4.55-5.75-4.79L40.78 48v-3.87h5.51A4.09 4.09 0 0050.36 41l1-3.35L32.4 35l-5 12.22 11.74 17-5.54 18.47L49.88 98l16.53-15.07s-6.23-28.5-6.23-29M49.88 2.23l-4.79 10.29 4.79 3.83 4.79-3.83zM62.1 9.41l1.43 6h6l2.87-11zM30.25 15.4h6l.24-.72 1.2-5.27-10.3-5z">
+            </path>
+          </svg>
+        </div>
+      </section>
+
+    </section>
+
   </div>
+
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-links">
