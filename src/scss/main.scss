@@ -3,11 +3,12 @@
 @import "fonts";
 @import "blocks/header";
 @import "blocks/footer";
-@import "blocks/main";
-@import "blocks/main-head";
-@import "blocks/main-nav";
-@import "blocks/main-champions-list";
-@import "blocks/champion-page";
-@import "blocks/champion-overview";
+@import "blocks/champions-page/main";
+@import "blocks/champions-page/main-head";
+@import "blocks/champions-page/main-nav";
+@import "blocks/champions-page/main-champions-list";
+@import "blocks/champion-page/champion-page";
+@import "blocks/champion-page/champion-overview";
+@import "blocks/champion-page/champion-abilities";
 //
 @import "common";
