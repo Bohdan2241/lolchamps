@@ -1,7 +1,0 @@
-/node_modules/
-Makefile
-package-lock.json
-package.json
-/src/
-README.md
-gulpfile.js
