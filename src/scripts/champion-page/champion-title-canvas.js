@@ -1,6 +1,6 @@
 export default () => {
   const canvas = document.querySelector('.champion-title-canvas');
-  const parent = document.querySelector('.details-container');
+  const parent = document.querySelector('.wrapper-details');
   const name = document.querySelector('[data-testid="overview:name"]');
 
   const parentCoords = parent.getBoundingClientRect();
