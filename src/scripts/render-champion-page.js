@@ -1,6 +1,7 @@
 // eslint-disable-next-line import/no-cycle
 import { render } from './render-champions.js';
 import data from './getData.js';
+import championsButtonCanvas from './champions-button-canvas.js';
 
 const pickRoleIcon = (role) => {
   const roleIcons = {
@@ -25,12 +26,12 @@ const fillDifficaltyIcon = (difficalty, container) => {
   const indicators = container.children;
 
   for (let i = 0; i < indicators.length; i += 1) {
-    console.log(i, difficalty, difficaltyMap[difficalty]);
+    // console.log(i, difficalty, difficaltyMap[difficalty]);
     if (i <= difficaltyMap[difficalty]) {
-      console.log('if');
+      // console.log('if');
       indicators[i].classList.add('difficalty-value-item');
     } else {
-      console.log('else');
+      // console.log('else');
       indicators[i].classList.add('difficalty-value-item-empty');
     }
   }
@@ -56,7 +57,7 @@ const firstPartOfDescription = (description) => {
 
 const createSeeMoreButton = () => {
   const container = document.querySelector('[data-testid="overview:description"]');
-  container.innerHTML = '<button data-testid="overview:seemorebutton">See More</button>';
+  container.innerHTML = '<!-- --> <button data-testid="overview:seemorebutton">See More</button>';
 };
 
 const seeMoreDescription = (container, text) => {
@@ -179,6 +180,7 @@ const renderChampionPage = (dataChampions) => {
       const championPage = document.querySelector('.champion-page');
       championPage.style.display = 'block';
 
+      championsButtonCanvas();
       goTop();
 
       backToList();

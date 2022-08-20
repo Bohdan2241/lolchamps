@@ -21,19 +21,14 @@ export default () => {
     ctx.moveTo(angle, 0);
     ctx.lineTo(widthDpi, 0);
 
-    ctx.moveTo(widthDpi, 0);
     ctx.lineTo(widthDpi, (heightDpi - angle));
 
-    ctx.moveTo(widthDpi, (heightDpi - angle));
     ctx.lineTo((widthDpi - angle), heightDpi);
 
-    ctx.moveTo(0, heightDpi);
-    ctx.lineTo((widthDpi - angle), heightDpi);
-
-    ctx.moveTo(0, angle);
     ctx.lineTo(0, heightDpi);
 
-    ctx.moveTo(0, angle);
+    ctx.lineTo(0, angle);
+
     ctx.lineTo(angle, 0);
 
     ctx.lineWidth = 3;
