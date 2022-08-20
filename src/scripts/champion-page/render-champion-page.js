@@ -1,7 +1,10 @@
 // eslint-disable-next-line import/no-cycle
-import { render } from './render-champions.js';
-import data from './getData.js';
+import { render } from '../champions-page/render-champions.js';
+import data from '../getData.js';
 import championsButtonCanvas from './champions-button-canvas.js';
+import championTitleCanvas from './champion-title-canvas.js';
+// eslint-disable-next-line import/no-cycle
+import { resetBgcDifficaltyMenuButtons } from '../champions-page/filter-difficalty.js';
 
 const pickRoleIcon = (role) => {
   const roleIcons = {
@@ -66,6 +69,7 @@ const seeMoreDescription = (container, text) => {
   seeMoreButton.addEventListener('click', () => {
     // eslint-disable-next-line no-param-reassign
     container.textContent = text;
+    championTitleCanvas();
   });
 };
 
@@ -132,6 +136,7 @@ const resetActiveTab = () => {
   });
 };
 
+// is it right?
 const resetDifficalty = () => {
   const difficaltyPlaceholder = document.querySelector('.difficalty-placeholder');
   const difficaltySingleValue = document.querySelector('.difficalty-single-value');
@@ -140,6 +145,7 @@ const resetDifficalty = () => {
   difficaltySingleValue.style.display = 'none';
   difficaltyIndicatorClear.style.display = 'none';
   // toggleDropDownMenu();
+  resetBgcDifficaltyMenuButtons();
 };
 
 const goTop = () => window.scrollTo(0, 0);
@@ -181,6 +187,7 @@ const renderChampionPage = (dataChampions) => {
       championPage.style.display = 'block';
 
       championsButtonCanvas();
+      championTitleCanvas();
       goTop();
 
       backToList();

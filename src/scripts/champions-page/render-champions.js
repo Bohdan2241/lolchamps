@@ -1,6 +1,6 @@
-import data from './getData.js';
+import data from '../getData.js';
 // eslint-disable-next-line import/no-cycle
-import renderChampionPage from './render-champion-page.js';
+import renderChampionPage from '../champion-page/render-champion-page.js';
 
 const delayMultiplayer = (extraDelay) => {
   const startDelay = 0;

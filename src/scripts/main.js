@@ -1,7 +1,7 @@
-import mainNavCanvas from './main-nav-canvas.js';
-import renderChampions from './render-champions.js';
-import filterChampions from './filter-champions.js';
-import filterDifficalty from './filter-difficalty.js';
+import mainNavCanvas from './champions-page/main-nav-canvas.js';
+import renderChampions from './champions-page/render-champions.js';
+import filterChampions from './champions-page/filter-champions.js';
+import filterDifficalty from './champions-page/filter-difficalty.js';
 
 mainNavCanvas();
 

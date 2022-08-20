@@ -1,5 +1,6 @@
+// eslint-disable-next-line import/no-cycle
 import { render } from './render-champions.js';
-import data from './getData.js';
+import data from '../getData.js';
 
 // fix this (close button => toggle)
 const toggleDropDownMenu = () => {
@@ -28,6 +29,14 @@ const dropDown = () => {
       toggleDropDownMenu();
     });
   }
+};
+
+export const resetBgcDifficaltyMenuButtons = () => {
+  const menuButtons = document.querySelectorAll('.difficalty-dropdown-content > .difficalty-single-value-container');
+  menuButtons.forEach((item) => {
+    // eslint-disable-next-line no-param-reassign
+    item.style.backgroundColor = 'transparent';
+  });
 };
 
 const fillDifficaltyIcon = (numDificalty) => {
@@ -64,12 +73,16 @@ const filtredDifficaltyContent = (numDificalty) => {
     difficaltyPlaceholder.style.display = 'block';
     difficaltySingleValue.style.display = 'none';
     difficaltyIndicatorClear.style.display = 'none';
-    // toggleDropDownMenu();
+
+    resetBgcDifficaltyMenuButtons();
+
+    render(data);
   });
 };
 
 const filterDifficalty = () => {
   dropDown();
+
   const menuButtons = document.querySelectorAll('.difficalty-dropdown-content > .difficalty-single-value-container');
   menuButtons.forEach((menuButton) => {
     menuButton.addEventListener('click', () => {
@@ -77,6 +90,9 @@ const filterDifficalty = () => {
       const granParent = granParentCollection.item(0);
       const parent = granParent.querySelector('.difficalty-value-container');
       const numDificalty = (parent.querySelectorAll('.difficalty-value-item-empty')).length;
+      resetBgcDifficaltyMenuButtons();
+      // eslint-disable-next-line no-param-reassign
+      menuButton.style.backgroundColor = '#41ece457';
       filtredDifficaltyContent(numDificalty);
       render(data, 'all', numDificalty);
     });

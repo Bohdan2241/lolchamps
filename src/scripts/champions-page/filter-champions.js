@@ -1,6 +1,6 @@
 import { render } from './render-champions.js';
 // import { renderChampionPage } from './render-champion-page.js';
-import data from './getData.js';
+import data from '../getData.js';
 
 const filterChampions = () => {
   const buttons = document.querySelectorAll('.role-btn');
