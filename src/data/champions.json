@@ -3613,6 +3613,310 @@
           }
         ]
       }
+    },
+    {
+      "name": "Shen",
+      "subtitle": "THE EYE OF TWILIGHT",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltd142d174831b78e9/5db06004242f426df132f97f/RiotX_ChampionList_shen.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Shen_0.jpg",
+      "role": "tank",
+      "difficalty": "moderate",
+      "description": "Among the secretive, Ionian warriors known as the Kinkou, Shen serves as their leader, the Eye of Twilight. He longs to remain free from the confusion of emotion, prejudice, and ego, and walks the unseen path of dispassionate judgment between the spirit realm and the physical world. Tasked with enforcing the equilibrium between them, Shen wields blades of steel and arcane energy against any who would threaten it.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/passive/Shen_Passive.png",
+          "hotkey": "PASSIVE",
+          "name": "KI BARRIER",
+          "description": "After casting a spell, Shen gets a shield. Affecting other champions reduces the cooldown of this effect.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0098/ability_0098_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/ShenQ.png",
+          "hotkey": "q",
+          "name": "TWILIGHT ASSAULT",
+          "description": "Shen recalls his spirit blade to attack with it, dealing damage based on the target's max health. The attacks are greatly empowered if it collides with an enemy champion, and all collided enemies are slowed while running away from Shen.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0098/ability_0098_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/ShenW.png",
+          "hotkey": "w",
+          "name": "SPIRIT'S REFUGE",
+          "description": "Attacks that would hit Shen or his allies near his spirit blade are blocked.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0098/ability_0098_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/ShenE.png",
+          "hotkey": "e",
+          "name": "SHADOW DASH",
+          "description": "Shen dashes in a direction, taunting enemies in his path.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0098/ability_0098_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/ShenR.png",
+          "hotkey": "r",
+          "name": "STAND UNITED",
+          "description": "Shen shields target allied champion from incoming damage, and soon after teleports to their location.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0098/ability_0098_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "shen",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Shen_0.jpg"
+          },
+          {
+            "name": "frozen shen",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Shen_1.jpg"
+          },
+          {
+            "name": "yellow jacket shen",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Shen_2.jpg"
+          },
+          {
+            "name": "surgeon shen",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Shen_3.jpg"
+          },
+          {
+            "name": "blood moon shen",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Shen_4.jpg"
+          },
+          {
+            "name": "warlord shen",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Shen_5.jpg"
+          },
+          {
+            "name": "tpa shen",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Shen_6.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Singed",
+      "subtitle": "THE MAD CHEMIST",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt766d98c27adfde28/5db06004347d1c6baa57be4f/RiotX_ChampionList_singed.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Singed_0.jpg",
+      "role": "tank",
+      "difficalty": "moderate",
+      "description": "Singed is a Zaunite alchemist of unmatched intellect, who has devoted his life to pushing the boundaries of knowledge—with no price, even his own sanity, too high to pay. Is there a method to his madness? His concoctions rarely fail, but it appears to many that Singed has lost all sense of humanity, leaving a toxic trail of misery and terror in his wake.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/passive/Singed_Passive.png",
+          "hotkey": "PASSIVE",
+          "name": "NOXIOUS SLIPSTREAM",
+          "description": "Singed drafts off nearby champions, gaining a burst of Move Speed when passing them.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0027/ability_0027_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/PoisonTrail.png",
+          "hotkey": "q",
+          "name": "POISON TRAIL",
+          "description": "Leaves a trail of poison behind Singed, dealing damage to enemies caught in the path.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0027/ability_0027_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/MegaAdhesive.png",
+          "hotkey": "w",
+          "name": "MEGA ADHESIVE",
+          "description": "Throws a vial of mega adhesive on the ground, slowing and grounding enemies who walk on it.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0027/ability_0027_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/Fling.png",
+          "hotkey": "e",
+          "name": "FLING",
+          "description": "Damages target enemy unit and flings them into the air behind Singed. If the target Singed flings lands in his Mega Adhesive, they are also rooted.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0027/ability_0027_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/InsanityPotion.png",
+          "hotkey": "r",
+          "name": "INSANITY POTION",
+          "description": "Singed drinks a potent brew of chemicals, granting him increased combat stats, and making his Poison Trail apply Grievous Wounds.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0027/ability_0027_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "singed",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Singed_0.jpg"
+          },
+          {
+            "name": "riot squad singed",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Singed_1.jpg"
+          },
+          {
+            "name": "hextech singed",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Singed_2.jpg"
+          },
+          {
+            "name": "surfer singed",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Singed_3.jpg"
+          },
+          {
+            "name": "mad scientist singed",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Singed_4.jpg"
+          },
+          {
+            "name": "augmented singed",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Singed_5.jpg"
+          },
+          {
+            "name": "snow day singed",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Singed_6.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Zilean",
+      "subtitle": "THE CHRONOKEEPER",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blta32de59397f53325/5db060222dc72966da746720/RiotX_ChampionList_zilean.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zilean_0.jpg",
+      "role": "support",
+      "difficalty": "moderate",
+      "description": "Once a powerful Icathian mage, Zilean became obsessed with the passage of time after witnessing his homeland's destruction by the Void. Unable to spare even a minute to grieve the catastrophic loss, he called upon ancient temporal magic to divine all possible outcomes. Having become functionally immortal, Zilean now drifts through the past, present, and future, bending and warping the flow of time around him, always searching for that elusive moment that will turn back the clock and undo Icathia's destruction.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/passive/Zilean_Passive.png",
+          "hotkey": "PASSIVE",
+          "name": "TIME IN A BOTTLE",
+          "description": "Zilean stores time as Experience and can grant it to his allies. When he has enough Experience to finish an ally's level up, he can right-click them to impart it. Zilean receives as much Experience as he gives.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0026/ability_0026_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/ZileanQ.png",
+          "hotkey": "q",
+          "name": "TIME BOMB",
+          "description": "Tosses a bomb to target area that sticks to units that come near it (prioritizes Champions). It detonates after 3 seconds, dealing area of effect damage. If a Time Bomb is detonated early by another Time Bomb, it also stuns enemies.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0026/ability_0026_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/ZileanW.png",
+          "hotkey": "w",
+          "name": "REWIND",
+          "description": "Zilean can prepare himself for future confrontations, reducing the cooldowns of his other basic abilities.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0026/ability_0026_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/TimeWarp.png",
+          "hotkey": "e",
+          "name": "TIME WARP",
+          "description": "Zilean bends time around any unit, decreasing an enemy's Move Speed or increasing an ally's Move Speed for a short time.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0026/ability_0026_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/ChronoShift.png",
+          "hotkey": "r",
+          "name": "CHRONOSHIFT",
+          "description": "Zilean places a protective time rune on an allied champion, teleporting the champion back in time if they take lethal damage.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0026/ability_0026_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "zilean",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zilean_0.jpg"
+          },
+          {
+            "name": "old saint zilean",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zilean_1.jpg"
+          },
+          {
+            "name": "groovy zilean",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zilean_2.jpg"
+          },
+          {
+            "name": "shurima desert zilean",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zilean_3.jpg"
+          },
+          {
+            "name": "time machine zilean",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zilean_4.jpg"
+          },
+          {
+            "name": "blood moon zilean",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zilean_5.jpg"
+          },
+          {
+            "name": "sugar rush zilean",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zilean_6.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Zac",
+      "subtitle": "THE SECRET WEAPON",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt9412083c2b98b9c8/5db0601d6af83b6d7032c910/RiotX_ChampionList_zac.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zac_0.jpg",
+      "role": "tank",
+      "difficalty": "high",
+      "description": "Zac is the product of a toxic spill that ran through a chemtech seam and pooled in an isolated cavern deep in Zaun's Sump. Despite such humble origins, Zac has grown from primordial ooze into a thinking being who dwells in the city's pipes, occasionally emerging to help those who cannot help themselves or to rebuild the broken infrastructure of Zaun.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/passive/ZacPassive.png",
+          "hotkey": "PASSIVE",
+          "name": "CELL DIVISION",
+          "description": "Each time Zac hits an enemy with an ability, he sheds a chunk of himself that can be reabsorbed to restore Health. Upon taking fatal damage, Zac splits into 4 bloblets that attempt to recombine. If any bloblets remain, he will revive with an amount of Health depending on the Health of the surviving bloblets. Each bloblet has a percentage of Zac's maximum Health, Armor and Magic Resistance. This ability has a 5 minute cooldown.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0154/ability_0154_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/ZacQ.png",
+          "hotkey": "q",
+          "name": "STRETCHING STRIKES",
+          "description": "Zac stretches an arm, grabbing an enemy. Attacking a different enemy will cause him to throw both targets towards each other.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0154/ability_0154_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/ZacW.png",
+          "hotkey": "w",
+          "name": "UNSTABLE MATTER",
+          "description": "Zac explodes outward towards nearby enemies, dealing a percentage of their maximum health as magic damage.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0154/ability_0154_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/ZacE.png",
+          "hotkey": "e",
+          "name": "ELASTIC SLINGSHOT",
+          "description": "Zac attaches his arms to the ground and stretches back, launching himself forward.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0154/ability_0154_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/ZacR.png",
+          "hotkey": "r",
+          "name": "LET'S BOUNCE!",
+          "description": "Zac bounces four times, knocking up enemies hit and slowing them.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0154/ability_0154_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "zac",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zac_0.jpg"
+          },
+          {
+            "name": "special weapon zac",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zac_1.jpg"
+          },
+          {
+            "name": "pool party zac",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zac_2.jpg"
+          },
+          {
+            "name": "skt t1 zac",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zac_6.jpg"
+          },
+          {
+            "name": "battlecast zac",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zac_7.jpg"
+          }
+        ]
+      }
     }
   ]
 }
