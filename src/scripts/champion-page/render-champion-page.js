@@ -3,6 +3,11 @@ import { render } from '../champions-page/render-champions.js';
 import data from '../getData.js';
 import championsButtonCanvas from './champions-button-canvas.js';
 import championTitleCanvas from './champion-title-canvas.js';
+import abilitiesImageCanvas from './abilities-image-canvas.js';
+import abilitiesVideoCanvas from './abilities-video-canvas.js';
+// import  from './abilities-slider.js';
+import { abilitiesSlider, resetAbilitiesSlider } from './abilities-slider.js';
+// import availableSkinsSlider from './available-skins-slider.js';
 // eslint-disable-next-line import/no-cycle
 import { resetBgcDifficaltyMenuButtons } from '../champions-page/filter-difficalty.js';
 
@@ -29,12 +34,9 @@ const fillDifficaltyIcon = (difficalty, container) => {
   const indicators = container.children;
 
   for (let i = 0; i < indicators.length; i += 1) {
-    // console.log(i, difficalty, difficaltyMap[difficalty]);
     if (i <= difficaltyMap[difficalty]) {
-      // console.log('if');
       indicators[i].classList.add('difficalty-value-item');
     } else {
-      // console.log('else');
       indicators[i].classList.add('difficalty-value-item-empty');
     }
   }
@@ -48,7 +50,8 @@ const firstPartOfDescription = (description) => {
     const currentChar = description[i];
     const nextChar = description[i + 1];
 
-    if (i >= minSize && nextChar === ' ' && currentChar !== ('.' || ',') && nextChar !== ('.' || ',')) { // fix this Ahri
+    // fix this Ahri
+    if (i >= minSize && nextChar === ' ' && currentChar !== ('.' || ',') && nextChar !== ('.' || ',')) {
       // console.log(description[i], nextChar);
       result = description.slice(0, i + 1);
       break;
@@ -65,7 +68,6 @@ const createSeeMoreButton = () => {
 
 const seeMoreDescription = (container, text) => {
   const seeMoreButton = document.querySelector('[data-testid="overview:seemorebutton"]');
-  // console.log(seeMoreButton, 'this bag');
   seeMoreButton.addEventListener('click', () => {
     // eslint-disable-next-line no-param-reassign
     container.textContent = text;
@@ -79,7 +81,7 @@ const createLinks = (links, name) => {
   links[2].setAttribute('href', `https://www.probuilds.net/champions/details/${name}`);
 };
 
-const creatingOverwiev = (championObj) => {
+const createOverviewSection = (championObj) => {
   const introImages = document.querySelectorAll('.background-image, .section-inner-img');
   introImages.forEach((introImage) => {
     const image = introImage;
@@ -107,22 +109,85 @@ const creatingOverwiev = (championObj) => {
   createSeeMoreButton();
   const description = document.querySelector('[data-testid="overview:description"]');
   description.insertAdjacentText('afterbegin', firstPartOfDescription(championObj.description));
-  // console.log(description, 'now');
   seeMoreDescription(description, championObj.description);
 
   const links = document.querySelectorAll('[data-testid="overview:link-0"], [data-testid="overview:link-1"], [data-testid="overview:link-2"]');
   createLinks(links, championObj.name);
 };
 
-const creatingAbilities = (championObj) => {
+const createAbilitiesSection = (championObj) => {
+  const abilitiesImages = document.querySelectorAll('[data-testid="abilities:image"');
+  for (let i = 0; i < abilitiesImages.length; i += 1) {
+    const image = abilitiesImages[i];
+    const value = championObj.abilities[i].image;
+    image.src = value;
+  }
+
+  const abilitiesHotkeys = document.querySelectorAll('[data-testid="abilities:ability:hotkey"');
+  for (let i = 0; i < abilitiesHotkeys.length; i += 1) {
+    const hotkey = abilitiesHotkeys[i];
+    const value = championObj.abilities[i].hotkey;
+    hotkey.textContent = value;
+  }
+
+  const abilitiesNames = document.querySelectorAll('[data-testid="abilities:ability:name"');
+  for (let i = 0; i < abilitiesNames.length; i += 1) {
+    const name = abilitiesNames[i];
+    const value = championObj.abilities[i].name;
+    name.textContent = value;
+  }
+
+  const abilitiesDescriptions = document.querySelectorAll('[data-testid="abilities:ability:description"');
+  for (let i = 0; i < abilitiesDescriptions.length; i += 1) {
+    const description = abilitiesDescriptions[i];
+    const value = championObj.abilities[i].description;
+    description.textContent = value;
+  }
+
+  const abilitiesVideoContainers = document.querySelectorAll('[data-testid="abilities:video-container"');
+  abilitiesVideoContainers.forEach((abilitiesVideoContainer, i) => {
+    const video = abilitiesVideoContainer.children[0];
+    const value = championObj.abilities[i].video;
+
+    if (!value) {
+      video.remove();
+
+      const noVideoContainer = document.createElement('div');
+      noVideoContainer.classList.add('abilities-no-video-container');
+      abilitiesVideoContainer.append(noVideoContainer);
+
+      const noVideoBackgroundImage = document.createElement('img');
+      noVideoBackgroundImage.classList.add('abilities-no-video-background-image');
+      noVideoBackgroundImage.setAttribute('src', 'https://www.leagueoflegends.com/static/no-ability-background-fdc6db338e4adb76a0dc80e0728ed6d0.jpg');
+      noVideoContainer.append(noVideoBackgroundImage);
+
+      const noVideoContent = document.createElement('div');
+      noVideoContent.classList.add('abilities-no-video-content');
+      noVideoContainer.append(noVideoContent);
+
+      const noVideoImage = document.createElement('img');
+      noVideoImage.classList.add('abilities-no-video-image');
+      noVideoImage.setAttribute('src', 'https://www.leagueoflegends.com/static/no-ability-icon-feb372ba66a6fcea09cdacb239b4f171.png');
+      noVideoContent.append(noVideoImage);
+
+      const noVideoText = document.createElement('div');
+      noVideoText.classList.add('abilities-no-video-text');
+      noVideoText.textContent = "CAN'T DISPLAY THIS ABILITY IN VIDEO FORMAT";
+      noVideoContent.append(noVideoText);
+    } else {
+      // eslint-disable-next-line no-param-reassign
+      abilitiesVideoContainer.innerHTML = `<video class="abilities-ability-video" preload="metadata" autoplay="" loop="" muted="" src=${value}></video>`;
+    }
+  });
+
   const roleicon = document.querySelector('[data-testid="abilities:backgroundicon"]');
   roleicon.innerHTML = pickRoleIcon(championObj.role);
-  // console.log(championObj);
 };
 
 const creatingItems = (championObj) => {
-  creatingOverwiev(championObj);
-  creatingAbilities(championObj);
+  createOverviewSection(championObj);
+  createAbilitiesSection(championObj);
+  // createAvailableSkins(championObj);
 };
 
 // is it right?
@@ -161,6 +226,7 @@ const backToList = () => {
     render(data);
     resetActiveTab();
     resetDifficalty();
+    resetAbilitiesSlider();
     goTop();
   });
 };
@@ -188,6 +254,9 @@ const renderChampionPage = (dataChampions) => {
 
       championsButtonCanvas();
       championTitleCanvas();
+      abilitiesSlider();
+      abilitiesImageCanvas();
+      abilitiesVideoCanvas();
       goTop();
 
       backToList();

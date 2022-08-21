@@ -93,6 +93,10 @@
   color: rgb(57, 64, 72);
 }
 
+.abilities-option:focus {
+  outline: 0;
+}
+
 .abilities-option-icon {
   position: relative;
   display: block;
@@ -142,7 +146,7 @@
   opacity: 1;
 }
 
-.abilities-container-canvas {
+.abilities-image-container-canvas {
   position: absolute;
   inset: 1px;
   pointer-events: none;
@@ -389,6 +393,53 @@
   display: block;
   width: 100%;
   height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.abilities-no-video-container {
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.abilities-no-video-background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.abilities-no-video-content {
+  padding: 20px;
+}
+
+.abilities-no-video-image {
+  position: relative;
+  display: block;
+  width: 160px;
+  height: 116px;
+  margin: 0 auto 15px;
+}
+
+.abilities-no-video-text {
+  position: relative;
+  max-width: 325px;
+  text-align: center;
+  font-family: "Beaufort for LOL", serif;
+  line-height: 1;
+  font-size: 20px;
+  font-style: italic;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.06em;
 }
 //
 .abilities-background-icon {

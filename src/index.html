@@ -372,14 +372,15 @@
                     </div>
                     <div class="abilities-option-list">
                       <h2 class="abilities-title">Abilities</h2>
-                      <button class="abilities-option is-active">
+                      <button data-testid="abilities:selector" class="abilities-option is-active">
                         <span class="abilities-option-icon">
                           <span class="abilities-option-icon-content">
-                            <img src="https://ddragon.leagueoflegends.com/cdn/12.15.1/img/passive/Aatrox_Passive.png"
+                            <img data-testid="abilities:image"
+                              src="https://ddragon.leagueoflegends.com/cdn/12.15.1/img/passive/Aatrox_Passive.png"
                               alt="">
                           </span>
                           <span class="abilities-option-icon-border">
-                            <div class="abilities-container-canvas">
+                            <div class="abilities-image-container-canvas">
                               <canvas class="abilities-image-canvas"></canvas>
                             </div>
                           </span>
@@ -389,13 +390,14 @@
                           <span class="abilities-option-bullet"></span>
                         </span>
                       </button>
-                      <button class="abilities-option">
+                      <button data-testid="abilities:selector" class="abilities-option">
                         <span class="abilities-option-icon">
                           <span class="abilities-option-icon-content">
-                            <img src="https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/AatroxQ.png" alt="">
+                            <img data-testid="abilities:image"
+                              src="" alt="">
                           </span>
                           <span class="abilities-option-icon-border">
-                            <div class="abilities-container-canvas">
+                            <div class="abilities-image-container-canvas">
                               <canvas class="abilities-image-canvas"></canvas>
                             </div>
                           </span>
@@ -405,13 +407,14 @@
                           <span class="abilities-option-bullet"></span>
                         </span>
                       </button>
-                      <button class="abilities-option">
+                      <button data-testid="abilities:selector" class="abilities-option">
                         <span class="abilities-option-icon">
                           <span class="abilities-option-icon-content">
-                            <img src="https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/AatroxW.png" alt="">
+                            <img data-testid="abilities:image"
+                              src="" alt="">
                           </span>
                           <span class="abilities-option-icon-border">
-                            <div class="abilities-container-canvas">
+                            <div class="abilities-image-container-canvas">
                               <canvas class="abilities-image-canvas"></canvas>
                             </div>
                           </span>
@@ -421,13 +424,14 @@
                           <span class="abilities-option-bullet"></span>
                         </span>
                       </button>
-                      <button class="abilities-option">
+                      <button data-testid="abilities:selector" class="abilities-option">
                         <span class="abilities-option-icon">
                           <span class="abilities-option-icon-content">
-                            <img src="https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/AatroxE.png" alt="">
+                            <img data-testid="abilities:image"
+                              src="" alt="">
                           </span>
                           <span class="abilities-option-icon-border">
-                            <div class="abilities-container-canvas">
+                            <div class="abilities-image-container-canvas">
                               <canvas class="abilities-image-canvas"></canvas>
                             </div>
                           </span>
@@ -435,15 +439,16 @@
                         <span class="abilities-option-line"></span>
                         <span class="abilities-option-bullet-container">
                           <span class="abilities-option-bullet"></sp>
-                        </span>
+                          </span>
                       </button>
-                      <button class="abilities-option">
+                      <button data-testid="abilities:selector" class="abilities-option">
                         <span class="abilities-option-icon">
                           <span class="abilities-option-icon-content">
-                            <img src="https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/AatroxR.png" alt="">
+                            <img data-testid="abilities:image"
+                              src="" alt="">
                           </span>
                           <span class="abilities-option-icon-border">
-                            <div class="abilities-container-canvas">
+                            <div class="abilities-image-container-canvas">
                               <canvas class="abilities-image-canvas"></canvas>
                             </div>
                           </span>
@@ -460,47 +465,35 @@
                       </div>
                       <div class="abilities-ability-info">
                         <ol class="abilities-ability-info-list">
-                          <li class="abilities-ability-info-item is-active">
-                            <h6 class="abilities-ability-info-item-type">Passive</h6>
-                            <h5 class="abilities-ability-info-item-name">DEATHBRINGER STANCE</h5>
-                            <p class="abilities-ability-info-item-description">
-                              Periodically, Aatrox's next basic attack deals bonus physical damage and heals him,
-                              based on the target's max health.
-                            </p>
+                          <li data-testid="abilities:ability" class="abilities-ability-info-item is-active">
+                            <h6 data-testid="abilities:ability:hotkey" class="abilities-ability-info-item-type"></h6>
+                            <h5 data-testid="abilities:ability:name" class="abilities-ability-info-item-name"></h5>
+                            <p data-testid="abilities:ability:description"
+                              class="abilities-ability-info-item-description"></p>
                           </li>
-                          <li class="abilities-ability-info-item">
-                            <h6 class="abilities-ability-info-item-type">Q</h6>
-                            <h5 class="abilities-ability-info-item-name">THE DARKIN BLADE</h5>
-                            <p class="abilities-ability-info-item-description">
-                              Aatrox slams his greatsword down, dealing physical damage. He can swing three times,
-                              each with a different area of effect.
-                            </p>
+                          <li data-testid="abilities:ability" class="abilities-ability-info-item">
+                            <h6 data-testid="abilities:ability:hotkey" class="abilities-ability-info-item-type"></h6>
+                            <h5 data-testid="abilities:ability:name" class="abilities-ability-info-item-name"></h5>
+                            <p data-testid="abilities:ability:description"
+                              class="abilities-ability-info-item-description"></p>
                           </li>
-                          <li class="abilities-ability-info-item">
-                            <h6 class="abilities-ability-info-item-type">W</h6>
-                            <h5 class="abilities-ability-info-item-name">INFERNAL CHAINS</h5>
-                            <p class="abilities-ability-info-item-description">
-                              Aatrox smashes the ground, dealing damage to the first enemy hit. Champions and large
-                              monsters have to leave the impact area quickly or they will be dragged to the center and
-                              take the damage again.
-                            </p>
+                          <li data-testid="abilities:ability" class="abilities-ability-info-item">
+                            <h6 data-testid="abilities:ability:hotkey" class="abilities-ability-info-item-type"></h6>
+                            <h5 data-testid="abilities:ability:name" class="abilities-ability-info-item-name"></h5>
+                            <p data-testid="abilities:ability:description"
+                              class="abilities-ability-info-item-description"></p>
                           </li>
-                          <li class="abilities-ability-info-item">
-                            <h6 class="abilities-ability-info-item-type">E</h6>
-                            <h5 class="abilities-ability-info-item-name">UMBRAL DASH</h5>
-                            <p class="abilities-ability-info-item-description">
-                              Passively, Aatrox heals when damaging enemy champions. On activation, he dashes in a
-                              direction.
-                            </p>
+                          <li data-testid="abilities:ability" class="abilities-ability-info-item">
+                            <h6 data-testid="abilities:ability:hotkey" class="abilities-ability-info-item-type"></h6>
+                            <h5 data-testid="abilities:ability:name" class="abilities-ability-info-item-name"></h5>
+                            <p data-testid="abilities:ability:description"
+                              class="abilities-ability-info-item-description"></p>
                           </li>
-                          <li class="abilities-ability-info-item">
-                            <h6 class="abilities-ability-info-item-type">R</h6>
-                            <h5 class="abilities-ability-info-item-name">WORLD ENDER</h5>
-                            <p class="abilities-ability-info-item-description">
-                              Aatrox unleashes his demonic form, fearing nearby enemy minions and gaining attack
-                              damage, increased healing, and Move Speed. If he gets a takedown, this effect is
-                              extended.
-                            </p>
+                          <li data-testid="abilities:ability" class="abilities-ability-info-item">
+                            <h6 data-testid="abilities:ability:hotkey" class="abilities-ability-info-item-type">R</h6>
+                            <h5 data-testid="abilities:ability:name" class="abilities-ability-info-item-name"></h5>
+                            <p data-testid="abilities:ability:description"
+                              class="abilities-ability-info-item-description"></p>
                           </li>
                         </ol>
                       </div>
@@ -516,38 +509,33 @@
                   <div class="abilities-wrapper-inner-video">
                     <div class="abilities-video-container">
                       <div class="abilities-video-wrapper is-active">
-                        <div class="abilities-video">
+                        <div data-testid="abilities:video-container" class="abilities-video">
                           <!-- <div class="abilities-poster"></div> -->
-                          <video class="abilities-ability-video" preload="metadata" autoplay loop muted
-                            src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_P1.webm"></video>
+                          <video class="abilities-ability-video" preload="metadata" autoplay loop muted src=""></video>
                         </div>
                       </div>
                       <div class="abilities-video-wrapper">
-                        <div class="abilities-video">
+                        <div data-testid="abilities:video-container" class="abilities-video">
                           <!-- <div class="abilities-poster"></div> -->
-                          <video class="abilities-ability-video" preload="metadata" autoplay loop muted
-                            src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_Q1.webm"></video>
+                          <video class="abilities-ability-video" preload="metadata" autoplay loop muted src=""></video>
                         </div>
                       </div>
                       <div class="abilities-video-wrapper">
-                        <div class="abilities-video">
+                        <div data-testid="abilities:video-container" class="abilities-video">
                           <!-- <div class="abilities-poster"></div> -->
-                          <video class="abilities-ability-video" preload="metadata" autoplay loop muted
-                            src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_W1.webm"></video>
+                          <video class="abilities-ability-video" preload="metadata" autoplay loop muted src=""></video>
                         </div>
                       </div>
                       <div class="abilities-video-wrapper">
-                        <div class="abilities-video">
+                        <div data-testid="abilities:video-container" class="abilities-video">
                           <!-- <div class="abilities-poster"></div> -->
-                          <video class="abilities-ability-video" preload="metadata" autoplay loop muted
-                            src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_E1.webm"></video>
+                          <video class="abilities-ability-video" preload="metadata" autoplay loop muted src=""></video>
                         </div>
                       </div>
                       <div class="abilities-video-wrapper">
-                        <div class="abilities-video">
+                        <div data-testid="abilities:video-container" class="abilities-video">
                           <!-- <div class="abilities-poster"></div> -->
-                          <video class="abilities-ability-video" preload="metadata" autoplay loop muted
-                            src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_R1.webm"></video>
+                          <video class="abilities-ability-video" preload="metadata" autoplay loop muted src=""></video>
                         </div>
                       </div>
                       <div class="abilities-video-container-canvas">

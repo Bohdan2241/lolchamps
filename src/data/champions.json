@@ -17,7 +17,7 @@
           "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0103/ability_0103_P1.webm"
         },
         {
-          "image": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0103/ability_0103_Q1.webm",
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/AhriOrbofDeception.png",
           "hotkey": "q",
           "name": "ORB OF DECEPTION",
           "description": "Ahri sends out and pulls back her orb, dealing magic damage on the way out and true damage on the way back.",
@@ -113,7 +113,7 @@
           "hotkey": "e",
           "name": "WEAPON QUEUE SYSTEM",
           "description": "Aphelios has no third ability. This slot shows the next weapon Alune will give him. Weapon order begins fixed but may change over game time -- when a weapon is out of ammo it goes to the end of the order.",
-          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0523/ability_0523_E1.jpg"
+          "video": ""
         },
         {
           "image": "https://ddragon.leagueoflegends.com/cdn/12.14.1/img/spell/ApheliosR.png",
@@ -3054,14 +3054,14 @@
           "hotkey": "w",
           "name": "RING OF FROST",
           "description": "Freezes nearby enemies in ice, dealing magic damage and rooting them.",
-          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0127/ability_0127_W1.jpg"
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0127/ability_0127_W1.webm"
         },
         {
           "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/LissandraE.png",
           "hotkey": "e",
           "name": "GLACIAL PATH",
           "description": "Lissandra creates an ice claw that deals magic damage. Reactivating this ability transports Lissandra to the claw's current location.",
-          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0127/ability_0127_E1.jpg"
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0127/ability_0127_E1.webm"
         },
         {
           "image": "https://ddragon.leagueoflegends.com/cdn/12.15.1/img/spell/LissandraR.png",
