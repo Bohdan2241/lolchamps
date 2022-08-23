@@ -1,0 +1,125 @@
+.skins {
+  display: none;
+}
+
+.skins-content-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.skins-content-wrapper::after {
+  display: block;
+  content: "";
+  width: 60px;
+  flex: 0 0 auto;
+}
+
+.skins-section-content {
+  // box-sizing: border-box;
+  padding: 0 60px;
+}
+
+.skins-wrapper {
+  max-width: 97.5rem;
+  position: relative;
+  margin: 5% auto;
+}
+
+.skins-slideshow {
+  position: relative;
+  width: 100%;
+  padding-bottom: 59.0123%;
+}
+
+.skins-slideshow-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+}
+
+.skins-slideshow-item.is-active {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0s;
+}
+
+.slins-slideshow-item-container {
+  width: 100%;
+  height: 100%;
+}
+
+.skins-slideshow-item-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.skins-side {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 25vw;
+  min-width: 400px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+}
+
+.skins-title {
+  padding: 20px;
+  margin: 40px 40px 0;
+  font-size: 40px;
+  border-bottom: 1px solid rgba(193, 193, 193, 0.2);
+  flex: 0 0 auto;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  font-family: "Beaufort for LOL", serif;
+  font-weight: 800;
+  color: white;
+}
+
+.skins-carousel-wrapper {
+  flex: 1 1 auto;
+  width: calc(100% + 15px);
+  overflow: hidden;
+}
+
+.skins-carousel-container {
+  margin-top: -20vw;
+  width: 100%;
+  height: calc(100% + 20vw);
+  display: flex;
+  flex-direction: column;
+}
+
+.skins-swiper {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.skins-swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+}

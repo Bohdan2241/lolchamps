@@ -5,9 +5,8 @@ import championsButtonCanvas from './champions-button-canvas.js';
 import championTitleCanvas from './champion-title-canvas.js';
 import abilitiesImageCanvas from './abilities-image-canvas.js';
 import abilitiesVideoCanvas from './abilities-video-canvas.js';
-// import  from './abilities-slider.js';
 import { abilitiesSlider, resetAbilitiesSlider } from './abilities-slider.js';
-// import availableSkinsSlider from './available-skins-slider.js';
+import skinsSlider from './skins-slider.js';
 // eslint-disable-next-line import/no-cycle
 import { resetBgcDifficaltyMenuButtons } from '../champions-page/filter-difficalty.js';
 
@@ -213,6 +212,14 @@ const resetDifficalty = () => {
   resetBgcDifficaltyMenuButtons();
 };
 
+const resetFillDifficaltyIcon = () => {
+  const difficaltyicon = document.querySelector('[data-testid="overview:difficaltyicon"]');
+  const indicators = difficaltyicon.children;
+  for (let i = 0; i < indicators.length; i += 1) {
+    indicators[i].className = '';
+  }
+};
+
 const goTop = () => window.scrollTo(0, 0);
 
 const backToList = () => {
@@ -226,6 +233,7 @@ const backToList = () => {
     render(data);
     resetActiveTab();
     resetDifficalty();
+    resetFillDifficaltyIcon();
     resetAbilitiesSlider();
     goTop();
   });
@@ -257,6 +265,7 @@ const renderChampionPage = (dataChampions) => {
       abilitiesSlider();
       abilitiesImageCanvas();
       abilitiesVideoCanvas();
+      skinsSlider();
       goTop();
 
       backToList();
