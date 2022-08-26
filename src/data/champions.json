@@ -3995,6 +3995,206 @@
           }
         ]
       }
+    },
+    {
+      "name": "Soraka",
+      "subtitle": "THE STARCHILD",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Soraka_0.jpg",
+      "role": "support",
+      "difficalty": "low",
+      "description": "A wanderer from the celestial dimensions beyond Mount Targon, Soraka gave up her immortality to protect the mortal races from their own more violent instincts. She endeavors to spread the virtues of compassion and mercy to everyone she meets—even healing those who would wish harm upon her. And, for all Soraka has seen of this world's struggles, she still believes the people of Runeterra have yet to reach their full potential.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.16.1/img/passive/Soraka_Passive.png",
+          "hotkey": "PASSIVE",
+          "name": "SALVATION",
+          "description": "Soraka runs faster towards nearby low health allies.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0016/ability_0016_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.16.1/img/spell/SorakaQ.png",
+          "hotkey": "q",
+          "name": "STARCALL",
+          "description": "A star falls from the sky at the target location dealing magic damage and slowing enemies. If an enemy champion is hit by Starcall, Soraka recovers Health.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0016/ability_0016_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.16.1/img/spell/SorakaW.png",
+          "hotkey": "w",
+          "name": "ASTRAL INFUSION",
+          "description": "Soraka sacrifices a portion of her own health to heal another friendly champion.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0016/ability_0016_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.16.1/img/spell/SorakaE.png",
+          "hotkey": "e",
+          "name": "EQUINOX",
+          "description": "Creates a zone at a location that silences all enemies inside. When the zone expires, all enemies still inside are rooted.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0016/ability_0016_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.16.1/img/spell/SorakaR.png",
+          "hotkey": "r",
+          "name": "WISH",
+          "description": "Soraka fills her allies with hope, instantly restoring health to herself and all allied champions.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0016/ability_0016_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "soraka",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Soraka_0.jpg"
+          },
+          {
+            "name": "dryad soraka",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Soraka_1.jpg"
+          },
+          {
+            "name": "divine soraka",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Soraka_2.jpg"
+          },
+          {
+            "name": "celestine soraka",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Soraka_3.jpg"
+          },
+          {
+            "name": "reaper soraka",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Soraka_4.jpg"
+          },
+          {
+            "name": "order of the banana soraka",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Soraka_5.jpg"
+          },
+          {
+            "name": "program soraka",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Soraka_6.jpg"
+          },
+          {
+            "name": "STAR GUARDIAN SORAKA",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Soraka_7.jpg"
+          },
+          {
+            "name": "PAJAMA GUARDIAN SORAKA",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Soraka_8.jpg"
+          },
+          {
+            "name": "WINTER WONDER SORAKA",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Soraka_9.jpg"
+          },
+          {
+            "name": "DAWNBRINGER SORAKA",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Soraka_15.jpg"
+          },
+          {
+            "name": "NIGHTBRINGER SORAKA",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Soraka_16.jpg"
+          },
+          {
+            "name": "PRESTIGE STAR GUARDIAN SORAKA",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Soraka_17.jpg"
+          },
+          {
+            "name": "CAFE CUTIES SORAKA",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Soraka_18.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ekko",
+      "subtitle": "THE BOY WHO SHATTERED TIME",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltf22ba7e6328e4376/5db05fbd242f426df132f963/RiotX_ChampionList_ekko.jpg?quality=90&width=250",
+      "largeImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ekko_0.jpg",
+      "role": "assasin",
+      "difficalty": "high",
+      "description": "A prodigy from the rough streets of Zaun, Ekko manipulates time to twist any situation to his advantage. Using his own invention, the Zero Drive, he explores the branching possibilities of reality to craft the perfect moment. Though he revels in this freedom, when there's a threat to his friends he'll do anything to defend them. To outsiders, Ekko seems to achieve the impossible the first time, every time.",
+      "abilities": [
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.16.1/img/passive/Ekko_P.png",
+          "hotkey": "PASSIVE",
+          "name": "Z-DRIVE RESONANCE",
+          "description": "Every third attack or damaging spell on the same target deals bonus magic damage, and grants Ekko a burst of speed if the target is a champion.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0245/ability_0245_P1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.16.1/img/spell/EkkoQ.png",
+          "hotkey": "q",
+          "name": "TIMEWINDER",
+          "description": "Ekko throws a temporal grenade that expands into a time-distortion field upon hitting an enemy champion, slowing and damaging anyone caught inside. After a delay, the grenade rewinds back to Ekko, dealing damage on its return.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0245/ability_0245_Q1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.16.1/img/spell/EkkoW.png",
+          "hotkey": "w",
+          "name": "PARALLEL CONVERGENCE",
+          "description": "Ekko's basic attacks deal bonus magic damage to low health enemies. He can cast Parallel Convergence to split the timeline, creating an anomaly after a few seconds that slows enemies caught inside. If Ekko enters the anomaly, he gains shielding and stuns enemies by suspending them in time.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0245/ability_0245_W1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.16.1/img/spell/EkkoE.png",
+          "hotkey": "e",
+          "name": "PHASE DIVE",
+          "description": "Ekko rolls evasively while charging up his Z-Drive. His next attack deals bonus damage and warps reality, teleporting him to his target.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0245/ability_0245_E1.webm"
+        },
+        {
+          "image": "https://ddragon.leagueoflegends.com/cdn/12.16.1/img/spell/EkkoR.png",
+          "hotkey": "r",
+          "name": "CHRONOBREAK",
+          "description": "Ekko shatters his timeline, becoming untargetable and rewinding to a more favorable point in time. He returns to whenever he was a few seconds ago, and heals for a percentage of the damage received in that duration. Enemies near his arrival zone take massive damage.",
+          "video": "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0245/ability_0245_R1.webm"
+        }
+      ],
+      "skins": {
+        "available": [
+          {
+            "name": "ekko",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ekko_0.jpg"
+          },
+          {
+            "name": "sandstorm ekko",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ekko_1.jpg"
+          },
+          {
+            "name": "academy ekko",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ekko_2.jpg"
+          },
+          {
+            "name": "project: ekko",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ekko_3.jpg"
+          },
+          {
+            "name": "skt t1 ekko",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ekko_11.jpg"
+          },
+          {
+            "name": "TRICK OR TREAT EKKO",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ekko_12.jpg"
+          },
+          {
+            "name": "true damage ekko",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ekko_19.jpg"
+          },
+          {
+            "name": "PULSEFIRE ekko",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ekko_28.jpg"
+          },
+          {
+            "name": "FIRELIGHT ekko",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ekko_36.jpg"
+          },
+          {
+            "name": "STAR GUARDIAN ekko",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ekko_45.jpg"
+          },
+          {
+            "name": "PRESTIGE STAR GUARDIAN EKKO",
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ekko_46.jpg"
+          }
+        ]
+      }
     }
   ]
 }

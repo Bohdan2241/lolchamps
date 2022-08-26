@@ -42,18 +42,18 @@ const fillDifficaltyIcon = (difficalty, container) => {
 };
 
 const firstPartOfDescription = (description) => {
-  const maxSize = 260;
+  const maxSize = 270;
   const minSize = 245;
   let result = '';
   for (let i = 0; i < maxSize; i += 1) {
     const currentChar = description[i];
     const nextChar = description[i + 1];
-
-    // fix this Ahri
-    if (i >= minSize && nextChar === ' ' && currentChar !== ('.' || ',') && nextChar !== ('.' || ',')) {
-      // console.log(description[i], nextChar);
-      result = description.slice(0, i + 1);
-      break;
+    // fix this anivia
+    if (i >= minSize && nextChar === ' ') {
+      if (!currentChar.includes('.') && !currentChar.includes(',')) {
+        result = description.slice(0, i + 1);
+        break;
+      }
     }
   }
 
@@ -114,34 +114,30 @@ const createOverviewSection = (championObj) => {
   createLinks(links, championObj.name);
 };
 
+const setProperty = (arr, name, championObj) => {
+  for (let i = 0; i < arr.length; i += 1) {
+    const value = championObj.abilities[i][name];
+    const item = arr[i];
+    if (name === 'image') {
+      item.src = value;
+    } else {
+      item.textContent = value;
+    }
+  }
+};
+
 const createAbilitiesSection = (championObj) => {
   const abilitiesImages = document.querySelectorAll('[data-testid="abilities:image"');
-  for (let i = 0; i < abilitiesImages.length; i += 1) {
-    const image = abilitiesImages[i];
-    const value = championObj.abilities[i].image;
-    image.src = value;
-  }
+  setProperty(abilitiesImages, 'image', championObj);
 
   const abilitiesHotkeys = document.querySelectorAll('[data-testid="abilities:ability:hotkey"');
-  for (let i = 0; i < abilitiesHotkeys.length; i += 1) {
-    const hotkey = abilitiesHotkeys[i];
-    const value = championObj.abilities[i].hotkey;
-    hotkey.textContent = value;
-  }
+  setProperty(abilitiesHotkeys, 'hotkey', championObj);
 
   const abilitiesNames = document.querySelectorAll('[data-testid="abilities:ability:name"');
-  for (let i = 0; i < abilitiesNames.length; i += 1) {
-    const name = abilitiesNames[i];
-    const value = championObj.abilities[i].name;
-    name.textContent = value;
-  }
+  setProperty(abilitiesNames, 'name', championObj);
 
   const abilitiesDescriptions = document.querySelectorAll('[data-testid="abilities:ability:description"');
-  for (let i = 0; i < abilitiesDescriptions.length; i += 1) {
-    const description = abilitiesDescriptions[i];
-    const value = championObj.abilities[i].description;
-    description.textContent = value;
-  }
+  setProperty(abilitiesDescriptions, 'description', championObj);
 
   const abilitiesVideoContainers = document.querySelectorAll('[data-testid="abilities:video-container"');
   abilitiesVideoContainers.forEach((abilitiesVideoContainer, i) => {
