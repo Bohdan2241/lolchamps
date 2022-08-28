@@ -11,13 +11,12 @@ const delayStep = 50;
 let initial = -(delayStep); // global var!!!
 
 const creatingItems = (champions, container) => {
+  // console.log(champions);
   // eslint-disable-next-line no-unused-vars
   const creatingItem = champions.forEach((champion) => {
-    // console.log(champion);
     const { name } = champion;
     const imageLink = champion.previewImage;
     const championLink = `/${name}`;
-    // const championLink = '/champion.html';
     const delay = delayMultiplayer(initial += delayStep);
 
     const itemLink = document.createElement('a');
@@ -100,13 +99,20 @@ const difficaltySort = (champions, numDifficalty) => champions.filter((champion)
 });
 
 export const render = (dataChampions, type = 'all', difficalty = 'all') => {
+  console.log(dataChampions);
   const { champions } = dataChampions;
   const container = document.querySelector('.champions-list');
 
   if (container) {
     container.innerHTML = '';
 
-    let sortedArr = defaultSort(champions);
+    let sortedArr = [];
+    if (!dataChampions.name) {
+      sortedArr = defaultSort(champions);
+    } else {
+      console.log('da', dataChampions.name, champions);
+      sortedArr.push(champions);
+    }
     if (type !== 'all') {
       sortedArr = roleSort(champions, type);
     }
@@ -120,7 +126,7 @@ export const render = (dataChampions, type = 'all', difficalty = 'all') => {
     if (!sortedArr.length) {
       message.style.display = 'block';
     }
-
+    // console.log(sortedArr);
     creatingItems(sortedArr, container);
     renderChampionPage();
     // delay global var

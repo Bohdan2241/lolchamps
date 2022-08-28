@@ -57,7 +57,8 @@
   transition: top 250ms ease 0s, bottom 250ms ease 0s;
 }
 
-.search-container:hover .search::before {
+.search-container:hover .search::before,
+.search-is-focused::before {
   top: 0;
   bottom: 0;
 }
@@ -79,18 +80,18 @@
 }
 
 .search-value svg .st0 {
-  fill: rgb(194, 144, 45);
+  fill: $sand;
 }
 
 .search-value svg .st1 {
   fill: none;
-  stroke: rgb(194, 144, 45);
+  stroke: $sand;
   stroke-width: 1.5;
   stroke-miterlimit: 10;
 }
 
-.search-value input {
-  width: 50px;
+.search-input {
+  width: 0;
   cursor: pointer;
   border: none;
   padding: 0;
@@ -100,20 +101,69 @@
   text-transform: uppercase;
 }
 
-.search-value input::placeholder {
-  text-transform: uppercase;
-  color: $black;
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  font-weight: 600;
+.search-input-focused {
+  min-width: 47px;
 }
 
-.search-value input:focus {
+.search-value .search-input:focus {
   outline: none;
 }
 
-.search-container:hover .search-value svg {
+/* stylelint-disable no-descending-specificity */
+.search-container:hover .search-value svg,
+.search-icon-focused svg {
   left: 0;
+}
+/* stylelint-enable no-descending-specificity */
+
+.search-placeholder {
+  position: static;
+  top: auto;
+  color: black;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 0;
+  transform: none;
+  transition: color 250ms ease 0s;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.search-placeholder-focused {
+  position: absolute;
+  color: rgb(202, 202, 202);
+}
+
+.search-dropdown-content {
+  display: none;
+  max-height: 300px;
+  z-index: 1;
+  position: absolute;
+  top: 38px;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  border-right: 1px rgb(193, 193, 193) solid;
+  border-left: 1px rgb(193, 193, 193) solid;
+  border-bottom: 1px rgb(193, 193, 193) solid;
+  overflow: scroll;
+}
+
+.search-dropdown-content-item {
+  padding: 10px 30px;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  transition: background-color 300ms ease 0s;
+  cursor: pointer;
+}
+
+.search-dropdown-content-item:hover {
+  background-color: rgb(236 235 234 / 75%);
 }
 
 .role-container {
@@ -154,7 +204,7 @@
   bottom: 0;
   width: 100%;
   height: 3px;
-  background-color: rgb(194, 144, 45);
+  background-color: $sand;
   transform: scale(0, 1);
   transition: transform 300ms ease 0s;
 }
@@ -353,7 +403,7 @@
 .difficalty-indicator-arrow svg {
   width: 14px;
   height: 11px;
-  color: rgb(194, 144, 45);
+  color: $sand;
 }
 
 .difficalty-indicator-arrow-open svg {
