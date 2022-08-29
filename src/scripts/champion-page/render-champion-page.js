@@ -1,4 +1,4 @@
-// eslint-disable-next-line import/no-cycle
+/* eslint-disable import/no-cycle */
 import { render } from '../champions-page/render-champions.js';
 import data from '../getData.js';
 import championsButtonCanvas from './champions-button-canvas.js';
@@ -7,7 +7,7 @@ import abilitiesImageCanvas from './abilities-image-canvas.js';
 import abilitiesVideoCanvas from './abilities-video-canvas.js';
 import { abilitiesSlider, resetAbilitiesSlider } from './abilities-slider.js';
 import skinsSlider from './skins-slider.js';
-// eslint-disable-next-line import/no-cycle
+import { resetSearchInput } from '../champions-page/search-champion.js';
 import { resetBgcDifficaltyMenuButtons } from '../champions-page/filter-difficalty.js';
 
 const pickRoleIcon = (role) => {
@@ -227,6 +227,7 @@ const backToList = () => {
     championPage.style.display = 'none';
 
     render(data);
+    resetSearchInput();
     resetActiveTab();
     resetDifficalty();
     resetFillDifficaltyIcon();

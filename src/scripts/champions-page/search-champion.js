@@ -1,11 +1,25 @@
+/* eslint-disable import/no-cycle */
 import { render } from './render-champions.js';
 import data from '../getData.js';
+
+const searchClear = (dataChampions) => {
+  const searchClearButton = document.querySelector('.search-indicator-clear');
+  const searchPlaceholder = document.querySelector('.search-placeholder');
+  searchClearButton.addEventListener('click', () => {
+    searchClearButton.style.display = 'none';
+    searchPlaceholder.textContent = 'search';
+    searchPlaceholder.style.marginRight = '0px';
+
+    render(dataChampions);
+  });
+};
 
 const renderSearchChampion = (dataChampions) => {
   const { champions } = dataChampions;
   const searchButtons = document.querySelectorAll('.search-dropdown-content-item');
   const search = document.querySelector('.search-input');
   const searchPlaceholder = document.querySelector('.search-placeholder');
+  const searchClearButton = document.querySelector('.search-indicator-clear');
   searchButtons.forEach((button) => {
     button.addEventListener('click', () => {
       const championButtons = document.querySelectorAll('.search-dropdown-content-item');
@@ -17,8 +31,10 @@ const renderSearchChampion = (dataChampions) => {
       const choosenChampionName = button.textContent;
       search.value = '';
       searchPlaceholder.style.display = 'block';
+      searchPlaceholder.style.marginRight = '10px';
       searchPlaceholder.textContent = choosenChampionName;
       searchPlaceholder.classList.remove('search-placeholder-focused');
+      searchClearButton.style.display = 'flex';
       const choosenChampion = champions.filter(({ name }) => name === choosenChampionName);
       render({
         champions: choosenChampion,
@@ -100,6 +116,16 @@ const searchChampion = (dataChampions) => {
       }
     });
   });
+
+  searchClear(dataChampions);
+};
+
+export const resetSearchInput = () => {
+  const searchClearButton = document.querySelector('.search-indicator-clear');
+  const searchPlaceholder = document.querySelector('.search-placeholder');
+  searchClearButton.style.display = 'none';
+  searchPlaceholder.textContent = 'search';
+  searchPlaceholder.style.marginRight = '0px';
 };
 
 export default () => {

@@ -137,6 +137,25 @@
   color: rgb(202, 202, 202);
 }
 
+.search-indicator-clear {
+  display: none;
+  // display: flex;
+  background-color: rgb(213, 213, 213);
+  border-radius: 50%;
+  transition: background-color 300ms ease 0s;
+}
+
+.search-indicator-clear:hover {
+  background-color: rgb(178, 178, 178);
+}
+
+.search-svg {
+  width: 11px;
+  height: 11px;
+  fill: #f9f9f9;
+  stroke: #f9f9f9;
+}
+
 .search-dropdown-content {
   display: none;
   max-height: 300px;

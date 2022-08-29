@@ -99,7 +99,6 @@ const difficaltySort = (champions, numDifficalty) => champions.filter((champion)
 });
 
 export const render = (dataChampions, type = 'all', difficalty = 'all') => {
-  console.log(dataChampions);
   const { champions } = dataChampions;
   const container = document.querySelector('.champions-list');
 
@@ -110,7 +109,6 @@ export const render = (dataChampions, type = 'all', difficalty = 'all') => {
     if (!dataChampions.name) {
       sortedArr = defaultSort(champions);
     } else {
-      console.log('da', dataChampions.name, champions);
       sortedArr.push(champions);
     }
     if (type !== 'all') {
@@ -118,7 +116,7 @@ export const render = (dataChampions, type = 'all', difficalty = 'all') => {
     }
     if (difficalty !== 'all') {
       sortedArr = difficaltySort(champions, difficalty);
-    } // fix work of 2 filters
+    } // fix work of 3 filters
 
     // No champions match the filter criteria.
     const message = document.querySelector('.champions-list-message');
@@ -126,7 +124,6 @@ export const render = (dataChampions, type = 'all', difficalty = 'all') => {
     if (!sortedArr.length) {
       message.style.display = 'block';
     }
-    // console.log(sortedArr);
     creatingItems(sortedArr, container);
     renderChampionPage();
     // delay global var
