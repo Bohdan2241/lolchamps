@@ -271,23 +271,23 @@
         "available": [
           {
             "name": "kha'zix",
-            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Khazix_1.jpg"
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Khazix_0.jpg"
           },
           {
             "name": "mecha kha'zix",
-            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Khazix_2.jpg"
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Khazix_1.jpg"
           },
           {
             "name": "guardian of the sands kha'zix",
-            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Khazix_3.jpg"
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Khazix_2.jpg"
           },
           {
             "name": "death blossom kha'zix",
-            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Khazix_4.jpg"
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Khazix_3.jpg"
           },
           {
             "name": "dark star kha'zix",
-            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Khazix_5.jpg"
+            "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Khazix_4.jpg"
           },
           {
             "name": "championship kha'zix",
@@ -3284,19 +3284,19 @@
             "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yone_0.jpg"
           },
           {
-            "name": "yone",
+            "name": "spirit blossom yone",
             "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yone_1.jpg"
           },
           {
-            "name": "yone",
+            "name": "BATTLE ACADEMIA yone",
             "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yone_10.jpg"
           },
           {
-            "name": "yone",
+            "name": "DAWNBRINGER yone",
             "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yone_19.jpg"
           },
           {
-            "name": "yone",
+            "name": "ocean song yone",
             "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yone_26.jpg"
           }
         ]

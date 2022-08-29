@@ -6,7 +6,7 @@ import championTitleCanvas from './champion-title-canvas.js';
 import abilitiesImageCanvas from './abilities-image-canvas.js';
 import abilitiesVideoCanvas from './abilities-video-canvas.js';
 import { abilitiesSlider, resetAbilitiesSlider } from './abilities-slider.js';
-import skinsSlider from './skins-slider.js';
+import skinsSlider, { resetSkinsSlider } from './skins-slider.js';
 import { resetSearchInput } from '../champions-page/search-champion.js';
 import { resetBgcDifficaltyMenuButtons } from '../champions-page/filter-difficalty.js';
 
@@ -232,6 +232,7 @@ const backToList = () => {
     resetDifficalty();
     resetFillDifficaltyIcon();
     resetAbilitiesSlider();
+    resetSkinsSlider();
     goTop();
   });
 };
@@ -262,7 +263,7 @@ const renderChampionPage = (dataChampions) => {
       abilitiesSlider();
       abilitiesImageCanvas();
       abilitiesVideoCanvas();
-      skinsSlider();
+      skinsSlider(championObj);
       goTop();
 
       backToList();
