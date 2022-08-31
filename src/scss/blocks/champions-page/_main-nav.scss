@@ -244,7 +244,7 @@
   transform: scale(1, 1) !important;
 }
 
-.difficalty-container {
+.difficulty-container {
   min-width: 172px;
   position: relative;
   flex: 0 1 auto;
@@ -252,12 +252,12 @@
   align-items: center;
 }
 
-.difficalty-wrapper {
+.difficulty-wrapper {
   position: relative;
   height: 100%;
 }
 
-.difficalty {
+.difficulty {
   position: relative;
   display: flex;
   align-items: center;
@@ -268,7 +268,7 @@
   justify-content: center;
 }
 
-.difficalty::before {
+.difficulty::before {
   content: "";
   position: absolute;
   top: 10px;
@@ -279,25 +279,25 @@
   transition: top 250ms ease 0s, bottom 250ms ease 0s;
 }
 
-.difficalty-container:hover .difficalty::before,
-.difficalty-container:focus .difficalty::before,
+.difficulty-container:hover .difficulty::before,
+.difficulty-container:focus .difficulty::before,
 .menu-is-open::before {
   top: 0;
   bottom: 0;
 }
 
-.difficalty-placeholder {
+.difficulty-placeholder {
   font-size: 10px;
   font-weight: 600;
   color: $black;
   text-transform: uppercase;
 }
 
-.difficalty-single-value {
+.difficulty-single-value {
   display: none;
 }
 
-.difficalty-single-value-container {
+.difficulty-single-value-container {
   // position: relative;
   display: flex;
   // transform: none;
@@ -305,14 +305,14 @@
   margin-right: 5px;
 }
 
-.difficalty-value-wrapper {
+.difficulty-value-wrapper {
   max-width: 100%;
   width: 100px;
   height: 10px;
   display: inline-block;
 }
 
-.difficalty-value-container {
+.difficulty-value-container {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -321,7 +321,7 @@
   white-space: nowrap;
 }
 
-.difficalty-value-item {
+.difficulty-value-item {
   box-sizing: content-box;
   display: inline-block;
   width: 30.6667%;
@@ -333,11 +333,11 @@
   transform: skewX(-40deg);
 }
 
-.difficalty-value-item:last-child {
+.difficulty-value-item:last-child {
   padding-right: 0;
 }
 
-.difficalty-value-item-empty {
+.difficulty-value-item-empty {
   box-sizing: content-box;
   display: inline-block;
   width: 30.6667%;
@@ -349,11 +349,11 @@
   transform: skewX(-40deg);
 }
 
-.difficalty-value-item-empty:last-child {
+.difficulty-value-item-empty:last-child {
   padding-right: 0;
 }
 
-.difficalty-dropdown-content {
+.difficulty-dropdown-content {
   display: none;
   position: absolute;
   top: 38px;
@@ -366,7 +366,7 @@
   border-bottom: 1px rgb(193, 193, 193) solid;
 }
 
-.difficalty-dropdown-content .difficalty-single-value-container {
+.difficulty-dropdown-content .difficulty-single-value-container {
   margin-right: 0;
   padding-left: 29px;
   padding-top: 10px;
@@ -374,18 +374,18 @@
   transition: background-color 300ms ease 0s;
 }
 
-.difficalty-dropdown-content .difficalty-single-value-container:hover,
-.difficalty-dropdown-content .difficalty-single-value-container:focus {
+.difficulty-dropdown-content .difficulty-single-value-container:hover,
+.difficulty-dropdown-content .difficulty-single-value-container:focus {
   background-color: rgba(221, 221, 221, 50%);
 }
 
-.difficalty-indicators {
+.difficulty-indicators {
   display: flex;
   align-items: center;
   height: 100%;
 }
 
-.difficalty-indicator-clear {
+.difficulty-indicator-clear {
   display: none;
   // display: flex;
   background-color: rgb(213, 213, 213);
@@ -394,12 +394,12 @@
   transition: background-color 300ms ease 0s;
 }
 
-.difficalty-indicator-clear:hover {
+.difficulty-indicator-clear:hover {
   background-color: rgb(178, 178, 178);
 }
 
 /* stylelint-disable no-descending-specificity */
-.difficalty-indicator-clear svg {
+.difficulty-indicator-clear svg {
   width: 11px;
   height: 11px;
   fill: $white;
@@ -407,36 +407,36 @@
 }
 /* stylelint-enable no-descending-specificity */
 
-.difficalty-indicator-arrow {
+.difficulty-indicator-arrow {
   padding: 4px;
   transition: transform 250ms ease 0s;
 }
 
-.difficalty-container:hover .difficalty-indicator-arrow,
-.difficalty-container:focus .difficalty-indicator-arrow,
-.difficalty-indicator-arrow-open {
+.difficulty-container:hover .difficulty-indicator-arrow,
+.difficulty-container:focus .difficulty-indicator-arrow,
+.difficulty-indicator-arrow-open {
   transform: translate(5px, 0);
 }
 
 /* stylelint-disable no-descending-specificity */
-.difficalty-indicator-arrow svg {
+.difficulty-indicator-arrow svg {
   width: 14px;
   height: 11px;
   color: $sand;
 }
 
-.difficalty-indicator-arrow-open svg {
+.difficulty-indicator-arrow-open svg {
   transform: rotate(180deg);
   color: rgb(178, 178, 178);
 }
 /* stylelint-enable no-descending-specificity */
 
-.difficalty-indicator-arrow svg .st0 {
+.difficulty-indicator-arrow svg .st0 {
   fill: none;
   stroke: currentColor;
   stroke-miterlimit: 10;
 }
 
-.difficalty-indicator-arrow svg .st1 {
+.difficulty-indicator-arrow svg .st1 {
   fill: currentColor;
 }

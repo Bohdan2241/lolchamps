@@ -1,6 +1,6 @@
 /* eslint-disable import/no-cycle */
 import { render } from './render-champions.js';
-import data from '../getData.js';
+import dataDragon from '../getData.js';
 
 const searchClear = (dataChampions) => {
   const searchClearButton = document.querySelector('.search-indicator-clear');
@@ -15,30 +15,30 @@ const searchClear = (dataChampions) => {
 };
 
 const renderSearchChampion = (dataChampions) => {
-  const { champions } = dataChampions;
+  const { data } = dataChampions;
   const searchButtons = document.querySelectorAll('.search-dropdown-content-item');
   const search = document.querySelector('.search-input');
   const searchPlaceholder = document.querySelector('.search-placeholder');
   const searchClearButton = document.querySelector('.search-indicator-clear');
   searchButtons.forEach((button) => {
     button.addEventListener('click', () => {
-      const championButtons = document.querySelectorAll('.search-dropdown-content-item');
-      championButtons.forEach((championButton) => {
+      // const championButtons = document.querySelectorAll('.search-dropdown-content-item');
+      searchButtons.forEach((championButton) => {
         const buttonUpdate = championButton;
         buttonUpdate.style.display = 'block';
       });
 
-      const choosenChampionName = button.textContent;
+      const chosenChampionName = button.textContent;
       search.value = '';
       searchPlaceholder.style.display = 'block';
       searchPlaceholder.style.marginRight = '10px';
-      searchPlaceholder.textContent = choosenChampionName;
+      searchPlaceholder.textContent = chosenChampionName;
       searchPlaceholder.classList.remove('search-placeholder-focused');
       searchClearButton.style.display = 'flex';
-      const choosenChampion = champions.filter(({ name }) => name === choosenChampionName);
-      render({
-        champions: choosenChampion,
-      });
+      const objForRender = {
+        data: data[chosenChampionName],
+      };
+      render(objForRender, 'all', 'all', true);
     });
   });
 };
@@ -75,7 +75,7 @@ const toggleDropdownContent = () => {
 };
 
 const searchChampion = (dataChampions) => {
-  const { champions } = dataChampions;
+  const { data } = dataChampions;
   const searchButton = document.querySelector('.search-container');
   const contentContainer = document.querySelector('.search-dropdown-content');
   const search = document.querySelector('.search-input');
@@ -85,14 +85,16 @@ const searchChampion = (dataChampions) => {
     search.focus();
 
     if (!contentContainer.children.length) {
-      champions.forEach((champion) => {
+      const championNamesList = Object.values(data);
+      championNamesList.forEach((champion) => {
         const championName = champion.name;
+        console.log(championName);
         const championButton = document.createElement('div');
         championButton.classList.add('search-dropdown-content-item');
         championButton.textContent = championName;
         contentContainer.append(championButton);
       });
-      renderSearchChampion(dataChampions);
+      renderSearchChampion(dataChampions, 'all', 'all', true);
     }
   });
 
@@ -129,5 +131,5 @@ export const resetSearchInput = () => {
 };
 
 export default () => {
-  searchChampion(data);
+  searchChampion(dataDragon);
 };

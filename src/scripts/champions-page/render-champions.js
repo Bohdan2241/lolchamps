@@ -1,6 +1,21 @@
-import data from '../getData.js';
+// import _ from 'lodash';
+import dataDragon from '../getData.js';
+import imagesDataOld from '../getImagesData.js';
 // eslint-disable-next-line import/no-cycle
 import renderChampionPage from '../champion-page/render-champion-page.js';
+
+const getPreviewImage = (name) => {
+  const { champions } = imagesDataOld;
+  const image = champions.flatMap((champion) => {
+    if (champion.name.toLowerCase() === name.toLowerCase()) {
+      return champion.previewImage;
+    }
+
+    return [];
+  });
+
+  return image;
+};
 
 const delayMultiplayer = (extraDelay) => {
   const startDelay = 0;
@@ -11,11 +26,9 @@ const delayStep = 50;
 let initial = -(delayStep); // global var!!!
 
 const creatingItems = (champions, container) => {
-  // console.log(champions);
-  // eslint-disable-next-line no-unused-vars
-  const creatingItem = champions.forEach((champion) => {
+  champions.forEach((champion) => {
     const { name } = champion;
-    const imageLink = champion.previewImage;
+    const imageLink = `${getPreviewImage(name)}`;
     const championLink = `/${name}`;
     const delay = delayMultiplayer(initial += delayStep);
 
@@ -55,58 +68,61 @@ const roleSort = (champions, type) => champions.filter((champion) => {
   let role = '';
   switch (type) {
     case 'assasins':
-      role = 'assasin';
+      role = 'Assassin';
       break;
     case 'fighters':
-      role = 'fighter';
+      role = 'Fighter';
       break;
     case 'mages':
-      role = 'mage';
+      role = 'Mage';
       break;
     case 'marksmen':
-      role = 'marksman';
+      role = 'Marksman';
       break;
     case 'supports':
-      role = 'support';
+      role = 'Support';
       break;
     case 'tanks':
-      role = 'tank';
+      role = 'Tank';
       break;
     default:
-      throw new Error('Unexpected type');
+      throw new Error(`Unexpected type ${type}`);
   }
 
-  return role === champion.role ? champion : false;
+  return champion.tags.includes(role) ? champion : false;
 });
 
-const difficaltySort = (champions, numDifficalty) => champions.filter((champion) => {
-  let difficalty = '';
-  switch (numDifficalty) {
+const difficultySort = (champions, numDifficulty) => champions.filter((champion) => {
+  let difficulty = [];
+  switch (numDifficulty) {
     case 2:
-      difficalty = 'low';
+      difficulty = [0, 1, 2, 3];
       break;
     case 1:
-      difficalty = 'moderate';
+      difficulty = [4, 5, 6, 7];
       break;
     case 0:
-      difficalty = 'high';
+      difficulty = [8, 9, 10];
       break;
     default:
-      throw new Error('Unexpected difficalty');
+      throw new Error(`Unexpected difficulty ${numDifficulty}`);
   }
 
-  return difficalty === champion.difficalty ? champion : false;
+  return difficulty.includes(champion.info.difficulty) ? champion : false;
 });
 
-export const render = (dataChampions, type = 'all', difficalty = 'all') => {
-  const { champions } = dataChampions;
+// eslint-disable-next-line no-unused-vars
+export const render = (dataChampions, type = 'all', difficulty = 'all', search = false) => {
+  const { data } = dataChampions;
+  const champions = search ? data : Object.values(data);
+
   const container = document.querySelector('.champions-list');
 
   if (container) {
     container.innerHTML = '';
 
     let sortedArr = [];
-    if (!dataChampions.name) {
+    if (!champions.name) {
       sortedArr = defaultSort(champions);
     } else {
       sortedArr.push(champions);
@@ -114,8 +130,8 @@ export const render = (dataChampions, type = 'all', difficalty = 'all') => {
     if (type !== 'all') {
       sortedArr = roleSort(champions, type);
     }
-    if (difficalty !== 'all') {
-      sortedArr = difficaltySort(champions, difficalty);
+    if (difficulty !== 'all') {
+      sortedArr = difficultySort(champions, difficulty);
     } // fix work of 3 filters
 
     // No champions match the filter criteria.
@@ -132,5 +148,5 @@ export const render = (dataChampions, type = 'all', difficalty = 'all') => {
 };
 
 export default () => {
-  render(data);
+  render(dataDragon);
 };

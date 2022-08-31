@@ -1,4 +1,4 @@
-const url = '../data/dataDragonList.json';
+const url = '../data/champions.json';
 
 const response = await fetch(url);
 const data = await response.json();

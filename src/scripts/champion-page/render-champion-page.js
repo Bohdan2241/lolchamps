@@ -1,6 +1,6 @@
 /* eslint-disable import/no-cycle */
 import { render } from '../champions-page/render-champions.js';
-import data from '../getData.js';
+import data from '../getChampionData.js';
 import championsButtonCanvas from './champions-button-canvas.js';
 import championTitleCanvas from './champion-title-canvas.js';
 import abilitiesImageCanvas from './abilities-image-canvas.js';
@@ -8,7 +8,7 @@ import abilitiesVideoCanvas from './abilities-video-canvas.js';
 import { abilitiesSlider, resetAbilitiesSlider } from './abilities-slider.js';
 import skinsSlider, { resetSkinsSlider } from './skins-slider.js';
 import { resetSearchInput } from '../champions-page/search-champion.js';
-import { resetBgcDifficaltyMenuButtons } from '../champions-page/filter-difficalty.js';
+import { resetBgcDifficultyMenuButtons } from '../champions-page/filter-difficulty.js';
 
 const pickRoleIcon = (role) => {
   const roleIcons = {
@@ -23,8 +23,8 @@ const pickRoleIcon = (role) => {
   return roleIcons[role];
 };
 
-const fillDifficaltyIcon = (difficalty, container) => {
-  const difficaltyMap = {
+const fillDifficultyIcon = (difficulty, container) => {
+  const difficultyMap = {
     low: 0,
     moderate: 1,
     high: 2,
@@ -33,31 +33,12 @@ const fillDifficaltyIcon = (difficalty, container) => {
   const indicators = container.children;
 
   for (let i = 0; i < indicators.length; i += 1) {
-    if (i <= difficaltyMap[difficalty]) {
-      indicators[i].classList.add('difficalty-value-item');
+    if (i <= difficultyMap[difficulty]) {
+      indicators[i].classList.add('difficulty-value-item');
     } else {
-      indicators[i].classList.add('difficalty-value-item-empty');
+      indicators[i].classList.add('difficulty-value-item-empty');
     }
   }
-};
-
-const firstPartOfDescription = (description) => {
-  const maxSize = 270;
-  const minSize = 245;
-  let result = '';
-  for (let i = 0; i < maxSize; i += 1) {
-    const currentChar = description[i];
-    const nextChar = description[i + 1];
-    // fix this anivia
-    if (i >= minSize && nextChar === ' ') {
-      if (!currentChar.includes('.') && !currentChar.includes(',')) {
-        result = description.slice(0, i + 1);
-        break;
-      }
-    }
-  }
-
-  return `${result}...`;
 };
 
 const createSeeMoreButton = () => {
@@ -81,17 +62,17 @@ const createLinks = (links, name) => {
 };
 
 const createOverviewSection = (championObj) => {
+  const name = document.querySelector('[data-testid="overview:name"]');
+  name.textContent = championObj.name;
+
   const introImages = document.querySelectorAll('.background-image, .section-inner-img');
   introImages.forEach((introImage) => {
     const image = introImage;
-    image.src = championObj.largeImage;
+    image.src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${name}_0.jpg`;
   });
 
   const subtitle = document.querySelector('[data-testid="overview:subtitle"]');
-  subtitle.textContent = championObj.subtitle;
-
-  const name = document.querySelector('[data-testid="overview:name"]');
-  name.textContent = championObj.name;
+  subtitle.textContent = championObj.title;
 
   const roleicon = document.querySelector('[data-testid="overview:roleicon"]');
   roleicon.innerHTML = pickRoleIcon(championObj.role);
@@ -99,16 +80,16 @@ const createOverviewSection = (championObj) => {
   const role = document.querySelector('[data-testid="overview:role"]');
   role.textContent = championObj.role;
 
-  const difficaltyicon = document.querySelector('[data-testid="overview:difficaltyicon"]');
-  fillDifficaltyIcon(championObj.difficalty, difficaltyicon);
+  const difficultyicon = document.querySelector('[data-testid="overview:difficultyicon"]');
+  fillDifficultyIcon(championObj.difficulty, difficultyicon);
 
-  const difficalty = document.querySelector('[data-testid="overview:difficalty"]');
-  difficalty.textContent = championObj.difficalty;
+  const difficulty = document.querySelector('[data-testid="overview:difficulty"]');
+  difficulty.textContent = championObj.difficulty;
 
   createSeeMoreButton();
   const description = document.querySelector('[data-testid="overview:description"]');
-  description.insertAdjacentText('afterbegin', firstPartOfDescription(championObj.description));
-  seeMoreDescription(description, championObj.description);
+  description.insertAdjacentText('afterbegin', championObj.blurb);
+  seeMoreDescription(description, championObj.lore);
 
   const links = document.querySelectorAll('[data-testid="overview:link-0"], [data-testid="overview:link-1"], [data-testid="overview:link-2"]');
   createLinks(links, championObj.name);
@@ -116,7 +97,7 @@ const createOverviewSection = (championObj) => {
 
 const setProperty = (arr, name, championObj) => {
   for (let i = 0; i < arr.length; i += 1) {
-    const value = championObj.abilities[i][name];
+    const value = championObj.spels[i][name];
     const item = arr[i];
     if (name === 'image') {
       item.src = value;
@@ -197,20 +178,20 @@ const resetActiveTab = () => {
 };
 
 // is it right?
-const resetDifficalty = () => {
-  const difficaltyPlaceholder = document.querySelector('.difficalty-placeholder');
-  const difficaltySingleValue = document.querySelector('.difficalty-single-value');
-  const difficaltyIndicatorClear = document.querySelector('.difficalty-indicator-clear');
-  difficaltyPlaceholder.style.display = 'block';
-  difficaltySingleValue.style.display = 'none';
-  difficaltyIndicatorClear.style.display = 'none';
+const resetDifficulty = () => {
+  const difficultyPlaceholder = document.querySelector('.difficulty-placeholder');
+  const difficultySingleValue = document.querySelector('.difficulty-single-value');
+  const difficultyIndicatorClear = document.querySelector('.difficulty-indicator-clear');
+  difficultyPlaceholder.style.display = 'block';
+  difficultySingleValue.style.display = 'none';
+  difficultyIndicatorClear.style.display = 'none';
   // toggleDropDownMenu();
-  resetBgcDifficaltyMenuButtons();
+  resetBgcDifficultyMenuButtons();
 };
 
-const resetFillDifficaltyIcon = () => {
-  const difficaltyicon = document.querySelector('[data-testid="overview:difficaltyicon"]');
-  const indicators = difficaltyicon.children;
+const resetFillDifficultyIcon = () => {
+  const difficultyicon = document.querySelector('[data-testid="overview:difficultyicon"]');
+  const indicators = difficultyicon.children;
   for (let i = 0; i < indicators.length; i += 1) {
     indicators[i].className = '';
   }
@@ -229,18 +210,20 @@ const backToList = () => {
     render(data);
     resetSearchInput();
     resetActiveTab();
-    resetDifficalty();
-    resetFillDifficaltyIcon();
+    resetDifficulty();
+    resetFillDifficultyIcon();
     resetAbilitiesSlider();
     resetSkinsSlider();
     goTop();
   });
 };
 
+// eslint-disable-next-line arrow-body-style
 const getChampionInfo = (championName, dataChampions) => {
-  const { champions } = dataChampions;
-  const filterChampion = champions.filter((champion) => champion.name === championName);
-  return filterChampion[0];
+  // const { champions } = dataChampions;
+  // const filterChampion = champions.filter((champion) => champion.name === championName);
+  // return filterChampion[0];
+  return dataChampions;
 };
 
 const renderChampionPage = (dataChampions) => {
@@ -249,7 +232,6 @@ const renderChampionPage = (dataChampions) => {
     link.addEventListener('click', (event) => {
       event.preventDefault();
       const championName = link.querySelector('.item-text').textContent;
-      // eslint-disable-next-line no-unused-vars
       const championObj = getChampionInfo(championName, dataChampions);
       creatingItems(championObj);
 
