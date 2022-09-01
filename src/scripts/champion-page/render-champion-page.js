@@ -1,6 +1,6 @@
 /* eslint-disable import/no-cycle */
 import { render } from '../champions-page/render-champions.js';
-import data from '../getChampionData.js';
+import { getChampionData, getChampionsData } from '../getData.js';
 import championsButtonCanvas from './champions-button-canvas.js';
 import championTitleCanvas from './champion-title-canvas.js';
 import abilitiesImageCanvas from './abilities-image-canvas.js';
@@ -9,6 +9,8 @@ import { abilitiesSlider, resetAbilitiesSlider } from './abilities-slider.js';
 import skinsSlider, { resetSkinsSlider } from './skins-slider.js';
 import { resetSearchInput } from '../champions-page/search-champion.js';
 import { resetBgcDifficultyMenuButtons } from '../champions-page/filter-difficulty.js';
+
+const dataDragon = await getChampionsData();
 
 const pickRoleIcon = (role) => {
   const roleIcons = {
@@ -67,8 +69,18 @@ const createOverviewSection = (championObj) => {
 
   const introImages = document.querySelectorAll('.background-image, .section-inner-img');
   introImages.forEach((introImage) => {
+    const defaultName = championObj.name;
+    let correctName = defaultName;
+    if (defaultName === 'Wukong') {
+      correctName = 'MonkeyKing';
+    }
+
+    if (defaultName === 'Nunu & Willump') {
+      correctName = 'Nunu';
+    }
     const image = introImage;
-    image.src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${name}_0.jpg`;
+
+    image.src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${correctName}_0.jpg`;
   });
 
   const subtitle = document.querySelector('[data-testid="overview:subtitle"]');
@@ -97,6 +109,7 @@ const createOverviewSection = (championObj) => {
 
 const setProperty = (arr, name, championObj) => {
   for (let i = 0; i < arr.length; i += 1) {
+    console.log(arr, name, championObj, 'setProperty func');
     const value = championObj.spels[i][name];
     const item = arr[i];
     if (name === 'image') {
@@ -207,7 +220,7 @@ const backToList = () => {
     const championPage = document.querySelector('.champion-page');
     championPage.style.display = 'none';
 
-    render(data);
+    render(dataDragon);
     resetSearchInput();
     resetActiveTab();
     resetDifficulty();
@@ -218,21 +231,31 @@ const backToList = () => {
   });
 };
 
-// eslint-disable-next-line arrow-body-style
-const getChampionInfo = (championName, dataChampions) => {
-  // const { champions } = dataChampions;
-  // const filterChampion = champions.filter((champion) => champion.name === championName);
-  // return filterChampion[0];
-  return dataChampions;
+const getChampionInfo = async (championName) => {
+  let correctName = championName;
+  if (championName === 'Wukong') {
+    correctName = 'MonkeyKing';
+  }
+
+  if (championName === 'Nunu & Willump') {
+    correctName = 'Nunu';
+  }
+
+  const dataDragonChampion = await getChampionData(correctName);
+  console.log(dataDragonChampion, correctName, championName, 'check init promise');
+  return dataDragonChampion;
 };
 
-const renderChampionPage = (dataChampions) => {
+const renderChampionPage = async () => {
   const links = document.querySelectorAll('.champions-list-item');
-  links.forEach((link) => {
-    link.addEventListener('click', (event) => {
+  // eslint-disable-next-line no-restricted-syntax
+  for (const link of links) {
+    link.addEventListener('click', async (event) => {
       event.preventDefault();
       const championName = link.querySelector('.item-text').textContent;
-      const championObj = getChampionInfo(championName, dataChampions);
+      const championData = await getChampionInfo(championName);
+      const { data } = championData;
+      const championObj = Object.values(data)[0];
       creatingItems(championObj);
 
       const championsList = document.querySelector('.main');
@@ -250,9 +273,9 @@ const renderChampionPage = (dataChampions) => {
 
       backToList();
     });
-  });
+  }
 };
 
 export default () => {
-  renderChampionPage(data);
+  renderChampionPage();
 };

@@ -1,6 +1,8 @@
 /* eslint-disable import/no-cycle */
 import { render } from './render-champions.js';
-import dataDragon from '../getData.js';
+import { getChampionsData } from '../getData.js';
+
+const dataDragon = await getChampionsData();
 
 const searchClear = (dataChampions) => {
   const searchClearButton = document.querySelector('.search-indicator-clear');

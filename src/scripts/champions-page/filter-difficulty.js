@@ -1,6 +1,8 @@
 // eslint-disable-next-line import/no-cycle
 import { render } from './render-champions.js';
-import data from '../getData.js';
+import { getChampionsData } from '../getData.js';
+
+const dataDragon = await getChampionsData();
 
 // fix this (close button => toggle)
 const toggleDropDownMenu = () => {
@@ -76,7 +78,7 @@ const filtredDifficultyContent = (numDificulty) => {
 
     resetBgcDifficultyMenuButtons();
 
-    render(data);
+    render(dataDragon);
   });
 };
 
@@ -94,7 +96,7 @@ const filterDifficulty = () => {
       // eslint-disable-next-line no-param-reassign
       menuButton.style.backgroundColor = '#41ece457';
       filtredDifficultyContent(numDificulty);
-      render(data, 'all', numDificulty);
+      render(dataDragon, 'all', numDificulty);
     });
   });
 };

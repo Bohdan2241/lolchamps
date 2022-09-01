@@ -1,6 +1,7 @@
 import { render } from './render-champions.js';
-// import { renderChampionPage } from './render-champion-page.js';
-import data from '../getData.js';
+import { getChampionsData } from '../getData.js';
+
+const dataDragon = await getChampionsData();
 
 const filterChampions = () => {
   const buttons = document.querySelectorAll('.role-btn');
@@ -11,7 +12,7 @@ const filterChampions = () => {
       button.classList.add('role-active');
       const activeButton = document.querySelector('.role-active');
       const target = activeButton.innerHTML.toLowerCase();
-      render(data, target);
+      render(dataDragon, target);
       // update links list for creating champion's page
       // renderChampionPage(data);
     });

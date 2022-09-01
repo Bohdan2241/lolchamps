@@ -1,8 +1,10 @@
 // import _ from 'lodash';
-import dataDragon from '../getData.js';
+import { getChampionsData } from '../getData.js';
 import imagesDataOld from '../getImagesData.js';
 // eslint-disable-next-line import/no-cycle
 import renderChampionPage from '../champion-page/render-champion-page.js';
+
+const dataDragon = await getChampionsData();
 
 const getPreviewImage = (name) => {
   const { champions } = imagesDataOld;
@@ -114,6 +116,7 @@ const difficultySort = (champions, numDifficulty) => champions.filter((champion)
 // eslint-disable-next-line no-unused-vars
 export const render = (dataChampions, type = 'all', difficulty = 'all', search = false) => {
   const { data } = dataChampions;
+  // console.log(data, Object.values(data));
   const champions = search ? data : Object.values(data);
 
   const container = document.querySelector('.champions-list');

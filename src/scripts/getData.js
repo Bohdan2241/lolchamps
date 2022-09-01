@@ -1,6 +1,11 @@
-const url = '../data/dataDragonList.json';
+import axios from 'axios';
 
-const response = await fetch(url);
-const data = await response.json();
+export const getChampionsData = async () => {
+  const response = await axios.get('http://ddragon.leagueoflegends.com/cdn/12.16.1/data/en_US/champion.json');
+  return response.data;
+};
 
-export default data;
+export const getChampionData = async (championName) => {
+  const response = await axios.get(`http://ddragon.leagueoflegends.com/cdn/12.16.1/data/en_US/champion/${championName}.json`);
+  return response.data;
+};
