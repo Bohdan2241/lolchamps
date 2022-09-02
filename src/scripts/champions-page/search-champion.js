@@ -1,6 +1,7 @@
 /* eslint-disable import/no-cycle */
 import { render } from './render-champions.js';
 import { getChampionsData } from '../getData.js';
+import { normalizeName } from '../champion-page/render-champion-page.js';
 
 const dataDragon = await getChampionsData();
 
@@ -37,8 +38,10 @@ const renderSearchChampion = (dataChampions) => {
       searchPlaceholder.textContent = chosenChampionName;
       searchPlaceholder.classList.remove('search-placeholder-focused');
       searchClearButton.style.display = 'flex';
+
+      const name = normalizeName(chosenChampionName);
       const objForRender = {
-        data: data[chosenChampionName],
+        data: data[name],
       };
       render(objForRender, 'all', 'all', true);
     });
@@ -90,7 +93,6 @@ const searchChampion = (dataChampions) => {
       const championNamesList = Object.values(data);
       championNamesList.forEach((champion) => {
         const championName = champion.name;
-        console.log(championName);
         const championButton = document.createElement('div');
         championButton.classList.add('search-dropdown-content-item');
         championButton.textContent = championName;

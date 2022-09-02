@@ -116,7 +116,6 @@ const difficultySort = (champions, numDifficulty) => champions.filter((champion)
 // eslint-disable-next-line no-unused-vars
 export const render = (dataChampions, type = 'all', difficulty = 'all', search = false) => {
   const { data } = dataChampions;
-  // console.log(data, Object.values(data));
   const champions = search ? data : Object.values(data);
 
   const container = document.querySelector('.champions-list');

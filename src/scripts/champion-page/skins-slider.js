@@ -1,4 +1,6 @@
 import Swiper from 'swiper';
+// eslint-disable-next-line import/no-cycle
+import { normalizeName } from './render-champion-page.js';
 
 const swiper = new Swiper('.swiper', {
   direction: 'vertical',
@@ -10,7 +12,7 @@ swiper.on('click', () => {
   swiper.slideTo(newActiveIndex, 300, true);
 });
 
-const createSwipeItems = (name, image, i) => {
+const createSwipeItems = (name, num, championName, i) => {
   const container = document.querySelector('.skins-swiper-wrapper');
 
   const item = document.createElement('li');
@@ -42,16 +44,21 @@ const createSwipeItems = (name, image, i) => {
   wrapperContent.append(wrapperImage);
 
   const championImage = document.createElement('img');
-  championImage.setAttribute('src', image);
+  const src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championName}_${num}.jpg`;
+  championImage.setAttribute('src', src);
   wrapperImage.append(championImage);
 
   const label = document.createElement('label');
   label.classList.add('skins-carousel-item-text');
-  label.textContent = name;
+  if (i === 0) {
+    label.textContent = championName;
+  } else {
+    label.textContent = name;
+  }
   button.append(label);
 };
 
-const createSlideshowItems = (image, i) => {
+const createSlideshowItems = (num, championName, i) => {
   const container = document.querySelector('.skins-slideshow');
 
   const wrapperContent = document.createElement('div');
@@ -68,7 +75,8 @@ const createSlideshowItems = (image, i) => {
 
   const championImage = document.createElement('img');
   championImage.classList.add('skins-slideshow-item-image');
-  championImage.setAttribute('src', image);
+  const src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championName}_${num}.jpg`;
+  championImage.setAttribute('src', src);
   wrapperImage.append(championImage);
 };
 
@@ -88,11 +96,12 @@ const syncSliders = () => {
 };
 
 const skinsSlider = (dataChampion) => {
-  const availableSkins = dataChampion.skins.available;
+  const { skins } = dataChampion;
+  const championName = normalizeName(dataChampion.name);
 
-  availableSkins.forEach(({ name, image }, i) => {
-    createSwipeItems(name, image, i);
-    createSlideshowItems(image, i);
+  skins.forEach(({ name, num }, i) => {
+    createSwipeItems(name, num, championName, i);
+    createSlideshowItems(num, championName, i);
 
     syncSliders();
   });
