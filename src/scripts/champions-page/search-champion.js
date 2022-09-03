@@ -98,6 +98,10 @@ const searchChampion = (dataChampions) => {
         championButton.textContent = championName;
         contentContainer.append(championButton);
       });
+      const hiddenContent = document.createElement('div');
+      hiddenContent.classList.add('search-dropdown-empty-content-item');
+      hiddenContent.textContent = 'No champions found.';
+      contentContainer.append(hiddenContent);
       renderSearchChampion(dataChampions, 'all', 'all', true);
     }
   });
@@ -112,15 +116,26 @@ const searchChampion = (dataChampions) => {
 
     const text = e.target.value.toLowerCase();
     const championButtons = document.querySelectorAll('.search-dropdown-content-item');
-    championButtons.forEach((championButton) => {
+    const arr = [...championButtons].flatMap((championButton) => {
       const button = championButton;
-      button.style.display = 'none';
 
       const buttonText = championButton.textContent.toLocaleLowerCase();
       if (buttonText.includes(text)) {
         button.style.display = 'block';
+        return championButton;
       }
+      button.style.display = 'none';
+
+      return [];
     });
+
+    if (arr.length === 0) {
+      const hiddenContent = document.querySelector('.search-dropdown-empty-content-item');
+      hiddenContent.style.display = 'block';
+    } else {
+      const hiddenContent = document.querySelector('.search-dropdown-empty-content-item');
+      hiddenContent.style.display = 'none';
+    }
   });
 
   searchClear(dataChampions);

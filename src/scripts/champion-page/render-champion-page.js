@@ -244,35 +244,37 @@ const setPropertyVideo = (arr, championObj) => {
     const championKey = normalizeKey(championObj.key);
 
     const value = `https://d28xe8vt774jo5.cloudfront.net/champion-abilities/${championKey}/ability_${championKey}_${getVideoKey(i)}.webm`;
-    if (!value) {
-      video.remove();
+    fetch(value).then((response) => {
+      if (response.status !== 200) {
+        video.remove();
 
-      const noVideoContainer = document.createElement('div');
-      noVideoContainer.classList.add('abilities-no-video-container');
-      abilitiesVideoContainer.append(noVideoContainer);
+        const noVideoContainer = document.createElement('div');
+        noVideoContainer.classList.add('abilities-no-video-container');
+        abilitiesVideoContainer.append(noVideoContainer);
 
-      const noVideoBackgroundImage = document.createElement('img');
-      noVideoBackgroundImage.classList.add('abilities-no-video-background-image');
-      noVideoBackgroundImage.setAttribute('src', 'https://www.leagueoflegends.com/static/no-ability-background-fdc6db338e4adb76a0dc80e0728ed6d0.jpg');
-      noVideoContainer.append(noVideoBackgroundImage);
+        const noVideoBackgroundImage = document.createElement('img');
+        noVideoBackgroundImage.classList.add('abilities-no-video-background-image');
+        noVideoBackgroundImage.setAttribute('src', 'https://www.leagueoflegends.com/static/no-ability-background-fdc6db338e4adb76a0dc80e0728ed6d0.jpg');
+        noVideoContainer.append(noVideoBackgroundImage);
 
-      const noVideoContent = document.createElement('div');
-      noVideoContent.classList.add('abilities-no-video-content');
-      noVideoContainer.append(noVideoContent);
+        const noVideoContent = document.createElement('div');
+        noVideoContent.classList.add('abilities-no-video-content');
+        noVideoContainer.append(noVideoContent);
 
-      const noVideoImage = document.createElement('img');
-      noVideoImage.classList.add('abilities-no-video-image');
-      noVideoImage.setAttribute('src', 'https://www.leagueoflegends.com/static/no-ability-icon-feb372ba66a6fcea09cdacb239b4f171.png');
-      noVideoContent.append(noVideoImage);
+        const noVideoImage = document.createElement('img');
+        noVideoImage.classList.add('abilities-no-video-image');
+        noVideoImage.setAttribute('src', 'https://www.leagueoflegends.com/static/no-ability-icon-feb372ba66a6fcea09cdacb239b4f171.png');
+        noVideoContent.append(noVideoImage);
 
-      const noVideoText = document.createElement('div');
-      noVideoText.classList.add('abilities-no-video-text');
-      noVideoText.textContent = "CAN'T DISPLAY THIS ABILITY IN VIDEO FORMAT";
-      noVideoContent.append(noVideoText);
-    } else {
-      // eslint-disable-next-line no-param-reassign
-      abilitiesVideoContainer.innerHTML = `<video class="abilities-ability-video" preload="metadata" autoplay="" loop="" muted="" src=${value}></video>`;
-    }
+        const noVideoText = document.createElement('div');
+        noVideoText.classList.add('abilities-no-video-text');
+        noVideoText.textContent = "CAN'T DISPLAY THIS ABILITY IN VIDEO FORMAT";
+        noVideoContent.append(noVideoText);
+      } else {
+        // eslint-disable-next-line no-param-reassign
+        abilitiesVideoContainer.innerHTML = `<video class="abilities-ability-video" preload="metadata" autoplay="" loop="" muted="" src=${value}></video>`;
+      }
+    });
   });
 };
 

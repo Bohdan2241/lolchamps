@@ -1,11 +1,20 @@
-import Swiper from 'swiper';
+// eslint-disable-next-line no-unused-vars
+import Swiper, { Autoplay } from 'swiper';
 // eslint-disable-next-line import/no-cycle
 import { normalizeName } from './render-champion-page.js';
 
+Swiper.use([Autoplay]);
+
 const swiper = new Swiper('.swiper', {
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
   direction: 'vertical',
   height: 100,
 });
+
+// swiper.autoplay.start();
 
 swiper.on('click', () => {
   const newActiveIndex = swiper.clickedIndex;
