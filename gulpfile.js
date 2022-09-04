@@ -16,9 +16,8 @@ export const clean = () => deleteAsync('./dist');
 export const scripts = (done) => {
   gulp.src('./src/scripts/main.js')
     .pipe(webpackStream(webpackConfig), webpack)
-    .pipe(gulp.dest(['./src/scripts'])) // last change
-    .pipe(gulp.dest(['./dist/scripts'])); // ^
-  // .pipe(sync.stream());
+    .pipe(gulp.dest(['./src/scripts']))
+    .pipe(gulp.dest(['./dist/scripts']));
 
   done();
 };
@@ -45,26 +44,14 @@ export const styles = async () => gulp.src('./src/scss/**/*.scss')
   .pipe(gulp.dest('./dist/css/'))
   .pipe(sync.stream());
 
-// add copy task
-export const html = () => gulp.src('./src/*.html')
+export const copy = () => gulp.src([
+  './src/*.html',
+  './src/data/*.json',
+  './src/*.ico',
+  './src/CNAME',
+  './src/*.ico',
+])
   .pipe(gulp.dest('./dist/'));
-
-export const json = () => gulp.src('./src/data/*.json')
-  .pipe(gulp.dest('./dist/data'));
-
-export const cname = () => gulp.src('./src/CNAME')
-  .pipe(gulp.dest('./dist'));
-
-export const favicon = () => gulp.src('./src/*.ico')
-  .pipe(gulp.dest('./dist'));
-// export const server = () => {
-//   sync.init({
-//     server: {
-//       startPath: './',
-//       baseDir: './src',
-//     },
-//   });
-// };
 
 const reload = (done) => {
   sync.reload();
@@ -91,10 +78,7 @@ export const build = (cb) => gulp.series(
   gulp.parallel(
     gulp.series(lintScripts, scripts),
     gulp.series(lintStyles, styles),
-    html,
-    json,
-    cname,
-    favicon,
+    copy,
   ),
 )(cb);
 
@@ -104,7 +88,5 @@ export const dev = () => gulp.series(
     gulp.series(lintScripts, scripts),
     gulp.series(lintStyles, styles),
   ),
-  html,
-  json,
   watch,
 )();

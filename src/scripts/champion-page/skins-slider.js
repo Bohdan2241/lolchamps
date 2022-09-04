@@ -1,24 +1,28 @@
-// eslint-disable-next-line no-unused-vars
 import Swiper, { Autoplay } from 'swiper';
-// eslint-disable-next-line import/no-cycle
-import { normalizeName } from './render-champion-page.js';
-
-Swiper.use([Autoplay]);
+import normalizeName from './normalizeName.js';
 
 const swiper = new Swiper('.swiper', {
+  modules: [Autoplay],
   autoplay: {
-    delay: 2000,
-    disableOnInteraction: false,
+    delay: 6000,
+    disableOnInteraction: true,
   },
   direction: 'vertical',
   height: 100,
+  slideActiveClass: 'swiper-slide-active is-active',
+  slideToClickedSlide: true,
+  // on: {
+  //   init: () => ({
+  //     swiper.autoplay.stop();
+  //   }),
+  // },
 });
 
-// swiper.autoplay.start();
-
-swiper.on('click', () => {
-  const newActiveIndex = swiper.clickedIndex;
-  swiper.slideTo(newActiveIndex, 300, true);
+swiper.on('slideChange', () => {
+  const backgroundImages = document.querySelectorAll('.skins-slideshow-item');
+  const newActiveIndex = swiper.activeIndex;
+  backgroundImages.forEach((item) => item.classList.remove('is-active'));
+  backgroundImages[newActiveIndex].classList.add('is-active');
 });
 
 const createSwipeItems = (name, num, championName, i) => {
@@ -26,9 +30,6 @@ const createSwipeItems = (name, num, championName, i) => {
 
   const item = document.createElement('li');
   item.classList.add('skins-carousel-item', 'swiper-slide');
-  if (i === 0) {
-    item.classList.add('is-active');
-  }
   container.append(item);
 
   const button = document.createElement('button');
@@ -89,21 +90,6 @@ const createSlideshowItems = (num, championName, i) => {
   wrapperImage.append(championImage);
 };
 
-const syncSliders = () => {
-  const swipeItems = document.querySelectorAll('.skins-carousel-item');
-  swipeItems.forEach((swipeItem) => {
-    swipeItem.addEventListener('click', () => {
-      swipeItems.forEach((item) => item.classList.remove('is-active'));
-      swipeItem.classList.add('is-active');
-
-      const backgroundImages = document.querySelectorAll('.skins-slideshow-item');
-      const newActiveIndex = swiper.clickedIndex;
-      backgroundImages.forEach((item) => item.classList.remove('is-active'));
-      backgroundImages[newActiveIndex].classList.add('is-active');
-    });
-  });
-};
-
 const skinsSlider = (dataChampion) => {
   const { skins } = dataChampion;
   const championName = normalizeName(dataChampion.name);
@@ -111,8 +97,17 @@ const skinsSlider = (dataChampion) => {
   skins.forEach(({ name, num }, i) => {
     createSwipeItems(name, num, championName, i);
     createSlideshowItems(num, championName, i);
+  });
 
-    syncSliders();
+  window.addEventListener('scroll', () => {
+    const skinsSection = document.querySelector('.skins');
+    const skinsSectionTop = skinsSection.getBoundingClientRect().top;
+    console.log(skinsSectionTop, window.innerHeight, document.documentElement.clientHeight);
+    if (skinsSectionTop <= (window.innerHeight || document.documentElement.clientHeight)) {
+      setTimeout(() => {
+        swiper.autoplay.start();
+      }, 2000);
+    }
   });
 };
 
@@ -121,7 +116,6 @@ export const resetSkinsSlider = () => {
   const containerSwiper = document.querySelector('.skins-swiper-wrapper');
   containerSlideshow.innerHTML = '';
   containerSwiper.innerHTML = '';
-  // swiper.destroy(true, true);
 };
 
 export default skinsSlider;

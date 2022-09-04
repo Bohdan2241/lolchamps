@@ -1,17 +1,11 @@
-/* eslint-disable import/no-cycle */
-import _ from 'lodash';
-import { render } from '../champions-page/render-champions.js';
-import { getChampionData, getChampionsData } from '../getData.js';
+import { getChampionData } from '../getData.js';
 import championsButtonCanvas from './champions-button-canvas.js';
 import championTitleCanvas from './champion-title-canvas.js';
 import abilitiesImageCanvas from './abilities-image-canvas.js';
 import abilitiesVideoCanvas from './abilities-video-canvas.js';
-import { abilitiesSlider, resetAbilitiesSlider } from './abilities-slider.js';
-import skinsSlider, { resetSkinsSlider } from './skins-slider.js';
-import { resetSearchInput } from '../champions-page/search-champion.js';
-import { resetBgcDifficultyMenuButtons } from '../champions-page/filter-difficulty.js';
-
-const dataDragon = await getChampionsData();
+import { abilitiesSlider } from './abilities-slider.js';
+import skinsSlider from './skins-slider.js';
+import normalizeName from './normalizeName.js';
 
 const pickRoleIcon = (role) => {
   const roleIcons = {
@@ -43,13 +37,13 @@ const fillDifficultyIcon = (difficulty, container) => {
 
   const indicators = container.children;
 
-  for (let i = 0; i < indicators.length; i += 1) {
+  Array.from(indicators).forEach((indicator, i) => {
     if (i <= difficultyMap[difficulty]) {
-      indicators[i].classList.add('difficulty-value-item');
+      indicator.classList.add('difficulty-value-item');
     } else {
-      indicators[i].classList.add('difficulty-value-item-empty');
+      indicator.classList.add('difficulty-value-item-empty');
     }
-  }
+  });
 };
 
 const fillDifficulty = (difficulty) => {
@@ -88,39 +82,6 @@ const createLinks = (links, name) => {
   links[0].setAttribute('href', `https://u.gg/lol/champions/${name}/build`);
   links[1].setAttribute('href', `https://na.op.gg/champion/${name}/statistics/`);
   links[2].setAttribute('href', `https://www.probuilds.net/champions/details/${name}`);
-};
-
-export const normalizeName = (name) => {
-  let normalizedName = name;
-  if (normalizedName === 'Nunu & Willump') {
-    normalizedName = 'Nunu';
-  }
-  if (normalizedName === 'Wukong') {
-    normalizedName = 'MonkeyKing';
-  }
-  if (normalizedName === 'Renata Glasc') {
-    normalizedName = 'Renata';
-  }
-  if (normalizedName === 'Rek\'Sai') {
-    normalizedName = 'RekSai';
-  }
-  if (normalizedName === 'Kog\'Maw') {
-    normalizedName = 'KogMaw';
-  }
-  if (normalizedName === 'LeBlanc') {
-    normalizedName = _.capitalize(normalizedName);
-  }
-  if (/\s/.test(normalizedName)) {
-    normalizedName = normalizedName.replace(/ /g, '');
-  }
-  if (/[']/.test(normalizedName)) {
-    normalizedName = _.capitalize(normalizedName.replace(/'/g, ''));
-  }
-  if (/[.]/.test(normalizedName)) {
-    normalizedName = normalizedName.replace(/\./g, '');
-  }
-
-  return normalizedName;
 };
 
 const createOverviewSection = (championObj) => {
@@ -201,11 +162,13 @@ const setProperty = (arr, propertyName, championObj) => {
     if (propertyName === 'description') {
       if (i === 0) {
         const value = championObj.passive[propertyName];
-        const clearText = value.replace(/<.*?>/g, '');
+        const fixSpaces = value.replace(/<br?>/g, ' ');
+        const clearText = fixSpaces.replace(/<.*?>/g, '');
         item.textContent = clearText;
       } else {
         const value = championObj.spells[i - 1][propertyName];
-        const clearText = value.replace(/<.*?>/g, '');
+        const fixSpaces = value.replace(/<br?>/g, ' ');
+        const clearText = fixSpaces.replace(/<.*?>/g, '');
         item.textContent = clearText;
       }
     }
@@ -271,8 +234,9 @@ const setPropertyVideo = (arr, championObj) => {
         noVideoText.textContent = "CAN'T DISPLAY THIS ABILITY IN VIDEO FORMAT";
         noVideoContent.append(noVideoText);
       } else {
+        const poster = `https://d28xe8vt774jo5.cloudfront.net/champion-abilities/${championKey}/ability_${championKey}_${getVideoKey(i)}.jpg`;
         // eslint-disable-next-line no-param-reassign
-        abilitiesVideoContainer.innerHTML = `<video class="abilities-ability-video" preload="metadata" autoplay="" loop="" muted="" src=${value}></video>`;
+        abilitiesVideoContainer.innerHTML = `<video class="abilities-ability-video" preload="metadata" poster=${poster} autoplay loop muted src=${value}></video>`;
       }
     });
   });
@@ -301,60 +265,10 @@ const createAbilitiesSection = (championObj) => {
 const creatingItems = (championObj) => {
   createOverviewSection(championObj);
   createAbilitiesSection(championObj);
-  // createAvailableSkins(championObj);
-};
-
-// is it right?
-const resetActiveTab = () => {
-  const buttons = document.querySelectorAll('.role-btn');
-
-  buttons.forEach(() => {
-    buttons.forEach((item) => item.classList.remove('role-active'));
-    const activeButton = document.querySelector('.role-btn');
-    activeButton.classList.add('role-active');
-  });
-};
-
-// is it right?
-const resetDifficulty = () => {
-  const difficultyPlaceholder = document.querySelector('.difficulty-placeholder');
-  const difficultySingleValue = document.querySelector('.difficulty-single-value');
-  const difficultyIndicatorClear = document.querySelector('.difficulty-indicator-clear');
-  difficultyPlaceholder.style.display = 'block';
-  difficultySingleValue.style.display = 'none';
-  difficultyIndicatorClear.style.display = 'none';
-  // toggleDropDownMenu();
-  resetBgcDifficultyMenuButtons();
-};
-
-const resetFillDifficultyIcon = () => {
-  const difficultyIcon = document.querySelector('[data-testid="overview:difficultyicon"]');
-  const indicators = difficultyIcon.children;
-  for (let i = 0; i < indicators.length; i += 1) {
-    indicators[i].className = '';
-  }
+  skinsSlider(championObj);
 };
 
 const goTop = () => window.scrollTo(0, 0);
-
-const backToList = () => {
-  const button = document.querySelector('[data-testid="overview:championlistbutton"]');
-  button.addEventListener('click', () => {
-    const championsList = document.querySelector('.main');
-    championsList.style.display = 'block';
-    const championPage = document.querySelector('.champion-page');
-    championPage.style.display = 'none';
-
-    render(dataDragon);
-    resetSearchInput();
-    resetActiveTab();
-    resetDifficulty();
-    resetFillDifficultyIcon();
-    resetAbilitiesSlider();
-    resetSkinsSlider();
-    goTop();
-  });
-};
 
 const getChampionInfo = async (name) => {
   const championName = normalizeName(name);
@@ -385,10 +299,7 @@ const renderChampionPage = async () => {
       abilitiesSlider();
       abilitiesImageCanvas();
       abilitiesVideoCanvas();
-      skinsSlider(championObj);
       goTop();
-
-      backToList();
     });
   }
 };

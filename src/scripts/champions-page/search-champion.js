@@ -1,7 +1,6 @@
-/* eslint-disable import/no-cycle */
 import { render } from './render-champions.js';
 import { getChampionsData } from '../getData.js';
-import { normalizeName } from '../champion-page/render-champion-page.js';
+import normalizeName from '../champion-page/normalizeName.js';
 
 const dataDragon = await getChampionsData();
 
