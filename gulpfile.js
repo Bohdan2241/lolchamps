@@ -46,12 +46,15 @@ export const styles = async () => gulp.src('./src/scss/**/*.scss')
 
 export const copy = () => gulp.src([
   './src/*.html',
-  './src/data/*.json',
+  './src/*.json',
   './src/*.ico',
   './src/CNAME',
   './src/*.ico',
 ])
   .pipe(gulp.dest('./dist/'));
+
+// export const json = () => gulp.src('./src/*.json')
+//   .pipe(gulp.dest('./dist/data'));
 
 const reload = (done) => {
   sync.reload();
