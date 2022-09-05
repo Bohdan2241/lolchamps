@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 export default () => {
   const canvas = document.querySelector('.main-nav-canvas');
   const parent = document.querySelector('.main-nav-inner');
@@ -24,7 +25,7 @@ export default () => {
     const speepFast = 100;
 
     let stepX1 = 0;
-    const animation1 = async () => {
+    const animation1 = () => {
       const animationID = requestAnimationFrame(animation1);
       stepX1 = stepX1 <= widthDpi ? stepX1 + speepFast : widthDpi;
       ctx.beginPath();
@@ -42,7 +43,7 @@ export default () => {
     };
 
     let stepY2 = 0;
-    const animation2 = async () => {
+    const animation2 = () => {
       const animationID = requestAnimationFrame(animation2);
       stepY2 = stepY2 <= (heightDpi - angle) ? stepY2 + speedMedium : (heightDpi - angle);
       ctx.beginPath();
@@ -61,7 +62,7 @@ export default () => {
 
     let stepX3 = 0;
     let stepY3 = 0;
-    const animation3 = async () => {
+    const animation3 = () => {
       const animationID = requestAnimationFrame(animation3);
       stepX3 = stepX3 <= angle ? stepX3 + speedSlow : angle;
       stepY3 = stepY3 < heightDpi ? stepY3 + speedSlow : heightDpi;
@@ -80,7 +81,7 @@ export default () => {
     };
 
     let stepX4 = 0;
-    const animation4 = async () => {
+    const animation4 = () => {
       const animationID = requestAnimationFrame(animation4);
       stepX4 = stepX4 >= -(widthDpi) ? stepX4 + speepFast : -(widthDpi);
       ctx.beginPath();
@@ -98,7 +99,7 @@ export default () => {
     };
 
     let stepY5 = 0;
-    const animation5 = async () => {
+    const animation5 = () => {
       const animationID = requestAnimationFrame(animation5);
       stepY5 = stepY5 <= (heightDpi - angle) ? stepY5 + speedMedium : (heightDpi - angle);
       ctx.beginPath();
@@ -117,7 +118,7 @@ export default () => {
 
     let stepX6 = 0;
     let stepY6 = 0;
-    const animation6 = async () => {
+    const animation6 = () => {
       const animationID = requestAnimationFrame(animation6);
       stepX6 = stepX6 <= angle ? stepX6 + speedSlow : angle;
       stepY6 = stepY6 <= angle ? stepY6 + speedSlow : angle;
@@ -141,5 +142,14 @@ export default () => {
     animation4();
     animation5();
     animation6();
+
+    // new Promise((resolve, _reject) => {
+    //   setTimeout(() => resolve(1), 1000); // (*)
+    // }).then((result) => animation1())
+    //   .then((result) => animation2())
+    //   .then((result) => animation3())
+    //   .then((result) => animation4())
+    //   .then((result) => animation5())
+    //   .then((result) => animation6());
   }
 };
