@@ -115,12 +115,12 @@ export default () => {
       }
     };
 
-    let stepX6 = 1;
-    let stepY6 = 1;
+    let stepX6 = 0;
+    let stepY6 = 0;
     const animation6 = async () => {
       const animationID = requestAnimationFrame(animation6);
-      stepX6 = stepX6 !== angle ? stepX6 + speedSlow : angle;
-      stepY6 = stepY6 !== angle ? stepY6 + speedSlow : angle;
+      stepX6 = stepX6 <= angle ? stepX6 + speedSlow : angle;
+      stepY6 = stepY6 <= angle ? stepY6 + speedSlow : angle;
       ctx.beginPath();
 
       ctx.moveTo(0, angle);
@@ -129,7 +129,7 @@ export default () => {
       ctx.lineWidth = lineWidth;
       ctx.strokeStyle = strokeStyle;
       ctx.stroke();
-      if (stepX6 === angle && stepY6 === angle) {
+      if (stepX6 >= angle && stepY6 >= angle) {
         cancelAnimationFrame(animationID);
         console.log('done 6');
       }
