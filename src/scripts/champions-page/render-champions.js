@@ -1,7 +1,6 @@
 // import _ from 'lodash';
 import { getChampionsData } from '../getData.js';
 import imagesDataOld from '../getImagesData.js';
-// eslint-disable-next-line import/no-cycle
 import renderChampionPage from '../champion-page/render-champion-page.js';
 
 const dataDragon = await getChampionsData();
@@ -120,33 +119,31 @@ export const render = (dataChampions, type = 'all', difficulty = 'all', search =
 
   const container = document.querySelector('.champions-list');
 
-  if (container) {
-    container.innerHTML = '';
+  container.innerHTML = '';
 
-    let sortedArr = [];
-    if (!champions.name) {
-      sortedArr = defaultSort(champions);
-    } else {
-      sortedArr.push(champions);
-    }
-    if (type !== 'all') {
-      sortedArr = roleSort(champions, type);
-    }
-    if (difficulty !== 'all') {
-      sortedArr = difficultySort(champions, difficulty);
-    } // fix work of 3 filters
-
-    // No champions match the filter criteria.
-    const message = document.querySelector('.champions-list-message');
-    message.style.display = 'none';
-    if (!sortedArr.length) {
-      message.style.display = 'block';
-    }
-    creatingItems(sortedArr, container);
-    renderChampionPage();
-    // delay global var
-    initial = 0;
+  let sortedArr = [];
+  if (!champions.name) {
+    sortedArr = defaultSort(champions);
+  } else {
+    sortedArr.push(champions);
   }
+  if (type !== 'all') {
+    sortedArr = roleSort(champions, type);
+  }
+  if (difficulty !== 'all') {
+    sortedArr = difficultySort(champions, difficulty);
+  } // fix work of 3 filters
+
+  // No champions match the filter criteria.
+  const message = document.querySelector('.champions-list-message');
+  message.style.display = 'none';
+  if (!sortedArr.length) {
+    message.style.display = 'block';
+  }
+  creatingItems(sortedArr, container);
+  renderChampionPage();
+  // delay global var
+  initial = 0;
 };
 
 export default () => {

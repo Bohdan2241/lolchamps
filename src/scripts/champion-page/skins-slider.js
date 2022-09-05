@@ -4,19 +4,16 @@ import normalizeName from './normalizeName.js';
 const swiper = new Swiper('.swiper', {
   modules: [Autoplay],
   autoplay: {
-    delay: 6000,
+    delay: 5000,
     disableOnInteraction: true,
   },
   direction: 'vertical',
   height: 100,
   slideActiveClass: 'swiper-slide-active is-active',
   slideToClickedSlide: true,
-  // on: {
-  //   init: () => ({
-  //     swiper.autoplay.stop();
-  //   }),
-  // },
 });
+
+swiper.autoplay.stop();
 
 swiper.on('slideChange', () => {
   const backgroundImages = document.querySelectorAll('.skins-slideshow-item');
@@ -102,7 +99,6 @@ const skinsSlider = (dataChampion) => {
   window.addEventListener('scroll', () => {
     const skinsSection = document.querySelector('.skins');
     const skinsSectionTop = skinsSection.getBoundingClientRect().top;
-    console.log(skinsSectionTop, window.innerHeight, document.documentElement.clientHeight);
     if (skinsSectionTop <= (window.innerHeight || document.documentElement.clientHeight)) {
       setTimeout(() => {
         swiper.autoplay.start();
