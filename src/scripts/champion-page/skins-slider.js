@@ -1,4 +1,5 @@
 import Swiper, { Autoplay } from 'swiper';
+import skinsCanvas from './skins-canvas.js';
 import normalizeName from './normalizeName.js';
 
 const swiper = new Swiper('.swiper', {
@@ -22,7 +23,7 @@ swiper.on('slideChange', () => {
   backgroundImages[newActiveIndex].classList.add('is-active');
 });
 
-const createSwipeItems = (name, num, championName, i) => {
+const createSwipeItems = (name, num, championName, firstSkinName, i) => {
   const container = document.querySelector('.skins-swiper-wrapper');
 
   const item = document.createElement('li');
@@ -58,7 +59,7 @@ const createSwipeItems = (name, num, championName, i) => {
   const label = document.createElement('label');
   label.classList.add('skins-carousel-item-text');
   if (i === 0) {
-    label.textContent = championName;
+    label.textContent = firstSkinName;
   } else {
     label.textContent = name;
   }
@@ -89,12 +90,15 @@ const createSlideshowItems = (num, championName, i) => {
 
 const skinsSlider = (dataChampion) => {
   const { skins } = dataChampion;
+  const firstSkinName = dataChampion.name;
   const championName = normalizeName(dataChampion.name);
 
   skins.forEach(({ name, num }, i) => {
-    createSwipeItems(name, num, championName, i);
+    createSwipeItems(name, num, championName, firstSkinName, i);
     createSlideshowItems(num, championName, i);
   });
+
+  skinsCanvas();
 
   window.addEventListener('scroll', () => {
     const skinsSection = document.querySelector('.skins');

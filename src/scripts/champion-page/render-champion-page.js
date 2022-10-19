@@ -6,6 +6,7 @@ import abilitiesVideoCanvas from './abilities-video-canvas.js';
 import { abilitiesSlider } from './abilities-slider.js';
 import skinsSlider from './skins-slider.js';
 import normalizeName from './normalizeName.js';
+import parallax from './footerVideo.js';
 
 const pickRoleIcon = (role) => {
   const roleIcons = {
@@ -299,6 +300,7 @@ const renderChampionPage = async () => {
       abilitiesSlider();
       abilitiesImageCanvas();
       abilitiesVideoCanvas();
+      parallax();
       goTop();
     });
   }

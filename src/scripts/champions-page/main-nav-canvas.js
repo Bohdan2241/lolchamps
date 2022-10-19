@@ -22,7 +22,7 @@ export default () => {
 
     const speedSlow = 5;
     const speedMedium = 10;
-    const speepFast = 100;
+    const speepFast = 200;
 
     let stepX1 = 0;
     const animation1 = () => {
@@ -38,7 +38,6 @@ export default () => {
       ctx.stroke();
       if (stepX1 >= widthDpi) {
         cancelAnimationFrame(animationID);
-        console.log('done 1');
       }
     };
 
@@ -49,14 +48,17 @@ export default () => {
       ctx.beginPath();
 
       ctx.moveTo(widthDpi, 0);
-      ctx.lineTo(widthDpi, (stepY2 + 1));
+      if (stepY2 <= (heightDpi - angle)) {
+        ctx.lineTo(widthDpi, (stepY2 + 1));
+      } else {
+        ctx.lineTo(widthDpi, (heightDpi - angle));
+      }
 
       ctx.lineWidth = lineWidth;
       ctx.strokeStyle = strokeStyle;
       ctx.stroke();
       if (stepY2 >= (heightDpi - angle)) {
         cancelAnimationFrame(animationID);
-        console.log('done 2');
       }
     };
 
@@ -76,7 +78,6 @@ export default () => {
       ctx.stroke();
       if (stepX3 >= angle && stepY3 >= angle) {
         cancelAnimationFrame(animationID);
-        console.log('done 3');
       }
     };
 
@@ -94,7 +95,6 @@ export default () => {
       ctx.stroke();
       if (stepX4 > widthDpi) {
         cancelAnimationFrame(animationID);
-        console.log('done 4');
       }
     };
 
@@ -105,14 +105,17 @@ export default () => {
       ctx.beginPath();
 
       ctx.moveTo(0, heightDpi);
-      ctx.lineTo(0, heightDpi - stepY5);
+      if (stepY5 <= (heightDpi - angle)) {
+        ctx.lineTo(0, heightDpi - stepY5);
+      } else {
+        ctx.lineTo(0, angle);
+      }
 
       ctx.lineWidth = lineWidth;
       ctx.strokeStyle = strokeStyle;
       ctx.stroke();
       if (stepY5 >= (heightDpi - angle)) {
         cancelAnimationFrame(animationID);
-        console.log('done 5');
       }
     };
 
@@ -132,24 +135,26 @@ export default () => {
       ctx.stroke();
       if (stepX6 >= angle && stepY6 >= angle) {
         cancelAnimationFrame(animationID);
-        console.log('done 6');
       }
     };
 
-    animation1();
-    animation2();
-    animation3();
-    animation4();
-    animation5();
-    animation6();
-
-    // new Promise((resolve, _reject) => {
-    //   setTimeout(() => resolve(1), 1000); // (*)
-    // }).then((result) => animation1())
-    //   .then((result) => animation2())
-    //   .then((result) => animation3())
-    //   .then((result) => animation4())
-    //   .then((result) => animation5())
-    //   .then((result) => animation6());
+    setTimeout(() => {
+      animation1();
+      setTimeout(() => {
+        animation2();
+        setTimeout(() => {
+          animation3();
+          setTimeout(() => {
+            animation4();
+            setTimeout(() => {
+              animation5();
+              setTimeout(() => {
+                animation6();
+              }, 50);
+            }, 170);
+          }, 1);
+        }, 20);
+      }, 200);
+    }, 1);
   }
 };
