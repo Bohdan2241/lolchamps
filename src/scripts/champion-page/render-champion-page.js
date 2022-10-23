@@ -280,11 +280,11 @@ const getChampionInfo = async (name) => {
 
 const renderChampionPage = async () => {
   const links = document.querySelectorAll('.champions-list-item');
-  // eslint-disable-next-line no-restricted-syntax
-  for (const link of links) {
+  links.forEach((link) => {
     link.addEventListener('click', async (event) => {
       event.preventDefault();
       const championName = link.querySelector('.item-text').textContent;
+      console.log(event, championName);
       const championData = await getChampionInfo(championName);
       const { data } = championData;
       const championObj = Object.values(data)[0];
@@ -303,7 +303,7 @@ const renderChampionPage = async () => {
       parallax();
       goTop();
     });
-  }
+  });
 };
 
 export default () => {

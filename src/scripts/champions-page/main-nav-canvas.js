@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 export default () => {
   const canvas = document.querySelector('.main-nav-canvas');
   const parent = document.querySelector('.main-nav-inner');

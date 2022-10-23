@@ -1,8 +1,4 @@
-// eslint-disable-next-line import/no-cycle
-import { render } from './render-champions.js';
-import { getChampionsData } from '../getData.js';
-
-const dataDragon = await getChampionsData();
+import render from './render.js';
 
 // fix this (close button => toggle)
 const toggleDropDownMenu = () => {
@@ -26,11 +22,9 @@ const toggleDropDownMenu = () => {
 const dropDown = () => {
   const controller = document.querySelector('.difficulty-container');
 
-  if (controller) {
-    controller.addEventListener('click', () => {
-      toggleDropDownMenu();
-    });
-  }
+  controller.addEventListener('click', () => {
+    toggleDropDownMenu();
+  });
 };
 
 export const resetBgcDifficultyMenuButtons = () => {
@@ -61,7 +55,7 @@ const fillDifficultyIcon = (numDificulty) => {
   }
 };
 
-const filtredDifficultyContent = (numDificulty) => {
+const filtredDifficultyContent = (state, numDificulty) => {
   const difficultyPlaceholder = document.querySelector('.difficulty-placeholder');
   difficultyPlaceholder.style.display = 'none';
   const difficultySingleValue = document.querySelector('.difficulty-single-value');
@@ -77,12 +71,14 @@ const filtredDifficultyContent = (numDificulty) => {
     difficultyIndicatorClear.style.display = 'none';
 
     resetBgcDifficultyMenuButtons();
-
-    render(dataDragon);
+    // eslint-disable-next-line no-param-reassign
+    state.filter.difficulty = null;
+    // console.log(e); fix this extra clicking events
+    render(state);
   });
 };
 
-const filterDifficulty = () => {
+const filterDifficulty = (state) => {
   dropDown();
 
   const menuButtons = document.querySelectorAll('.difficulty-dropdown-content > .difficulty-single-value-container');
@@ -95,8 +91,11 @@ const filterDifficulty = () => {
       resetBgcDifficultyMenuButtons();
       // eslint-disable-next-line no-param-reassign
       menuButton.style.backgroundColor = '#41ece457';
-      filtredDifficultyContent(numDificulty);
-      render(dataDragon, 'all', numDificulty);
+      filtredDifficultyContent(state, numDificulty);
+
+      // eslint-disable-next-line no-param-reassign
+      state.filter.difficulty = numDificulty;
+      render(state);
     });
   });
 };
