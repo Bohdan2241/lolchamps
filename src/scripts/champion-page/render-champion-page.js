@@ -284,7 +284,6 @@ const renderChampionPage = async () => {
     link.addEventListener('click', async (event) => {
       event.preventDefault();
       const championName = link.querySelector('.item-text').textContent;
-      console.log(event, championName);
       const championData = await getChampionInfo(championName);
       const { data } = championData;
       const championObj = Object.values(data)[0];

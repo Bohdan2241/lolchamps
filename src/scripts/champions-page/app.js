@@ -3,6 +3,7 @@ import render from './render.js';
 import roleFilter from './role-filter.js';
 import difficultyFilter from './difficulty-filter.js';
 import searchFilter from './search-filter.js';
+import mainNavCanvas from './main-nav-canvas.js';
 
 export default async () => {
   const dataDragon = await getChampionsData();
@@ -20,5 +21,6 @@ export default async () => {
   roleFilter(state);
   difficultyFilter(state);
 
+  mainNavCanvas();
   render(state);
 };

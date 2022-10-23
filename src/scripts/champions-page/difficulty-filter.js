@@ -37,22 +37,23 @@ export const resetBgcDifficultyMenuButtons = () => {
 
 const fillDifficultyIcon = (numDificulty) => {
   const difficultyMap = {
-    2: 1,
-    1: 2,
-    0: 3,
+    low: 1,
+    moderate: 2,
+    high: 3,
   };
 
   const parent = document.querySelector('[data-testid="difficulty-nav:container"]');
   const indicators = parent.children;
 
-  for (let i = 0; i < indicators.length; i += 1) {
-    indicators[i].className = '';
+  Array.from(indicators).forEach((indicator, i) => {
+    // eslint-disable-next-line no-param-reassign
+    indicator.className = '';
     if (i >= difficultyMap[numDificulty]) {
-      indicators[i].classList.add('difficulty-value-item-empty');
+      indicator.classList.add('difficulty-value-item-empty');
     } else {
-      indicators[i].classList.add('difficulty-value-item');
+      indicator.classList.add('difficulty-value-item');
     }
-  }
+  });
 };
 
 const filtredDifficultyContent = (state, numDificulty) => {
@@ -87,7 +88,13 @@ const filterDifficulty = (state) => {
       const granParentCollection = menuButton.children;
       const granParent = granParentCollection.item(0);
       const parent = granParent.querySelector('.difficulty-value-container');
-      const numDificulty = (parent.querySelectorAll('.difficulty-value-item-empty')).length;
+      const difficultyLength = (parent.querySelectorAll('.difficulty-value-item-empty')).length;
+      const difficultyMap = {
+        2: 'low',
+        1: 'moderate',
+        0: 'high',
+      };
+      const numDificulty = difficultyMap[difficultyLength];
       resetBgcDifficultyMenuButtons();
       // eslint-disable-next-line no-param-reassign
       menuButton.style.backgroundColor = '#41ece457';

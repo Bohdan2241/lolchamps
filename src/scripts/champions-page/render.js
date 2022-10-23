@@ -39,31 +39,29 @@ const filtersFunctions = {
     }
     return champion.tags.includes(targetRole) ? champion : false;
   },
-  difficulty: (champion, numDifficulty) => {
-    let difficulty = [];
-    switch (numDifficulty) {
-      case 2:
-        difficulty = [0, 1, 2, 3];
+  difficulty: (champion, difficulty) => {
+    let targetDifficulty = [];
+    switch (difficulty) {
+      case 'low':
+        targetDifficulty = [0, 1, 2, 3];
         break;
-      case 1:
-        difficulty = [4, 5, 6, 7];
+      case 'moderate':
+        targetDifficulty = [4, 5, 6, 7];
         break;
-      case 0:
-        difficulty = [8, 9, 10];
+      case 'high':
+        targetDifficulty = [8, 9, 10];
         break;
       default:
-        throw new Error(`Unexpected difficulty ${numDifficulty}`);
+        throw new Error(`Unexpected difficulty ${difficulty}`);
     }
 
-    return difficulty.includes(champion.info.difficulty) ? champion : false;
+    return targetDifficulty.includes(champion.info.difficulty) ? champion : false;
   },
   search: (champion, name) => (champion.name === name ? champion : false),
 };
 
 const filterItems = (champions, query) => {
-  // Остаются только изменённые пользователем фильтры
   const activeFilters = Object.entries(query).filter(([, filterValue]) => filterValue !== null);
-  // Фильтрация товаров: каждый товар должен удовлетворять каждому фильтру из списка
   return champions.filter((champion) => activeFilters.every(([filterName, filterValue]) => {
     if (filterName === 'search' && filterValue === '') {
       return champions;

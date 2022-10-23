@@ -1,5 +1,4 @@
 import render from './render.js';
-import normalizeName from '../champion-page/normalizeName.js';
 
 const searchClear = (state) => {
   const searchClearButton = document.querySelector('.search-indicator-clear');
@@ -22,23 +21,21 @@ const renderSearchChampion = (state) => {
   const searchClearButton = document.querySelector('.search-indicator-clear');
   searchButtons.forEach((button) => {
     button.addEventListener('click', () => {
-      // const championButtons = document.querySelectorAll('.search-dropdown-content-item');
       searchButtons.forEach((championButton) => {
-        const buttonUpdate = championButton;
-        buttonUpdate.style.display = 'block';
+        // eslint-disable-next-line no-param-reassign
+        championButton.style.display = 'block';
       });
 
-      const chosenChampionName = button.textContent;
+      const championName = button.textContent;
       search.value = '';
       searchPlaceholder.style.display = 'block';
       searchPlaceholder.style.marginRight = '10px';
-      searchPlaceholder.textContent = chosenChampionName;
+      searchPlaceholder.textContent = championName;
       searchPlaceholder.classList.remove('search-placeholder-focused');
       searchClearButton.style.display = 'flex';
 
-      const name = normalizeName(chosenChampionName);
       // eslint-disable-next-line no-param-reassign
-      state.filter.search = name;
+      state.filter.search = championName;
       render(state);
     });
   });
@@ -136,11 +133,3 @@ export default (state) => {
 
   searchClear(state);
 };
-
-// export const resetSearchInput = () => {
-//   const searchClearButton = document.querySelector('.search-indicator-clear');
-//   const searchPlaceholder = document.querySelector('.search-placeholder');
-//   searchClearButton.style.display = 'none';
-//   searchPlaceholder.textContent = 'search';
-//   searchPlaceholder.style.marginRight = '0px';
-// };
