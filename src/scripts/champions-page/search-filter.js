@@ -8,8 +8,8 @@ const searchClear = (state) => {
     searchPlaceholder.textContent = 'search';
     searchPlaceholder.style.marginRight = '0px';
 
-    // eslint-disable-next-line no-param-reassign
-    state.filter.search = null;
+    const { filter } = state;
+    filter.search = null;
     render(state);
   });
 };
@@ -34,8 +34,8 @@ const renderSearchChampion = (state) => {
       searchPlaceholder.classList.remove('search-placeholder-focused');
       searchClearButton.style.display = 'flex';
 
-      // eslint-disable-next-line no-param-reassign
-      state.filter.search = championName;
+      const { filter } = state;
+      filter.search = championName;
       render(state);
     });
   });

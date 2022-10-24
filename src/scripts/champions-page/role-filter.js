@@ -9,8 +9,8 @@ export default (state) => {
       const activeButton = document.querySelector('.role-active');
       const role = activeButton.textContent.toLowerCase();
 
-      // eslint-disable-next-line no-param-reassign
-      state.filter.role = role === 'all' ? null : role;
+      const { filter } = state;
+      filter.role = role === 'all' ? null : role;
       render(state);
     });
   });

@@ -72,8 +72,9 @@ const filtredDifficultyContent = (state, numDificulty) => {
     difficultyIndicatorClear.style.display = 'none';
 
     resetBgcDifficultyMenuButtons();
-    // eslint-disable-next-line no-param-reassign
-    state.filter.difficulty = null;
+
+    const { filter } = state;
+    filter.difficulty = null;
     // console.log(e); fix this extra clicking events
     render(state);
   });
@@ -100,8 +101,8 @@ const filterDifficulty = (state) => {
       menuButton.style.backgroundColor = '#41ece457';
       filtredDifficultyContent(state, numDificulty);
 
-      // eslint-disable-next-line no-param-reassign
-      state.filter.difficulty = numDificulty;
+      const { filter } = state;
+      filter.difficulty = numDificulty;
       render(state);
     });
   });
