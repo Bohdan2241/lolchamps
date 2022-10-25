@@ -24,9 +24,24 @@
   min-width: 0;
   padding: 20px 20px 0 0;
   cursor: pointer;
-  transition:
-    opacity 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s,
+  /* stylelint-disable-next-line declaration-colon-newline-after */
+  transition: opacity 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s,
     transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+
+  @include media("<=desktop") {
+    flex: 1 1 25%;
+    max-width: 25%;
+  }
+
+  @include media("<=tablet") {
+    flex: 1 1 33.3333%;
+    max-width: 33.3333%;
+  }
+
+  @include media("<=mobile") {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
 }
 
 .champions-list-item-hidden {

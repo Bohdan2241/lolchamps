@@ -17,12 +17,50 @@
   letter-spacing: 0.1em;
 }
 
+@keyframes test2 {
+  from {
+    clip-path: polygon(0% 0%, 0% 0%, 0% 0%);
+  }
+
+  to {
+    clip-path: polygon(100% 100%, -200% 100%, 100% -200%);
+  }
+}
+
+.main-head-intro > .display-inline {
+  animation-name: test;
+  animation-duration: 2800ms;
+  animation-delay: 200ms;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-fill-mode: backwards;
+  animation-iteration-count: 1;
+}
+
 .main-head-title {
   display: block;
   font-size: calc(61.82px + 3.03vw);
   font-weight: 800;
   letter-spacing: 0.03em;
   line-height: 0.85;
+}
+
+@keyframes test {
+  from {
+    clip-path: polygon(0% 0%, 0% 0%, 0% 0%);
+  }
+
+  to {
+    clip-path: polygon(0% 0%, 200% 0%, 0% 200%);
+  }
+}
+
+.main-head-title > .display-inline {
+  animation-name: test;
+  animation-duration: 2000ms;
+  animation-delay: 200ms;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-fill-mode: backwards;
+  animation-iteration-count: 1;
 }
 
 .main-head-title span {

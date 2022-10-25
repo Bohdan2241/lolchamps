@@ -1,4 +1,4 @@
-import render from './render.js';
+import render, { scrollToChampionList } from './render.js';
 
 export default (state) => {
   const roleButtons = document.querySelectorAll('.role-btn');
@@ -12,6 +12,7 @@ export default (state) => {
       const { filter } = state;
       filter.role = role === 'all' ? null : role;
       render(state);
+      scrollToChampionList();
     });
   });
 };

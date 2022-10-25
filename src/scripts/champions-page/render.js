@@ -63,20 +63,29 @@ const filtersFunctions = {
 const filterItems = (champions, query) => {
   const activeFilters = Object.entries(query).filter(([, filterValue]) => filterValue !== null);
   return champions.filter((champion) => activeFilters.every(([filterName, filterValue]) => {
-    if (filterName === 'search' && filterValue === '') {
-      return champions;
-    }
     const match = filtersFunctions[filterName];
     return match(champion, filterValue);
   }));
 };
 
+export const scrollToChampionList = () => {
+  const nav = document.querySelector('.main-nav');
+  const { top } = nav.getBoundingClientRect();
+  if (top > 240) {
+    window.scrollTo({
+      top: nav.offsetTop,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }
+};
+
 export default (state) => {
   const container = document.querySelector('.champions-list');
   container.innerHTML = '';
-  console.log(state.filter);
-  const filteredChampions = filterItems(state.champions, state.filter);
 
+  const filteredChampions = filterItems(state.champions, state.filter);
+  console.log(state.filter);
   // No champions match the filter criteria.
   const message = document.querySelector('.champions-list-message');
   message.style.display = 'none';

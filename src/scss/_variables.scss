@@ -7,3 +7,12 @@ $sand: rgb(208, 168, 92);
 
 // fonts
 $main: arial;
+
+// media query
+$breakpoints: (
+  mobile: 520px,
+  tablet: 750px,
+  laptop: 930px,
+  desktop: 1000px,
+  large-desktop: 1440px
+);

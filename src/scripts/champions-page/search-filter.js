@@ -1,16 +1,27 @@
-import render from './render.js';
+import render, { scrollToChampionList } from './render.js';
 
 const searchClear = (state) => {
   const searchClearButton = document.querySelector('.search-indicator-clear');
   const searchPlaceholder = document.querySelector('.search-placeholder');
+  const contentContainer = document.querySelector('.search-dropdown-content');
+  const searchIcon = document.querySelector('.search-value');
+  const searchInput = document.querySelector('.search-input');
+  const search = document.querySelector('.search');
   searchClearButton.addEventListener('click', () => {
     searchClearButton.style.display = 'none';
     searchPlaceholder.textContent = 'search';
     searchPlaceholder.style.marginRight = '0px';
+    searchPlaceholder.classList.remove('search-placeholder-focused');
+
+    contentContainer.classList.remove('display-block');
+    searchIcon.classList.remove('search-icon-focused');
+    searchInput.classList.remove('search-input-focused');
+    search.classList.remove('search-is-focused');
 
     const { filter } = state;
     filter.search = null;
     render(state);
+    scrollToChampionList();
   });
 };
 
@@ -37,12 +48,12 @@ const renderSearchChampion = (state) => {
       const { filter } = state;
       filter.search = championName;
       render(state);
+      scrollToChampionList();
     });
   });
 };
 
 const toggleDropdownContent = () => {
-  const searchButton = document.querySelector('.search-container');
   const contentContainer = document.querySelector('.search-dropdown-content');
   contentContainer.classList.toggle('display-block');
 
@@ -59,15 +70,25 @@ const toggleDropdownContent = () => {
   if (searchPlaceholder.textContent === '' || searchPlaceholder.textContent.toLocaleLowerCase() === 'search') {
     searchPlaceholder.classList.toggle('search-placeholder-focused');
   }
+};
 
+const closeDropDownMenu = () => {
+  const searchButton = document.querySelector('.search-container');
+  const contentContainer = document.querySelector('.search-dropdown-content');
+  const searchIcon = document.querySelector('.search-value');
+  const searchInput = document.querySelector('.search-input');
+  const search = document.querySelector('.search');
+  const searchPlaceholder = document.querySelector('.search-placeholder');
   document.addEventListener('click', (e) => {
-    const isClickInside = searchButton.contains(e.target);
-    if (!isClickInside) {
-      contentContainer.classList.remove('display-block');
-      searchIcon.classList.remove('search-icon-focused');
-      searchInput.classList.remove('search-input-focused');
-      search.classList.remove('search-is-focused');
-      searchPlaceholder.classList.remove('search-placeholder-focused');
+    if (contentContainer.classList.contains('display-block')) {
+      const isClickInside = searchButton.contains(e.target);
+      if (!isClickInside) {
+        contentContainer.classList.remove('display-block');
+        searchIcon.classList.remove('search-icon-focused');
+        searchInput.classList.remove('search-input-focused');
+        search.classList.remove('search-is-focused');
+        searchPlaceholder.classList.remove('search-placeholder-focused');
+      }
     }
   });
 };
@@ -76,8 +97,15 @@ export default (state) => {
   const searchButton = document.querySelector('.search-container');
   const contentContainer = document.querySelector('.search-dropdown-content');
   const search = document.querySelector('.search-input');
+  closeDropDownMenu();
 
-  searchButton.addEventListener('click', () => {
+  searchButton.addEventListener('click', (e) => {
+    const searchClearButton = document.querySelector('.search-indicator-clear');
+    const isClickInside = searchClearButton.contains(e.target);
+    // if (contentContainer.classList.contains('display-block') && isClickInside) {
+    //   toggleDropdownContent();
+    // }
+    if (isClickInside) return;
     toggleDropdownContent();
     search.focus();
 

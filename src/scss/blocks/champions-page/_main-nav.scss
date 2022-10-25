@@ -4,16 +4,37 @@
 
 .main-nav {
   margin: 0 2%;
+
+  @include media("<=desktop") {
+    margin: 0;
+  }
 }
 
 .main-nav-inner {
   position: relative;
   margin: 0 auto;
   max-width: 1400px;
+
+  @include media("<=desktop") {
+    border-width: 1px 0;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgb(193, 193, 193);
+    border-bottom-color: rgb(193, 193, 193);
+    border-image: initial;
+    border-left-style: initial;
+    border-left-color: initial;
+    border-right-style: initial;
+    border-right-color: initial;
+  }
 }
 
 .canvas-wrapper {
   position: absolute;
+
+  @include media("<=desktop") {
+    display: none;
+  }
 }
 
 .main-nav-canvas {
@@ -26,10 +47,18 @@
 .main-nav-content {
   height: 50px;
   display: flex;
+
+  @include media("<=desktop") {
+    height: 35px;
+  }
 }
 
 .search-container {
   min-width: 138px;
+
+  @include media("<=desktop") {
+    flex: 1 1 auto;
+  }
 }
 
 .search-wrapper {
@@ -41,6 +70,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 0 30px;
   height: 100%;
   cursor: pointer;
@@ -201,6 +231,11 @@
 
 .role-container {
   flex: 1 0 auto;
+
+  @include media("<=desktop") {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .role-list {
@@ -208,6 +243,10 @@
   justify-content: center;
   align-items: center;
   height: 100%;
+
+  @include media("<=desktop") {
+    display: none;
+  }
 }
 
 .role-list li {
@@ -264,6 +303,10 @@
   flex: 0 1 auto;
   display: flex;
   align-items: center;
+
+  @include media("<=desktop") {
+    flex: 1 1 auto;
+  }
 }
 
 .difficulty-wrapper {
@@ -303,6 +346,7 @@
 .difficulty-placeholder {
   font-size: 10px;
   font-weight: 600;
+  letter-spacing: 0.1em;
   color: $black;
   text-transform: uppercase;
 }

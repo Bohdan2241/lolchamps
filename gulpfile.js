@@ -41,8 +41,7 @@ export const lintStyles = () => gulp.src('./src/scss/**/*.scss')
 export const styles = async () => gulp.src('./src/scss/**/*.scss')
   .pipe(sass().on('error', sass.logError))
   .pipe(gulp.dest('./src/css/'))
-  .pipe(gulp.dest('./dist/css/'))
-  .pipe(sync.stream());
+  .pipe(gulp.dest('./dist/css/'));
 
 export const copy = () => gulp.src([
   './src/*.html',
@@ -50,8 +49,14 @@ export const copy = () => gulp.src([
   './src/*.ico',
   './src/CNAME',
   './src/*.ico',
+  './src/fonts',
 ])
   .pipe(gulp.dest('./dist/'));
+
+export const fonts = () => gulp.src([
+  './src/fonts/**.*',
+])
+  .pipe(gulp.dest('./dist/fonts/'));
 
 // export const json = () => gulp.src('./src/*.json')
 //   .pipe(gulp.dest('./dist/data'));
@@ -66,9 +71,10 @@ export const watch = () => {
     server: {
       baseDir: './src',
     },
+    tunnel: true,
   });
   gulp.watch('./src/**/*.html').on('change', sync.reload);
-  gulp.watch('./src/scss/**/*.scss', gulp.series(styles, lintStyles));
+  gulp.watch('./src/scss/**/*.scss', gulp.series(styles, lintStyles, reload));
   gulp.watch(
     ['src/scripts/**/*.js', '!src/scripts/**/*.min.js'],
     gulp.series(scripts, lintScripts, reload),
@@ -81,7 +87,7 @@ export const build = (cb) => gulp.series(
   gulp.parallel(
     gulp.series(lintScripts, scripts),
     gulp.series(lintStyles, styles),
-    copy,
+    gulp.series(copy, fonts),
   ),
 )(cb);
 

@@ -1,6 +1,5 @@
-import render from './render.js';
+import render, { scrollToChampionList } from './render.js';
 
-// fix this (close button => toggle)
 const toggleDropDownMenu = () => {
   const dropDownContent = document.querySelector('.difficulty-dropdown-content');
   const menu = document.querySelector('.difficulty');
@@ -8,22 +7,35 @@ const toggleDropDownMenu = () => {
   dropDownContent.classList.toggle('display-block');
   menu.classList.toggle('menu-is-open');
   arrow.classList.toggle('difficulty-indicator-arrow-open');
-
-  document.addEventListener('click', (e) => {
-    const isClickInside = menu.contains(e.target);
-    if (!isClickInside) {
-      dropDownContent.classList.remove('display-block');
-      menu.classList.remove('menu-is-open');
-      arrow.classList.remove('difficulty-indicator-arrow-open');
-    }
-  });
 };
 
 const dropDown = () => {
   const controller = document.querySelector('.difficulty-container');
-
-  controller.addEventListener('click', () => {
+  const difficultyIndicatorClear = document.querySelector('.difficulty-indicator-clear');
+  const menu = document.querySelector('.difficulty');
+  controller.addEventListener('click', (e) => {
+    const isClickInside = difficultyIndicatorClear.contains(e.target);
+    if (menu.classList.contains('menu-is-open') && isClickInside) {
+      toggleDropDownMenu();
+    }
+    if (isClickInside) return;
     toggleDropDownMenu();
+  });
+};
+
+const closeDropDownMenu = () => {
+  const dropDownContent = document.querySelector('.difficulty-dropdown-content');
+  const menu = document.querySelector('.difficulty');
+  const arrow = document.querySelector('.difficulty-indicator-arrow');
+  document.addEventListener('click', (e) => {
+    if (menu.classList.contains('menu-is-open')) {
+      const isClickInside = menu.contains(e.target);
+      if (!isClickInside) {
+        dropDownContent.classList.remove('display-block');
+        menu.classList.remove('menu-is-open');
+        arrow.classList.remove('difficulty-indicator-arrow-open');
+      }
+    }
   });
 };
 
@@ -56,7 +68,25 @@ const fillDifficultyIcon = (numDificulty) => {
   });
 };
 
-const filtredDifficultyContent = (state, numDificulty) => {
+const resetDifficultyContent = (state) => {
+  const difficultyPlaceholder = document.querySelector('.difficulty-placeholder');
+  const difficultySingleValue = document.querySelector('.difficulty-single-value');
+  const difficultyIndicatorClear = document.querySelector('.difficulty-indicator-clear');
+  difficultyIndicatorClear.addEventListener('click', () => {
+    difficultyPlaceholder.style.display = 'block';
+    difficultySingleValue.style.display = 'none';
+    difficultyIndicatorClear.style.display = 'none';
+    // console.log('click');
+    resetBgcDifficultyMenuButtons();
+
+    const { filter } = state;
+    filter.difficulty = null;
+    render(state);
+    scrollToChampionList();
+  });
+};
+
+const filtredDifficultyContent = (numDificulty) => {
   const difficultyPlaceholder = document.querySelector('.difficulty-placeholder');
   difficultyPlaceholder.style.display = 'none';
   const difficultySingleValue = document.querySelector('.difficulty-single-value');
@@ -65,24 +95,12 @@ const filtredDifficultyContent = (state, numDificulty) => {
   difficultyIndicatorClear.style.display = 'flex';
 
   fillDifficultyIcon(numDificulty);
-
-  difficultyIndicatorClear.addEventListener('click', () => {
-    difficultyPlaceholder.style.display = 'block';
-    difficultySingleValue.style.display = 'none';
-    difficultyIndicatorClear.style.display = 'none';
-
-    resetBgcDifficultyMenuButtons();
-
-    const { filter } = state;
-    filter.difficulty = null;
-    // console.log(e); fix this extra clicking events
-    render(state);
-  });
 };
 
-const filterDifficulty = (state) => {
+export default (state) => {
   dropDown();
-
+  closeDropDownMenu();
+  resetDifficultyContent(state);
   const menuButtons = document.querySelectorAll('.difficulty-dropdown-content > .difficulty-single-value-container');
   menuButtons.forEach((menuButton) => {
     menuButton.addEventListener('click', () => {
@@ -99,13 +117,12 @@ const filterDifficulty = (state) => {
       resetBgcDifficultyMenuButtons();
       // eslint-disable-next-line no-param-reassign
       menuButton.style.backgroundColor = '#41ece457';
-      filtredDifficultyContent(state, numDificulty);
+      filtredDifficultyContent(numDificulty);
 
       const { filter } = state;
       filter.difficulty = numDificulty;
       render(state);
+      scrollToChampionList();
     });
   });
 };
-
-export default filterDifficulty;
