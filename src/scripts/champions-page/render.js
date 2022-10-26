@@ -85,7 +85,7 @@ export default (state) => {
   container.innerHTML = '';
 
   const filteredChampions = filterItems(state.champions, state.filter);
-  console.log(state.filter);
+  console.log(state.filter, state.uiState.search);
   // No champions match the filter criteria.
   const message = document.querySelector('.champions-list-message');
   message.style.display = 'none';
