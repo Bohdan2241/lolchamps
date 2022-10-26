@@ -15,6 +15,13 @@ export default async () => {
       difficulty: null,
       search: null,
     },
+    uiState: {
+      search: {
+        currentValue: '',
+        selectedChampion: null,
+        open: false,
+      },
+    },
   };
 
   searchFilter(state);
