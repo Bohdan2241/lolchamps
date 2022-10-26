@@ -1,3 +1,4 @@
+import { htmlEscape } from 'escape-goat';
 import render, { scrollToChampionList } from './render.js';
 
 const searchClear = (state) => {
@@ -135,7 +136,8 @@ export default (state) => {
       searchPlaceholder.style.display = 'none';
     }
 
-    const text = e.target.value.toLowerCase();
+    const getText = e.target.value.toLowerCase();
+    const text = htmlEscape(getText);
     const championButtons = document.querySelectorAll('.search-dropdown-content-item');
     const arr = [...championButtons].flatMap((championButton) => {
       const button = championButton;
