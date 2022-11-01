@@ -16,9 +16,7 @@ export const clean = () => deleteAsync('./dist');
 export const scripts = (done) => {
   gulp.src('./src/scripts/main.js')
     .pipe(webpackStream(webpackConfig), webpack)
-    .pipe(gulp.dest(['./src/scripts']))
-    .pipe(gulp.dest(['./dist/scripts']));
-
+    .pipe(gulp.dest(['./src/scripts']));
   done();
 };
 
@@ -40,8 +38,7 @@ export const lintStyles = () => gulp.src('./src/scss/**/*.scss')
 
 export const styles = async () => gulp.src('./src/scss/**/*.scss')
   .pipe(sass().on('error', sass.logError))
-  .pipe(gulp.dest('./src/css/'))
-  .pipe(gulp.dest('./dist/css/'));
+  .pipe(gulp.dest('./src/css/'));
 
 export const copy = () => gulp.src([
   './src/*.html',
