@@ -14,6 +14,7 @@
   position: relative;
   margin: 0 auto;
   max-width: 1400px;
+  border: 1px solid rgb(193, 193, 193);
 
   @include media("<=desktop") {
     border-width: 1px 0;
@@ -27,6 +28,32 @@
     border-right-style: initial;
     border-right-color: initial;
   }
+}
+
+.main-nav-inner::before,
+.main-nav-inner::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  transform: rotate(45deg);
+
+  @include media("<=desktop") {
+    display: none;
+  }
+}
+
+.main-nav-inner::before {
+  border-right: 1px solid rgb(193 193 193);
+  top: -8px;
+  left: -8.4px;
+}
+
+.main-nav-inner::after {
+  border-left: 1px solid rgb(193 193 193);
+  bottom: -8px;
+  right: -8.4px;
 }
 
 .canvas-wrapper {
@@ -193,7 +220,7 @@
   position: absolute;
   top: 38px;
   right: 0;
-  left: 0;
+  left: -1px;
   background-color: #fff;
   border-right: 1px rgb(193, 193, 193) solid;
   border-left: 1px rgb(193, 193, 193) solid;
@@ -312,6 +339,7 @@
 .difficulty-wrapper {
   position: relative;
   height: 100%;
+  width: 100%;
 }
 
 .difficulty {
