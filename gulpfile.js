@@ -1,10 +1,14 @@
 import gulp from 'gulp';
 import { deleteAsync } from 'del';
+import rename from 'gulp-rename';
+import size from 'gulp-size';
 import sync from 'browser-sync';
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import stylelint from 'gulp-stylelint';
+import cleanCss from 'gulp-clean-css';
 import eslint from 'gulp-eslint-new';
+import htmlmin from 'gulp-htmlmin';
 import webpack from 'webpack';
 import webpackStream from 'webpack-stream';
 import webpackConfig from './webpack.config.cjs';
@@ -12,13 +16,6 @@ import webpackConfig from './webpack.config.cjs';
 const sass = gulpSass(dartSass);
 
 export const clean = () => deleteAsync('./dist');
-
-export const scripts = (done) => {
-  gulp.src('./src/scripts/main.js')
-    .pipe(webpackStream(webpackConfig), webpack)
-    .pipe(gulp.dest(['./src/scripts']));
-  done();
-};
 
 export const lintScripts = () => gulp.src(['./src/**/*.js', '!src/scripts/**/*.min.js'])
   .pipe(eslint())
@@ -36,27 +33,59 @@ export const lintStyles = () => gulp.src('./src/scss/**/*.scss')
     ],
   }));
 
+export const scripts = (done) => {
+  gulp.src('./src/scripts/main.js')
+    .pipe(webpackStream(webpackConfig), webpack)
+    .pipe(gulp.dest(['./src/scripts']))
+    .pipe(gulp.dest(['./dist/scripts']))
+    .pipe(size({
+      title: 'scripts',
+    }));
+  done();
+};
+
 export const styles = async () => gulp.src('./src/scss/**/*.scss')
   .pipe(sass().on('error', sass.logError))
-  .pipe(gulp.dest('./src/css/'));
+  .pipe(cleanCss())
+  .pipe(rename({
+    suffix: '.min',
+  }))
+  .pipe(gulp.dest('./src/css/'))
+  .pipe(gulp.dest('./dist/css/'))
+  .pipe(size({
+    title: 'styles',
+  }));
+
+export const html = () => gulp.src(['src/**/*.html'])
+  .pipe(
+    htmlmin({
+      collapseWhitespace: true,
+    }),
+  )
+  .pipe(gulp.dest('dist/'))
+  .pipe(
+    size({
+      title: 'html',
+    }),
+  );
 
 export const copy = () => gulp.src([
-  './src/*.html',
   './src/*.json',
   './src/*.ico',
   './src/CNAME',
-  './src/*.ico',
-  './src/fonts',
 ])
-  .pipe(gulp.dest('./dist/'));
+  .pipe(gulp.dest('./dist/'))
+  .pipe(size({
+    title: 'copy',
+  }));
 
 export const fonts = () => gulp.src([
   './src/fonts/**.*',
 ])
-  .pipe(gulp.dest('./dist/fonts/'));
-
-// export const json = () => gulp.src('./src/*.json')
-//   .pipe(gulp.dest('./dist/data'));
+  .pipe(gulp.dest('./dist/fonts/'))
+  .pipe(size({
+    title: 'fonts',
+  }));
 
 const reload = (done) => {
   sync.reload();
@@ -84,8 +113,10 @@ export const build = (cb) => gulp.series(
   gulp.parallel(
     gulp.series(lintScripts, scripts),
     gulp.series(lintStyles, styles),
-    gulp.series(copy, fonts),
+    copy,
+    fonts,
   ),
+  html,
 )(cb);
 
 export const dev = () => gulp.series(
