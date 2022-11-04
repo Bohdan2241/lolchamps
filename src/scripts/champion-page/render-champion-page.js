@@ -129,10 +129,10 @@ const setProperty = (arr, propertyName, championObj) => {
     if (propertyName === 'image') {
       if (i === 0) {
         const value = championObj.passive.image.full;
-        item.src = `http://ddragon.leagueoflegends.com/cdn/12.16.1/img/passive/${value}`;
+        item.src = `http://ddragon.leagueoflegends.com/cdn/12.21.1/img/passive/${value}`;
       } else {
         const value = championObj.spells[i - 1].image.full;
-        item.src = `https://ddragon.leagueoflegends.com/cdn/12.16.1/img/spell/${value}`;
+        item.src = `https://ddragon.leagueoflegends.com/cdn/12.21.1/img/spell/${value}`;
       }
     }
 

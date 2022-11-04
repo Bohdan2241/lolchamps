@@ -4558,7 +4558,7 @@
     },
     {
       "name": "udyr",
-      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt8350eda62a9ed56c/5db060150b39e86c2f83dc2b/RiotX_ChampionList_udyr.jpg?quality=90&width=250"
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt8350eda62a9ed56c/63350924f709a318104f9bbb/RiotX_ChampionList_udyr_v2.jpg?quality=90&width=250"
     },
     {
       "name": "urgot",
@@ -4623,6 +4623,9 @@
     {
       "name": "zyra",
       "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt9bc3497cdd04f6d5/5db060229481396d6bdd01c4/RiotX_ChampionList_zyra.jpg?quality=90&width=250"
+    }, {
+      "name": "k'sante",
+      "previewImage": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blte7545766d0c1e829/636048e02d878355fecde0ee/RiotX_ChampionList_ksante.jpg?quality=90&width=250"
     }
   ]
 }

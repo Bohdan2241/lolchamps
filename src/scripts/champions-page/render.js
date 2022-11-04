@@ -84,17 +84,17 @@ export default (state) => {
   container.innerHTML = '';
 
   const filteredChampions = filterItems(state.champions, state.filter);
-  console.log(state);
+  const sortedChampions = filteredChampions.sort((a, b) => a.name.localeCompare(b.name));
 
   // No champions match the filter criteria.
   const message = document.querySelector('.champions-list-message');
   message.style.display = 'none';
-  if (filteredChampions.length === 0) {
+  if (sortedChampions.length === 0) {
     message.style.display = 'block';
     return;
   }
 
-  filteredChampions.forEach((champion, i) => {
+  sortedChampions.forEach((champion, i) => {
     const { name } = champion;
     const imageLink = `${getPreviewImage(name)}`;
     const championLink = `/${name}`;

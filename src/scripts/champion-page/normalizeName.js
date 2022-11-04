@@ -20,6 +20,9 @@ export default (name) => {
   if (normalizedName === 'LeBlanc') {
     normalizedName = _.capitalize(normalizedName);
   }
+  if (normalizedName === 'K\'Sante') {
+    normalizedName = 'KSante';
+  }
   if (/\s/.test(normalizedName)) {
     normalizedName = normalizedName.replace(/ /g, '');
   }
