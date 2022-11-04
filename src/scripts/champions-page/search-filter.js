@@ -94,55 +94,6 @@ const renderSearchChampion = (state) => {
   });
 };
 
-const searchListener = (state) => {
-  const { search } = state.uiState;
-  const searchField = document.querySelector('.search-input');
-  const searchPlaceholder = document.querySelector('.search-placeholder');
-
-  searchField.addEventListener('keyup', () => {
-    searchPlaceholder.style.display = 'block';
-    if (searchField.value) {
-      searchPlaceholder.style.display = 'none';
-    }
-
-    const inputText = searchField.value.toLowerCase();
-    search.currentValue = htmlEscape(inputText);
-
-    const championButtons = document.querySelectorAll('.search-dropdown-content-item');
-    const currentList = Array.from(championButtons).flatMap((championButton) => {
-      const button = championButton;
-      const buttonText = championButton.textContent.toLowerCase();
-      if (buttonText.includes(search.currentValue)) {
-        button.style.display = 'block';
-        return championButton;
-      }
-      button.style.display = 'none';
-      return [];
-    });
-
-    const hiddenContent = document.querySelector('.search-dropdown-empty-content-item');
-    if (currentList.length === 0) {
-      hiddenContent.classList.add('display-block');
-    } else {
-      hiddenContent.classList.remove('display-block');
-    }
-  });
-};
-
-const scrollToSearchList = () => {
-  const dropdawnContent = document.querySelector('.search-dropdown-content');
-  const { top } = dropdawnContent.getBoundingClientRect();
-  window.addEventListener('scroll', () => {
-    console.log(dropdawnContent.getBoundingClientRect(), dropdawnContent);
-  });
-  if (top > 350) {
-    dropdawnContent.scrollIntoView({
-      behavior: 'smooth',
-      block: 'end',
-    });
-  }
-};
-
 const getButtonsList = (state) => {
   const { search } = state.uiState;
   const dropdawnContent = document.querySelector('.search-dropdown-content');
@@ -170,6 +121,73 @@ const getButtonsList = (state) => {
   renderSearchChampion(state);
 };
 
+const searchListener = (state) => {
+  const { search } = state.uiState;
+  const searchField = document.querySelector('.search-input');
+  const searchPlaceholder = document.querySelector('.search-placeholder');
+  const searchClearButton = document.querySelector('.search-indicator-clear');
+
+  searchField.addEventListener('keyup', (e) => {
+    searchPlaceholder.style.display = 'block';
+    if (searchField.value) {
+      searchPlaceholder.style.display = 'none';
+    }
+
+    const inputText = searchField.value.toLowerCase();
+    search.currentValue = htmlEscape(inputText);
+
+    if (e.key === 'Backspace' && search.selectedChampion !== null && search.currentValue === '') {
+      if (searchPlaceholder.style.display === 'block') {
+        search.selectedChampion = null;
+        const { filter } = state;
+        filter.search = null;
+
+        searchClearButton.style.display = 'none';
+        searchPlaceholder.textContent = 'search';
+        searchPlaceholder.classList.add('search-placeholder-focused');
+        searchPlaceholder.style.marginRight = '0px';
+
+        render(state);
+        getButtonsList(state);
+        scrollToChampionList();
+        return;
+      }
+    }
+
+    const championButtons = document.querySelectorAll('.search-dropdown-content-item');
+    const currentList = Array.from(championButtons).flatMap((championButton) => {
+      const button = championButton;
+      const buttonText = championButton.textContent.toLowerCase();
+      if (buttonText.includes(search.currentValue)) {
+        button.style.display = 'block';
+        return championButton;
+      }
+      button.style.display = 'none';
+      return [];
+    });
+
+    const hiddenContent = document.querySelector('.search-dropdown-empty-content-item');
+    if (currentList.length === 0) {
+      hiddenContent.classList.add('display-block');
+    } else {
+      hiddenContent.classList.remove('display-block');
+    }
+  });
+};
+
+const scrollToSearchList = () => {
+  const dropdawnContent = document.querySelector('.search-dropdown-content');
+  const { top } = dropdawnContent.getBoundingClientRect();
+  window.addEventListener('scroll', () => {
+  });
+  if (top > 350) {
+    dropdawnContent.scrollIntoView({
+      behavior: 'smooth',
+      block: 'end',
+    });
+  }
+};
+
 const dropdownControl = (state) => {
   const { search } = state.uiState;
   const searchButton = document.querySelector('.search');
@@ -181,7 +199,9 @@ const dropdownControl = (state) => {
     if (search.open === false) {
       const searchClearButton = document.querySelector('.search-indicator-clear');
       const isClickInside = searchClearButton.contains(e.target);
-      if (isClickInside) return;
+      if (isClickInside) {
+        return;
+      }
 
       search.open = true;
       toggleDropdownContent();
