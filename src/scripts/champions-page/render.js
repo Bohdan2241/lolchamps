@@ -12,7 +12,7 @@ const getPreviewImage = (name) => {
   return image;
 };
 
-const filtersFunctions = {
+const filterFunctions = {
   role: (champion, role) => {
     let targetRole = '';
     switch (role) {
@@ -54,7 +54,6 @@ const filtersFunctions = {
       default:
         throw new Error(`Unexpected difficulty ${difficulty}`);
     }
-
     return targetDifficulty.includes(champion.info.difficulty) ? champion : false;
   },
   search: (champion, name) => (champion.name === name ? champion : false),
@@ -63,7 +62,7 @@ const filtersFunctions = {
 const filterItems = (champions, query) => {
   const activeFilters = Object.entries(query).filter(([, filterValue]) => filterValue !== null);
   return champions.filter((champion) => activeFilters.every(([filterName, filterValue]) => {
-    const match = filtersFunctions[filterName];
+    const match = filterFunctions[filterName];
     return match(champion, filterValue);
   }));
 };
@@ -85,7 +84,8 @@ export default (state) => {
   container.innerHTML = '';
 
   const filteredChampions = filterItems(state.champions, state.filter);
-  console.log(state.filter, state.uiState.search);
+  console.log(state);
+
   // No champions match the filter criteria.
   const message = document.querySelector('.champions-list-message');
   message.style.display = 'none';

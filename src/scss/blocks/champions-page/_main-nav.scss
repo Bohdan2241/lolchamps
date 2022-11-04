@@ -280,7 +280,7 @@
   height: 100%;
 }
 
-.role-list button {
+.role-btn {
   position: relative;
   display: block;
   height: 100%;
@@ -296,7 +296,7 @@
   cursor: pointer;
 }
 
-.role-list button::after {
+.role-btn::after {
   content: "";
   position: absolute;
   left: 0;
@@ -308,20 +308,20 @@
   transition: transform 300ms ease 0s;
 }
 
-.role-list button:hover {
+.role-btn:hover {
   color: $black;
 }
 
-.role-list button:hover::after {
+.role-btn:hover::after {
   transform: scale(0.2, 1);
 }
 
-.role-list .role-active {
+.role-active {
   color: $black;
 }
 
-.role-list .role-active::after {
-  transform: scale(1, 1) !important;
+.role-btn.role-active::after {
+  transform: scale(1, 1);
 }
 
 .difficulty-container {
