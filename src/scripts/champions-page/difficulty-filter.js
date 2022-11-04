@@ -1,6 +1,6 @@
 import render, { scrollToChampionList } from './render.js';
 
-const toggleDropDownMenu = () => {
+const toggleDropdownContent = () => {
   const dropDownContent = document.querySelector('.difficulty-dropdown-content');
   const menu = document.querySelector('.difficulty');
   const arrow = document.querySelector('.difficulty-indicator-arrow');
@@ -9,41 +9,66 @@ const toggleDropDownMenu = () => {
   arrow.classList.toggle('difficulty-indicator-arrow-open');
 };
 
-const dropDown = () => {
+const dropdownControl = (state) => {
+  const { difficulty } = state.uiState;
   const controller = document.querySelector('.difficulty-container');
   const difficultyIndicatorClear = document.querySelector('.difficulty-indicator-clear');
   const menu = document.querySelector('.difficulty');
+
   controller.addEventListener('click', (e) => {
-    const isClickInside = difficultyIndicatorClear.contains(e.target);
-    if (menu.classList.contains('menu-is-open') && isClickInside) {
-      toggleDropDownMenu();
-    }
-    if (isClickInside) return;
-    toggleDropDownMenu();
-  });
-};
-
-const closeDropDownMenu = () => {
-  const dropDownContent = document.querySelector('.difficulty-dropdown-content');
-  const menu = document.querySelector('.difficulty');
-  const arrow = document.querySelector('.difficulty-indicator-arrow');
-  document.addEventListener('click', (e) => {
-    if (menu.classList.contains('menu-is-open')) {
-      const isClickInside = menu.contains(e.target);
-      if (!isClickInside) {
-        dropDownContent.classList.remove('display-block');
-        menu.classList.remove('menu-is-open');
-        arrow.classList.remove('difficulty-indicator-arrow-open');
+    if (difficulty.open === false) {
+      const isClickInside = difficultyIndicatorClear.contains(e.target);
+      if (isClickInside) {
+        return;
       }
+
+      difficulty.open = true;
+      toggleDropdownContent();
+    } else if (difficulty.open === true) {
+      difficulty.open = false;
+      toggleDropdownContent();
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    const isClickInside = menu.contains(e.target);
+    if (difficulty.open === true && !isClickInside) {
+      difficulty.open = false;
+      toggleDropdownContent();
     }
   });
 };
 
-export const resetBgcDifficultyMenuButtons = () => {
+const resetBgcDifficultyMenuButtons = () => {
   const menuButtons = document.querySelectorAll('.difficulty-dropdown-content > .difficulty-single-value-container');
   menuButtons.forEach((item) => {
-    // eslint-disable-next-line no-param-reassign
-    item.style.backgroundColor = 'transparent';
+    const button = item;
+    button.style.backgroundColor = 'transparent';
+  });
+};
+
+const difficultyClear = (state) => {
+  const difficultyPlaceholder = document.querySelector('.difficulty-placeholder');
+  const difficultySingleValue = document.querySelector('.difficulty-single-value');
+  const difficultyIndicatorClear = document.querySelector('.difficulty-indicator-clear');
+
+  difficultyIndicatorClear.addEventListener('click', () => {
+    const { difficulty } = state.uiState;
+    if (difficulty.open === true) {
+      difficulty.open = false;
+      toggleDropdownContent();
+    }
+    difficulty.selectedDifficulty = null;
+    const { filter } = state;
+    filter.difficulty = null;
+
+    difficultyPlaceholder.style.display = 'block';
+    difficultySingleValue.style.display = 'none';
+    difficultyIndicatorClear.style.display = 'none';
+    resetBgcDifficultyMenuButtons();
+
+    render(state);
+    scrollToChampionList();
   });
 };
 
@@ -57,32 +82,14 @@ const fillDifficultyIcon = (numDificulty) => {
   const parent = document.querySelector('[data-testid="difficulty-nav:container"]');
   const indicators = parent.children;
 
-  Array.from(indicators).forEach((indicator, i) => {
-    // eslint-disable-next-line no-param-reassign
+  Array.from(indicators).forEach((item, i) => {
+    const indicator = item;
     indicator.className = '';
     if (i >= difficultyMap[numDificulty]) {
       indicator.classList.add('difficulty-value-item-empty');
     } else {
       indicator.classList.add('difficulty-value-item');
     }
-  });
-};
-
-const resetDifficultyContent = (state) => {
-  const difficultyPlaceholder = document.querySelector('.difficulty-placeholder');
-  const difficultySingleValue = document.querySelector('.difficulty-single-value');
-  const difficultyIndicatorClear = document.querySelector('.difficulty-indicator-clear');
-  difficultyIndicatorClear.addEventListener('click', () => {
-    difficultyPlaceholder.style.display = 'block';
-    difficultySingleValue.style.display = 'none';
-    difficultyIndicatorClear.style.display = 'none';
-    // console.log('click');
-    resetBgcDifficultyMenuButtons();
-
-    const { filter } = state;
-    filter.difficulty = null;
-    render(state);
-    scrollToChampionList();
   });
 };
 
@@ -97,16 +104,14 @@ const filtredDifficultyContent = (numDificulty) => {
   fillDifficultyIcon(numDificulty);
 };
 
-export default (state) => {
-  dropDown();
-  closeDropDownMenu();
-  resetDifficultyContent(state);
+const difficultyListener = (state) => {
   const menuButtons = document.querySelectorAll('.difficulty-dropdown-content > .difficulty-single-value-container');
+
   menuButtons.forEach((menuButton) => {
     menuButton.addEventListener('click', () => {
-      const granParentCollection = menuButton.children;
-      const granParent = granParentCollection.item(0);
-      const parent = granParent.querySelector('.difficulty-value-container');
+      const grandParentCollection = menuButton.children;
+      const grandParent = grandParentCollection.item(0);
+      const parent = grandParent.querySelector('.difficulty-value-container');
       const difficultyLength = (parent.querySelectorAll('.difficulty-value-item-empty')).length;
       const difficultyMap = {
         2: 'low',
@@ -119,10 +124,18 @@ export default (state) => {
       menuButton.style.backgroundColor = '#41ece457';
       filtredDifficultyContent(numDificulty);
 
+      const { difficulty } = state.uiState;
+      difficulty.selectedDifficulty = numDificulty;
       const { filter } = state;
       filter.difficulty = numDificulty;
       render(state);
       scrollToChampionList();
     });
   });
+};
+
+export default (state) => {
+  dropdownControl(state);
+  difficultyListener(state);
+  difficultyClear(state);
 };
