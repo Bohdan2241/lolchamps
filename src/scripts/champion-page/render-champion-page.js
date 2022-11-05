@@ -80,9 +80,10 @@ const seeMoreDescription = (container, text) => {
 };
 
 const createLinks = (links, name) => {
-  links[0].setAttribute('href', `https://u.gg/lol/champions/${name}/build`);
-  links[1].setAttribute('href', `https://na.op.gg/champion/${name}/statistics/`);
-  links[2].setAttribute('href', `https://www.probuilds.net/champions/details/${name}`);
+  const correctName = normalizeName(name);
+  links[0].setAttribute('href', `https://u.gg/lol/champions/${correctName}/build`);
+  links[1].setAttribute('href', `https://na.op.gg/champion/${correctName}/statistics/`);
+  links[2].setAttribute('href', `https://www.probuilds.net/champions/details/${correctName}`);
 };
 
 const createOverviewSection = (championObj) => {
