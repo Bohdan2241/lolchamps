@@ -219,11 +219,7 @@ const dropdownControl = (state) => {
     const isClickInside = searchButton.contains(e.target);
 
     if (search.open === true && !isClickInside) {
-      if (search.selectedChampion !== null) {
-        search.currentValue = '';
-        searchField.value = search.currentValue;
-        searchPlaceholder.style.display = 'block';
-      } else if (search.value !== '') {
+      if (search.selectedChampion !== null || search.value !== '') {
         search.currentValue = '';
         searchField.value = search.currentValue;
         searchPlaceholder.style.display = 'block';
