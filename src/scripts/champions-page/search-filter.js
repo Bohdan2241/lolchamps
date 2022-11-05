@@ -111,7 +111,6 @@ const getButtonsList = (state) => {
   if (search.selectedChampion !== null) {
     const selectedIndex = search.selectedChampion;
     const searchButtons = document.querySelectorAll('.search-dropdown-content-item');
-    // searchButtons[selectedIndex].style.backgroundColor = 'rgba(65, 236, 228, 0.34)';
     searchButtons[selectedIndex].classList.add('selected-option');
   }
   const hiddenContent = document.createElement('div');
