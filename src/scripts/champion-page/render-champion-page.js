@@ -1,11 +1,12 @@
 import { getVersionDataDragon, getChampionData } from '../getData.js';
+import { fillDifficultyIcon } from '../utility/fillDifficultyIcon.js';
 import championsButtonCanvas from './champions-button-canvas.js';
 import championTitleCanvas from './champion-title-canvas.js';
 import abilitiesImageCanvas from './abilities-image-canvas.js';
 import abilitiesVideoCanvas from './abilities-video-canvas.js';
 import { abilitiesSlider } from './abilities-slider.js';
 import skinsSlider from './skins-slider.js';
-import normalizeName from './normalizeName.js';
+import normalizeName from '../utility/normalizeName.js';
 import parallax from './footerVideo.js';
 
 const pickRoleIcon = (role) => {
@@ -19,32 +20,6 @@ const pickRoleIcon = (role) => {
   };
 
   return roleIcons[role];
-};
-
-const fillDifficultyIcon = (difficulty, container) => {
-  const difficultyMap = {
-    0: 0,
-    1: 0,
-    2: 0,
-    3: 0,
-    4: 1,
-    5: 1,
-    6: 1,
-    7: 1,
-    8: 2,
-    9: 2,
-    10: 2,
-  };
-
-  const indicators = container.children;
-
-  Array.from(indicators).forEach((indicator, i) => {
-    if (i <= difficultyMap[difficulty]) {
-      indicator.classList.add('difficulty-value-item');
-    } else {
-      indicator.classList.add('difficulty-value-item-empty');
-    }
-  });
 };
 
 const fillDifficulty = (difficulty) => {

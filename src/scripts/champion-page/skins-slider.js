@@ -1,6 +1,6 @@
 import Swiper, { Autoplay } from 'swiper';
 import skinsCanvas from './skins-canvas.js';
-import normalizeName from './normalizeName.js';
+import normalizeName from '../utility/normalizeName.js';
 
 const swiper = new Swiper('.swiper', {
   modules: [Autoplay],

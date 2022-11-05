@@ -1,4 +1,5 @@
 import render, { scrollToChampionList } from './render.js';
+import { fillDifficultyIcon } from '../utility/fillDifficultyIcon.js';
 
 const toggleDropdownContent = () => {
   const dropDownContent = document.querySelector('.difficulty-dropdown-content');
@@ -43,7 +44,7 @@ const resetBgcDifficultyMenuButtons = () => {
   const menuButtons = document.querySelectorAll('.difficulty-dropdown-content > .difficulty-single-value-container');
   menuButtons.forEach((item) => {
     const button = item;
-    button.style.backgroundColor = 'transparent';
+    button.classList.remove('selected-option');
   });
 };
 
@@ -72,27 +73,6 @@ const difficultyClear = (state) => {
   });
 };
 
-const fillDifficultyIcon = (numDificulty) => {
-  const difficultyMap = {
-    low: 1,
-    moderate: 2,
-    high: 3,
-  };
-
-  const parent = document.querySelector('[data-testid="difficulty-nav:container"]');
-  const indicators = parent.children;
-
-  Array.from(indicators).forEach((item, i) => {
-    const indicator = item;
-    indicator.className = '';
-    if (i >= difficultyMap[numDificulty]) {
-      indicator.classList.add('difficulty-value-item-empty');
-    } else {
-      indicator.classList.add('difficulty-value-item');
-    }
-  });
-};
-
 const filtredDifficultyContent = (numDificulty) => {
   const difficultyPlaceholder = document.querySelector('.difficulty-placeholder');
   difficultyPlaceholder.style.display = 'none';
@@ -101,16 +81,17 @@ const filtredDifficultyContent = (numDificulty) => {
   const difficultyIndicatorClear = document.querySelector('.difficulty-indicator-clear');
   difficultyIndicatorClear.style.display = 'flex';
 
-  fillDifficultyIcon(numDificulty);
+  const container = document.querySelector('[data-testid="difficulty-nav:container"]');
+  fillDifficultyIcon(numDificulty, container);
 };
 
 const difficultyListener = (state) => {
   const menuButtons = document.querySelectorAll('.difficulty-dropdown-content > .difficulty-single-value-container');
 
-  menuButtons.forEach((menuButton) => {
+  menuButtons.forEach((menuButton, i) => {
     menuButton.addEventListener('click', () => {
       const grandParentCollection = menuButton.children;
-      const grandParent = grandParentCollection.item(0);
+      const grandParent = grandParentCollection[0];
       const parent = grandParent.querySelector('.difficulty-value-container');
       const difficultyLength = (parent.querySelectorAll('.difficulty-value-item-empty')).length;
       const difficultyMap = {
@@ -120,12 +101,11 @@ const difficultyListener = (state) => {
       };
       const numDificulty = difficultyMap[difficultyLength];
       resetBgcDifficultyMenuButtons();
-      // eslint-disable-next-line no-param-reassign
-      menuButton.style.backgroundColor = '#41ece457';
+      menuButton.classList.add('selected-option');
       filtredDifficultyContent(numDificulty);
 
       const { difficulty } = state.uiState;
-      difficulty.selectedDifficulty = numDificulty;
+      difficulty.selectedDifficulty = i;
       const { filter } = state;
       filter.difficulty = numDificulty;
       render(state);
