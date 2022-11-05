@@ -1,4 +1,4 @@
-import { getChampionData } from '../getData.js';
+import { getVersionDataDragon, getChampionData } from '../getData.js';
 import championsButtonCanvas from './champions-button-canvas.js';
 import championTitleCanvas from './champion-title-canvas.js';
 import abilitiesImageCanvas from './abilities-image-canvas.js';
@@ -123,16 +123,17 @@ const createOverviewSection = (championObj) => {
   createLinks(links, championObj.name);
 };
 
-const setProperty = (arr, propertyName, championObj) => {
+const setProperty = async (arr, propertyName, championObj) => {
+  const version = await getVersionDataDragon();
   arr.forEach((element, i) => {
     const item = element;
     if (propertyName === 'image') {
       if (i === 0) {
         const value = championObj.passive.image.full;
-        item.src = `http://ddragon.leagueoflegends.com/cdn/12.21.1/img/passive/${value}`;
+        item.src = `http://ddragon.leagueoflegends.com/cdn/${version}/img/passive/${value}`;
       } else {
         const value = championObj.spells[i - 1].image.full;
-        item.src = `https://ddragon.leagueoflegends.com/cdn/12.21.1/img/spell/${value}`;
+        item.src = `https://ddragon.leagueoflegends.com/cdn/${version}/img/spell/${value}`;
       }
     }
 

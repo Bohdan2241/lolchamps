@@ -1,12 +1,19 @@
 import axios from 'axios';
 
+export const getVersionDataDragon = async () => {
+  const response = await axios.get('https://ddragon.leagueoflegends.com/api/versions.json');
+  return response.data[0];
+};
+
 export const getChampionsData = async () => {
-  const response = await axios.get('http://ddragon.leagueoflegends.com/cdn/12.21.1/data/en_US/champion.json');
+  const version = await getVersionDataDragon();
+  const response = await axios.get(`http://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion.json`);
   return response.data;
 };
 
 export const getChampionData = async (championName) => {
-  const response = await axios.get(`http://ddragon.leagueoflegends.com/cdn/12.21.1/data/en_US/champion/${championName}.json`);
+  const version = await getVersionDataDragon();
+  const response = await axios.get(`http://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion/${championName}.json`);
   return response.data;
 };
 
