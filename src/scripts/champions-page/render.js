@@ -96,7 +96,7 @@ export default (state) => {
 
   sortedChampions.forEach((champion, i) => {
     const { name } = champion;
-    const imageLink = `${getPreviewImage(name)}`;
+    const imageLink = getPreviewImage(name);
     const championLink = `/${name}`;
     const delay = i * 50;
 
