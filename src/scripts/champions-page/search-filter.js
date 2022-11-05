@@ -28,7 +28,7 @@ const toggleDropdownContent = (state) => {
 };
 
 const searchClear = (state) => {
-  const searchClearButton = document.querySelector('.search-indicator-clear');
+  const searchClearButton = document.querySelector('.search .dropdown-indicator-clear');
   const searchPlaceholder = document.querySelector('.search-placeholder');
   const contentContainer = document.querySelector('.search-dropdown-content');
   const searchIcon = document.querySelector('.search-value');
@@ -72,14 +72,14 @@ const renderSearchChampion = (state) => {
   const searchButtons = document.querySelectorAll('.search-dropdown-content-item');
   const searchField = document.querySelector('.search-input');
   const searchPlaceholder = document.querySelector('.search-placeholder');
-  const searchClearButton = document.querySelector('.search-indicator-clear');
+  const searchClearButton = document.querySelector('.search .dropdown-indicator-clear');
 
   searchButtons.forEach((button, i) => {
     button.addEventListener('click', () => {
       const championName = button.textContent;
       searchField.value = '';
       searchPlaceholder.style.display = 'block';
-      searchPlaceholder.style.marginRight = '10px';
+      searchPlaceholder.style.marginRight = '15px';
       searchPlaceholder.textContent = championName;
       searchPlaceholder.classList.remove('search-placeholder-focused');
       searchClearButton.style.display = 'flex';
@@ -125,7 +125,7 @@ const searchListener = (state) => {
   const { search } = state.uiState;
   const searchField = document.querySelector('.search-input');
   const searchPlaceholder = document.querySelector('.search-placeholder');
-  const searchClearButton = document.querySelector('.search-indicator-clear');
+  const searchClearButton = document.querySelector('.search .dropdown-indicator-clear');
 
   searchField.addEventListener('keyup', (e) => {
     searchPlaceholder.style.display = 'block';
@@ -197,7 +197,7 @@ const dropdownControl = (state) => {
     searchField.focus();
 
     if (search.open === false) {
-      const searchClearButton = document.querySelector('.search-indicator-clear');
+      const searchClearButton = document.querySelector('.search .dropdown-indicator-clear');
       const isClickInside = searchClearButton.contains(e.target);
       if (isClickInside) {
         return;

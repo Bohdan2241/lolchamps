@@ -1,5 +1,5 @@
 import { getVersionDataDragon, getChampionData } from '../getData.js';
-import { fillDifficultyIcon } from '../utility/fillDifficultyIcon.js';
+import fillDifficultyIcon from '../utility/fillDifficultyIcon.js';
 import championsButtonCanvas from './champions-button-canvas.js';
 import championTitleCanvas from './champion-title-canvas.js';
 import abilitiesImageCanvas from './abilities-image-canvas.js';

@@ -1,19 +1,19 @@
 import render, { scrollToChampionList } from './render.js';
-import { fillDifficultyIcon } from '../utility/fillDifficultyIcon.js';
+import fillDifficultyIcon from '../utility/fillDifficultyIcon.js';
 
 const toggleDropdownContent = () => {
   const dropDownContent = document.querySelector('.difficulty-dropdown-content');
   const menu = document.querySelector('.difficulty');
-  const arrow = document.querySelector('.difficulty-indicator-arrow');
+  const arrow = document.querySelector('.difficulty .dropdown-indicator-arrow');
   dropDownContent.classList.toggle('display-block');
   menu.classList.toggle('menu-is-open');
-  arrow.classList.toggle('difficulty-indicator-arrow-open');
+  arrow.classList.toggle('indicator-arrow-open');
 };
 
 const dropdownControl = (state) => {
   const { difficulty } = state.uiState;
   const controller = document.querySelector('.difficulty-container');
-  const difficultyIndicatorClear = document.querySelector('.difficulty-indicator-clear');
+  const difficultyIndicatorClear = document.querySelector('.difficulty .dropdown-indicator-clear');
   const menu = document.querySelector('.difficulty');
 
   controller.addEventListener('click', (e) => {
@@ -51,7 +51,7 @@ const resetBgcDifficultyMenuButtons = () => {
 const difficultyClear = (state) => {
   const difficultyPlaceholder = document.querySelector('.difficulty-placeholder');
   const difficultySingleValue = document.querySelector('.difficulty-single-value');
-  const difficultyIndicatorClear = document.querySelector('.difficulty-indicator-clear');
+  const difficultyIndicatorClear = document.querySelector('.difficulty .dropdown-indicator-clear');
 
   difficultyIndicatorClear.addEventListener('click', () => {
     const { difficulty } = state.uiState;
@@ -78,7 +78,7 @@ const filtredDifficultyContent = (numDificulty) => {
   difficultyPlaceholder.style.display = 'none';
   const difficultySingleValue = document.querySelector('.difficulty-single-value');
   difficultySingleValue.style.display = 'block';
-  const difficultyIndicatorClear = document.querySelector('.difficulty-indicator-clear');
+  const difficultyIndicatorClear = document.querySelector('.difficulty .dropdown-indicator-clear');
   difficultyIndicatorClear.style.display = 'flex';
 
   const container = document.querySelector('[data-testid="difficulty-nav:container"]');

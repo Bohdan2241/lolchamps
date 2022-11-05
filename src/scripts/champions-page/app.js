@@ -23,6 +23,7 @@ export default async () => {
       },
       role: {
         selectedRole: null,
+        open: false,
       },
       difficulty: {
         selectedDifficulty: null,

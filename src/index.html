@@ -111,7 +111,7 @@
             <div class="main-nav-content">
               <div class="search-container">
                 <div class="search-wrapper">
-                  <div class="search">
+                  <div class="search dropdown-control">
                     <div class="search-value">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.69 15.69"
                         class="value-container-loupe__LoupeIcon-sc-1hpvr1c-0-SvgLoupe gKqvNU">
@@ -120,20 +120,20 @@
                         </path>
                         <path class="st1" d="M10.25 10.26l4.89 4.89"></path>
                       </svg>
-                      <div class="search-placeholder">Search</div>
+                      <div class="dropdown-placeholder search-placeholder">Search</div>
                       <input class="search-input" type="text">
                     </div>
-                    <div class="seacrh-indicators">
-                      <div class="search-indicator-clear">
+                    <div class="dropdown-indicators">
+                      <div class="dropdown-indicator-clear">
                         <svg height="20" width="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"
-                          class="search-svg">
+                          class="indicator-clear">
                           <path
                             d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z">
                           </path>
                         </svg>
                       </div>
                     </div>
-                    <div class="search-dropdown-content"></div>
+                    <div class="dropdown-control-menu search-dropdown-content"></div>
                   </div>
                 </div>
               </div>
@@ -161,12 +161,45 @@
                     <button class="role-btn">Tanks</button>
                   </li>
                 </ul>
+                <!--  -->
+                <div class="role-dropdown">
+                  <div class="role dropdown-control">
+                    <div class="dropdown-value">
+                      <div class="dropdown-placeholder">All roles</div>
+                    </div>
+                    <div class="dropdown-indicators">
+                      <div class="dropdown-indicator-clear">
+                        <svg height="20" width="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"
+                          class="indicator-clear">
+                          <path
+                            d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z">
+                          </path>
+                        </svg>
+                      </div>
+                      <div class="dropdown-indicator-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.69 4.69" class="indicator-arrow">
+                          <path class="st0" d="M.35.37l4 3.64 4-3.64"></path>
+                          <path class="st1" d="M2.75.01l1.6 1.45L5.95.01z"></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dropdown-control-menu">
+                    <div class="dropdown-menu-item">Assasins</div>
+                    <div class="dropdown-menu-item">Fighters</div>
+                    <div class="dropdown-menu-item">Mages</div>
+                    <div class="dropdown-menu-item">Marksmen</div>
+                    <div class="dropdown-menu-item">Supports</div>
+                    <div class="dropdown-menu-item">Tanks</div>
+                  </div>
+                </div>
+                <!--  -->
               </div>
               <div class="difficulty-container">
                 <div class="difficulty-wrapper">
-                  <div class="difficulty">
+                  <div class="difficulty dropdown-control">
                     <div class="difficulty-value">
-                      <div class="difficulty-placeholder">
+                      <div class="dropdown-placeholder difficulty-placeholder">
                         All difficalties
                       </div>
                       <div class="difficulty-single-value">
@@ -181,8 +214,8 @@
                         </div>
                       </div>
                     </div>
-                    <div class="difficulty-dropdown-content">
-                      <div class="difficulty-single-value-container">
+                    <div class="dropdown-control-menu difficulty-dropdown-content">
+                      <div class="dropdown-menu-item difficulty-single-value-container">
                         <span class="difficulty-value-wrapper">
                           <span class="difficulty-value-container">
                             <span class="difficulty-value-item"></span>
@@ -191,7 +224,7 @@
                           </span>
                         </span>
                       </div>
-                      <div class="difficulty-single-value-container">
+                      <div class="dropdown-menu-item difficulty-single-value-container">
                         <span class="difficulty-value-wrapper">
                           <span class="difficulty-value-container">
                             <span class="difficulty-value-item"></span>
@@ -200,7 +233,7 @@
                           </span>
                         </span>
                       </div>
-                      <div class="difficulty-single-value-container">
+                      <div class="dropdown-menu-item difficulty-single-value-container">
                         <span class="difficulty-value-wrapper">
                           <span class="difficulty-value-container">
                             <span class="difficulty-value-item"></span>
@@ -210,18 +243,17 @@
                         </span>
                       </div>
                     </div>
-                    <div class="difficulty-indicators">
-                      <div class="difficulty-indicator-clear">
+                    <div class="dropdown-indicators">
+                      <div class="dropdown-indicator-clear">
                         <svg height="20" width="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"
-                          class="css-19bqh2r">
+                          class="indicator-clear">
                           <path
                             d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z">
                           </path>
                         </svg>
                       </div>
-                      <div class="difficulty-indicator-arrow">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.69 4.69"
-                          class="dropdown-indicator-arrow__ArrowIcon-xoben1-0-SvgArrowDown eydvhD">
+                      <div class="dropdown-indicator-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.69 4.69" class="indicator-arrow">
                           <path class="st0" d="M.35.37l4 3.64 4-3.64"></path>
                           <path class="st1" d="M2.75.01l1.6 1.45L5.95.01z"></path>
                         </svg>
@@ -599,7 +631,8 @@
       <section class="footerVideo">
         <div class="video-container">
           <div class="video-wrapper">
-            <video class="video-content" preload="none" loop autoplay playsinline src="https://assets.contentstack.io/v3/assets/blt731acb42bb3d1659/blt7de86c03defc8902/5f4959882ecc864927d8d392/ss2020_galio_lux_1920x1080.mp4"></video>
+            <video class="video-content" preload="none" loop autoplay playsinline
+              src="https://assets.contentstack.io/v3/assets/blt731acb42bb3d1659/blt7de86c03defc8902/5f4959882ecc864927d8d392/ss2020_galio_lux_1920x1080.mp4"></video>
           </div>
         </div>
       </section>

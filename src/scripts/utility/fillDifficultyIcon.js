@@ -1,4 +1,4 @@
-export const fillDifficultyIcon = (difficulty, container) => {
+export default (difficulty, container) => {
   const difficultyMap = {
     0: 1,
     1: 1,
@@ -19,9 +19,7 @@ export const fillDifficultyIcon = (difficulty, container) => {
   const indicators = container.children;
   Array.from(indicators).forEach((item, i) => {
     const indicator = item;
-    console.log(indicator.className);
     indicator.className = '';
-    console.log(indicator.className);
     if (i >= difficultyMap[difficulty]) {
       indicator.classList.add('difficulty-value-item-empty');
     } else {
@@ -29,5 +27,3 @@ export const fillDifficultyIcon = (difficulty, container) => {
     }
   });
 };
-
-export const a = 0;
