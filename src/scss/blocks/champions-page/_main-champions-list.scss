@@ -38,7 +38,7 @@
     max-width: 33.3333%;
   }
 
-  @include media("<=mobile") {
+  @include media("<=520px") {
     flex: 1 1 50%;
     max-width: 50%;
   }
