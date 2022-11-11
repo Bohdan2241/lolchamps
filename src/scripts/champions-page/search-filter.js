@@ -1,6 +1,8 @@
 import { htmlEscape } from 'escape-goat';
 import render, { scrollToChampionList } from './render.js';
 
+// const mobileMediaQuery = window.matchMedia('(max-width: 500px)');
+
 const toggleDropdownContent = (state) => {
   const contentContainer = document.querySelector('.search-dropdown-content');
   contentContainer.classList.toggle('display-block');
@@ -33,7 +35,8 @@ const searchClear = (state) => {
   const contentContainer = document.querySelector('.search-dropdown-content');
   const searchIcon = document.querySelector('.search-value');
   const searchInput = document.querySelector('.search-input');
-  const searchButton = document.querySelector('.search');
+  const searchButton = document.querySelector('.search-container');
+  const searcDropdownControl = document.querySelector('.search-container .dropdown-control');
 
   searchClearButton.addEventListener('click', () => {
     const { search } = state.uiState;
@@ -61,7 +64,9 @@ const searchClear = (state) => {
     searchInput.value = search.currentValue;
     searchInput.classList.remove('search-input-focused');
 
-    searchButton.classList.remove('search-is-focused');
+    searchButton.classList.remove('active');
+
+    searcDropdownControl.classList.remove('search-is-focused');
 
     render(state);
     scrollToChampionList();
@@ -100,7 +105,8 @@ const getButtonsList = (state) => {
   dropdawnContent.innerHTML = '';
 
   const championNamesList = Object.values(state.champions);
-  championNamesList.forEach((champion) => {
+  const sortedList = championNamesList.sort((a, b) => a.name.localeCompare(b.name));
+  sortedList.forEach((champion) => {
     const championName = champion.name;
     const championButton = document.createElement('div');
     championButton.classList.add('search-dropdown-content-item');
@@ -190,7 +196,7 @@ const scrollToSearchList = () => {
 
 const dropdownControl = (state) => {
   const { search } = state.uiState;
-  const searchButton = document.querySelector('.search');
+  const searchButton = document.querySelector('.search-container');
   const searchField = document.querySelector('.search-input');
 
   searchButton.addEventListener('click', (e) => {
@@ -203,12 +209,21 @@ const dropdownControl = (state) => {
         return;
       }
 
+      if (!searchButton.classList.contains('active')) {
+        searchButton.classList.add('active');
+      }
+
       search.open = true;
       toggleDropdownContent();
       getButtonsList(state);
       scrollToSearchList();
     } else if (search.open === true) {
       search.open = false;
+
+      if (search.selectedChampion === null) {
+        searchButton.classList.remove('active');
+      }
+
       toggleDropdownContent(state);
     }
   });
@@ -222,6 +237,9 @@ const dropdownControl = (state) => {
         search.currentValue = '';
         searchField.value = search.currentValue;
         searchPlaceholder.style.display = 'block';
+      }
+      if (search.selectedChampion === null) {
+        searchButton.classList.remove('active');
       }
 
       search.open = false;

@@ -208,6 +208,13 @@
     background-color: #fff;
     z-index: 1;
   }
+
+  &.active {
+    @include media("<=500px") {
+      position: absolute;
+      width: 100%;
+    }
+  }
 }
 
 .search-wrapper {
