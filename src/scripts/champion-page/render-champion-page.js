@@ -1,4 +1,4 @@
-import { getVersionDataDragon, getChampionData } from '../getData.js';
+import { getVersionDataDragon, getChampionData } from '../utility/getData.js';
 import fillDifficultyIcon from '../utility/fillDifficultyIcon.js';
 import championsButtonCanvas from './champions-button-canvas.js';
 import championTitleCanvas from './champion-title-canvas.js';
@@ -6,7 +6,6 @@ import abilitiesImageCanvas from './abilities-image-canvas.js';
 import abilitiesVideoCanvas from './abilities-video-canvas.js';
 import { abilitiesSlider } from './abilities-slider.js';
 import skinsSlider from './skins-slider.js';
-import normalizeName from '../utility/normalizeName.js';
 import parallax from './footerVideo.js';
 
 const pickRoleIcon = (role) => {
@@ -54,11 +53,10 @@ const seeMoreDescription = (container, text) => {
   });
 };
 
-const createLinks = (links, name) => {
-  const correctName = normalizeName(name);
-  links[0].setAttribute('href', `https://u.gg/lol/champions/${correctName}/build`);
-  links[1].setAttribute('href', `https://na.op.gg/champion/${correctName}/statistics/`);
-  links[2].setAttribute('href', `https://www.probuilds.net/champions/details/${correctName}`);
+const createLinks = (links, id) => {
+  links[0].setAttribute('href', `https://u.gg/lol/champions/${id}/build`);
+  links[1].setAttribute('href', `https://na.op.gg/champion/${id}/statistics/`);
+  links[2].setAttribute('href', `https://www.probuilds.net/champions/details/${id}`);
 };
 
 const createOverviewSection = (championObj) => {
@@ -67,11 +65,10 @@ const createOverviewSection = (championObj) => {
 
   const introImages = document.querySelectorAll('.background-image, .section-inner-img');
   introImages.forEach((introImage) => {
-    const defaultName = championObj.name;
-    const correctName = normalizeName(defaultName);
+    const { id } = championObj;
     const image = introImage;
 
-    image.src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${correctName}_0.jpg`;
+    image.src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${id}_0.jpg`;
   });
 
   const subtitle = document.querySelector('[data-testid="overview:subtitle"]');
@@ -96,7 +93,7 @@ const createOverviewSection = (championObj) => {
   seeMoreDescription(description, championObj.lore);
 
   const links = document.querySelectorAll('[data-testid="overview:link-0"], [data-testid="overview:link-1"], [data-testid="overview:link-2"]');
-  createLinks(links, championObj.name);
+  createLinks(links, championObj.id);
 };
 
 const setProperty = async (arr, propertyName, championObj) => {
@@ -248,20 +245,20 @@ const creatingItems = (championObj) => {
 
 const goTop = () => window.scrollTo(0, 0);
 
-const getChampionInfo = async (name) => {
-  const championName = normalizeName(name);
-
-  const dataDragonChampion = await getChampionData(championName);
+const getChampionInfo = async (id) => {
+  const dataDragonChampion = await getChampionData(id);
   return dataDragonChampion;
 };
 
-const renderChampionPage = async () => {
+export default async (state) => {
   const links = document.querySelectorAll('.champions-list-item');
   links.forEach((link) => {
-    link.addEventListener('click', async (event) => {
-      event.preventDefault();
+    link.addEventListener('click', async (e) => {
+      e.preventDefault();
       const championName = link.querySelector('.item-text').textContent;
-      const championData = await getChampionInfo(championName);
+      const championId = state.champions
+        .filter(({ id, name }) => (championName === name ? id : false));
+      const championData = await getChampionInfo(championId[0].id); // ?
       const { data } = championData;
       const championObj = Object.values(data)[0];
       creatingItems(championObj);
@@ -280,8 +277,4 @@ const renderChampionPage = async () => {
       goTop();
     });
   });
-};
-
-export default () => {
-  renderChampionPage();
 };

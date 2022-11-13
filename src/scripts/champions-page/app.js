@@ -1,4 +1,4 @@
-import { getChampionsData } from '../getData.js';
+import { getChampionsData } from '../utility/getData.js';
 import render from './render.js';
 import roleFilter from './role-filter.js';
 import difficultyFilter from './difficulty-filter.js';

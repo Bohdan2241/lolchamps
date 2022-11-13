@@ -1,8 +1,7 @@
-import imagesDataOld from '../getImagesData.js';
+import imagesDataOld from '../utility/getImagesData.js';
 import renderChampionPage from '../champion-page/render-champion-page.js';
 
-const getPreviewImage = (name) => {
-  const { champions } = imagesDataOld;
+const getPreviewImage = (name, champions) => {
   const image = champions.flatMap((champion) => {
     if (champion.name.toLowerCase() === name.toLowerCase()) {
       return champion.previewImage;
@@ -79,7 +78,7 @@ export const scrollToChampionList = () => {
   }
 };
 
-export default (state) => {
+export default async (state) => {
   const container = document.querySelector('.champions-list');
   container.innerHTML = '';
 
@@ -93,10 +92,11 @@ export default (state) => {
     message.style.display = 'block';
     return;
   }
+  const { champions } = await imagesDataOld();
 
   sortedChampions.forEach((champion, i) => {
     const { name } = champion;
-    const imageLink = getPreviewImage(name);
+    const imageLink = getPreviewImage(name, champions);
     const championLink = `/${name}`;
     const delay = i * 50;
 
@@ -129,5 +129,5 @@ export default (state) => {
     itemName.append(itemText);
   });
 
-  renderChampionPage();
+  renderChampionPage(state);
 };
