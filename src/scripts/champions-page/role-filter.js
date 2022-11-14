@@ -1,4 +1,6 @@
 import render, { scrollToChampionList } from './render.js';
+import resetBackgroundMenuButtons from '../utility/resetBackgroundMenuButtons.js';
+import dropdown from '../utility/dropdown.js';
 
 const desktopRoleFilter = (state) => {
   const roleButtons = document.querySelectorAll('.role-btn');
@@ -36,41 +38,13 @@ const dropdownControl = (state) => {
   const indicatorClear = document.querySelector('.role-dropdown .dropdown-indicator-clear');
   const menu = document.querySelector('.role');
 
-  controller.addEventListener('click', (e) => {
-    if (role.open === false) {
-      const isClickInside = indicatorClear.contains(e.target);
-      if (isClickInside) {
-        return;
-      }
-
-      role.open = true;
-      toggleDropdownContent();
-    } else if (role.open === true) {
-      role.open = false;
-      toggleDropdownContent();
-    }
-  });
-
-  document.addEventListener('click', (e) => {
-    const isClickInside = menu.contains(e.target);
-    if (role.open === true && !isClickInside) {
-      role.open = false;
-      toggleDropdownContent();
-    }
-  });
-};
-
-const resetBgcDifficultyMenuButtons = () => {
-  const roleButtons = document.querySelectorAll('.role-dropdown .dropdown-menu-item');
-  roleButtons.forEach((item) => {
-    const button = item;
-    button.classList.remove('selected-option');
-  });
+  dropdown(role, controller, indicatorClear, menu, toggleDropdownContent);
 };
 
 const roleClear = (state) => {
   const rolePlaceholder = document.querySelector('.role-dropdown .dropdown-placeholder');
   const indicatorClear = document.querySelector('.role-dropdown .dropdown-indicator-clear');
+  const roleButtons = document.querySelectorAll('.role-dropdown .dropdown-menu-item');
 
   indicatorClear.addEventListener('click', () => {
     const { role } = state.uiState;
@@ -85,7 +59,7 @@ const roleClear = (state) => {
     rolePlaceholder.textContent = 'All roles';
     rolePlaceholder.style.marginRight = '0';
     indicatorClear.style.display = 'none';
-    resetBgcDifficultyMenuButtons();
+    resetBackgroundMenuButtons(roleButtons);
 
     render(state);
     scrollToChampionList();
@@ -106,7 +80,7 @@ const roleListener = (state) => {
   roleButtons.forEach((roleButton) => {
     roleButton.addEventListener('click', (e) => {
       const currentRole = e.target.textContent.toLowerCase();
-      resetBgcDifficultyMenuButtons();
+      resetBackgroundMenuButtons(roleButtons);
       roleButton.classList.add('selected-option');
       setRoleValue(currentRole);
 

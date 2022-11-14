@@ -1,5 +1,7 @@
 import render, { scrollToChampionList } from './render.js';
 import fillDifficultyIcon from '../utility/fillDifficultyIcon.js';
+import resetBackgroundMenuButtons from '../utility/resetBackgroundMenuButtons.js';
+import dropdown from '../utility/dropdown.js';
 
 const toggleDropdownContent = () => {
   const dropDownContent = document.querySelector('.difficulty-dropdown-content');
@@ -13,31 +15,10 @@ const toggleDropdownContent = () => {
 const dropdownControl = (state) => {
   const { difficulty } = state.uiState;
   const controller = document.querySelector('.difficulty-container');
-  const difficultyIndicatorClear = document.querySelector('.difficulty .dropdown-indicator-clear');
+  const indicatorClear = document.querySelector('.difficulty .dropdown-indicator-clear');
   const menu = document.querySelector('.difficulty');
 
-  controller.addEventListener('click', (e) => {
-    if (difficulty.open === false) {
-      const isClickInside = difficultyIndicatorClear.contains(e.target);
-      if (isClickInside) {
-        return;
-      }
-
-      difficulty.open = true;
-      toggleDropdownContent();
-    } else if (difficulty.open === true) {
-      difficulty.open = false;
-      toggleDropdownContent();
-    }
-  });
-
-  document.addEventListener('click', (e) => {
-    const isClickInside = menu.contains(e.target);
-    if (difficulty.open === true && !isClickInside) {
-      difficulty.open = false;
-      toggleDropdownContent();
-    }
-  });
+  dropdown(difficulty, controller, indicatorClear, menu, toggleDropdownContent);
 };
 
 const resetBgcDifficultyMenuButtons = () => {
@@ -52,6 +33,7 @@ const difficultyClear = (state) => {
   const difficultyPlaceholder = document.querySelector('.difficulty-placeholder');
   const difficultySingleValue = document.querySelector('.difficulty-single-value');
   const difficultyIndicatorClear = document.querySelector('.difficulty .dropdown-indicator-clear');
+  const menuButtons = document.querySelectorAll('.difficulty-dropdown-content > .difficulty-single-value-container');
 
   difficultyIndicatorClear.addEventListener('click', () => {
     const { difficulty } = state.uiState;
@@ -66,7 +48,8 @@ const difficultyClear = (state) => {
     difficultyPlaceholder.style.display = 'block';
     difficultySingleValue.style.display = 'none';
     difficultyIndicatorClear.style.display = 'none';
-    resetBgcDifficultyMenuButtons();
+
+    resetBackgroundMenuButtons(menuButtons);
 
     render(state);
     scrollToChampionList();
@@ -100,7 +83,7 @@ const difficultyListener = (state) => {
         0: 'high',
       };
       const numDificulty = difficultyMap[difficultyLength];
-      resetBgcDifficultyMenuButtons();
+      resetBgcDifficultyMenuButtons(menuButtons);
       menuButton.classList.add('selected-option');
       filtredDifficultyContent(numDificulty);
 
