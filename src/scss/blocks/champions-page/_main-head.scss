@@ -15,20 +15,18 @@
   line-height: 1;
   font-weight: 600;
   letter-spacing: 0.1em;
-}
 
-@keyframes test2 {
-  from {
-    clip-path: polygon(0% 0%, 0% 0%, 0% 0%);
+  @include media("<=599px") {
+    font-size: 1rem;
   }
 
-  to {
-    clip-path: polygon(100% 100%, -200% 100%, 100% -200%);
+  @include media("<=320px") {
+    font-size: 0.875rem;
   }
 }
 
 .main-head-intro > .display-inline {
-  animation-name: test;
+  animation-name: headers;
   animation-duration: 2800ms;
   animation-delay: 200ms;
   animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -42,9 +40,13 @@
   font-weight: 800;
   letter-spacing: 0.03em;
   line-height: 0.85;
+
+  @include media("<=599px") {
+    font-size: calc(22.24px + 4.3vw);
+  }
 }
 
-@keyframes test {
+@keyframes headers {
   from {
     clip-path: polygon(0% 0%, 0% 0%, 0% 0%);
   }
@@ -55,7 +57,7 @@
 }
 
 .main-head-title > .display-inline {
-  animation-name: test;
+  animation-name: headers;
   animation-duration: 2000ms;
   animation-delay: 200ms;
   animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -70,7 +72,9 @@
 }
 
 .main-head-description {
-  max-width: 490px;
+  box-sizing: content-box;
+  max-width: 460px;
+  padding: 0 10%;
   margin: 12px auto 0;
   font-size: 0.875rem;
   letter-spacing: 0.08em;

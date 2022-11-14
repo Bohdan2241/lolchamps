@@ -1,3 +1,9 @@
+/* stylelint-disable no-descending-specificity */
+.footer {
+  font-family: "FF Mark W05", Arial, sans-serif;
+  text-align: center;
+}
+
 .footer-content {
   background-color: $black;
   padding: 0 0 48px;
@@ -7,6 +13,7 @@
 .footer-links {
   padding: 24px;
   font-size: 13px;
+  letter-spacing: 0.08em;
   font-weight: 700;
   background-color: $gray;
 }
@@ -16,6 +23,16 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  @include media("<=1024px") {
+    flex-direction: column;
+  }
+}
+
+.footer-links ul li {
+  @include media("<=1024px") {
+    margin: 12px 0;
+  }
 }
 
 .footer-links a {
@@ -40,6 +57,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include media("<=1024px") {
+    flex-wrap: wrap;
+  }
 }
 
 .footer-social-links li {
@@ -48,22 +69,35 @@
   width: 32px;
   height: 32px;
   border-radius: 12px;
+
+  @include media("<=1024px") {
+    width: 48px;
+    height: 48px;
+  }
 }
 
-/* stylelint-disable no-descending-specificity */
 .footer-social-links a {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
+
+  @include media("<=1024px") {
+    margin: 12px;
+    height: auto;
+  }
 }
-/* stylelint-enable no-descending-specificity */
 
 .footer-social-links svg {
   width: 16px;
   height: 16px;
   fill: $white;
   fill-rule: evenodd;
+
+  @include media("<=1024px") {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .footer-logos {
@@ -86,7 +120,13 @@
   text-align: center;
   font-size: 13px;
   font-weight: 500;
+  line-height: 140%;
   color: #7e7e7e;
+  word-break: keep-all;
+
+  @include media("<=640px") {
+    max-width: 368px;
+  }
 }
 
 .footer-legal-links {
@@ -102,16 +142,36 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include media("<=1024px") {
+    flex-direction: column;
+  }
 }
 
-/* stylelint-disable no-descending-specificity */
+.footer-legal-links li {
+  @include media("<=1024px") {
+    margin: 12px 0;
+  }
+}
+
+.footer-legal-links li:first-child {
+  @include media("<=1024px") {
+    margin-top: 0;
+  }
+}
+
+.footer-legal-links li:last-child {
+  @include media("<=1024px") {
+    margin-bottom: 0;
+  }
+}
+
 .footer-legal-links a {
   display: block;
   padding: 8px 16px;
   color: $white;
   transition: all 0.2s linear;
 }
-/* stylelint-enable no-descending-specificity */
 
 .footer-legal-links a:hover {
   background-color: $dark;
@@ -145,4 +205,5 @@
   font-size: 13px;
   font-weight: 600;
   line-height: 150%;
+  text-align: left;
 }
