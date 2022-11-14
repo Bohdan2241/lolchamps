@@ -5,7 +5,7 @@
 .main-nav {
   margin: 0 2%;
 
-  @include media("<=desktop") {
+  @include media("<=desktop-main-nav") {
     margin: 0;
   }
 }
@@ -16,7 +16,7 @@
   max-width: 1400px;
   border: 1px solid rgb(193, 193, 193);
 
-  @include media("<=desktop") {
+  @include media("<=desktop-main-nav") {
     border-width: 1px 0;
     border-top-style: solid;
     border-bottom-style: solid;
@@ -39,7 +39,7 @@
   background-color: #fff;
   transform: rotate(45deg);
 
-  @include media("<=desktop") {
+  @include media("<=desktop-main-nav") {
     display: none;
   }
 }
@@ -59,7 +59,7 @@
 .canvas-wrapper {
   position: absolute;
 
-  @include media("<=desktop") {
+  @include media("<=desktop-main-nav") {
     display: none;
   }
 }
@@ -75,7 +75,7 @@
   height: 50px;
   display: flex;
 
-  @include media("<=desktop") {
+  @include media("<=desktop-main-nav") {
     height: 35px;
   }
 }
@@ -175,7 +175,7 @@
   border-left: 1px rgb(193, 193, 193) solid;
   border-bottom: 1px rgb(193, 193, 193) solid;
 
-  @include media("<desktop") {
+  @include media("<=desktop-main-nav") {
     top: 25px;
   }
 }
@@ -197,7 +197,7 @@
 .search-container {
   min-width: 138px;
 
-  @include media("<=desktop") {
+  @include media("<=desktop-main-nav") {
     flex: 1 1 auto;
   }
 
@@ -312,18 +312,12 @@
   color: rgb(202, 202, 202);
 }
 
-// .search-placeholder.search-placeholder-focused {
-//   @include media("<=500px") {
-//     display: block;
-//   }
-// }
-
 .search > .dropdown-control-menu {
   max-height: 300px;
   overflow-y: scroll;
   left: -1px;
 
-  @include media("<desktop") {
+  @include media("<=desktop-main-nav") {
     left: 0;
   }
 }
@@ -360,7 +354,7 @@
 .role-container {
   flex: 1 0 auto;
 
-  @include media("<=desktop") {
+  @include media("<=desktop-main-nav") {
     display: flex;
     align-items: center;
   }
@@ -372,7 +366,7 @@
   align-items: center;
   height: 100%;
 
-  @include media("<=desktop") {
+  @include media("<=desktop-main-nav") {
     display: none;
   }
 }
@@ -431,7 +425,7 @@
   height: 100%;
   flex: 1 1 auto;
 
-  @include media("<=desktop") {
+  @include media("<=desktop-main-nav") {
     display: flex;
   }
 }
@@ -443,7 +437,7 @@
   display: flex;
   align-items: center;
 
-  @include media("<=desktop") {
+  @include media("<=desktop-main-nav") {
     flex: 1 1 auto;
   }
 
@@ -472,7 +466,7 @@
 .difficulty > .dropdown-control-menu {
   right: -1px;
 
-  @include media("<desktop") {
+  @include media("<=desktop-main-nav") {
     right: 0;
   }
 }
@@ -489,9 +483,7 @@
 }
 
 .difficulty-single-value-container {
-  // position: relative;
   display: flex;
-  // transform: none;
   max-width: 100%;
   margin-right: 10px;
 }
@@ -552,32 +544,3 @@
 .difficulty-dropdown-content .difficulty-single-value-container:focus {
   background-color: rgba(221, 221, 221, 50%);
 }
-
-// .difficulty-container:hover .difficulty-indicator-arrow,
-// .difficulty-container:focus .difficulty-indicator-arrow,
-// .difficulty-indicator-arrow-open {
-//   transform: translate(5px, 0);
-// }
-
-/* stylelint-disable no-descending-specificity */
-// .difficulty-indicator-arrow svg {
-//   width: 14px;
-//   height: 11px;
-//   color: $sand;
-// }
-
-// .difficulty-indicator-arrow-open svg {
-//   transform: rotate(180deg);
-//   color: rgb(178, 178, 178);
-// }
-/* stylelint-enable no-descending-specificity */
-
-// .difficulty-indicator-arrow svg .st0 {
-//   fill: none;
-//   stroke: currentColor;
-//   stroke-miterlimit: 10;
-// }
-
-// .difficulty-indicator-arrow svg .st1 {
-//   fill: currentColor;
-// }

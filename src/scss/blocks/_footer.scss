@@ -1,6 +1,6 @@
 /* stylelint-disable no-descending-specificity */
 .footer {
-  font-family: "FF Mark W05", Arial, sans-serif;
+  font-family: $font-footer;
   text-align: center;
 }
 
@@ -23,14 +23,15 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 
-  @include media("<=1024px") {
+  @include media("<=desktop-default") {
     flex-direction: column;
   }
 }
 
 .footer-links ul li {
-  @include media("<=1024px") {
+  @include media("<=desktop-default") {
     margin: 12px 0;
   }
 }
@@ -58,7 +59,7 @@
   justify-content: center;
   align-items: center;
 
-  @include media("<=1024px") {
+  @include media("<=desktop-default") {
     flex-wrap: wrap;
   }
 }
@@ -70,7 +71,7 @@
   height: 32px;
   border-radius: 12px;
 
-  @include media("<=1024px") {
+  @include media("<=desktop-default") {
     width: 48px;
     height: 48px;
   }
@@ -82,7 +83,7 @@
   align-items: center;
   height: 100%;
 
-  @include media("<=1024px") {
+  @include media("<=desktop-default") {
     margin: 12px;
     height: auto;
   }
@@ -94,7 +95,7 @@
   fill: $white;
   fill-rule: evenodd;
 
-  @include media("<=1024px") {
+  @include media("<=desktop-default") {
     width: 24px;
     height: 24px;
   }
@@ -124,7 +125,7 @@
   color: #7e7e7e;
   word-break: keep-all;
 
-  @include media("<=640px") {
+  @include media("<=640px") { // media var
     max-width: 368px;
   }
 }
@@ -143,25 +144,25 @@
   justify-content: center;
   align-items: center;
 
-  @include media("<=1024px") {
+  @include media("<=desktop-default") {
     flex-direction: column;
   }
 }
 
 .footer-legal-links li {
-  @include media("<=1024px") {
+  @include media("<=desktop-default") {
     margin: 12px 0;
   }
 }
 
 .footer-legal-links li:first-child {
-  @include media("<=1024px") {
+  @include media("<=desktop-default") {
     margin-top: 0;
   }
 }
 
 .footer-legal-links li:last-child {
-  @include media("<=1024px") {
+  @include media("<=desktop-default") {
     margin-bottom: 0;
   }
 }

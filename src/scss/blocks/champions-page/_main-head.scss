@@ -1,5 +1,29 @@
 .main-head-wrapper {
+  position: relative;
   text-align: center;
+}
+
+.main-head-wrapper::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  left: 0;
+  top: -70px;
+  height: 150px;
+  background-color: rgb(248, 248, 248);
+
+  @include media("<=desktop-default") {
+    top: -80px;
+  }
+
+  @include media("<=600px") {
+    top: -105px;
+  }
+
+  @include media("<=450px") {
+    top: -110px;
+  }
 }
 
 .main-head {
@@ -69,6 +93,10 @@
   display: block;
   padding: 0 15px 10px;
   margin-bottom: -10px;
+
+  @include media("<=599px") {
+    margin-top: 0.3125rem;
+  }
 }
 
 .main-head-description {
