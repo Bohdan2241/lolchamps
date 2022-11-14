@@ -1,6 +1,9 @@
 /* eslint-disable no-undef */
-export default (currentUiState, controller, indicatorClear, menu, toggleDropdownContent) => {
+export default (currentUiState, btnEl, menuEl, toggleDropdownContent) => {
   const uiState = currentUiState;
+  const controller = document.querySelector(`.${btnEl}`);
+  const indicatorClear = document.querySelector(`.${btnEl} .dropdown-indicator-clear`);
+  const menu = document.querySelector(`.${menuEl}`);
 
   controller.addEventListener('click', (e) => {
     if (uiState.open === false) {

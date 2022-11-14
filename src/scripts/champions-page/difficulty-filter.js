@@ -14,17 +14,7 @@ const toggleDropdownContent = () => {
 
 const dropdownControl = (state) => {
   const { difficulty } = state.uiState;
-  const difficultyController = document.querySelector('.difficulty-container');
-  const difficultyindicatorClear = document.querySelector('.difficulty .dropdown-indicator-clear');
-  const difficultyMenu = document.querySelector('.difficulty');
-
-  dropdown(
-    difficulty,
-    difficultyController,
-    difficultyindicatorClear,
-    difficultyMenu,
-    toggleDropdownContent,
-  );
+  dropdown(difficulty, 'difficulty-container', 'difficulty', toggleDropdownContent);
 };
 
 const difficultyClear = (state) => {

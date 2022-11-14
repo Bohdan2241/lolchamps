@@ -34,17 +34,7 @@ const toggleDropdownContent = () => {
 
 const dropdownControl = (state) => {
   const { role } = state.uiState;
-  const roleController = document.querySelector('.role-dropdown');
-  const roleIndicatorClear = document.querySelector('.role-dropdown .dropdown-indicator-clear');
-  const roleMenu = document.querySelector('.role');
-
-  dropdown(
-    role,
-    roleController,
-    roleIndicatorClear,
-    roleMenu,
-    toggleDropdownContent,
-  );
+  dropdown(role, 'role-dropdown', 'role', toggleDropdownContent);
 };
 
 const roleClear = (state) => {
