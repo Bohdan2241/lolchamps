@@ -8,8 +8,9 @@ body {
 @font-face {
   font-family: "Beaufort for LOL";
   src: url("../fonts/BeaufortforLOL-Bold.eot?#iefix");
-  src: url("../fonts/BeaufortforLOL-Bold.eot?#iefix") format("eot"), url("../fonts/BeaufortforLOL-Bold.woff") format("woff"),
-    url("../fonts/BeaufortforLOL-Bold.ttf") format("truetype"), url("../fonts/BeaufortforLOL-Bold.svg#") format("svg");
+  src: url("../fonts/BeaufortforLOL-Bold.eot?#iefix") format("eot"),
+    url("../fonts/BeaufortforLOL-Bold.woff") format("woff"), url("../fonts/BeaufortforLOL-Bold.ttf") format("truetype"),
+    url("../fonts/BeaufortforLOL-Bold.svg#") format("svg");
   font-weight: 700;
   font-style: normal;
 }
@@ -17,8 +18,9 @@ body {
 @font-face {
   font-family: "BeaufortforLOL-Bold";
   src: url("../fonts/BeaufortforLOL-Bold.eot?#iefix");
-  src: url("../fonts/BeaufortforLOL-Bold.eot?#iefix") format("eot"), url("../fonts/BeaufortforLOL-Bold.woff") format("woff"),
-    url("../fonts/BeaufortforLOL-Bold.ttf") format("truetype"), url("../fonts/BeaufortforLOL-Bold.svg#") format("svg");
+  src: url("../fonts/BeaufortforLOL-Bold.eot?#iefix") format("eot"),
+    url("../fonts/BeaufortforLOL-Bold.woff") format("woff"), url("../fonts/BeaufortforLOL-Bold.ttf") format("truetype"),
+    url("../fonts/BeaufortforLOL-Bold.svg#") format("svg");
 }
 
 /* Beaufort for LOL Regular */
@@ -26,7 +28,8 @@ body {
   font-family: "Beaufort for LOL";
   src: url("../fonts/BeaufortforLOL-Regular.eot?#iefix");
   src: url("../fonts/BeaufortforLOL-Regular.eot?#iefix") format("eot"),
-    url("../fonts/BeaufortforLOL-Regular.woff") format("woff"), url("../fonts/BeaufortforLOL-Regular.ttf") format("truetype"),
+    url("../fonts/BeaufortforLOL-Regular.woff") format("woff"),
+    url("../fonts/BeaufortforLOL-Regular.ttf") format("truetype"),
     url("../fonts/BeaufortforLOL-Regular.svg#") format("svg");
   font-weight: 400;
   font-style: normal;
@@ -36,7 +39,8 @@ body {
   font-family: "BeaufortforLOL-Regular";
   src: url("../fonts/BeaufortforLOL-Regular.eot?#iefix");
   src: url("../fonts/BeaufortforLOL-Regular.eot?#iefix") format("eot"),
-    url("../fonts/BeaufortforLOL-Regular.woff") format("woff"), url("../fonts/BeaufortforLOL-Regular.ttf") format("truetype"),
+    url("../fonts/BeaufortforLOL-Regular.woff") format("woff"),
+    url("../fonts/BeaufortforLOL-Regular.ttf") format("truetype"),
     url("../fonts/BeaufortforLOL-Regular.svg#") format("svg");
 }
 
@@ -167,4 +171,42 @@ body {
   src: url("../fonts/Spiegel-Bold.eot?#iefix");
   src: url("../fonts/Spiegel-Bold.eot?#iefix") format("eot"), url("../fonts/Spiegel-Bold.woff") format("woff"),
     url("../fonts/Spiegel-Bold.ttf") format("truetype"), url("../fonts/Spiegel-Bold.svg#") format("svg");
+}
+
+//
+
+@font-face {
+  font-family: "FF Mark W05";
+  src: url("../fonts/8a533745-7bc5-4dcd-8552-d9952208de6f.eot?#iefix");
+  src: url("../fonts/8a533745-7bc5-4dcd-8552-d9952208de6f.eot?#iefix") format("eot"),
+    url("../fonts/ffbb4591-1a9c-443b-9b6e-6ceb6a3ca76b.woff2") format("woff2"),
+    url("../fonts/e44c8656-a389-4ecb-838c-3c135565d6b3.woff") format("woff"),
+    url("../fonts/fcdcba61-8d4e-41db-9c06-24a5238587f1.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FF Mark W05";
+  src: url("../fonts/0f774eeb-e868-4bd6-9055-79542afd5208.eot?#iefix");
+  src: url("../fonts/0f774eeb-e868-4bd6-9055-79542afd5208.eot?#iefix") format("eot"),
+    url("../fonts/cdb13a7a-2f13-4f7c-b7a3-01b4ccef574d.woff2") format("woff2"),
+    url("../fonts/40a8594b-08b2-4a38-97d9-958c95360b20.woff") format("woff"),
+    url("../fonts/bcc8880e-b967-43ce-a210-d1404cbdc736.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FF Mark W05";
+  src: url("../fonts/MarkPro-Bold.eot?#iefix");
+  src: url("../fonts/MarkPro-Bold.eot?#iefix") format("eot"),
+    url("../fonts/MarkPro-Bold.woff2") format("woff2"),
+    url("../fonts/MarkPro-Bold.woff") format("woff"),
+    url(".././fonts/ffmark/MarkPro-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
