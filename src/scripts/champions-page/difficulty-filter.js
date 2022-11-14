@@ -21,14 +21,6 @@ const dropdownControl = (state) => {
   dropdown(difficulty, controller, indicatorClear, menu, toggleDropdownContent);
 };
 
-const resetBgcDifficultyMenuButtons = () => {
-  const menuButtons = document.querySelectorAll('.difficulty-dropdown-content > .difficulty-single-value-container');
-  menuButtons.forEach((item) => {
-    const button = item;
-    button.classList.remove('selected-option');
-  });
-};
-
 const difficultyClear = (state) => {
   const difficultyPlaceholder = document.querySelector('.difficulty-placeholder');
   const difficultySingleValue = document.querySelector('.difficulty-single-value');
@@ -83,7 +75,7 @@ const difficultyListener = (state) => {
         0: 'high',
       };
       const numDificulty = difficultyMap[difficultyLength];
-      resetBgcDifficultyMenuButtons(menuButtons);
+      resetBackgroundMenuButtons(menuButtons);
       menuButton.classList.add('selected-option');
       filtredDifficultyContent(numDificulty);
 
