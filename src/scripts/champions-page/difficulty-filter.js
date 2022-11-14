@@ -14,11 +14,17 @@ const toggleDropdownContent = () => {
 
 const dropdownControl = (state) => {
   const { difficulty } = state.uiState;
-  const controller = document.querySelector('.difficulty-container');
-  const indicatorClear = document.querySelector('.difficulty .dropdown-indicator-clear');
-  const menu = document.querySelector('.difficulty');
+  const difficultyController = document.querySelector('.difficulty-container');
+  const difficultyindicatorClear = document.querySelector('.difficulty .dropdown-indicator-clear');
+  const difficultyMenu = document.querySelector('.difficulty');
 
-  dropdown(difficulty, controller, indicatorClear, menu, toggleDropdownContent);
+  dropdown(
+    difficulty,
+    difficultyController,
+    difficultyindicatorClear,
+    difficultyMenu,
+    toggleDropdownContent,
+  );
 };
 
 const difficultyClear = (state) => {
