@@ -164,6 +164,9 @@
 
 .riotbar-locale-switcher {
   position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .locale-switcher-icon {
@@ -212,6 +215,94 @@
   }
 }
 
+.locale-switcher-dropdown {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: -107px;
+  padding: 8px 0 8px 8px;
+
+  @include media("<=desktop-default") {
+    left: -155px;
+  }
+}
+
+.lang-switch-caret {
+  height: 0;
+  position: absolute;
+  width: 0;
+  left: 113px;
+  top: -12px;
+  border: 10px solid transparent;
+  border-bottom-color: $white;
+
+  @include media("<=desktop-default") {
+    left: 176px;
+  }
+}
+
+.locale-list {
+  font-weight: bold;
+  display: block;
+  width: 240px;
+  background-color: #fcfcfc;
+  box-shadow: 0 4px 16px 0 rgb(0 0 0 / 20%);
+  border-radius: 2px;
+  text-align: left;
+  font-size: 12px;
+  max-height: 360px;
+  overflow-x: auto;
+  padding: 8px 0 8px 8px;
+}
+
+.locale-list li {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.locale-list li.active-language {
+  cursor: default;
+}
+
+.locale-list a {
+  transition: color 0.3s linear;
+  position: relative;
+  display: inline-block;
+  color: #999;
+  width: 100%;
+  padding: 0 0 0 20px;
+}
+
+.locale-list li:hover a {
+  color: $black;
+}
+
+.locale-list li.active-language a {
+  color: #c4202b;
+  cursor: default;
+}
+
+.locale-list a svg {
+  position: absolute;
+  top: 35%;
+  right: 20px;
+  width: 14px;
+  height: 12px;
+  fill: $white;
+  pointer-events: none;
+}
+
+.locale-list li.active-language a svg {
+  fill: #c4202b;
+}
+
+.lang-name {
+  text-transform: uppercase;
+  display: inline-block;
+}
+
 .riotbar-menu-icon {
   display: none;
   visibility: hidden;
@@ -227,6 +318,7 @@
   }
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .riotbar-menu-icon svg {
   pointer-events: none;
 }

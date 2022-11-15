@@ -171,7 +171,7 @@
       <div class="header-right-content">
         <div class="riotbar-locale-switcher">
           <div class="locale-switcher-icon">
-            <a href="" class="lang-switch-trigger">
+            <a class="lang-switch-trigger" data-testid="riotbar:localeswitcher:button-toggleLocaleMenu">
               <svg width="14" height="14" class="" viewBox="0 0 16 16">
                 <title>globeIcon</title>
                 <path
@@ -179,6 +179,34 @@
                   fill="#E8E8E8"></path>
               </svg>
             </a>
+          </div>
+          <div class="locale-switcher-dropdown">
+            <div class="lang-switch-caret"></div>
+            <ul class="locale-list" data-testid="riotbar:localeswitcher:dropdown">
+              <li class="active-language">
+                <a href="" data-testid="riotbar:localeswitcher:link-en-us/">
+                  <span class="lang-name">English (NA)</span>
+                  <svg width="14" height="12" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                      <rect x="2.10889" y="7.03003" width="10" height="2" transform="rotate(-44.6688 2.10889 7.03003)">
+                      </rect>
+                      <rect x="1.42236" y="3.48999" width="5" height="2" transform="rotate(45.3312 1.42236 3.48999)">
+                      </rect>
+                    </g>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="/pl-pl/" data-testid="riotbar:localeswitcher:link-pl-pl/">
+                  <span class="lang-name">Polski</span>
+                </a>
+              </li>
+              <li>
+                <a href="/ru-ru/" data-testid="riotbar:localeswitcher:link-ru-ru/">
+                  <span class="lang-name">Русский</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
         <div class="riotbar-mobile-nav-reset">
@@ -198,7 +226,8 @@
             </a>
           </div>
           <div class="riotbar-account-anonymous-link-wrapper">
-            <a class="riotbar-anonymous-link riotbar-account-button-signup" href="https://signup.leagueoflegends.com/en-us/">
+            <a class="riotbar-anonymous-link riotbar-account-button-signup"
+              href="https://signup.leagueoflegends.com/en-us/">
               Play now
             </a>
           </div>
