@@ -1,9 +1,11 @@
 import imagesDataOld from '../utility/getImagesData.js';
+import normalizeName from '../utility/normalizeName.js';
 import renderChampionPage from '../champion-page/render-champion-page.js';
 
-const getPreviewImage = (name, champions) => {
+const getPreviewImage = (id, champions) => {
   const image = champions.flatMap((champion) => {
-    if (champion.name.toLowerCase() === name.toLowerCase()) {
+    const championId = normalizeName(champion.name);
+    if (championId.toLowerCase() === id.toLowerCase()) {
       return champion.previewImage;
     }
     return [];
@@ -95,8 +97,8 @@ export default async (state) => {
   const { champions } = await imagesDataOld();
 
   sortedChampions.forEach((champion, i) => {
-    const { name } = champion;
-    const imageLink = getPreviewImage(name, champions);
+    const { id, name } = champion;
+    const imageLink = getPreviewImage(id, champions);
     const championLink = `/${name}`;
     const delay = i * 50;
 
