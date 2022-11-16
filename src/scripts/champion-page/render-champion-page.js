@@ -1,12 +1,12 @@
 import { getVersionDataDragon, getChampionData } from '../utility/getData.js';
 import fillDifficultyIcon from '../utility/fillDifficultyIcon.js';
 import championsButtonCanvas from './champions-button-canvas.js';
-import championTitleCanvas from './champion-title-canvas.js';
 import abilitiesImageCanvas from './abilities-image-canvas.js';
 import abilitiesVideoCanvas from './abilities-video-canvas.js';
 import { abilitiesSlider } from './abilities-slider.js';
 import skinsSlider from './skins-slider.js';
 import parallax from './footerVideo.js';
+import drawHeaderLines from './draw-header-lines.js';
 
 const pickRoleIcon = (role) => {
   const roleIcons = {
@@ -49,7 +49,7 @@ const seeMoreDescription = (container, text) => {
   seeMoreButton.addEventListener('click', () => {
     // eslint-disable-next-line no-param-reassign
     container.textContent = text;
-    championTitleCanvas();
+    drawHeaderLines();
   });
 };
 
@@ -269,7 +269,7 @@ export default async (state) => {
       championPage.style.display = 'block';
 
       championsButtonCanvas();
-      championTitleCanvas();
+      drawHeaderLines();
       abilitiesSlider();
       abilitiesImageCanvas();
       abilitiesVideoCanvas();

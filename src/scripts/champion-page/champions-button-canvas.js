@@ -32,7 +32,7 @@ export default () => {
 
     ctx.lineTo(angle, 0);
 
-    ctx.lineWidth = 7;
+    ctx.lineWidth = 4;
     ctx.strokeStyle = 'rgb(12, 186, 214)';
     ctx.fillStyle = 'rgba(0, 0, 0, 0.6)';
     ctx.fill();

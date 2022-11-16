@@ -163,7 +163,6 @@ const searchListener = (state) => {
     const currentList = Array.from(championButtons).flatMap((championButton) => {
       const button = championButton;
       const buttonText = championButton.textContent.toLowerCase();
-      console.log(championButton.textContent, search.currentValue);
       if (buttonText.includes(search.currentValue)) {
         button.style.display = 'block';
         return championButton;

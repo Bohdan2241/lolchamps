@@ -7,10 +7,18 @@ const swiper = new Swiper('.swiper', {
     delay: 5000,
     disableOnInteraction: true,
   },
-  direction: 'vertical',
-  height: 100,
   slideActiveClass: 'swiper-slide-active is-active',
   slideToClickedSlide: true,
+  breakpoints: {
+    320: {
+      direction: 'horizontal',
+      width: 110,
+    },
+    1001: {
+      direction: 'vertical',
+      height: 100,
+    },
+  },
 });
 
 swiper.autoplay.stop();

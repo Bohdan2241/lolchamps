@@ -40,6 +40,10 @@
   font-weight: 600;
   letter-spacing: 0.1em;
 
+  @include media(">=600px", "<desktop-default") {
+    font-size: 1.25rem;
+  }
+
   @include media("<=599px") {
     font-size: 1rem;
   }

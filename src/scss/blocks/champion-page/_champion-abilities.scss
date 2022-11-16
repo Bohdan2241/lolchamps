@@ -1,6 +1,10 @@
 .abilities {
   position: relative;
   padding: 75px 0 15rem;
+
+  @include media("<desktop-default") {
+    padding: 0 0 3.75rem;
+  }
 }
 
 .abilities-content-wrapper {
@@ -19,15 +23,25 @@
 .abilities-section-inner {
   position: relative;
   z-index: 1;
-  // box-sizing: border-box;
   display: flex;
   max-width: 2040px;
   padding: 0 60px 0 0;
+
+  @include media("<desktop-default") {
+    flex-flow: column-reverse wrap;
+    padding: 0 20px;
+  }
 }
 
 .abilities-selector-wrapper {
   flex: 2 1 120%;
   padding-top: 5.625rem;
+
+  @include media("<desktop-default") {
+    flex: 1 1 auto;
+    width: 100%;
+    padding: 20px 3.75rem;
+  }
 }
 
 .abilities-wrapper {
@@ -38,6 +52,13 @@
   position: relative;
   width: 100%;
   display: flex;
+
+  @include media("<desktop-default") {
+    padding-bottom: 250px;
+    width: calc(100% + 10px);
+    margin: 0 -5px;
+    // overflow: visible;
+  }
 }
 
 .abilities-side-fill {
@@ -59,11 +80,23 @@
   right: 0;
   width: 200%;
   min-width: 120px;
+
+  @include media("<desktop-default") {
+    display: none;
+  }
 }
 
 .abilities-option-list {
   position: relative;
   display: inline-flex;
+
+  @include media("<desktop-default") {
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 30px 0;
+  }
 }
 
 .abilities-title {
@@ -74,23 +107,33 @@
   margin-bottom: 30px;
   color: rgb(255, 255, 255);
   letter-spacing: 0.05em;
-  font-family: "Beaufort for LOL", serif;
+  font-family: $font-headers;
   font-weight: 800;
   font-size: 3.75rem;
   font-style: italic;
   text-transform: uppercase;
+
+  @include media("<desktop-default") {
+    display: none;
+  }
 }
 
 .abilities-option {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  -webkit-box-align: stretch;
   align-items: stretch;
   padding: 12px;
   border: 0;
   background-color: transparent;
   color: rgb(57, 64, 72);
+
+  @include media("<desktop-default") {
+    flex: 0 0 auto;
+    min-width: auto;
+    min-height: auto;
+    padding: 0;
+  }
 }
 
 .abilities-option:focus {
@@ -103,6 +146,10 @@
   width: 70px;
   height: 70px;
   margin: 0 auto 10px;
+
+  @include media("<desktop-default") {
+    margin: 0;
+  }
 }
 
 .abilities-option-icon-content {
@@ -115,6 +162,12 @@
   will-change: transform;
   transform-origin: center bottom;
   transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+
+  @include media("<desktop-default") {
+    width: calc(100% - 10px);
+    height: auto;
+    transform: none;
+  }
 }
 
 .abilities-option-icon-content > * {
@@ -174,6 +227,10 @@
   transition-property: opacity, transform;
   transition-duration: 200ms;
   transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  @include media("<desktop-default") {
+    display: none;
+  }
 }
 
 .abilities-option.is-active .abilities-option-line {
@@ -190,6 +247,10 @@
   margin-top: 5.5px;
   margin-left: -12px;
   z-index: 1;
+
+  @include media("<desktop-default") {
+    display: none;
+  }
 }
 
 .abilities-option-bullet-container::before,
@@ -245,12 +306,15 @@
   width: 100%;
   height: 1px;
   background-color: transparent;
+
+  @include media("<desktop-default") {
+    display: none;
+  }
 }
 
 .abilities-outer-circle {
   position: absolute;
   z-index: 1;
-  box-sizing: border-box;
   width: 20px;
   height: 20px;
   margin: -10px 0 0 -10px;
@@ -276,6 +340,11 @@
   left: 2.8125rem;
   right: 0;
   color: rgb(255, 255, 255);
+
+  @include media("<desktop-default") {
+    left: 4px;
+    right: 4px;
+  }
 }
 
 .abilities-ability-info-list {
@@ -283,6 +352,10 @@
   padding: 0;
   position: relative;
   margin: 1.875rem 0 0;
+
+  @include media("<desktop-default") {
+    margin-top: 20px;
+  }
 }
 
 .abilities-ability-info-item {
@@ -333,10 +406,14 @@
 }
 
 .abilities-preview-wrapper {
-  // box-sizing: border-box;
   width: 100%;
   flex: 1 1 100%;
   padding-top: 3.75rem;
+
+  @include media("<desktop-default") {
+    flex: 1 1 auto;
+    padding: 40px 1.25rem 20px;
+  }
 }
 
 .abilities-wrapper-inner-video {
@@ -452,9 +529,20 @@
   -webkit-box-align: center;
   align-items: center;
   background-color: rgb(0, 9, 19);
+
+  @include media("<desktop-default") {
+    align-items: flex-end;
+  }
 }
 
 .abilities-background-icon svg {
   height: calc(100% - 30px);
   fill: rgb(7, 18, 26);
+
+  @include media("<desktop-default") {
+    width: 70%;
+    height: auto;
+    margin-bottom: 20px;
+    max-height: 100%;
+  }
 }

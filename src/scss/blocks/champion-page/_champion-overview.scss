@@ -3,6 +3,10 @@
   min-height: 75vh;
   padding: 30px 0 75px;
   background: rgb(0, 9, 19);
+
+  @include media("<desktop-default") {
+    padding-bottom: 6.25rem;
+  }
 }
 
 .background-asset {
@@ -90,7 +94,7 @@
   vertical-align: middle;
   width: 1.4em;
   height: 1px;
-  margin-left: 0.5em;
+  // margin-left: 0.5em;
   background-color: currentColor;
 }
 
@@ -103,6 +107,10 @@
   max-width: 1335px;
   padding: 0 3.75rem;
   margin: 0 auto;
+
+  @include media("<=1200px") {
+    padding: 0 0.625rem;
+  }
 }
 
 .foreground-asset {
@@ -127,24 +135,34 @@
 .wrapper-details {
   position: relative;
   margin: -5.625rem 3.75rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: none;
 }
 
-.details-container {
+.line {
   position: absolute;
-  pointer-events: none;
+  top: 0;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
-.champion-title-canvas {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
+.line-left {
+  left: 0;
+}
+
+.line-right {
+  right: 0;
 }
 
 .wrapper-details-name {
   position: relative;
   top: -5rem;
   margin-bottom: -5rem;
+
+  @include media("<desktop-default") {
+    top: -3.75rem;
+    margin-bottom: -4.0625rem;
+  }
 }
 
 .details-name-container {
@@ -157,11 +175,20 @@
 .info-container {
   position: relative;
   display: flex;
+
+  @include media("<desktop-default") {
+    flex-wrap: wrap;
+  }
 }
 
 .info-specs {
   width: 50%;
   padding: 3.75rem;
+
+  @include media("<desktop-default") {
+    width: 100%;
+    padding: 1.25rem 3.75rem;
+  }
 }
 
 .specs-list {
@@ -224,42 +251,16 @@
   white-space: nowrap;
 }
 
-// .difficulty-icon-value-item {
-//   box-sizing: content-box;
-//   display: inline-block;
-//   width: 30.6667%;
-//   height: 100%;
-//   padding-right: 4%;
-//   opacity: 1;
-//   background-color: rgb(8, 215, 247);
-//   background-clip: content-box;
-//   transform: skewX(-40deg);
-// }
-
-// .difficulty-icon-value-item:last-child {
-//   padding-right: 0;
-// }
-
-// .difficulty-value-item-empty {
-//   box-sizing: content-box;
-//   display: inline-block;
-//   width: 30.6667%;
-//   height: 100%;
-//   padding-right: 4%;
-//   opacity: 0.2;
-//   background-color: rgb(8, 215, 247);
-//   background-clip: content-box;
-//   transform: skewX(-40deg);
-// }
-
-// .difficulty-icon-value-item-empty:last-child {
-//   padding-right: 0;
-// }
-
 .info-divider {
   width: 1px;
   margin: 2.5rem 0;
   background: rgba(255, 255, 255, 0.2);
+
+  @include media("<desktop-default") {
+    width: calc(100% - 18.75rem);
+    height: 1px;
+    margin: 0 auto;
+  }
 }
 
 .info-desc {
@@ -267,6 +268,11 @@
   align-items: center;
   width: 50%;
   padding: 3.75rem;
+
+  @include media("<desktop-default") {
+    width: 100%;
+    padding: 1.25rem 3.75rem 1.875rem;
+  }
 }
 
 .info-desc p {
@@ -359,21 +365,20 @@
 
 .champions-button {
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
   height: 100%;
-  color: rgb(255, 255, 255);
   padding: 10px 20px;
   border: none;
   background-color: transparent;
 }
 
 .champions-button-text {
-  vertical-align: middle;
   padding-right: 10px;
   text-transform: uppercase;
-  color: rgb(255, 255, 255);
   font-size: 10px;
   font-weight: 600;
+  color: rgb(255, 255, 255);
   letter-spacing: 0.16em;
   line-height: 1;
   text-align: left;
@@ -392,4 +397,8 @@
   left: 50%;
   transform: translate(-50%, 0);
   stroke: rgb(57, 64, 72);
+
+  @include media("<desktop-default") {
+    display: none;
+  }
 }

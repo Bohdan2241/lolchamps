@@ -1,6 +1,8 @@
-// .skins {
-//   // display: none;
-// }
+.skins {
+  @include media("<=desktop-main-nav") {
+    background-color: rgb(0, 9, 19);
+  }
+}
 
 .skins-content-wrapper {
   display: flex;
@@ -16,8 +18,11 @@
 }
 
 .skins-section-content {
-  // box-sizing: border-box;
   padding: 0 60px;
+
+  @include media("<1200px") {
+    padding: 0;
+  }
 }
 
 .skins-wrapper {
@@ -61,17 +66,19 @@
 }
 
 .skins-side {
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 25vw;
-  min-width: 400px;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
-  display: flex;
-  flex-direction: column;
+  @include media(">desktop-main-nav") {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 25vw;
+    min-width: 400px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .skins-title {
@@ -79,27 +86,41 @@
   margin: 40px 40px 0;
   font-size: 40px;
   border-bottom: 1px solid rgba(193, 193, 193, 0.2);
-  flex: 0 0 auto;
   text-transform: uppercase;
   font-style: italic;
   letter-spacing: 0.05em;
-  font-family: "Beaufort for LOL", serif;
   font-weight: 800;
   color: white;
+
+  @include media(">desktop-main-nav") {
+    flex: 0 0 auto;
+  }
+
+  @include media("<=desktop-main-nav") {
+    display: none;
+  }
 }
 
 .skins-carousel-wrapper {
-  flex: 1 1 auto;
-  width: calc(100% + 15px);
-  overflow: hidden;
+  @include media(">desktop-main-nav") {
+    flex: 1 1 auto;
+    width: calc(100% + 15px);
+    overflow: hidden;
+  }
 }
 
 .skins-carousel-container {
-  // margin-top: -20vw;
-  width: 100%;
-  height: calc(100% + 20vw);
-  display: flex;
-  flex-direction: column;
+  @include media(">desktop-main-nav") {
+    // margin-top: -20vw;
+    width: 100%;
+    height: calc(100% + 20vw);
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include media("<=desktop-main-nav") {
+    height: calc(220px);
+  }
 }
 
 .skins-swiper {
@@ -117,19 +138,30 @@
 .skins-swiper-wrapper {
   position: relative;
   width: 100%;
-  height: fit-content;
+  height: 100%;
   z-index: 1;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   transition-property: transform;
   box-sizing: content-box;
+
+  @include media(">desktop-main-nav") {
+    height: fit-content;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }
 
 .skins-carousel-item.swiper-slide {
-  height: 100px;
-  width: 100% !important;
-  padding: 0 0 0 60px;
+  @include media(">desktop-main-nav") {
+    box-sizing: border-box;
+    padding: 0 0 0 60px;
+  }
+
+  @include media("<=desktop-main-nav") {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 25px 5px;
+  }
 }
 
 .skins-carousel-button {
@@ -142,6 +174,10 @@
   display: flex;
   -webkit-box-align: center;
   align-items: center;
+
+  @include media("<=desktop-main-nav") {
+    flex-direction: column;
+  }
 }
 
 .skins-carousel-container-canvas {
@@ -163,16 +199,25 @@
   position: relative;
   width: 100px;
   height: 100px;
+
+  @include media("<=desktop-main-nav") {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+  }
 }
 
 .skins-carousel-item-thumb {
-  transform: scale(0.6);
   flex-shrink: 0;
   overflow: hidden;
   width: 100%;
   height: 100%;
   opacity: 0.7;
   transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+
+  @include media(">desktop-main-nav") {
+    transform: scale(0.6);
+  }
 }
 
 .is-active .skins-carousel-item-thumb {
@@ -204,9 +249,31 @@
   transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
     transform 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
   transform: translateX(-24px);
+
+  @include media("<=desktop-main-nav") {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0 0;
+    transform: none;
+    font-size: 10px;
+    line-height: 1.2;
+    letter-spacing: 0.15em;
+  }
 }
 
 .is-active .skins-carousel-item-text {
   opacity: 1;
   transform: none;
+}
+
+.skins .section-title {
+  align-self: center;
+}
+
+.skins .title-text {
+  color: rgb(28, 29, 42);
+
+  @include media("<=desktop-main-nav") {
+    color: rgba(255, 255, 255, 0.6);
+  }
 }
