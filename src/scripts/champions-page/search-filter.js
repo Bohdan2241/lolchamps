@@ -1,4 +1,3 @@
-import { htmlEscape } from 'escape-goat';
 import render, { scrollToChampionList } from './render.js';
 
 // const mobileMediaQuery = window.matchMedia('(max-width: 500px)');
@@ -140,7 +139,7 @@ const searchListener = (state) => {
     }
 
     const inputText = searchField.value.toLowerCase();
-    search.currentValue = htmlEscape(inputText);
+    search.currentValue = inputText;
 
     if (e.key === 'Backspace' && search.selectedChampion !== null && search.currentValue === '') {
       if (searchPlaceholder.style.display === 'block') {
@@ -164,6 +163,7 @@ const searchListener = (state) => {
     const currentList = Array.from(championButtons).flatMap((championButton) => {
       const button = championButton;
       const buttonText = championButton.textContent.toLowerCase();
+      console.log(championButton.textContent, search.currentValue);
       if (buttonText.includes(search.currentValue)) {
         button.style.display = 'block';
         return championButton;

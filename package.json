@@ -11,7 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.27.2",
-    "escape-goat": "^4.0.0",
     "lodash": "^4.17.21",
     "swiper": "^8.3.2"
   },
