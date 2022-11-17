@@ -54,8 +54,8 @@ const seeMoreDescription = (container, text) => {
 };
 
 const createLinks = (links, id) => {
-  links[0].setAttribute('href', `https://u.gg/lol/champions/${id}/build`);
-  links[1].setAttribute('href', `https://na.op.gg/champion/${id}/statistics/`);
+  links[0].setAttribute('href', `https://na.op.gg/champion/${id}/statistics/`);
+  links[1].setAttribute('href', `https://u.gg/lol/champions/${id}/build`);
   links[2].setAttribute('href', `https://www.probuilds.net/champions/details/${id}`);
 };
 

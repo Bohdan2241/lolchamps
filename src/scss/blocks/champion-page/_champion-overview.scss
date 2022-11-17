@@ -7,6 +7,11 @@
   @include media("<desktop-default") {
     padding-bottom: 6.25rem;
   }
+
+  @include media("<600px") {
+    padding-top: 0.625rem;
+    padding-bottom: 1.25rem;
+  }
 }
 
 .background-asset {
@@ -51,6 +56,9 @@
   display: flex;
   width: 100%;
   height: 100%;
+}
+
+.overview .wrapper-section {
   position: absolute;
   top: 31%;
 }
@@ -60,12 +68,20 @@
   content: "";
   width: 60px;
   flex: 0 0 auto;
+
+  @include media("<600px") {
+    width: 20px;
+  }
 }
 
-.section-title {
+.section-side-title {
   position: relative;
   width: 60px;
   flex: 0 0 auto;
+
+  @include media("<600px") {
+    width: 20px;
+  }
 }
 
 .title-text-container {
@@ -86,6 +102,10 @@
   letter-spacing: 0.25em;
   font-weight: bold;
   text-transform: uppercase;
+
+  @include media("<600px") {
+    display: none;
+  }
 }
 
 .title-text::after {
@@ -137,6 +157,10 @@
   margin: -5.625rem 3.75rem 0;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-top: none;
+
+  @include media("<600px") {
+    margin: -1.875rem 0 0;
+  }
 }
 
 .line {
@@ -163,6 +187,11 @@
     top: -3.75rem;
     margin-bottom: -4.0625rem;
   }
+
+  @include media("<600px") {
+    top: -2.6875rem;
+    margin-bottom: -2.6875rem;
+  }
 }
 
 .details-name-container {
@@ -175,6 +204,7 @@
 .info-container {
   position: relative;
   display: flex;
+  margin: 0 -1px;
 
   @include media("<desktop-default") {
     flex-wrap: wrap;
@@ -188,6 +218,10 @@
   @include media("<desktop-default") {
     width: 100%;
     padding: 1.25rem 3.75rem;
+  }
+
+  @include media("<600px") {
+    padding: 1.25rem 0.625rem;
   }
 }
 
@@ -261,6 +295,10 @@
     height: 1px;
     margin: 0 auto;
   }
+
+  @include media("<600px") {
+    width: calc(100% - 6.25rem);
+  }
 }
 
 .info-desc {
@@ -272,6 +310,12 @@
   @include media("<desktop-default") {
     width: 100%;
     padding: 1.25rem 3.75rem 1.875rem;
+  }
+
+  @include media("<600px") {
+    padding: 1.25rem 1.25rem 2.5rem;
+    font-size: 10px;
+    letter-spacing: 0.04em;
   }
 }
 
@@ -305,6 +349,10 @@
   width: calc(100% - 2px);
   height: 1px;
   background: rgba(255, 255, 255, 0.2);
+
+  @include media("<600px") {
+    top: 1px;
+  }
 }
 
 .links-info-container {
@@ -315,6 +363,12 @@
   width: 100%;
   padding: 0.875rem 3.75rem;
   white-space: nowrap;
+
+  @include media("<600px") {
+    overflow: auto hidden;
+    justify-content: flex-start;
+    padding: 1.25rem 0;
+  }
 }
 
 .links-info-label {
@@ -348,6 +402,13 @@
   position: absolute;
   top: 40px;
   right: 30px;
+
+  @include media("<600px") {
+    width: 36px;
+    height: 36px;
+    top: 26px;
+    right: 20px;
+  }
 }
 
 .wrap-champions-button-canvas {
@@ -371,6 +432,10 @@
   padding: 10px 20px;
   border: none;
   background-color: transparent;
+
+  @include media("<600px") {
+    padding: 0;
+  }
 }
 
 .champions-button-text {
@@ -382,6 +447,12 @@
   letter-spacing: 0.16em;
   line-height: 1;
   text-align: left;
+
+  @include media("<600px") {
+    line-height: 0;
+    font-size: 0;
+    color: transparent;
+  }
 }
 
 .champions-button svg {
@@ -389,6 +460,14 @@
   height: 14px;
   width: 14px;
   vertical-align: middle;
+
+  @include media("<600px") {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    right: 9px;
+    top: 9px;
+  }
 }
 
 .champion-page-scroll {

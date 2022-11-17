@@ -15,10 +15,14 @@ const resizeWatcher = (lineLeft, lineRight, container, header) => {
     const containerCoords = container.getBoundingClientRect();
     const headerCoords = header.getBoundingClientRect();
 
-    const distanceLeft = Math.floor((containerCoords.width - headerCoords.width) / 2);
-    const distanceRight = Math.floor((containerCoords.width + headerCoords.width) / 2);
+    const distanceLeft = (containerCoords.width - headerCoords.width) / 2;
+    const distanceRight = (containerCoords.width + headerCoords.width) / 2;
 
-    lineLeft.style.width = `${distanceLeft}px`;
+    if (distanceLeft < 0) {
+      lineLeft.style.width = '0px';
+    } else {
+      lineLeft.style.width = `${distanceLeft}px`;
+    }
     lineRight.style.left = `${distanceRight}px`;
   });
 };

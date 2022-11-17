@@ -7,12 +7,14 @@ const swiper = new Swiper('.swiper', {
     delay: 5000,
     disableOnInteraction: true,
   },
+  // centeredSlides: true,
   slideActiveClass: 'swiper-slide-active is-active',
   slideToClickedSlide: true,
   breakpoints: {
     320: {
       direction: 'horizontal',
-      width: 110,
+      // width: 110,
+      // slidesPerView: 5,
     },
     1001: {
       direction: 'vertical',
@@ -30,7 +32,7 @@ swiper.on('slideChange', () => {
   backgroundImages[newActiveIndex].classList.add('is-active');
 });
 
-const createSwipeItems = (name, num, championName, firstSkinName, i) => {
+const createSwipeItems = (name, num, id, firstSkinName, i) => {
   const container = document.querySelector('.skins-swiper-wrapper');
 
   const item = document.createElement('li');
@@ -59,7 +61,7 @@ const createSwipeItems = (name, num, championName, firstSkinName, i) => {
   wrapperContent.append(wrapperImage);
 
   const championImage = document.createElement('img');
-  const src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championName}_${num}.jpg`;
+  const src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${id}_${num}.jpg`;
   championImage.setAttribute('src', src);
   wrapperImage.append(championImage);
 
@@ -73,7 +75,7 @@ const createSwipeItems = (name, num, championName, firstSkinName, i) => {
   button.append(label);
 };
 
-const createSlideshowItems = (num, championName, i) => {
+const createSlideshowItems = (num, id, i) => {
   const container = document.querySelector('.skins-slideshow');
 
   const wrapperContent = document.createElement('div');
@@ -90,15 +92,14 @@ const createSlideshowItems = (num, championName, i) => {
 
   const championImage = document.createElement('img');
   championImage.classList.add('skins-slideshow-item-image');
-  const src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championName}_${num}.jpg`;
+  const src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${id}_${num}.jpg`;
   championImage.setAttribute('src', src);
   wrapperImage.append(championImage);
 };
 
 const skinsSlider = (dataChampion) => {
-  const { skins } = dataChampion;
+  const { skins, id } = dataChampion;
   const firstSkinName = dataChampion.name;
-  const { id } = dataChampion;
 
   skins.forEach(({ name, num }, i) => {
     createSwipeItems(name, num, id, firstSkinName, i);
@@ -116,13 +117,6 @@ const skinsSlider = (dataChampion) => {
       }, 2000);
     }
   });
-};
-
-export const resetSkinsSlider = () => {
-  const containerSlideshow = document.querySelector('.skins-slideshow');
-  const containerSwiper = document.querySelector('.skins-swiper-wrapper');
-  containerSlideshow.innerHTML = '';
-  containerSwiper.innerHTML = '';
 };
 
 export default skinsSlider;

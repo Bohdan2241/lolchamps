@@ -336,12 +336,13 @@
 }
 
 .riotbar-anonymous-link {
+  display: inline-block;
+  height: 32px;
   padding: 8px 16px;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  border-radius: 12px;
 
   @include media("<=desktop-default") {
     display: none;
@@ -351,11 +352,13 @@
 .riotbar-account-button-login {
   color: $white;
   background-color: rgba(128, 128, 128, 0.2);
+  border-radius: 6.4px;
 }
 
 .riotbar-account-button-signup {
   color: $black;
   background-color: rgb(11 196 226);
+  border-radius: 12px;
 }
 
 .riotbar-account-button-signup:hover {
