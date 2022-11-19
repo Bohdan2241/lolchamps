@@ -1,0 +1,104 @@
+.downloadapp {
+  background-color: rgb(6, 28, 37);
+  color: rgb(209, 218, 222);
+}
+
+.downloadapp-inner {
+  display: flex;
+  align-items: center;
+
+  @include media(">desktop-main-nav") {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 20px 60px;
+  }
+
+  @include media("<=desktop-main-nav") {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+.downloadapp-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  @include media(">desktop-main-nav") {
+    flex: 0 0 25%;
+    min-width: 300px;
+  }
+}
+
+.downloadapp-descripiton {
+  flex: 1 1 auto;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+
+  @include media("<=desktop-main-nav") {
+    margin-top: 1em;
+  }
+}
+
+.downloadapp-links {
+  display: flex;
+  justify-content: end;
+
+  @include media(">desktop-main-nav") {
+    flex: 0 0 25%;
+    min-width: 300px;
+  }
+
+  @include media("<=desktop-main-nav") {
+    justify-content: center;
+  }
+}
+
+.mobile-store-button {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0 5px;
+  vertical-align: middle;
+
+  @include media("<=desktop-main-nav") {
+    margin-top: 1em;
+  }
+}
+
+.mobile-store-button::before {
+  content: "";
+  display: block;
+}
+
+.appstore-link {
+  width: 110px;
+}
+
+.appstore-link::before {
+  padding-top: 33.3333%;
+}
+
+.playmarket-link {
+  width: 124px;
+}
+
+.playmarket-link::before {
+  padding-top: 30%;
+}
+
+.store-button-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.playmarket-link .store-button-image {
+  width: 114%;
+  height: 150%;
+  transform: translate(-6%, -16%);
+}
