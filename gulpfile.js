@@ -97,7 +97,8 @@ export const watch = () => {
     server: {
       baseDir: './src',
     },
-    tunnel: true,
+    https: true,
+    // tunnel: true,
   });
   gulp.watch('./src/**/*.html').on('change', sync.reload);
   gulp.watch('./src/scss/**/*.scss', gulp.series(styles, lintStyles, reload));
