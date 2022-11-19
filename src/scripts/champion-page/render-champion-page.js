@@ -211,7 +211,7 @@ const setPropertyVideo = (arr, championObj) => {
       } else {
         const poster = `https://d28xe8vt774jo5.cloudfront.net/champion-abilities/${championKey}/ability_${championKey}_${getVideoKey(i)}.jpg`;
         // eslint-disable-next-line no-param-reassign
-        abilitiesVideoContainer.innerHTML = `<video class="abilities-ability-video" preload="metadata" poster=${poster} autoplay loop muted src=${value}></video>`;
+        abilitiesVideoContainer.innerHTML = `<video class="abilities-ability-video" preload="metadata" poster=${poster} autoplay playsinline loop muted src=${value}></video>`;
       }
     });
   });
