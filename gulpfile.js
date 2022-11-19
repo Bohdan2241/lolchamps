@@ -44,7 +44,7 @@ export const scripts = (done) => {
   done();
 };
 
-export const styles = async () => gulp.src('./src/scss/**/*.scss')
+export const styles = () => gulp.src('./src/scss/**/*.scss')
   .pipe(sass().on('error', sass.logError))
   .pipe(cleanCss())
   .pipe(rename({
