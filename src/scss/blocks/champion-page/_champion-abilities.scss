@@ -121,7 +121,7 @@
   left: 15px;
   bottom: calc(100%);
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   font-size: 3.75rem;
 
   @include media("<desktop-default") {
@@ -539,6 +539,16 @@
   width: 160px;
   height: 116px;
   margin: 0 auto 15px;
+
+  @include media("<=500px") {
+    width: 100px;
+    height: 72px;
+    margin-bottom: 8px;
+  }
+
+  @include media("<=370px") {
+    display: none;
+  }
 }
 
 .abilities-no-video-text {
@@ -552,6 +562,11 @@
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 0.06em;
+
+  @include media("<=500px") {
+    max-width: 240px;
+    font-size: 15px;
+  }
 }
 //
 .abilities-background-icon {
