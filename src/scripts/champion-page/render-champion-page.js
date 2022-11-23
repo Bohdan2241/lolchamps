@@ -5,8 +5,8 @@ import abilitiesImageCanvas from './abilities-image-canvas.js';
 import abilitiesVideoCanvas from './abilities-video-canvas.js';
 import { abilitiesSlider } from './abilities-slider.js';
 import skinsSlider from './skins-slider.js';
-import parallax from './footerVideo.js';
 import drawHeaderLines from './draw-header-lines.js';
+import footerVideo from '../footer-video/footer-video.js';
 
 const pickRoleIcon = (role) => {
   const roleIcons = {
@@ -273,7 +273,7 @@ export default async (state) => {
       abilitiesSlider();
       abilitiesImageCanvas();
       abilitiesVideoCanvas();
-      parallax();
+      footerVideo();
       goTop();
     });
   });

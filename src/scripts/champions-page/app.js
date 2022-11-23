@@ -4,6 +4,7 @@ import render from './render.js';
 import roleFilter from './role-filter.js';
 import difficultyFilter from './difficulty-filter.js';
 import searchFilter from './search-filter.js';
+import footerVideo from '../footer-video/footer-video.js';
 // import mainNavCanvas from './main-nav-canvas.js';
 
 export default async () => {
@@ -40,4 +41,5 @@ export default async () => {
   // mainNavCanvas();
   localeSwitcher();
   render(state);
+  footerVideo();
 };
