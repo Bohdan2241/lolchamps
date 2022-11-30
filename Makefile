@@ -2,7 +2,7 @@ install:
 	npm install
 
 build:
-	gulp build
+	npx gulp build
 
 lintScripts:
 	npx eslint .
