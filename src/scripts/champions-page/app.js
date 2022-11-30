@@ -1,5 +1,6 @@
 import { getChampionsData } from '../utility/getData.js';
 import localeSwitcher from '../header/localeSwitcher.js';
+import mobileMenu from '../header/mobile-menu.js';
 import render from './render.js';
 import roleFilter from './role-filter.js';
 import difficultyFilter from './difficulty-filter.js';
@@ -40,6 +41,7 @@ export default async () => {
 
   // mainNavCanvas();
   localeSwitcher();
+  mobileMenu();
   render(state);
   footerVideo();
 };
