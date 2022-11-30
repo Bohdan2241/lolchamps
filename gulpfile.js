@@ -72,7 +72,6 @@ export const html = () => gulp.src(['src/**/*.html'])
 export const copy = () => gulp.src([
   './src/*.json',
   './src/*.ico',
-  './src/CNAME',
 ])
   .pipe(gulp.dest('./dist/'))
   .pipe(size({
@@ -98,7 +97,6 @@ export const watch = () => {
       baseDir: './src',
     },
     https: true,
-    // tunnel: true,
   });
   gulp.watch('./src/**/*.html').on('change', sync.reload);
   gulp.watch('./src/scss/**/*.scss', gulp.series(styles, lintStyles, reload));
@@ -120,7 +118,7 @@ export const build = (cb) => gulp.series(
   html,
 )(cb);
 
-export const dev = () => gulp.series(
+export default () => gulp.series(
   clean,
   gulp.parallel(
     gulp.series(lintScripts, scripts),

@@ -9,7 +9,3 @@ lintScripts:
 
 lintStyles:
 	npx stylelint "**/*.scss"
-
-publish:
-	gulp build
-	surge ./dist
