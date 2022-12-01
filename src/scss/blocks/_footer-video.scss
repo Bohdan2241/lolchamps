@@ -81,6 +81,79 @@
   // opacity: 0;
 }
 
+.custom-border {
+  position: absolute;
+  background-color: #b8cbd7;
+  transition: 0.1s;
+}
+
+.custom-border-bottom {
+  height: 0.5px;
+  bottom: -5px;
+  left: -5px;
+  right: 20px;
+}
+
+.footer-video-button:hover .custom-border-bottom {
+  right: -5px;
+}
+
+.custom-border-top {
+  height: 0.5px;
+  top: -5px;
+  left: 20px;
+  right: -5px;
+}
+
+.footer-video-button:hover .custom-border-top {
+  left: -5px;
+}
+
+.custom-border-right {
+  width: 0.5px;
+  bottom: 16px;
+  top: -5px;
+  right: -5px;
+}
+
+.footer-video-button:hover .custom-border-right {
+  bottom: -5px;
+  height: auto;
+}
+
+.custom-border-left {
+  width: 0.5px;
+  bottom: -5px;
+  top: 16px;
+  left: -5px;
+}
+
+.footer-video-button:hover .custom-border-left {
+  top: -5px;
+}
+
+.custom-border-bottom-angle {
+  bottom: -11px;
+  transform: rotate(50deg);
+  height: 33px;
+  width: 0.5px;
+  right: 8px;
+}
+
+.custom-border-top-angle {
+  top: -11px;
+  transform: rotate(50deg);
+  height: 33px;
+  width: 0.5px;
+  left: 8px;
+}
+
+.footer-video-button:hover .custom-border-bottom-angle,
+.footer-video-button:hover .custom-border-top-angle {
+  opacity: 0;
+  height: auto;
+}
+
 .video-container {
   overflow: hidden;
   position: absolute;
