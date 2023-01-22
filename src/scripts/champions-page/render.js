@@ -17,7 +17,7 @@ const filterFunctions = {
   role: (champion, role) => {
     let targetRole = '';
     switch (role) {
-      case 'assasins':
+      case 'assassins':
         targetRole = 'Assassin';
         break;
       case 'fighters':
@@ -108,7 +108,7 @@ export default async (state) => {
     itemLink.setAttribute('delay', delay);
     container.append(itemLink);
     setTimeout(() => {
-      itemLink.classList.add('champions-list-item-visibile');
+      itemLink.classList.add('champions-list-item-visible');
       itemLink.classList.remove('champions-list-item-hidden');
     }, delay);
 

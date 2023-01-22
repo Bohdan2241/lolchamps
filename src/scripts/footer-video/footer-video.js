@@ -5,7 +5,7 @@ const footerVideos = [
         url: 'https://assets.contentstack.io/v3/assets/blt731acb42bb3d1659/bltbb792e3456cb02b7/5f4959269586f1653fc65a1b/ss2020_urgot_vi_cait_1920x1080.mp4',
         type: 'video/mp4',
       },
-      title: 'Urgon -Vi - Cait',
+      title: 'Urgot -Vi - Cait',
     },
   },
   {

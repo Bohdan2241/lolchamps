@@ -44,7 +44,7 @@ const difficultyClear = (state) => {
   });
 };
 
-const filtredDifficultyContent = (numDificulty) => {
+const filteredDifficultyContent = (numDifficulty) => {
   const difficultyPlaceholder = document.querySelector('.difficulty-placeholder');
   difficultyPlaceholder.style.display = 'none';
   const difficultySingleValue = document.querySelector('.difficulty-single-value');
@@ -53,7 +53,7 @@ const filtredDifficultyContent = (numDificulty) => {
   difficultyIndicatorClear.style.display = 'flex';
 
   const container = document.querySelector('[data-testid="difficulty-nav:container"]');
-  fillDifficultyIcon(numDificulty, container);
+  fillDifficultyIcon(numDifficulty, container);
 };
 
 const difficultyListener = (state) => {
@@ -70,15 +70,15 @@ const difficultyListener = (state) => {
         1: 'moderate',
         0: 'high',
       };
-      const numDificulty = difficultyMap[difficultyLength];
+      const numDifficulty = difficultyMap[difficultyLength];
       resetBackgroundMenuButtons(menuButtons);
       menuButton.classList.add('selected-option');
-      filtredDifficultyContent(numDificulty);
+      filteredDifficultyContent(numDifficulty);
 
       const { difficulty } = state.uiState;
       difficulty.selectedDifficulty = i;
       const { filter } = state;
-      filter.difficulty = numDificulty;
+      filter.difficulty = numDifficulty;
       render(state);
       scrollToChampionList();
     });

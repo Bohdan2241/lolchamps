@@ -22,12 +22,12 @@ export default () => {
 
   //   const speedSlow = 5;
   //   const speedMedium = 10;
-  //   const speepFast = 200;
+  //   const speedFast = 200;
 
   //   let stepX1 = 0;
   //   const animation1 = () => {
   //     const animationID = requestAnimationFrame(animation1);
-  //     stepX1 = stepX1 <= widthDpi ? stepX1 + speepFast : widthDpi;
+  //     stepX1 = stepX1 <= widthDpi ? stepX1 + speedFast : widthDpi;
   //     ctx.beginPath();
 
   //     ctx.moveTo(angle, 0);
@@ -87,7 +87,7 @@ export default () => {
   //   let stepX4 = 0;
   //   const animation4 = () => {
   //     const animationID = requestAnimationFrame(animation4);
-  //     stepX4 = stepX4 >= -(widthDpi) ? stepX4 + speepFast : -(widthDpi);
+  //     stepX4 = stepX4 >= -(widthDpi) ? stepX4 + speedFast : -(widthDpi);
   //     ctx.beginPath();
 
   //     ctx.moveTo(widthDpi - angle, heightDpi);

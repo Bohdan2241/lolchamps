@@ -35,7 +35,7 @@ const searchClear = (state) => {
   const searchIcon = document.querySelector('.search-value');
   const searchInput = document.querySelector('.search-input');
   const searchButton = document.querySelector('.search-container');
-  const searcDropdownControl = document.querySelector('.search-container .dropdown-control');
+  const searchDropdownControl = document.querySelector('.search-container .dropdown-control');
 
   searchClearButton.addEventListener('click', () => {
     const { search } = state.uiState;
@@ -65,7 +65,7 @@ const searchClear = (state) => {
 
     searchButton.classList.remove('active');
 
-    searcDropdownControl.classList.remove('search-is-focused');
+    searchDropdownControl.classList.remove('search-is-focused');
 
     render(state);
     scrollToChampionList();
@@ -100,8 +100,8 @@ const renderSearchChampion = (state) => {
 
 const getButtonsList = (state) => {
   const { search } = state.uiState;
-  const dropdawnContent = document.querySelector('.search-dropdown-content');
-  dropdawnContent.innerHTML = '';
+  const dropdownContent = document.querySelector('.search-dropdown-content');
+  dropdownContent.innerHTML = '';
 
   const championNamesList = Object.values(state.champions);
   const sortedList = championNamesList.sort((a, b) => a.name.localeCompare(b.name));
@@ -110,7 +110,7 @@ const getButtonsList = (state) => {
     const championButton = document.createElement('div');
     championButton.classList.add('search-dropdown-content-item');
     championButton.textContent = championName;
-    dropdawnContent.append(championButton);
+    dropdownContent.append(championButton);
   });
 
   if (search.selectedChampion !== null) {
@@ -121,7 +121,7 @@ const getButtonsList = (state) => {
   const hiddenContent = document.createElement('div');
   hiddenContent.classList.add('search-dropdown-empty-content-item');
   hiddenContent.textContent = 'No champions found.';
-  dropdawnContent.append(hiddenContent);
+  dropdownContent.append(hiddenContent);
 
   renderSearchChampion(state);
 };
@@ -181,12 +181,12 @@ const searchListener = (state) => {
 };
 
 const scrollToSearchList = () => {
-  const dropdawnContent = document.querySelector('.search-dropdown-content');
-  const { top } = dropdawnContent.getBoundingClientRect();
+  const dropdownContent = document.querySelector('.search-dropdown-content');
+  const { top } = dropdownContent.getBoundingClientRect();
   window.addEventListener('scroll', () => {
   });
   if (top > 350) {
-    dropdawnContent.scrollIntoView({
+    dropdownContent.scrollIntoView({
       behavior: 'smooth',
       block: 'end',
     });
