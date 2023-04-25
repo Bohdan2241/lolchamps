@@ -9,6 +9,8 @@ const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
 app.use(logger);
 
+app.use(express.static(path.join(__dirname, '..', 'build')));
+
 app.get('/api/champions', (req, res) => {
   const { lang = 'en-us' } = req.query;
   axios
@@ -41,8 +43,7 @@ app.get('/api/champion', (req, res) => {
     });
 });
 
-app.use(express.static(path.join(__dirname, '..', 'build')));
-
 app.listen(3000, () => {
   console.log('Server started on port 3000');
+  console.log(path.join(__dirname, '..', 'build'));
 });
