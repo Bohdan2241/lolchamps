@@ -10,6 +10,9 @@ function Navbar() {
           <Link to={routes.mainPagePath()}>Champions</Link>
         </li>
         <li className="p-2">
+          <Link to={routes.championPagePath()}>Champion</Link>
+        </li>
+        <li className="p-2">
           <Link to={routes.notFoundPath()}>NotFound</Link>
         </li>
       </ul>
