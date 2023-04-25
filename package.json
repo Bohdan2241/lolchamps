@@ -4,14 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start-express": "node proxyServer/index.js",
-    "start": "concurrently \"npm run build\" \"npm run start-express\"",
+    "start": "node proxyServer/index.js",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "lint": "npx eslint .",
-    "prepare": "husky install"
+    "lint": "npx eslint ."
   },
   "dependencies": {
     "@tanstack/react-query": "^4.29.5",
