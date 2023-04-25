@@ -1,23 +1,20 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import Navbar from './Navbar';
+import Champions from './Champions/Champions';
+import NotFound from './NotFound';
+import routes from './routes';
 
 function App() {
-  const { isLoading, error, data } = useQuery(['champions'], async () => {
-    const response = await axios.get('/api/champions');
-    return response.data;
-  });
-
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error instanceof Error && error.message) {
-    return <div>Error: {error.message}</div>;
-  }
-
   return (
-    <div className="text-center text-white bg-gray-900 ">{data.length}</div>
+    <Router>
+      <Navbar />
+
+      <Routes>
+        <Route path={routes.mainPagePath()} element={<Champions />} />
+        <Route path={routes.notFoundPath()} element={<NotFound />} />
+      </Routes>
+    </Router>
   );
 }
 

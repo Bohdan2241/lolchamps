@@ -20,7 +20,8 @@
   "ignorePatterns": [
     "postcss.config.js",
     "tailwind.config.js",
-    "vite.config.ts"
+    "vite.config.ts",
+    "proxyServer"
   ],
   "plugins": ["react-refresh", "@typescript-eslint", "prettier"],
   "rules": {

@@ -1,7 +1,6 @@
 import './wdyr';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 
 import './index.css';
