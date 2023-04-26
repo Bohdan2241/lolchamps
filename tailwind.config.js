@@ -2,7 +2,14 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      maxWidth: {
+        '1/2': '50%',
+      }
+    },
+    fontFamily: {
+      custom: ["Beaufort for LOL", 'serif'],
+    },
   },
   plugins: [],
 };
