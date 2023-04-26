@@ -1,9 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
-import ChampionList from './ChampionsList';
 import routes from '../routes';
 import type { ChampionsData } from '../types';
+import ChampionList from './ChampionsList';
 
 function Champions() {
   const { isLoading, error, data } = useQuery<ChampionsData>(
