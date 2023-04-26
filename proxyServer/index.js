@@ -35,7 +35,6 @@ app.get('/api/champion', (req, res) => {
     )
     .then((response) => {
       res.send(response.data);
-      console.log('ok');
     })
     .catch((error) => {
       console.log(error);
@@ -45,5 +44,4 @@ app.get('/api/champion', (req, res) => {
 
 app.listen(3000, () => {
   console.log('Server started on port 3000');
-  console.log(path.join(__dirname, '..', 'build'));
 });
