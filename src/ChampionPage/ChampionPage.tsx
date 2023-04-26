@@ -22,7 +22,7 @@ function Champion() {
     return <div>Error: {error.message}</div>;
   }
 
-  return <div className="text-center text-white bg-gray-900">{data.name}</div>;
+  return <div className="text-center text-black bg-white">{data.name}</div>;
 }
 
 export default Champion;

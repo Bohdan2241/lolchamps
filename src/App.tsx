@@ -1,15 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Navbar from './Navbar';
-import Champions from './Champions/Champions';
-import Champion from './Champion/Champion';
+import Header from './Header';
+import Champions from './ChampionsPage/ChampionsPage';
+import Champion from './ChampionPage/ChampionPage';
 import NotFound from './NotFound';
 import routes from './routes';
 
 function App() {
   return (
     <Router>
-      <Navbar />
+      <Header />
 
       <Routes>
         <Route path={routes.mainPagePath()} element={<Champions />} />
