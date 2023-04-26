@@ -4,6 +4,6 @@ export default {
   dataPath: () => [apiPath, 'champions'].join('/'),
   championDataPath: () => [apiPath, 'champion'].join('/'),
   mainPagePath: () => '/',
-  championPagePath: () => '/champion',
+  championPagePath: (url: string) => [url].join('/'),
   notFoundPath: () => '*',
 };
