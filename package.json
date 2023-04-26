@@ -7,6 +7,7 @@
     "start": "nodemon proxyServer/index.js",
     "dev": "vite",
     "build": "tsc && vite build",
+    "deploy": "concurrently \"npm run build\" \"npm run start\"",
     "preview": "vite preview",
     "test": "vitest",
     "lint": "npx eslint .",
