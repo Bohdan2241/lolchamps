@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
-import Champions from './ChampionsPage/ChampionsPage';
+import ChampionsPage from './ChampionsPage/ChampionsPage';
 import Header from './Header';
 import NotFound from './NotFound';
 import routes from './routes';
@@ -11,7 +11,7 @@ function App() {
       <Header />
 
       <Routes>
-        <Route path={routes.mainPagePath()} element={<Champions />} />
+        <Route path={routes.mainPagePath()} element={<ChampionsPage />} />
         <Route path={routes.notFoundPath()} element={<NotFound />} />
       </Routes>
     </Router>

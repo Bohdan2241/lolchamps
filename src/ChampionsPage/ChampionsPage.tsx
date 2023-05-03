@@ -2,18 +2,14 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
 import routes from '../routes';
-import type { ChampionsData } from '../types';
 import ChampionList from './ChampionsList';
-import Navbar from './Navbar';
+import Navbar from './Navbar/Navbar';
 
-function Champions() {
-  const { isLoading, error, data } = useQuery<ChampionsData>(
-    ['champions'],
-    async () => {
-      const response = await axios.get<ChampionsData>(routes.dataPath());
-      return response.data;
-    }
-  );
+function ChampionsPage() {
+  const { isLoading, error, data } = useQuery(['championsList'], async () => {
+    const response = await axios.get(routes.dataPath());
+    return response.data;
+  });
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -34,4 +30,4 @@ function Champions() {
   );
 }
 
-export default Champions;
+export default ChampionsPage;

@@ -1,22 +1,23 @@
-export type Champion = {
-  uid: string;
-  champion_name: string;
-  champion_splash: string;
-  recommended_roles: string[];
-  difficulty: number;
-  champion: {
-    profile_image: {
-      url: string;
-    };
-  };
-};
+// export type Champion = {
+//   uid: string;
+//   champion_name: string;
+//   champion_splash: string;
+//   recommended_roles: string[];
+//   difficulty: number;
+//   champion: {
+//     profile_image: {
+//       url: string;
+//     };
+//   };
+// };
 
-export type ChampionNode = {
+export interface ChampionData {
   node: {
     publish_details: {
       locale: string;
     };
     uid: string;
+    url: string;
     champion_name: string;
     champion_splash: string;
     recommended_roles: string[];
@@ -25,17 +26,16 @@ export type ChampionNode = {
       profile_image: {
         url: string;
       };
-    }; // Include properties from Champion type
-    url: string;
+    };
   };
+}
+
+export type ChampionsList = ChampionData[];
+
+export type ChampionsListProps = {
+  championsList: ChampionsList;
 };
 
-export type ChampionsData = ChampionNode[];
-
-export type ChampionListProps = {
-  championsList: ChampionsData;
-};
-
-export type ChampionProps = {
-  champion: ChampionNode;
+export type ChampionDataProps = {
+  champion: ChampionData;
 };
