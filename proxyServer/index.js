@@ -18,7 +18,8 @@ app.get('/api/champions', (req, res) => {
       `https://www.leagueoflegends.com/page-data/${lang}/champions/page-data.json`
     )
     .then((response) => {
-      res.send(response.data.result.data.allChampions.edges);
+      const data = response.data.result.data.allChampions.edges;
+      res.send(data);
     })
     .catch((error) => {
       console.log(error);
