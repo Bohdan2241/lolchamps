@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const Header = styled.header`
+const HeaderElement = styled.header`
   position: fixed;
   top: 0;
   right: 0;
@@ -18,12 +18,12 @@ const HeaderLink = styled(Link)`
   color: inherit;
 `;
 
-const Navbar = () => {
+const Header = () => {
   return (
-    <Header>
+    <HeaderElement>
       <HeaderLink to="/">Champions</HeaderLink>
-    </Header>
+    </HeaderElement>
   );
 };
 
-export default Navbar;
+export default Header;

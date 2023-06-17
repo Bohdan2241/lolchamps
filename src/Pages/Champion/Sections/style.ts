@@ -1,27 +1,205 @@
 import styled, { keyframes } from 'styled-components';
 
+export const ChampionsButtonContainer = styled.div`
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-align: left;
+`;
+
+export const ChampionsButton = styled.a`
+  position: relative;
+  display: block;
+  height: 100%;
+  color: #fff;
+  padding: 10px 20px;
+`;
+
+export const ChampionsButtonText = styled.span`
+  vertical-align: middle;
+  padding-right: 10px;
+`;
+
+export const ChampionsButtonIcon = styled.svg`
+  fill: #fff;
+  height: 14px;
+  width: 14px;
+  vertical-align: middle;
+`;
+
+const Line = styled.div`
+  position: absolute;
+  top: 0;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+`;
+
+export const StartLine = styled(Line)`
+  left: 0;
+`;
+
+export const EndLine = styled(Line)`
+  right: 0;
+`;
+
+export const Container = styled.div`
+  position: absolute;
+  inset: 1px;
+  border-color: rgba(255, 255, 255, 0.2);
+  border-width: 1px;
+  border-top-width: 0;
+  border-style: solid;
+`;
+
+export const Text = styled.p`
+  max-width: 100%;
+  margin-top: 0px;
+  color: rgb(255, 255, 255);
+  font-size: 0.875rem;
+  line-height: 1.28571;
+  letter-spacing: 0.08em;
+
+  & button {
+    padding: 0px;
+    border: 0px;
+    background-color: transparent;
+    color: rgb(208, 168, 92);
+    font-size: 0.625rem;
+    text-transform: uppercase;
+  }
+`;
+
+const DescAnimation = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
+export const Desc = styled.div`
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 50%;
+  padding: 3.75rem;
+  animation: 1000ms cubic-bezier(0.215, 0.61, 0.355, 1) 800ms 1 normal both
+    running ${DescAnimation};
+`;
+
+const InfoDividerAnimation = keyframes`
+  0% {
+    transform: scale(1, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+`;
+
+export const InfoDivider = styled.div`
+  width: 1px;
+  margin: 2.5rem 0px;
+  background: rgba(255, 255, 255, 0.2);
+  transform-origin: center top;
+  animation: 400ms cubic-bezier(0.215, 0.61, 0.355, 1) 780ms 1 normal both
+    running ${InfoDividerAnimation};
+`;
+
+export const SpecsItemValue = styled.div`
+  width: 100%;
+  margin-top: 0.125rem;
+  color: rgb(208, 168, 92);
+  font-weight: normal;
+`;
+
+export const SpecsItemType = styled.div`
+  width: 100%;
+  margin-top: 0.9375rem;
+  color: rgb(255, 255, 255);
+`;
+
+export const SpecsItemIcon = styled.div`
+  width: 50px;
+  height: 50px;
+  position: relative;
+  margin: 0px auto;
+
+  & svg {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 7px;
+    fill: rgb(208, 168, 92);
+  }
+`;
+
+const SpecsItemAnimation = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
+export const SpecsItem = styled.li`
+  display: block;
+  text-align: center;
+  color: rgb(208, 168, 92);
+  text-transform: uppercase;
+  font-size: 0.625rem;
+  letter-spacing: 0.15em;
+  animation: 1000ms cubic-bezier(0.215, 0.61, 0.355, 1) 700ms 1 normal both
+    running ${SpecsItemAnimation};
+`;
+
+export const SpecsList = styled.ul`
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+`;
+
+export const Specs = styled.div`
+  width: 50%;
+  padding: 3.75rem;
+`;
+
+export const Info = styled.div`
+  position: relative;
+  display: flex;
+`;
+
 const RevealWrapperNameAnimation = keyframes`
   0% {
     clip-path: polygon(0% 0%, 0% 0%, 0% 0%);
   }
   100% {
-    clip-path: polygon(0% 0%, 200% 0%, 0% 200%);
+    clip-path: polygon(0% 0%, 200% 0%, -15% 200%);
   }
 `;
 
 export const RevealWrapperName = styled.div`
   display: inline-block;
-  clip-path: polygon(0% 0%, 200% 0%, 0% 200%);
+  clip-path: polygon(0% 0%, 200% 0%, -15% 200%);
   animation-name: ${RevealWrapperNameAnimation};
   animation-duration: 2000ms;
   animation-delay: 500ms;
   animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   animation-fill-mode: backwards;
+
+  & span {
+    display: block;
+    padding: 0px 15px 10px;
+    margin-bottom: -10px;
+  }
 `;
 
 export const Title = styled.strong`
   display: block;
-  font-size: 120px;
+  font-size: calc(61.82px + 3.03vw);
   line-height: 0.85;
   font-weight: 800;
   letter-spacing: 0.03em;

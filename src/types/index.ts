@@ -71,7 +71,7 @@ export interface Champion {
       h: number;
     };
   };
-  recommended: any[]; // FIXME: remove any
+  recommended: [];
 }
 
 export interface ChampionSkin {
@@ -97,7 +97,7 @@ export interface ChampionSpell {
   costBurn: string;
   effect: (number | null)[][];
   effectBurn: (string | null)[];
-  vars: any[]; // FIXME: remove any
+  vars: [];
   costType: string;
   maxammo: string;
   range: number[];
@@ -131,7 +131,7 @@ export interface ChampionShortData {
   blurb: string;
   info: Info;
   image: Image;
-  tags: Tag[];
+  tags: ChampionRole[];
   partype: string;
   stats: { [key: string]: number };
 }
@@ -162,11 +162,27 @@ export interface Info {
   difficulty: number;
 }
 
-export enum Tag {
+export enum ChampionRole {
+  All = 'All',
   Assassin = 'Assassin',
   Fighter = 'Fighter',
   Mage = 'Mage',
   Marksman = 'Marksman',
   Support = 'Support',
   Tank = 'Tank',
+}
+
+// export enum ChampionRole {
+//   ASSASSIN = 'Assassin',
+//   FIGHTER = 'Fighter',
+//   MAGE = 'Mage',
+//   MARKSMAN = 'Marksman',
+//   SUPPORT = 'Support',
+//   TANK = 'Tank',
+// }
+
+export enum ChampionDifficultyRanking {
+  LOW = 'low',
+  MEDIUM = 'moderate',
+  HIGH = 'high',
 }

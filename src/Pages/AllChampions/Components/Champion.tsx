@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import { ChampionShortData } from '../../../types';
 import getChampionLargeImageLink from '../../../utils/getChampionLargeImageLink';
 import {
@@ -13,7 +15,7 @@ type ChampionProps = {
 };
 
 const Champion = ({ champion }: ChampionProps) => (
-  <ChampionItem href={`champions/${champion.name}`}>
+  <ChampionItem as={Link} to={`champions/${champion.id}`}>
     <WrapChampionImage>
       <ChampionImage
         src={getChampionLargeImageLink(champion.id)}

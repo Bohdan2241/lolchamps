@@ -1,10 +1,11 @@
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import { useGetChampionByNameQuery } from '../../services/champion';
 import Overview from './Sections/Overview';
 
 const Champion = () => {
   const { name } = useParams();
+  const navigate = useNavigate();
   const { data, error, isLoading } = useGetChampionByNameQuery(name || '');
 
   if (isLoading) {
@@ -12,18 +13,14 @@ const Champion = () => {
   }
 
   if (error) {
-    return <>Oh no, there was an error</>;
+    navigate('/404', { replace: true });
+    return null;
   }
 
   if (data && name) {
     const champion = data.data[name];
 
-    return (
-      <>
-        <Overview champion={champion} />
-        {/* Render the champion details */}
-      </>
-    );
+    return <Overview champion={champion} />;
   }
 };
 
