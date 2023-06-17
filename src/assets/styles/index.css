@@ -47,6 +47,7 @@ textarea {
   font-family: inherit;
   vertical-align: baseline;
   line-height: normal;
+  cursor: pointer;
 }
 
 img {
