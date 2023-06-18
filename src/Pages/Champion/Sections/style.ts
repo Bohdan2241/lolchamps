@@ -16,6 +16,8 @@ export const ChampionsButton = styled.a`
   height: 100%;
   color: #fff;
   padding: 10px 20px;
+  background-color: rgba(0, 9, 19, 0.5);
+  border: 1px solid rgb(8, 215, 247);
 `;
 
 export const ChampionsButtonText = styled.span`
