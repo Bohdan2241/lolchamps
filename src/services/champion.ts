@@ -6,7 +6,7 @@ import { AllChampionsData, ChampionData } from '../types';
 export const championApi = createApi({
   reducerPath: 'championApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://ddragon.leagueoflegends.com/cdn/13.12.1/data/en_US/',
+    baseUrl: 'https://ddragon.leagueoflegends.com/cdn/13.12.1/data/en_US/',
   }),
   endpoints: (builder) => ({
     getChampionByName: builder.query<ChampionData, string>({
