@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import routes from '../../../routes';
 import { Champion, ChampionRole } from '../../../types';
 import getChampionLargeImageLink from '../../../utils/getChampionLargeImageLink';
 import getRoleSvgIcon from '../../../utils/getRoleSvgIcon';
@@ -166,7 +167,7 @@ const Overview = ({ champion }: ChampionProps) => {
       </SectionInner>
 
       <ChampionsButtonContainer>
-        <ChampionsButton as={Link} to="/">
+        <ChampionsButton as={Link} to={routes.championsListPagePath()}>
           <ChampionsButtonText>Champions List</ChampionsButtonText>
           <ChampionsButtonIcon
             xmlns="http://www.w3.org/2000/svg"

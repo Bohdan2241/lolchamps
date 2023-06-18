@@ -14,6 +14,7 @@ type ChampionProps = {
   champion: ChampionShortData;
 };
 
+// TODO: path (routes)
 const Champion = ({ champion }: ChampionProps) => (
   <ChampionItem as={Link} to={`champions/${champion.id}`}>
     <WrapChampionImage>

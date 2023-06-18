@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+import routes from '../routes';
+
 const HeaderElement = styled.header`
   position: fixed;
   top: 0;
@@ -21,7 +23,7 @@ const HeaderLink = styled(Link)`
 const Header = () => {
   return (
     <HeaderElement>
-      <HeaderLink to="/">Champions</HeaderLink>
+      <HeaderLink to={routes.championsListPagePath()}>Champions</HeaderLink>
     </HeaderElement>
   );
 };
