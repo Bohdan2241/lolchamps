@@ -2,7 +2,11 @@ import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import routes from '../../../routes';
-import { Champion, ChampionRole } from '../../../types';
+import {
+  Champion,
+  ChampionDifficultyRanking,
+  ChampionRole,
+} from '../../../types';
 import getChampionLargeImageLink from '../../../utils/getChampionLargeImageLink';
 import getRoleSvgIcon from '../../../utils/getRoleSvgIcon';
 import levelToRanking from '../../../utils/levelToRanking';
@@ -14,6 +18,7 @@ import {
   ChampionsButtonIcon,
   ChampionsButtonText,
   Container,
+  ContainerDifficultyIcon,
   Desc,
   Dock,
   EndLine,
@@ -22,6 +27,7 @@ import {
   Info,
   InfoDivider,
   Intro,
+  ItemDifficultyIcon,
   MainImage,
   Name,
   OverviewSection,
@@ -38,8 +44,35 @@ import {
   Text,
   Title,
   WrapBackgroundImage,
+  WrapDifficultyIcon,
   Wrapper,
 } from './style';
+
+type DifficultyIconProps = {
+  difficulty: ChampionDifficultyRanking;
+};
+
+const DifficultyIcon = ({ difficulty }: DifficultyIconProps) => {
+  let itemClasses: string[] = [];
+
+  if (difficulty === 'low') {
+    itemClasses = ['full', 'empty', 'empty'];
+  } else if (difficulty === 'moderate') {
+    itemClasses = ['full', 'full', 'empty'];
+  } else if (difficulty === 'high') {
+    itemClasses = ['full', 'full', 'full'];
+  }
+
+  return (
+    <WrapDifficultyIcon>
+      <ContainerDifficultyIcon>
+        {itemClasses.map((className, index) => (
+          <ItemDifficultyIcon key={index} className={className} />
+        ))}
+      </ContainerDifficultyIcon>
+    </WrapDifficultyIcon>
+  );
+};
 
 type ChampionProps = {
   champion: Champion;
@@ -144,7 +177,9 @@ const Overview = ({ champion }: ChampionProps) => {
                 </SpecsItem>
 
                 <SpecsItem>
-                  <SpecsItemIcon>Icon</SpecsItemIcon>
+                  <SpecsItemIcon>
+                    <DifficultyIcon difficulty={difficulty} />
+                  </SpecsItemIcon>
                   <SpecsItemType>Difficulty</SpecsItemType>
                   <SpecsItemValue>{difficulty}</SpecsItemValue>
                 </SpecsItem>

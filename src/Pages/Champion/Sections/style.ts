@@ -1,5 +1,44 @@
 import styled, { keyframes } from 'styled-components';
 
+export const ItemDifficultyIcon = styled.span`
+  display: inline-block;
+  box-sizing: content-box;
+  width: 30.6667%;
+  height: 100%;
+  padding-right: 4%;
+  background-color: rgb(8, 215, 247);
+  background-clip: content-box;
+  transform: skewX(-40deg);
+
+  &:last-child {
+    padding-right: 0;
+  }
+
+  &.full {
+    opacity: 1;
+  }
+
+  &.empty {
+    opacity: 0.2;
+  }
+`;
+
+export const ContainerDifficultyIcon = styled.span`
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 0px 8% 0px 5%;
+  white-space: nowrap;
+`;
+
+export const WrapDifficultyIcon = styled.span`
+  display: block;
+  width: 50px;
+  height: 10px;
+  position: absolute;
+  top: 20px;
+`;
+
 export const ChampionsButtonContainer = styled.div`
   position: absolute;
   top: 40px;
