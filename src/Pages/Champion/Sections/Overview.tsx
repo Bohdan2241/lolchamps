@@ -1,12 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import ChampionDifficultyRanking from '../../../enums/championDifficultyRanking';
+import ChampionRole from '../../../enums/championRole';
 import routes from '../../../routes';
-import {
-  Champion,
-  ChampionDifficultyRanking,
-  ChampionRole,
-} from '../../../types';
+import { Champion } from '../../../types';
 import getChampionLargeImageLink from '../../../utils/getChampionLargeImageLink';
 import getRoleSvgIcon from '../../../utils/getRoleSvgIcon';
 import levelToRanking from '../../../utils/levelToRanking';
@@ -57,7 +55,7 @@ const DifficultyIcon = ({ difficulty }: DifficultyIconProps) => {
 
   if (difficulty === 'low') {
     itemClasses = ['full', 'empty', 'empty'];
-  } else if (difficulty === 'moderate') {
+  } else if (difficulty === 'medium') {
     itemClasses = ['full', 'full', 'empty'];
   } else if (difficulty === 'high') {
     itemClasses = ['full', 'full', 'full'];
