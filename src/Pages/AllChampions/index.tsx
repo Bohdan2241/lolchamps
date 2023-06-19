@@ -2,24 +2,27 @@ import { useState } from 'react';
 import Select from 'react-select';
 
 import { useGetAllChampionsQuery } from '../../services/champion';
-import { ChampionRole } from '../../types';
+import { ChampionRoleButtons } from '../../types';
 import levelToRanking from '../../utils/levelToRanking';
 import Champion from './Components/Champion';
+import {
+  difficultySelectOptions,
+  difficultySelectStyles,
+} from './difficultySelectData';
 import { ChampionsList, WrapChampionList } from './style';
 
-const difficultyOptions = [
-  { value: 'low', label: 'low' },
-  { value: 'moderate', label: 'moderate' },
-  { value: 'high', label: 'high' },
-];
+type RoleButtonProps = {
+  role: ChampionRoleButtons;
+  handleRoleChange: (role: ChampionRoleButtons) => void;
+};
 
-const RoleButton = ({ role, handleRoleChange }) => (
+const RoleButton = ({ role, handleRoleChange }: RoleButtonProps) => (
   <button onClick={handleRoleChange(role)}>{role}</button>
 );
 
 const AllChampions = () => {
   const { data, error, isLoading } = useGetAllChampionsQuery();
-  const [selectedRole, setSelectedRole] = useState(ChampionRole.All);
+  const [selectedRole, setSelectedRole] = useState(ChampionRoleButtons.All);
   const [selectedDifficulty, setSelectedDifficulty] = useState<string | null>(
     null
   );
@@ -29,13 +32,14 @@ const AllChampions = () => {
     a.name.localeCompare(b.name)
   );
 
-  const handleRoleChange = (role: ChampionRole) => () => {
+  const handleRoleChange = (role: ChampionRoleButtons) => () => {
     setSelectedRole(role);
   };
 
   const filteredChampions = sortedChampions.filter((champion) => {
     const roleMatch =
-      selectedRole === ChampionRole.All || champion.tags.includes(selectedRole);
+      selectedRole === ChampionRoleButtons.All ||
+      champion.tags.includes(selectedRole);
     const difficultyMatch =
       selectedDifficulty === null ||
       selectedDifficulty.value === levelToRanking(champion.info.difficulty);
@@ -53,7 +57,7 @@ const AllChampions = () => {
         <>
           <div style={{ display: 'flex' }}>
             <div className="role-buttons">
-              {Object.values(ChampionRole).map((role) => (
+              {Object.values(ChampionRoleButtons).map((role) => (
                 <RoleButton
                   key={role}
                   role={role}
@@ -63,8 +67,10 @@ const AllChampions = () => {
             </div>
 
             <Select
-              options={difficultyOptions}
+              options={difficultySelectOptions}
               isClearable={true}
+              isSearchable={false}
+              styles={difficultySelectStyles}
               placeholder={'All Difficulties'}
               value={selectedDifficulty}
               onChange={(selectedOption) =>
