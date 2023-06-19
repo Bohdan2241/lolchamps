@@ -163,7 +163,6 @@ export interface Info {
 }
 
 export enum ChampionRole {
-  All = 'All',
   Assassin = 'Assassin',
   Fighter = 'Fighter',
   Mage = 'Mage',
@@ -172,6 +171,15 @@ export enum ChampionRole {
   Tank = 'Tank',
 }
 
+export enum ChampionRoleButtons {
+  All = 'All',
+  Assassin = 'Assassin',
+  Fighter = 'Fighter',
+  Mage = 'Mage',
+  Marksman = 'Marksman',
+  Support = 'Support',
+  Tank = 'Tank',
+}
 // export enum ChampionRole {
 //   ASSASSIN = 'Assassin',
 //   FIGHTER = 'Fighter',
