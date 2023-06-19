@@ -1,4 +1,4 @@
-import { ChampionDifficultyRanking } from '../types';
+import ChampionDifficultyRanking from '../enums/championDifficultyRanking';
 
 export default (num: number): ChampionDifficultyRanking => {
   if (num >= 8) return ChampionDifficultyRanking.HIGH;
