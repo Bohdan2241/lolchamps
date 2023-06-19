@@ -1,3 +1,5 @@
+import ChampionRole from '../enums/championRole';
+
 // Champion
 export interface ChampionData {
   type: string;
@@ -160,37 +162,4 @@ export interface Info {
   defense: number;
   magic: number;
   difficulty: number;
-}
-
-export enum ChampionRole {
-  Assassin = 'Assassin',
-  Fighter = 'Fighter',
-  Mage = 'Mage',
-  Marksman = 'Marksman',
-  Support = 'Support',
-  Tank = 'Tank',
-}
-
-export enum ChampionRoleButtons {
-  All = 'All',
-  Assassin = 'Assassin',
-  Fighter = 'Fighter',
-  Mage = 'Mage',
-  Marksman = 'Marksman',
-  Support = 'Support',
-  Tank = 'Tank',
-}
-// export enum ChampionRole {
-//   ASSASSIN = 'Assassin',
-//   FIGHTER = 'Fighter',
-//   MAGE = 'Mage',
-//   MARKSMAN = 'Marksman',
-//   SUPPORT = 'Support',
-//   TANK = 'Tank',
-// }
-
-export enum ChampionDifficultyRanking {
-  LOW = 'low',
-  MEDIUM = 'moderate',
-  HIGH = 'high',
 }
