@@ -1,11 +1,16 @@
-import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 
-const StyledNotFound = styled.div`
-  color: #fff;
-`;
+import { StyledNotFound } from './style';
 
 const NotFound = () => {
-  return <StyledNotFound>NotFound</StyledNotFound>;
+  const { t } = useTranslation();
+
+  return (
+    <StyledNotFound>
+      <h1>{t('error.404')}</h1>
+      <p>{t('pageNotFound')}</p>
+    </StyledNotFound>
+  );
 };
 
 export default NotFound;
