@@ -1,11 +1,12 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import Select from 'react-select';
 
 import ChampionDifficultyRanking from '../../../enums/championDifficultyRanking';
 import ChampionRole from '../../../enums/championRole';
 import { ChampionShortData } from '../../../types';
 import levelToRanking from '../../../utils/levelToRanking';
-import { difficultySelectStyles, RoleButton } from './style';
+import { difficultySelectStyles, Nav, RoleButton, SectionNav } from './style';
 
 interface ChampionRoleOption {
   value: ChampionRole;
@@ -15,22 +16,22 @@ interface ChampionRoleOption {
 const CHAMPION_ROLE_OPTIONS: ChampionRoleOption[] = [
   {
     value: ChampionRole.ASSASSIN,
-    label: 'Assassins',
+    label: 'champion-role.assassin.plural',
   },
   {
     value: ChampionRole.FIGHTER,
-    label: 'Fighters',
+    label: 'champion-role.fighter.plural',
   },
-  { value: ChampionRole.MAGE, label: 'Mages' },
+  { value: ChampionRole.MAGE, label: 'champion-role.mage.plural' },
   {
     value: ChampionRole.MARKSMAN,
-    label: 'Marksmen',
+    label: 'champion-role.marksman.plural',
   },
   {
     value: ChampionRole.SUPPORT,
-    label: 'Supports',
+    label: 'champion-role.support.plural',
   },
-  { value: ChampionRole.TANK, label: 'Tanks' },
+  { value: ChampionRole.TANK, label: 'champion-role.tank.plural' },
 ];
 
 interface ChampionDifficultyOption {
@@ -41,15 +42,15 @@ interface ChampionDifficultyOption {
 const CHAMPION_DIFFICULTY_OPTIONS: ChampionDifficultyOption[] = [
   {
     value: ChampionDifficultyRanking.LOW,
-    label: 'LOW',
+    label: 'champion-difficulty.ranking.low',
   },
   {
     value: ChampionDifficultyRanking.MEDIUM,
-    label: 'MODERATE',
+    label: 'champion-difficulty.ranking.medium',
   },
   {
     value: ChampionDifficultyRanking.HIGH,
-    label: 'HIGH',
+    label: 'champion-difficulty.ranking.high',
   },
 ];
 
@@ -63,7 +64,7 @@ interface Props {
   onSelectActiveChampions: (champions: ChampionShortData[]) => void;
 }
 
-const Section = ({ champions, onSelectActiveChampions }: Props) => {
+const Section: React.FC<Props> = ({ champions, onSelectActiveChampions }) => {
   const [searchValue, setSearchValue] = useState<ChampionOption | null>(null);
   const [roleValue, setRoleValue] = useState<ChampionRoleOption | null>(null);
   const [difficultyValue, setDifficultyValue] =
@@ -97,35 +98,33 @@ const Section = ({ champions, onSelectActiveChampions }: Props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchValue, roleValue, difficultyValue]);
 
-  return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        height: '30px',
-        marginTop: '70px',
-      }} // TODO: move to styled component
-    >
-      <Select
-        options={championOptions}
-        isClearable={true}
-        isSearchable={true}
-        defaultValue={null}
-        styles={difficultySelectStyles} // TODO: add styles
-        value={searchValue}
-        placeholder={'Search'}
-        noOptionsMessage={() => 'No champions found.'}
-        onChange={(v: unknown) => {
-          const value: ChampionOption | null =
-            v instanceof Array ? v[0] : v || null; // FIXME: refactor it
-          setSearchValue(value);
-        }}
-      />
+  const { t } = useTranslation();
 
-      <div>
-        {/* large screen */}
-        {[{ value: null, label: 'All' }, ...CHAMPION_ROLE_OPTIONS].map(
-          (option) => (
+  return (
+    <SectionNav>
+      <Nav>
+        <Select
+          options={championOptions}
+          isClearable={true}
+          isSearchable={true}
+          defaultValue={null}
+          styles={difficultySelectStyles} // TODO: add styles
+          value={searchValue}
+          placeholder={t('search.action')}
+          noOptionsMessage={() => t('search.message.no-champions-found')}
+          onChange={(v: unknown) => {
+            const value: ChampionOption | null =
+              v instanceof Array ? v[0] : v || null; // ! refactor it
+            setSearchValue(value);
+          }}
+        />
+
+        <div>
+          {/* large screen */}
+          {[
+            { value: null, label: t('champion-role.all.short') },
+            ...CHAMPION_ROLE_OPTIONS,
+          ].map((option) => (
             <RoleButton
               key={option.value || ''}
               selected={
@@ -135,30 +134,31 @@ const Section = ({ champions, onSelectActiveChampions }: Props) => {
               }
               onClick={() => setRoleValue(option.value ? option : null)}
             >
-              {option.label}
+              {t(option.label)}
             </RoleButton>
-          )
-        )}
-        {/* small screen */}
-        {/* TODO: add mobile version here */}
-      </div>
+          ))}
+          {/* small screen */}
+          {/* TODO: add mobile version here */}
+        </div>
 
-      <Select
-        options={CHAMPION_DIFFICULTY_OPTIONS.map((o) => ({
-          ...o,
-        }))}
-        value={difficultyValue}
-        isClearable={true}
-        isSearchable={false}
-        styles={difficultySelectStyles}
-        placeholder={'All Difficulties'}
-        onChange={(v: unknown) => {
-          const value: ChampionDifficultyOption | null =
-            v instanceof Array ? v[0] : v || null; // FIXME: refactor it
-          setDifficultyValue(value);
-        }}
-      />
-    </div>
+        <Select
+          options={CHAMPION_DIFFICULTY_OPTIONS.map((o) => ({
+            ...o,
+            label: t(o.label),
+          }))}
+          value={difficultyValue}
+          isClearable={true}
+          isSearchable={false}
+          styles={difficultySelectStyles}
+          placeholder={t('champion-difficulty.all-difficulties')}
+          onChange={(v: unknown) => {
+            const value: ChampionDifficultyOption | null =
+              v instanceof Array ? v[0] : v || null; // ! refactor it
+            setDifficultyValue(value);
+          }}
+        />
+      </Nav>
+    </SectionNav>
   );
 };
 

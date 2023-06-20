@@ -1,24 +1,43 @@
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+
 import { ChampionShortData } from '../../../types';
 import ChampionComponent from '../Components/Champion';
-import { ChampionsList } from './style';
+import { Item, List, Message, ResponsiveWrapper } from './style';
 
 export interface Props {
+  isVisible: boolean;
+  isFirstTime: boolean;
   champions: ChampionShortData[];
 }
 
-const Section = ({ champions }: Props) => {
+const Section: React.FC<Props> = ({ champions, isVisible, isFirstTime }) => {
+  const { t } = useTranslation();
+
   return (
-    <>
+    <ResponsiveWrapper>
       {champions.length <= 0 ? (
-        <div>No champions match the filter criteria.</div>
+        <Message>{t('champion-list.filter-result.no-champions-found')}</Message>
       ) : (
-        <ChampionsList>
+        <List>
           {champions.map(({ id, name }) => {
-            return <ChampionComponent key={id} name={name} id={id} />;
+            const additionalProps = {
+              isVisible,
+              isFirstTime,
+            };
+            return (
+              <Item
+                as={ChampionComponent}
+                key={id}
+                name={name}
+                id={id}
+                {...additionalProps}
+              />
+            );
           })}
-        </ChampionsList>
+        </List>
       )}
-    </>
+    </ResponsiveWrapper>
   );
 };
 

@@ -1,14 +1,28 @@
 import { StylesConfig } from 'react-select';
 import styled, { css } from 'styled-components';
 
+export const Nav = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  margin: 0px auto;
+  max-width: 1400px;
+`;
+
+export const SectionNav = styled.section`
+  margin: 0px 2%;
+`;
+
 export const RoleButton = styled.button<{ selected: boolean }>`
   padding: 5.5px;
   margin: 0 8px;
   border: none;
   background-color: #006780;
+  font-size: 12px;
   color: white;
   border-radius: 4px;
   transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+  text-transform: uppercase;
 
   &:hover {
     background-color: rgb(0 102 128 / 50%);

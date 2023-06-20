@@ -1,31 +1,46 @@
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 import getChampionLargeImageLink from '../../../../utils/getChampionLargeImageLink';
-import {
-  ChampionImage,
-  ChampionItem,
-  ChampionName,
-  WrapChampionImage,
-  WrapChampionName,
-} from './style';
+import { ImageContainer, Name, ResponsiveWrapper, Text } from './style';
 
-interface Props {
+export interface Props {
   id: string;
   name: string;
+  animationDelay?: number;
+  isVisible?: boolean;
+  isFirstTime?: boolean;
+  className?: string;
 }
 
-const Champion = ({ id, name }: Props) => (
-  <ChampionItem as={Link} to={`champions/${id}`}>
-    <WrapChampionImage>
-      <ChampionImage
-        src={getChampionLargeImageLink(id)}
-        alt="Champion's icon"
-      />
-    </WrapChampionImage>
-    <WrapChampionName>
-      <ChampionName>{name}</ChampionName>
-    </WrapChampionName>
-  </ChampionItem>
-);
+const Section: React.FC<Props> = ({
+  id,
+  name,
+  animationDelay = 0,
+  isVisible = true,
+  isFirstTime = true,
+  className,
+}) => {
+  const { t } = useTranslation();
 
-export default Champion;
+  return (
+    <ResponsiveWrapper
+      as={Link}
+      to={`${t('champion-link.start')}${id}`}
+      className={`${className} ${isVisible ? 'isVisible' : ''} ${
+        isFirstTime ? 'isFirstTime' : ''
+      }`}
+      delay={animationDelay}
+    >
+      <ImageContainer>
+        <img src={getChampionLargeImageLink(id)} />
+      </ImageContainer>
+      <Name>
+        <Text>{name}</Text>
+      </Name>
+    </ResponsiveWrapper>
+  );
+};
+
+export default Section;

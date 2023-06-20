@@ -1,68 +1,113 @@
 import styled from 'styled-components';
 
-export const ChampionName = styled.span`
-  display: inline-block;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-family: EB Garamond, Arial, Helvetica, sans-serif;
-  font-style: italic;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  color: #fff;
-  text-transform: uppercase;
-  transition: transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
-`;
+import {
+  COLOR_BACKGROUND_DARK_LIGHT,
+  FONT_FAMILY_SERIF,
+  MEDIA_MOBILE_ALL,
+} from '../../../../assets/styles/theme';
+import { animation, easing, hoverEffect, rem } from '../../../../utils/style';
 
-export const WrapChampionName = styled.span`
+export const Wrapper = styled.a<{ delay: number }>`
   display: block;
-  padding: 4% 6%;
-  overflow: hidden;
-  background-color: rgb(6, 28, 37);
-  transition: background-color 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+
+  transition: opacity 300ms ${easing.easeOutQuad},
+    transform 300ms ${easing.easeOutQuad};
+
+  opacity: 0;
+  transform: translate(0, 10px);
+
+  &.isFirstTime {
+    ${({ delay }) => animation.translateFadeIn({ delay: 600 + delay })}
+    animation-fill-mode: backwards;
+  }
+
+  &.isVisible {
+    transition-delay: ${({ delay }) => delay}ms;
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 `;
 
-export const ChampionImage = styled.img`
-  transform: scale3d(1.05, 1.05, 1);
-  transition: transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
-`;
-
-export const WrapChampionImage = styled.span`
+export const ImageContainer = styled.span`
   position: relative;
   display: block;
+  width: 100%;
   overflow: hidden;
+
+  &::before {
+    content: '';
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-top: ${(560 / 496) * 100 + '%'};
+  }
 
   &::after {
     content: '';
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
     width: 11%;
     padding-top: 11%;
-    background-color: rgb(0, 9, 19);
-    transition: transform 0.5s ease 0s;
+    background-color: ${COLOR_BACKGROUND_DARK_LIGHT};
+    transition: transform 0.5s;
     transform: translate(50%, -50%) rotate(45deg);
+  }
+
+  ${hoverEffect.scaleDown(Wrapper)}
+
+  > * {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 `;
 
-export const ChampionItem = styled.a`
+export const Name = styled.span`
   display: block;
-  flex: 1 1 25%;
-  max-width: 25%;
-  padding: 20px 20px 0 0;
+  overflow: hidden;
+  background-color: #061c25;
+  padding: 6% 8%;
 
-  &:hover ${ChampionImage} {
-    transform: scale3d(1.001, 1.001, 1);
+  transition: 300ms background-color ${easing.easeOutQuad};
+`;
+
+export const Text = styled.span`
+  display: inline-block;
+  color: white;
+  white-space: nowrap;
+  font-size: 20px;
+  font-family: ${FONT_FAMILY_SERIF};
+  font-weight: 800;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: 0.08em;
+  text-overflow: ellipsis;
+
+  transition: transform 300ms ${easing.easeOutQuad};
+`;
+
+export const ResponsiveWrapper = styled(Wrapper)`
+  &:hover {
+    ${ImageContainer}::after {
+      transform: translate(100%, -100%) rotate(45deg);
+    }
+
+    ${Name} {
+      background-color: #006680;
+    }
+    ${Text} {
+      transform: translate(10px, 0);
+    }
   }
 
-  &:hover ${WrapChampionImage}::after {
-    transform: translate(100%, -100%) rotate(45deg);
-  }
-
-  &:hover ${WrapChampionName} {
-    background-color: rgb(0, 102, 128);
-  }
-
-  &:hover ${ChampionName} {
-    transform: translate(10px, 0px);
+  @media ${MEDIA_MOBILE_ALL} {
+    ${Text} {
+      font-size: ${rem(14)};
+    }
   }
 `;

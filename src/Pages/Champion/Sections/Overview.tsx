@@ -1,13 +1,17 @@
 import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
+import GiantTitle from '../../../Components/GiantTitle';
 import ChampionDifficultyRanking from '../../../enums/championDifficultyRanking';
 import ChampionRole from '../../../enums/championRole';
 import routes from '../../../routes';
 import { Champion } from '../../../types';
 import getChampionLargeImageLink from '../../../utils/getChampionLargeImageLink';
 import getRoleSvgIcon from '../../../utils/getRoleSvgIcon';
-import levelToRanking from '../../../utils/levelToRanking';
+import levelToRanking, {
+  CHAMPION_DIFFICULTIES,
+} from '../../../utils/levelToRanking';
 import {
   BackgroundAsset,
   BackgroundImage,
@@ -21,16 +25,12 @@ import {
   Dock,
   EndLine,
   ForegroundAsset,
-  Heading,
   Info,
   InfoDivider,
-  Intro,
   ItemDifficultyIcon,
   MainImage,
   Name,
   OverviewSection,
-  RevealWrapperName,
-  RevealWrapperTitle,
   SectionInner,
   Specs,
   SpecsItem,
@@ -40,10 +40,8 @@ import {
   SpecsList,
   StartLine,
   Text,
-  Title,
   WrapBackgroundImage,
   WrapDifficultyIcon,
-  Wrapper,
 } from './style';
 
 type DifficultyIconProps = {
@@ -82,6 +80,7 @@ const Overview = ({ champion }: ChampionProps) => {
   const startLineRef = useRef<HTMLHeadingElement>(null);
   const endLineRef = useRef<HTMLHeadingElement>(null);
   const [showLore, setShowLore] = useState(false);
+  const { t } = useTranslation();
 
   const seeMoreHandler = () => setShowLore(true);
   const { name, title, lore, blurb, info, tags, id } = champion;
@@ -130,38 +129,24 @@ const Overview = ({ champion }: ChampionProps) => {
     <OverviewSection>
       <BackgroundAsset>
         <WrapBackgroundImage>
-          <BackgroundImage
-            src={getChampionLargeImageLink(id)}
-            alt={`${name} image`}
-          />
+          <BackgroundImage src={getChampionLargeImageLink(id)} />
         </WrapBackgroundImage>
       </BackgroundAsset>
       <SectionInner>
         <ForegroundAsset>
-          <MainImage
-            src={getChampionLargeImageLink(id)}
-            alt={`${name} image`}
-          />
+          <MainImage src={getChampionLargeImageLink(id)} />
         </ForegroundAsset>
         <Dock>
           <Container ref={containerRef} />
           <StartLine ref={startLineRef} />
           <EndLine ref={endLineRef} />
           <Name>
-            <Wrapper>
-              <Heading>
-                <Intro>
-                  <RevealWrapperTitle>
-                    <span>{title}</span>
-                  </RevealWrapperTitle>
-                </Intro>
-                <Title>
-                  <RevealWrapperName>
-                    <span ref={nameRef}>{name}</span>
-                  </RevealWrapperName>
-                </Title>
-              </Heading>
-            </Wrapper>
+            <GiantTitle
+              titleRef={nameRef}
+              text={`${title ? `${title}\n` : ''}${name}`}
+              toggleContrast
+              transitionDelay={500}
+            />
           </Name>
           <Info>
             <Specs>
@@ -179,7 +164,9 @@ const Overview = ({ champion }: ChampionProps) => {
                     <DifficultyIcon difficulty={difficulty} />
                   </SpecsItemIcon>
                   <SpecsItemType>Difficulty</SpecsItemType>
-                  <SpecsItemValue>{difficulty}</SpecsItemValue>
+                  <SpecsItemValue>
+                    {t(CHAMPION_DIFFICULTIES[difficulty])}
+                  </SpecsItemValue>
                 </SpecsItem>
               </SpecsList>
             </Specs>
@@ -200,7 +187,7 @@ const Overview = ({ champion }: ChampionProps) => {
       </SectionInner>
 
       <ChampionsButtonContainer>
-        <ChampionsButton as={Link} to={routes.championsListPagePath()}>
+        <ChampionsButton as={Link} to={routes.championListPagePath()}>
           <ChampionsButtonText>Champions List</ChampionsButtonText>
           <ChampionsButtonIcon
             xmlns="http://www.w3.org/2000/svg"
