@@ -1,5 +1,5 @@
 export default {
-  championsListPagePath: () => '/',
+  championListPagePath: () => '/',
   championPagePath: () => '/champions/:name',
   notFoundPagePath: () => '*',
 };

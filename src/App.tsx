@@ -10,7 +10,7 @@ const App = () => (
   <Router>
     <Header />
     <Routes>
-      <Route path={routes.championsListPagePath()} element={<ChampionList />} />
+      <Route path={routes.championListPagePath()} element={<ChampionList />} />
       <Route path={routes.championPagePath()} element={<Champion />} />
       <Route path={routes.notFoundPagePath()} element={<NotFound />} />
     </Routes>
