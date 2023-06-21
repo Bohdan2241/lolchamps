@@ -5,9 +5,10 @@ import { Link } from 'react-router-dom';
 import GiantTitle from '../../../Components/GiantTitle';
 import ChampionDifficultyRanking from '../../../enums/championDifficultyRanking';
 import ChampionRole from '../../../enums/championRole';
+import ImageSize from '../../../enums/imageSize';
 import routes from '../../../routes';
 import { Champion } from '../../../types';
-import getChampionLargeImageLink from '../../../utils/getChampionLargeImageLink';
+import getChampionLargeImageLink from '../../../utils/getChampionImageLink';
 import getRoleSvgIcon from '../../../utils/getRoleSvgIcon';
 import levelToRanking, {
   CHAMPION_DIFFICULTIES,
@@ -129,12 +130,14 @@ const Overview = ({ champion }: ChampionProps) => {
     <OverviewSection>
       <BackgroundAsset>
         <WrapBackgroundImage>
-          <BackgroundImage src={getChampionLargeImageLink(id)} />
+          <BackgroundImage
+            src={getChampionLargeImageLink(id, ImageSize.LARGE)}
+          />
         </WrapBackgroundImage>
       </BackgroundAsset>
       <SectionInner>
         <ForegroundAsset>
-          <MainImage src={getChampionLargeImageLink(id)} />
+          <MainImage src={getChampionLargeImageLink(id, ImageSize.LARGE)} />
         </ForegroundAsset>
         <Dock>
           <Container ref={containerRef} />

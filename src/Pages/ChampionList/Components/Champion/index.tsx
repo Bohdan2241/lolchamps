@@ -1,8 +1,8 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
-import getChampionLargeImageLink from '../../../../utils/getChampionLargeImageLink';
+import ImageSize from '../../../../enums/imageSize';
+import getChampionLargeImageLink from '../../../../utils/getChampionImageLink';
 import { ImageContainer, Name, ResponsiveWrapper, Text } from './style';
 
 export interface Props {
@@ -22,19 +22,17 @@ const Section: React.FC<Props> = ({
   isFirstTime = true,
   className,
 }) => {
-  const { t } = useTranslation();
-
   return (
     <ResponsiveWrapper
       as={Link}
-      to={`${t('champion-link.start')}${id}`}
+      to={id}
       className={`${className} ${isVisible ? 'isVisible' : ''} ${
         isFirstTime ? 'isFirstTime' : ''
       }`}
       delay={animationDelay}
     >
       <ImageContainer>
-        <img src={getChampionLargeImageLink(id)} />
+        <img src={getChampionLargeImageLink(id, ImageSize.MEDIUM)} />
       </ImageContainer>
       <Name>
         <Text>{name}</Text>
