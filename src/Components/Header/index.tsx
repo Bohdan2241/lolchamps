@@ -4,7 +4,11 @@ import { HeaderElement, HeaderLink } from './style';
 const Header = () => {
   return (
     <HeaderElement>
+      <HeaderLink to={routes.homePagePath()}>Home</HeaderLink>
       <HeaderLink to={routes.championListPagePath()}>Champions</HeaderLink>
+      <HeaderLink to={routes.randomChampionPagePath()}>
+        Choose champion
+      </HeaderLink>
     </HeaderElement>
   );
 };
