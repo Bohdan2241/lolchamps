@@ -39,7 +39,7 @@ export const ImageContainer = styled.span`
     position: relative;
     display: block;
     width: 100%;
-    padding-top: ${(560 / 496) * 100 + '%'};
+    padding-top: 160%;
   }
 
   &::after {
