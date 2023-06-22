@@ -1,5 +1,5 @@
 enum ImageSize {
-  SMALL = '',
+  SMALL = 'small',
   MEDIUM = 'loading',
   LARGE = 'splash',
 }
