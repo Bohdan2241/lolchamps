@@ -3,6 +3,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Header from './Components/Header';
 import Champion from './Pages/Champion';
 import ChampionList from './Pages/ChampionList';
+import CreateTeam from './Pages/CreateTeam';
 import Home from './Pages/Home';
 import NotFound from './Pages/NotFound/NotFound';
 import RandomChampion from './Pages/RandomChampion';
@@ -31,6 +32,10 @@ const App = () => {
           element={<RandomChampion champions={champions} />}
         />
         <Route path={routes.notFoundPagePath()} element={<NotFound />} />
+        <Route
+          path={routes.createTeamPagePath()}
+          element={<CreateTeam champions={champions} />}
+        />
       </Routes>
     </Router>
   );

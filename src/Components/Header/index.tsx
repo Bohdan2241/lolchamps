@@ -9,6 +9,7 @@ const Header = () => {
       <HeaderLink to={routes.randomChampionPagePath()}>
         Choose champion
       </HeaderLink>
+      <HeaderLink to={routes.createTeamPagePath()}>Create Team</HeaderLink>
     </HeaderElement>
   );
 };
