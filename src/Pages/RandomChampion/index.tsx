@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
+import GiantTitle from '../../Components/GiantTitle';
 import { ChampionShortData } from '../../types';
 import RandomChampionItem from './Components/RandomChampionItem';
 import Nav from './Nav';
+import { List } from './style';
 
 type Props = {
   champions: ChampionShortData[];
@@ -12,17 +15,20 @@ const RandomChampion: React.FC<Props> = ({ champions }) => {
   const [randomChampions, setRandomChampions] = useState<ChampionShortData[]>(
     []
   );
+  const { t } = useTranslation();
 
   return (
     <section>
       <Nav champions={champions} setRandomChampions={setRandomChampions} />
 
+      <GiantTitle text={t('section.champion-list.title')} toggleContrast />
+
       {randomChampions.length > 0 && (
-        <div style={{ display: 'flex' }}>
+        <List>
           {randomChampions.map((champion) => {
             return <RandomChampionItem {...champion} key={champion.id} />;
           })}
-        </div>
+        </List>
       )}
     </section>
   );
