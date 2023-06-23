@@ -23,6 +23,24 @@ export const HeaderElement = styled.header`
 `;
 
 export const HeaderLink = styled(Link)`
+  position: relative;
   text-transform: uppercase;
   color: inherit;
+  padding: 7.5px 16px;
+
+  &:hover {
+    background: rgba(128, 128, 128, 0.3);
+    border-radius: 6.4px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      right: 0;
+      height: 4px;
+      border-radius: 2px;
+      background-color: rgb(0, 160, 186);
+    }
+  }
 `;
