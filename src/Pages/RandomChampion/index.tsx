@@ -26,7 +26,10 @@ const RandomChampion: React.FC<Props> = ({ champions }) => {
       <section>
         <Nav champions={champions} setRandomChampions={setRandomChampions} />
 
-        <GiantTitle text={t('section.champion-list.title')} toggleContrast />
+        <GiantTitle
+          text={t('section.champion-list.title')}
+          $toggleContrast={true}
+        />
 
         {randomChampions.length > 0 && (
           <List>

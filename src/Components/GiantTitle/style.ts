@@ -21,13 +21,13 @@ const simpleFadeIn = keyframes`
   }
 `;
 
-export const Wrapper = styled.div<{ toggleContrast: boolean }>`
+export const Wrapper = styled.div<{ $toggleContrast: boolean }>`
   position: relative;
   z-index: 1;
 
   text-align: center;
-  color: ${({ toggleContrast }) =>
-    toggleContrast ? COLOR_TEXT_WHITE : COLOR_TEXT_BLACK};
+  color: ${({ $toggleContrast }) =>
+    $toggleContrast ? COLOR_TEXT_WHITE : COLOR_TEXT_BLACK};
 `;
 
 export const Heading = styled.h1`

@@ -147,7 +147,7 @@ const Overview = ({ champion }: ChampionProps) => {
             <GiantTitle
               titleRef={nameRef}
               text={`${title ? `${title}\n` : ''}${name}`}
-              toggleContrast
+              $toggleContrast={true}
               transitionDelay={500}
             />
           </Name>

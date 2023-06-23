@@ -10,7 +10,7 @@ interface Props {
   className?: string;
   text: string;
   description?: string;
-  toggleContrast?: boolean;
+  $toggleContrast?: boolean;
   transitionDelay?: number;
 }
 
@@ -22,7 +22,7 @@ const GiantTitle = React.forwardRef<HTMLDivElement, Props>(
       className,
       text,
       description,
-      toggleContrast = false,
+      $toggleContrast = false,
       transitionDelay = 0,
     },
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -54,7 +54,7 @@ const GiantTitle = React.forwardRef<HTMLDivElement, Props>(
     }
 
     return (
-      <Wrapper className={className} toggleContrast={toggleContrast}>
+      <Wrapper className={className} $toggleContrast={$toggleContrast}>
         <Heading>
           {intro && (
             <Intro>
