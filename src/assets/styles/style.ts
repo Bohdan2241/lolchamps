@@ -4,6 +4,7 @@ import { COLOR_BACKGROUND_DARK_LIGHT, COLOR_TEXT_WHITE } from './theme';
 
 const baseStyle = css`
   body {
+    margin: 0;
     cursor: default;
     -webkit-tap-highlight-color: transparent;
   }
