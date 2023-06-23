@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 
 import GiantTitle from '../../Components/GiantTitle';
@@ -36,21 +37,26 @@ const ChampionList: React.FC<Props> = ({ champions }) => {
   const { t } = useTranslation();
 
   return (
-    <Wrapper>
-      <GiantTitle text={t('section.champion-list.title')} toggleContrast />
-      <Introduction>{t('section.champion-list.description')}</Introduction>
-      <Body>
-        <Nav
-          champions={champions}
-          onSelectActiveChampions={setActiveChampions}
-        />
-        <List
-          isFirstTime={isFirstTime}
-          isVisible={!isTransition}
-          champions={activeListChampions}
-        />
-      </Body>
-    </Wrapper>
+    <>
+      <Helmet>
+        <title>{t('champion-list.title')}</title>
+      </Helmet>
+      <Wrapper>
+        <GiantTitle text={t('section.champion-list.title')} toggleContrast />
+        <Introduction>{t('section.champion-list.description')}</Introduction>
+        <Body>
+          <Nav
+            champions={champions}
+            onSelectActiveChampions={setActiveChampions}
+          />
+          <List
+            isFirstTime={isFirstTime}
+            isVisible={!isTransition}
+            champions={activeListChampions}
+          />
+        </Body>
+      </Wrapper>
+    </>
   );
 };
 

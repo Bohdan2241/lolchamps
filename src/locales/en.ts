@@ -23,5 +23,10 @@ export default {
     error: 'Oh no, there was an error',
     'error.404': 'Error 404',
     pageNotFound: 'The page you were looking for was not found.',
+    'champion-page.title': ' - League of Legends',
+    'champion-list.title': 'Champions - League of Legends',
+    'create-team.title': 'Create Team - League of Legends',
+    'home.title': 'League of Legends',
+    'random-champion.title': 'Random Champion - League of Legends',
   },
 };
