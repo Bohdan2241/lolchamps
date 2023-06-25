@@ -1,4 +1,5 @@
 import { useDraggable } from '@dnd-kit/core';
+import { CSS } from '@dnd-kit/utilities';
 import React from 'react';
 
 import ImageSize from '../../../../enums/imageSize';
@@ -10,15 +11,18 @@ type Props = {
 };
 
 const SidebarItem: React.FC<Props> = ({ id }) => {
+  const championImageLink = getChampionImageLink(id, ImageSize.SMALL);
+
   const { attributes, listeners, setNodeRef, transform } = useDraggable({
     id: id,
+    data: { championImageLink },
   });
 
   return (
     <Item
       ref={setNodeRef}
       style={{
-        transform: `translate3d(${transform?.x}px, ${transform?.y}px, 0)`,
+        transform: CSS.Translate.toString(transform),
       }}
       {...listeners}
       {...attributes}
