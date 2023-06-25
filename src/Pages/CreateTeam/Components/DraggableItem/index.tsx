@@ -23,6 +23,7 @@ const SidebarItem: React.FC<Props> = ({ id }) => {
       ref={setNodeRef}
       style={{
         transform: CSS.Translate.toString(transform),
+        touchAction: 'none',
       }}
       {...listeners}
       {...attributes}
