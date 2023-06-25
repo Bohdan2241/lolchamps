@@ -6,9 +6,8 @@ export const Wrapper = styled.section`
 `;
 
 export const Sidebar = styled.aside`
-  flex: 1 1 30%;
   display: flex;
   flex-wrap: wrap;
   max-height: calc(100vh - 80px);
-  max-width: 30%;
+  max-width: calc(80px * 4);
 `;
