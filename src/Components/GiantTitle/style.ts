@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import {
   COLOR_TEXT_BLACK,
@@ -9,17 +9,7 @@ import {
   MEDIA_MOBILE_TINY,
   MEDIA_TABLET_ALL,
 } from '../../assets/styles/theme';
-import { easing } from '../../utils/style/easing';
 import rem from '../../utils/style/rem';
-
-const simpleFadeIn = keyframes`
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-`;
 
 export const Wrapper = styled.div<{ $toggleContrast: boolean }>`
   position: relative;
@@ -39,7 +29,7 @@ export const Intro = styled.span`
   display: block;
 
   font-size: ${rem(24)};
-  line-height: 1; // 1.1
+  line-height: 1;
   font-style: italic;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -60,11 +50,6 @@ export const Intro = styled.span`
   @media ${MEDIA_MOBILE_TINY} {
     font-size: ${rem(14)};
   }
-
-  /* opacity: 0;
-  ${Wrapper}.is-visible & {
-    animation: ${simpleFadeIn} forwards 1.4s 0.25s ${easing.easeOutCubic};
-  } */
 `;
 
 export const Title = styled.strong`

@@ -53,7 +53,6 @@ export const ForegroundInner = styled.div`
 
 export const ForegroundRow = styled.div`
   width: 100%;
-  /* margin-top: 0.625rem; */
   text-align: center;
 `;
 
