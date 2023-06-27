@@ -39,7 +39,7 @@ const ChampionList: React.FC<Props> = ({ champions }) => {
     setActiveListChampions(activeChampions);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeChampions]);
-  console.log('render');
+
   const { t } = useTranslation();
 
   return (
