@@ -15,10 +15,16 @@ type Props = {
 const ChampionList: React.FC<Props> = ({ champions }) => {
   const [isTransition, setIsTransition] = useState<boolean>(false);
   const [isFirstTime, setIsFirstTime] = useState<boolean>(true);
-  const [activeChampions, setActiveChampions] =
-    useState<ChampionShortData[]>(champions);
-  const [activeListChampions, setActiveListChampions] =
-    useState<ChampionShortData[]>(activeChampions);
+  const [activeChampions, setActiveChampions] = useState<ChampionShortData[]>(
+    []
+  );
+  const [activeListChampions, setActiveListChampions] = useState<
+    ChampionShortData[]
+  >([]);
+
+  useEffect(() => {
+    setActiveChampions(champions);
+  }, [champions]);
 
   useEffect(() => {
     if (isFirstTime) setIsFirstTime(false);
@@ -33,7 +39,7 @@ const ChampionList: React.FC<Props> = ({ champions }) => {
     setActiveListChampions(activeChampions);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeChampions]);
-
+  console.log('render');
   const { t } = useTranslation();
 
   return (
