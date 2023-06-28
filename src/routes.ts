@@ -1,7 +1,7 @@
 export default {
   homePagePath: () => '/',
   championListPagePath: () => '/champions/',
-  championPagePath: () => '/champions/:name',
+  championPagePath: (id = ':name') => ['/champions', id].join('/'),
   randomChampionPagePath: () => '/random-champion/',
   createTeamPagePath: () => '/create-team/',
   notFoundPagePath: () => '*',
