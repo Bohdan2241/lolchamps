@@ -45,7 +45,7 @@ const ChampionList: React.FC<Props> = ({ champions }) => {
   return (
     <>
       <Helmet>
-        <title>{t('champion-list.title')}</title>
+        <title>{t('champion-list-page.title')}</title>
       </Helmet>
       <Wrapper>
         <GiantTitle

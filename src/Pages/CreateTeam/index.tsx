@@ -56,7 +56,7 @@ const CreateTeam: React.FC<Props> = ({ champions }) => {
   return (
     <>
       <Helmet>
-        <title>{t('create-team.title')}</title>
+        <title>{t('create-team-page.title')}</title>
       </Helmet>
 
       <Wrapper>

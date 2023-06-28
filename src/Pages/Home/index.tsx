@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>{t('home.title')}</title>
+        <title>{t('home-page.title')}</title>
       </Helmet>
       <Wrapper>
         <ForegroundVideoWrapper>
