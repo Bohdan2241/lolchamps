@@ -1,6 +1,8 @@
 import routes from '../../routes';
 import { HeaderElement, HeaderLink } from './style';
 
+// TODO: add active styles to current link
+
 const Header = () => {
   return (
     <HeaderElement>
