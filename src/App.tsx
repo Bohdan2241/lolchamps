@@ -5,7 +5,7 @@ import Champion from './Pages/Champion';
 import ChampionList from './Pages/ChampionList';
 import CreateTeam from './Pages/CreateTeam';
 import Home from './Pages/Home';
-import NotFound from './Pages/NotFound/NotFound';
+import NotFound from './Pages/NotFound';
 import RandomChampion from './Pages/RandomChampion';
 import routes from './routes';
 import { useGetAllChampionsQuery } from './services/champion';
