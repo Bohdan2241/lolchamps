@@ -4,6 +4,8 @@ export const MAX_WIDTH = 1800;
 export const COLUMN_WIDTH = BASE_WIDTH / COLUMNS;
 export const MOBILE_MARGIN = 20;
 
+export const CARD_MIN_HEIGHT = 450;
+
 const FONT_FAMILY_SPIEGEL = 'Spiegel';
 
 const FONT_FAMILY_BEAUFORT = 'Beaufort for LOL';
