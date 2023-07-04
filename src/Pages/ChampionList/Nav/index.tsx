@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Select from 'react-select';
 
+import RoleButton from '../../../Components/RoleButton';
 import ChampionDifficultyRanking from '../../../enums/championDifficultyRanking';
 import ChampionRole from '../../../enums/championRole';
 import { ChampionShortData } from '../../../types';
 import levelToRanking from '../../../utils/levelToRanking';
-import { difficultySelectStyles, Nav, RoleButton, SectionNav } from './style';
+import { Buttons, difficultySelectStyles, Nav, Wrapper } from './style';
 
 interface ChampionRoleOption {
   value: ChampionRole;
@@ -101,7 +102,7 @@ const Section: React.FC<Props> = ({ champions, onSelectActiveChampions }) => {
   const { t } = useTranslation();
 
   return (
-    <SectionNav>
+    <Wrapper>
       <Nav>
         <Select
           options={championOptions}
@@ -114,12 +115,12 @@ const Section: React.FC<Props> = ({ champions, onSelectActiveChampions }) => {
           noOptionsMessage={() => t('search.message.no-champions-found')}
           onChange={(v: unknown) => {
             const value: ChampionOption | null =
-              v instanceof Array ? v[0] : v || null; // ! refactor it
+              v instanceof Array ? v[0] : v || null;
             setSearchValue(value);
           }}
         />
 
-        <div>
+        <Buttons>
           {/* large screen */}
           {[
             { value: null, label: t('champion-role.all.short') },
@@ -133,13 +134,12 @@ const Section: React.FC<Props> = ({ champions, onSelectActiveChampions }) => {
                   : option.value === null
               }
               onClick={() => setRoleValue(option.value ? option : null)}
-            >
-              {t(option.label)}
-            </RoleButton>
+              text={t(option.label)}
+            />
           ))}
           {/* small screen */}
           {/* TODO: add mobile version here */}
-        </div>
+        </Buttons>
 
         <Select
           options={CHAMPION_DIFFICULTY_OPTIONS.map((o) => ({
@@ -153,12 +153,12 @@ const Section: React.FC<Props> = ({ champions, onSelectActiveChampions }) => {
           placeholder={t('champion-difficulty.all-difficulties')}
           onChange={(v: unknown) => {
             const value: ChampionDifficultyOption | null =
-              v instanceof Array ? v[0] : v || null; // ! refactor it
+              v instanceof Array ? v[0] : v || null;
             setDifficultyValue(value);
           }}
         />
       </Nav>
-    </SectionNav>
+    </Wrapper>
   );
 };
 
