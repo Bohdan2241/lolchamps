@@ -3,8 +3,8 @@ import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 
 import GiantTitle from '../../Components/GiantTitle';
+import Loader from '../../Components/Loader';
 import { ChampionShortData } from '../../types';
-import Loader from './Components/Loader';
 import List from './List';
 import Nav from './Nav';
 import { Section, Wrapper } from './style';

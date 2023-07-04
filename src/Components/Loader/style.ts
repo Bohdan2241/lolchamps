@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import {
   COLOR_BACKGROUND_DARK_BLUE,
   COLOR_BACKGROUND_LIGHT_BLUE,
-} from '../../../../assets/styles/theme';
+} from '../../assets/styles/theme';
 
 export const LoadingContainer = styled.div`
   position: absolute;
