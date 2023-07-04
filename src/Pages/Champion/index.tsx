@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router-dom';
 
+import Loader from '../../Components/Loader';
 import { useGetChampionByNameQuery } from '../../services/champion';
 import Overview from './Sections/Overview';
 
@@ -12,7 +13,7 @@ const Champion = () => {
   const { t } = useTranslation();
 
   if (isLoading) {
-    return <>Loading...</>;
+    return <Loader />;
   }
 
   if (error) {
