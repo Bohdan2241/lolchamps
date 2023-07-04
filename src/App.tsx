@@ -1,14 +1,17 @@
+import { lazy, Suspense } from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
 import Header from './Components/Header';
-import Champion from './Pages/Champion';
-import ChampionList from './Pages/ChampionList';
-import CreateTeam from './Pages/CreateTeam';
+import Loader from './Components/Loader';
 import Home from './Pages/Home';
-import NotFound from './Pages/NotFound';
-import RandomChampion from './Pages/RandomChampion';
 import routes from './routes';
 import { useGetAllChampionsQuery } from './services/champion';
+
+const Champion = lazy(() => import('./Pages/Champion'));
+const ChampionList = lazy(() => import('./Pages/ChampionList'));
+const CreateTeam = lazy(() => import('./Pages/CreateTeam'));
+const NotFound = lazy(() => import('./Pages/NotFound'));
+const RandomChampion = lazy(() => import('./Pages/RandomChampion'));
 
 const App = () => {
   const { data } = useGetAllChampionsQuery();
@@ -20,23 +23,31 @@ const App = () => {
   return (
     <Router>
       <Header />
-      <Routes>
-        <Route path={routes.homePagePath()} element={<Home />} />
-        <Route
-          path={routes.championListPagePath()}
-          element={<ChampionList champions={champions} />}
-        />
-        <Route path={routes.championPagePath()} element={<Champion />} />
-        <Route
-          path={routes.randomChampionPagePath()}
-          element={<RandomChampion champions={champions} />}
-        />
-        <Route path={routes.notFoundPagePath()} element={<NotFound />} />
-        <Route
-          path={routes.createTeamPagePath()}
-          element={<CreateTeam champions={champions} />}
-        />
-      </Routes>
+
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route path={routes.homePagePath()} element={<Home />} />
+
+          <Route
+            path={routes.championListPagePath()}
+            element={<ChampionList champions={champions} />}
+          />
+
+          <Route path={routes.championPagePath()} element={<Champion />} />
+
+          <Route
+            path={routes.randomChampionPagePath()}
+            element={<RandomChampion champions={champions} />}
+          />
+
+          <Route path={routes.notFoundPagePath()} element={<NotFound />} />
+
+          <Route
+            path={routes.createTeamPagePath()}
+            element={<CreateTeam champions={champions} />}
+          />
+        </Routes>
+      </Suspense>
     </Router>
   );
 };
