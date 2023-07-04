@@ -1,6 +1,13 @@
 import { StylesConfig } from 'react-select';
 import styled, { css } from 'styled-components';
 
+import {
+  COLOR_BACKGROUND_DARK_BLUE,
+  COLOR_BACKGROUND_LIGHT_BLUE,
+  COLOR_TEXT_WHITE,
+} from '../../../assets/styles/theme';
+import { animation, rem } from '../../../utils/style';
+
 export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
@@ -9,8 +16,17 @@ export const Nav = styled.nav`
   max-width: 1400px;
 `;
 
-export const SectionNav = styled.section`
+export const Wrapper = styled.section`
+  position: relative;
+  z-index: 5;
   margin: 0px 2%;
+
+  ${animation.fadeIn({ delay: 500 })}
+`;
+
+export const Buttons = styled.div`
+  display: flex;
+  gap: 8px;
 `;
 
 export const RoleButton = styled.button<{ selected: boolean }>`
@@ -18,7 +34,7 @@ export const RoleButton = styled.button<{ selected: boolean }>`
   margin: 0 8px;
   border: none;
   background-color: #006780;
-  font-size: 12px;
+  font-size: ${rem(12)};
   color: white;
   border-radius: 4px;
   transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
@@ -46,31 +62,32 @@ export const difficultySelectStyles: StylesConfig = {
     boxShadow: 'none',
     WebkitBoxAlign: 'center',
     justifyContent: 'center',
-    backgroundColor: 'rgb(0, 102, 128)',
-    width: '206px',
+    backgroundColor: `${COLOR_BACKGROUND_LIGHT_BLUE}`,
+    minWidth: '206px',
     textTransform: 'uppercase',
-    fontSize: '12px',
+    fontSize: `${rem(12)}`,
   }),
   option: (base, props) => ({
     ...base,
     cursor: 'pointer',
-    color: 'rgb(255, 255, 255)',
-    fontSize: '12px',
+    color: `${COLOR_TEXT_WHITE}`,
+    fontSize: `${rem(12)}`,
+    textTransform: 'uppercase',
     '&:hover': {
       backgroundColor: props.isSelected
-        ? 'rgb(6, 28, 37)'
+        ? `${COLOR_BACKGROUND_DARK_BLUE}`
         : 'rgb(0 102 128 / 50%)',
     },
     backgroundColor: props.isSelected
-      ? 'rgb(6, 28, 37)'
+      ? `${COLOR_BACKGROUND_DARK_BLUE}`
       : props.isFocused
       ? 'rgb(0 102 128 / 50%)'
-      : 'rgb(0, 102, 128)',
+      : `${COLOR_BACKGROUND_LIGHT_BLUE}`,
     transition:
       'background-color 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s',
   }),
-  placeholder: (base) => ({ ...base, color: 'white' }),
-  singleValue: (base) => ({ ...base, color: 'white' }),
+  placeholder: (base) => ({ ...base, color: `${COLOR_TEXT_WHITE}` }),
+  singleValue: (base) => ({ ...base, color: `${COLOR_TEXT_WHITE}` }),
   indicatorSeparator: (base) => ({ ...base, display: 'none' }),
   menu: (base) => ({
     ...base,
@@ -83,7 +100,7 @@ export const difficultySelectStyles: StylesConfig = {
   }),
   dropdownIndicator: (base) => ({
     ...base,
-    color: '#fff',
+    color: `${COLOR_TEXT_WHITE}`,
     padding: '4px',
 
     '& svg': {
@@ -93,7 +110,7 @@ export const difficultySelectStyles: StylesConfig = {
   }),
   clearIndicator: (base) => ({
     ...base,
-    color: '#fff',
+    color: `${COLOR_TEXT_WHITE}`,
     padding: '0px',
     backgroundColor: 'rgb(213, 213, 213)',
     borderRadius: '50%',
@@ -108,7 +125,7 @@ export const difficultySelectStyles: StylesConfig = {
       backgroundColor: 'grey',
 
       '& svg': {
-        fill: '#fff',
+        fill: `${COLOR_TEXT_WHITE}`,
       },
     },
   }),
@@ -125,5 +142,14 @@ export const difficultySelectStyles: StylesConfig = {
     alignSelf: 'stretch',
     display: 'flex',
     flexShrink: '0',
+  }),
+  input: (base) => ({
+    ...base,
+    color: `${COLOR_TEXT_WHITE}`,
+  }),
+  noOptionsMessage: (base) => ({
+    ...base,
+    color: `${COLOR_TEXT_WHITE}`,
+    backgroundColor: `${COLOR_BACKGROUND_LIGHT_BLUE}`,
   }),
 };
