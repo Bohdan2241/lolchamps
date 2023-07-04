@@ -29,6 +29,9 @@ export default {
     'create-team-page.title': 'Create Team - League of Legends',
     'home-page.title': 'League of Legends',
     'random-champion-page.title': 'Random Champion - League of Legends',
+    'random-champion-page.button': 'Randomize',
     'card-title': "Here's your champ!",
+    'card.details-button': 'Details about this champ',
+    'card.default-text': 'Click the button above to roll a new champ!',
   },
 };
