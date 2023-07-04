@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { animation } from '../../utils/style';
+
 export const Wrapper = styled.section`
   padding: 70px 0 140px 0;
 `;
@@ -13,6 +15,7 @@ export const Introduction = styled.p`
   line-height: 1.6;
   box-sizing: content-box;
   letter-spacing: 0.08em;
+  ${animation.fadeIn({ delay: 400 })}
 `;
 
 export const Body = styled.div`
