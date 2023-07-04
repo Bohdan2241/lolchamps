@@ -13,7 +13,7 @@ const CreateTeam = lazy(() => import('./Pages/CreateTeam'));
 const NotFound = lazy(() => import('./Pages/NotFound'));
 const RandomChampion = lazy(() => import('./Pages/RandomChampion'));
 
-const App = () => {
+export const App = () => {
   const { data } = useGetAllChampionsQuery();
   const unsortedChampions = Object.values(data?.data || {});
   const champions = unsortedChampions.sort((a, b) =>
@@ -21,7 +21,7 @@ const App = () => {
   );
 
   return (
-    <Router>
+    <>
       <Header />
 
       <Suspense fallback={<Loader />}>
@@ -48,8 +48,14 @@ const App = () => {
           />
         </Routes>
       </Suspense>
-    </Router>
+    </>
   );
 };
 
-export default App;
+export const WrappedApp = () => {
+  return (
+    <Router>
+      <App />
+    </Router>
+  );
+};
