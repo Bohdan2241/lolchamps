@@ -1,44 +1,53 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 
 import GiantTitle from '../../Components/GiantTitle';
 import { ChampionShortData } from '../../types';
-import RandomChampionItem from './Components/RandomChampionItem';
+import Loader from './Components/Loader';
+import List from './List';
 import Nav from './Nav';
-import { List } from './style';
+import { Section, Wrapper } from './style';
 
 type Props = {
   champions: ChampionShortData[];
 };
 
 const RandomChampion: React.FC<Props> = ({ champions }) => {
+  const { t } = useTranslation();
   const [randomChampions, setRandomChampions] = useState<ChampionShortData[]>(
     []
   );
-  const { t } = useTranslation();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, [randomChampions]);
 
   return (
     <>
       <Helmet>
-        <title>{t('random-champion.title')}</title>
+        <title>{t('random-champion-page.title')}</title>
       </Helmet>
-      <section>
-        <Nav champions={champions} setRandomChampions={setRandomChampions} />
-
+      <Section>
         <GiantTitle
-          text={t('section.champion-list.title')}
+          text={t('section.random-champion.title')}
           $toggleContrast={true}
         />
 
-        {randomChampions.length > 0 && (
-          <List>
-            {randomChampions.map((champion) => {
-              return <RandomChampionItem {...champion} key={champion.id} />;
-            })}
-          </List>
-        )}
-      </section>
+        <Nav
+          champions={champions}
+          setRandomChampions={setRandomChampions}
+          setLoading={setLoading}
+        />
+        <Wrapper>
+          {loading ? <Loader /> : <List randomChampions={randomChampions} />}
+        </Wrapper>
+      </Section>
     </>
   );
 };

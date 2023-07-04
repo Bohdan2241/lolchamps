@@ -1,20 +1,38 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
+import RoleButton from '../../../Components/RoleButton';
 import ChampionRole from '../../../enums/championRole';
 import { ChampionShortData } from '../../../types';
+import {
+  CheckboxContainer,
+  CheckboxInput,
+  CheckboxLabel,
+  Nav,
+  Roles,
+} from './style';
+
+const MAX_RANDOM_CHAMPS = 5;
 
 type Props = {
   champions: ChampionShortData[];
   setRandomChampions: (n: ChampionShortData[]) => void;
+  setLoading: (v: boolean) => void;
 };
 
-const Nav: React.FC<Props> = ({ champions, setRandomChampions }) => {
+const Section: React.FC<Props> = ({
+  champions,
+  setRandomChampions,
+  setLoading,
+}) => {
+  const { t } = useTranslation();
   const [renderCount, setRenderCount] = useState<number>(1);
   const [selectedRoles, setSelectedRoles] = useState(
     Object.values(ChampionRole)
   );
 
   const handleRandomize = () => {
+    setLoading(true);
     let filteredChampions = champions;
 
     if (selectedRoles.length) {
@@ -56,39 +74,48 @@ const Nav: React.FC<Props> = ({ champions, setRandomChampions }) => {
     }
   };
 
+  const isDisabled =
+    renderCount < 1 ||
+    renderCount > MAX_RANDOM_CHAMPS ||
+    selectedRoles.length === 0;
+
   return (
-    <nav>
-      <button
-        onClick={handleRandomize}
-        disabled={renderCount <= 0 || selectedRoles.length === 0}
-      >
-        Randomize
-      </button>
+    <Nav>
+      <div>
+        <RoleButton
+          onClick={handleRandomize}
+          // TODO: add tooltip 1-5 + role > 0
+          disabled={isDisabled}
+          text={t('random-champion-page.button')}
+        />
+      </div>
       <div>
         <label htmlFor="countInput">Number of times to render:</label>
         <input
           id="countInput"
           type="number"
           min={1}
-          max={5}
+          max={MAX_RANDOM_CHAMPS}
           value={renderCount}
           onChange={handleCountChange}
         />
       </div>
-      <div>
+      <Roles>
         {Object.values(ChampionRole).map((role) => (
-          <label key={role}>
-            {role}
-            <input
-              type="checkbox"
-              checked={selectedRoles.includes(role)}
-              onChange={(e) => handleRoleChange(e, role)}
-            />
-          </label>
+          <CheckboxContainer key={role}>
+            <CheckboxLabel>
+              <CheckboxInput
+                type="checkbox"
+                checked={selectedRoles.includes(role)}
+                onChange={(e) => handleRoleChange(e, role)}
+              />
+              {role}
+            </CheckboxLabel>
+          </CheckboxContainer>
         ))}
-      </div>
-    </nav>
+      </Roles>
+    </Nav>
   );
 };
 
-export default Nav;
+export default Section;
