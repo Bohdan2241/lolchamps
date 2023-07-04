@@ -38,17 +38,28 @@ const toLeftBottom = css`
 
 // SE
 const animateShowSE = keyframes`
-  from { ${fromLeftTop} }
-  to { ${toRightBottom} }
+  from {
+    ${fromLeftTop}
+  }
+  to {
+    ${toRightBottom}
+  }
 `;
+
 const animateHideSE = keyframes`
-  from { ${toLeftTop} }
-  to { ${fromRightBottom} }
+  from {
+    ${toLeftTop}
+  }
+  to {
+    ${fromRightBottom}
+  }
 `;
+
 const showSE = css`
   ${toRightBottom}
   animation-name: ${animateShowSE};
 `;
+
 const hideSE = css`
   ${fromRightBottom}
   animation-name: ${animateHideSE};
@@ -56,17 +67,28 @@ const hideSE = css`
 
 // NE
 const animateShowNE = keyframes`
-  from { ${fromLeftBottom} }
-  to { ${toRightTop} }
+  from {
+    ${fromLeftBottom}
+  }
+  to {
+    ${toRightTop}
+  }
 `;
+
 const animateHideNE = keyframes`
-  from { ${toLeftBottom} }
-  to { ${fromRightTop} }
+  from {
+    ${toLeftBottom}
+  }
+  to {
+    ${fromRightTop}
+  }
 `;
+
 const showNE = css`
   ${toRightTop}
   animation-name: ${animateShowNE};
 `;
+
 const hideNE = css`
   ${fromRightTop}
   animation-name: ${animateHideNE};
@@ -74,17 +96,28 @@ const hideNE = css`
 
 // NW
 const animateShowNW = keyframes`
-  from { ${fromRightBottom} }
-  to { ${toLeftTop} }
+  from {
+    ${fromRightBottom}
+  }
+  to {
+    ${toLeftTop}
+  }
 `;
+
 const animateHideNW = keyframes`
-  from { ${toRightBottom} }
-  to { ${fromLeftTop} }
+  from {
+    ${toRightBottom}
+  }
+  to {
+    ${fromLeftTop}
+  }
 `;
+
 const showNW = css`
   ${toLeftTop}
   animation-name: ${animateShowNW};
 `;
+
 const hideNW = css`
   ${fromLeftTop}
   animation-name: ${animateHideNW};
@@ -92,17 +125,28 @@ const hideNW = css`
 
 // SW
 const animateShowSW = keyframes`
-  from { ${fromRightTop} }
-  to { ${toLeftBottom} }
+  from {
+    ${fromRightTop}
+  }
+  to {
+    ${toLeftBottom}
+  }
 `;
+
 const animateHideSW = keyframes`
-  from { ${toRightTop} }
-  to { ${fromLeftBottom} }
+  from {
+    ${toRightTop}
+  }
+  to {
+    ${fromLeftBottom}
+  }
 `;
+
 const showSW = css`
   ${toLeftBottom}
   animation-name: ${animateShowSW};
 `;
+
 const hideSW = css`
   ${fromLeftBottom}
   animation-name: ${animateHideSW};
