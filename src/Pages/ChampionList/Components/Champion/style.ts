@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 import {
+  COLOR_BACKGROUND_DARK_BLUE,
   COLOR_BACKGROUND_DARK_LIGHT,
+  COLOR_BACKGROUND_LIGHT_BLUE,
   FONT_FAMILY_SERIF,
   MEDIA_MOBILE_ALL,
 } from '../../../../assets/styles/theme';
@@ -70,7 +72,7 @@ export const ImageContainer = styled.span`
 export const Name = styled.span`
   display: block;
   overflow: hidden;
-  background-color: #061c25;
+  background-color: ${COLOR_BACKGROUND_DARK_BLUE};
   padding: 6% 8%;
 
   transition: 300ms background-color ${easing.easeOutQuad};
@@ -98,7 +100,7 @@ export const ResponsiveWrapper = styled(Wrapper)`
     }
 
     ${Name} {
-      background-color: #006680;
+      background-color: ${COLOR_BACKGROUND_LIGHT_BLUE};
     }
     ${Text} {
       transform: translate(10px, 0);
