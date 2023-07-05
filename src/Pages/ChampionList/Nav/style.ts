@@ -11,15 +11,15 @@ import { animation, rem } from '../../../utils/style';
 export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
-  height: 30px;
-  margin: 0px auto;
   max-width: 1400px;
+  height: 30px;
+  margin: 0 auto;
 `;
 
 export const Wrapper = styled.section`
   position: relative;
   z-index: 5;
-  margin: 0px 2%;
+  margin: 0 2%;
 
   ${animation.fadeIn({ delay: 500 })}
 `;
@@ -32,13 +32,13 @@ export const Buttons = styled.div`
 export const RoleButton = styled.button<{ selected: boolean }>`
   padding: 5.5px;
   margin: 0 8px;
-  border: none;
-  background-color: #006780;
   font-size: ${rem(12)};
-  color: white;
+  color: ${COLOR_TEXT_WHITE};
+  text-transform: uppercase;
+  background-color: #006780;
+  border: none;
   border-radius: 4px;
   transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
-  text-transform: uppercase;
 
   &:hover {
     background-color: rgb(0 102 128 / 50%);
@@ -46,8 +46,8 @@ export const RoleButton = styled.button<{ selected: boolean }>`
   ${({ selected }) =>
     selected &&
     css`
-      background-color: rgb(0 102 128 / 50%);
       color: #006780;
+      background-color: rgb(0 102 128 / 50%);
     `}
 `;
 

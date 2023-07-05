@@ -14,10 +14,9 @@ import rem from '../../utils/style/rem';
 export const Wrapper = styled.div<{ $toggleContrast: boolean }>`
   position: relative;
   z-index: 1;
-
-  text-align: center;
   color: ${({ $toggleContrast }) =>
     $toggleContrast ? COLOR_TEXT_WHITE : COLOR_TEXT_BLACK};
+  text-align: center;
 `;
 
 export const Heading = styled.h1`
@@ -27,13 +26,12 @@ export const Heading = styled.h1`
 
 export const Intro = styled.span`
   display: block;
-
   font-size: ${rem(24)};
-  line-height: 1;
   font-style: italic;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  line-height: 1;
   text-transform: uppercase;
+  letter-spacing: 0.1em;
 
   @media ${MEDIA_TABLET_ALL} {
     font-size: ${rem(20)};
@@ -54,19 +52,18 @@ export const Intro = styled.span`
 
 export const Title = styled.strong`
   display: block;
+  font-family: ${FONT_FAMILY_SERIF};
   font-size: 120px;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 
   @media ${MEDIA_MOBILE_ALL} {
     margin-top: ${rem(5)};
     font-size: 46px;
   }
-
-  line-height: 1; // 1.1
-  font-family: ${FONT_FAMILY_SERIF};
-  font-style: italic;
-  font-weight: 800;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
 
   span {
     /*
@@ -86,12 +83,12 @@ export const Description = styled.p<{
 }>`
   position: relative;
   max-width: 600px;
-  text-align: center;
   padding: 0 10%;
   margin: 12px auto 0;
   font-size: ${rem(14)};
-  letter-spacing: 0.08em;
   line-height: 1.6;
+  text-align: center;
+  letter-spacing: 0.08em;
 
   @media ${MEDIA_MOBILE_ALL} {
     padding: 0;

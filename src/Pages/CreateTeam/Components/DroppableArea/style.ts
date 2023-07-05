@@ -7,8 +7,8 @@ import {
 
 export const Title = styled.span`
   position: absolute;
-  left: 50%;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 `;
 
@@ -16,12 +16,13 @@ export const SelectedChampion = styled.div<{ $isOver: boolean }>`
   position: absolute;
   width: 80px;
   height: 80px;
-  background-color: rgba(0, 102, 128, 0.2);
+  background-color: rgba(0 102 128 / 20%);
   border: ${({ $isOver }) =>
     $isOver
       ? `1px dashed ${COLOR_BACKGROUND_WHITE}`
       : `1px solid ${COLOR_PRIMARY_GOLD}`};
 
+  /* stylelint-disable selector-class-pattern */
   &.Top {
     top: 30px;
     left: 225px;
@@ -38,14 +39,15 @@ export const SelectedChampion = styled.div<{ $isOver: boolean }>`
   }
 
   &.ADC {
-    bottom: 180px;
     right: 275px;
+    bottom: 180px;
   }
 
   &.Support {
-    bottom: 150px;
     right: 170px;
+    bottom: 150px;
   }
+  /* stylelint-enable selector-class-pattern */
 
   & img {
     position: relative;

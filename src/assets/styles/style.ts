@@ -11,10 +11,6 @@ const baseStyle = css`
 
   a {
     text-decoration: none;
-    /* 
-    &:hover {
-      text-decoration: underline;
-    } */
   }
 
   h1,
@@ -44,7 +40,7 @@ const baseStyle = css`
     }
   }
 
-  // hide X that shows up in IE inside <input> fields
+  /* hide X that shows up in IE inside <input> fields */
   ::-ms-clear {
     display: none;
   }
@@ -58,22 +54,20 @@ const layoutStyle = css`
   }
 
   body {
-    overflow-y: scroll;
     margin-top: 80px;
-    background-color: ${COLOR_BACKGROUND_DARK_LIGHT};
+    overflow-y: scroll;
     color: ${COLOR_TEXT_WHITE};
+    background-color: ${COLOR_BACKGROUND_DARK_LIGHT};
   }
 
   img {
     display: block;
-    /* height: 100%;
-    width: 100%; */
   }
 
   ol,
   ul {
-    margin: 0;
     padding: 0;
+    margin: 0;
     list-style: none;
   }
 `;

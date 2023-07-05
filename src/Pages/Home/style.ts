@@ -13,19 +13,17 @@ const simpleFadeIn = keyframes`
 `;
 
 export const Video = styled.video`
-  height: 100%;
   width: 100%;
+  height: 100%;
   object-fit: cover;
 `;
 
 export const ForegroundVideoWrapper = styled.div`
   position: absolute;
-  left: 0;
   top: 0;
-
+  left: 0;
   width: 100%;
   height: 100%;
-
   background: ${COLOR_BACKGROUND_DARK};
 `;
 
@@ -36,14 +34,12 @@ export const ForegroundVideo = styled.div`
 
 export const LogoImage = styled.img`
   position: absolute;
-  left: 0;
   top: 0;
-
+  left: 0;
   display: block;
   width: 100%;
   height: 100%;
   margin: 0;
-
   animation: ${simpleFadeIn} backwards 1s 0.5s ${easing.easeOutCubic};
 `;
 
@@ -57,18 +53,18 @@ export const ForegroundRow = styled.div`
 `;
 
 export const Logo = styled.div`
-  display: inline-block;
   position: relative;
+  display: inline-block;
   width: 40vw;
-  height: calc(17.6333vw);
   max-width: 37.5rem;
+  height: calc(17.6333vw);
   max-height: 16.5312rem;
 `;
 
 export const Wrapper = styled.section`
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: calc(100vh - 84px);
 `;

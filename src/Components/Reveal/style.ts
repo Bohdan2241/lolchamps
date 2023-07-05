@@ -155,8 +155,8 @@ const hideSW = css`
 export const RevealWrapper = styled.div`
   &.absolute {
     position: absolute;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
   }
@@ -173,40 +173,46 @@ export const RevealWrapper = styled.div`
 
   /* Overridden by props */
   animation-duration: 1000ms;
-  animation-delay: 0ms;
   animation-timing-function: ease-in-out;
+  animation-delay: 0ms;
 
   &.show-se {
     ${showSE}
   }
+
   &.hide-se {
     ${hideSE}
   }
+
   &.show-ne {
     ${showNE}
   }
+
   &.hide-ne {
     ${hideNE}
   }
+
   &.show-nw {
     ${showNW}
   }
+
   &.hide-nw {
     ${hideNW}
   }
+
   &.show-sw {
     ${showSW}
   }
+
   &.hide-sw {
     ${hideSW}
   }
 
   html.is-ms &,
   html.is-safari &.safari-simplified {
-    animation: none !important;
     clip-path: none !important;
-
     opacity: 0;
+    animation: none !important;
 
     &.show-se,
     &.show-ne,
@@ -216,9 +222,11 @@ export const RevealWrapper = styled.div`
       transition-delay: 0s;
     }
   }
+
   html.is-ms & {
     transition: opacity 0.6s 0s ${easing.easeOutCubic};
   }
+
   html.is-safari &.safari-simplified {
     transition: opacity 0.6s 0s ${easing.easeOutCubic};
   }

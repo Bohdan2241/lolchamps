@@ -10,12 +10,12 @@ export const LoadingContainer = styled.div`
   top: 0;
   left: 0;
   z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: rgba(0 0 0 / 50%);
 `;
 
 const fillProgress = keyframes`
@@ -40,8 +40,8 @@ export const CircleBackground = styled.circle`
 export const CircleProgress = styled.circle`
   fill: none;
   stroke: ${COLOR_BACKGROUND_LIGHT_BLUE};
-  stroke-width: 10;
   stroke-dasharray: 302;
   stroke-dashoffset: 302;
+  stroke-width: 10;
   animation: ${fillProgress} 2.5s linear forwards;
 `;

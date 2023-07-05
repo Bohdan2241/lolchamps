@@ -11,23 +11,22 @@ import { animation, easing, hoverEffect, rem } from '../../../../utils/style';
 
 export const Wrapper = styled.a<{ delay: number }>`
   display: block;
-
+  opacity: 0;
   transition: opacity 300ms ${easing.easeOutQuad},
     transform 300ms ${easing.easeOutQuad};
-
-  opacity: 0;
   transform: translate(0, 10px);
-
+  /* stylelint-disable selector-class-pattern */
   &.isFirstTime {
     ${({ delay }) => animation.translateFadeIn({ delay: 600 + delay })}
     animation-fill-mode: backwards;
   }
 
   &.isVisible {
-    transition-delay: ${({ delay }) => delay}ms;
     opacity: 1;
+    transition-delay: ${({ delay }) => delay}ms;
     transform: translate(0, 0);
   }
+  /* stylelint-enable selector-class-pattern */
 `;
 
 export const ImageContainer = styled.span`
@@ -37,20 +36,20 @@ export const ImageContainer = styled.span`
   overflow: hidden;
 
   &::before {
-    content: '';
     position: relative;
     display: block;
     width: 100%;
     padding-top: 160%;
+    content: '';
   }
 
   &::after {
-    content: '';
     position: absolute;
     top: 0;
     right: 0;
     width: 11%;
     padding-top: 11%;
+    content: '';
     background-color: ${COLOR_BACKGROUND_DARK_LIGHT};
     transition: transform 0.5s;
     transform: translate(50%, -50%) rotate(45deg);
@@ -60,9 +59,9 @@ export const ImageContainer = styled.span`
 
   > * {
     position: absolute;
-    display: block;
     top: 0;
     left: 0;
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -71,25 +70,23 @@ export const ImageContainer = styled.span`
 
 export const Name = styled.span`
   display: block;
+  padding: 6% 8%;
   overflow: hidden;
   background-color: ${COLOR_BACKGROUND_DARK_BLUE};
-  padding: 6% 8%;
-
   transition: 300ms background-color ${easing.easeOutQuad};
 `;
 
 export const Text = styled.span`
   display: inline-block;
-  color: white;
-  white-space: nowrap;
-  font-size: 20px;
   font-family: ${FONT_FAMILY_SERIF};
-  font-weight: 800;
-  text-transform: uppercase;
+  font-size: 20px;
   font-style: italic;
-  letter-spacing: 0.08em;
+  font-weight: 800;
+  color: white;
   text-overflow: ellipsis;
-
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
   transition: transform 300ms ${easing.easeOutQuad};
 `;
 

@@ -11,8 +11,8 @@ export const Wrapper = styled.section`
 `;
 
 export const Message = styled.div`
-  margin: 50px 0;
   padding: 0 20px;
+  margin: 50px 0;
   text-align: center;
 `;
 
@@ -31,18 +31,17 @@ const cssChampionSize = (itemsPerRow: number) => {
 };
 
 export const Item = styled.a`
+  box-sizing: border-box;
   display: block;
   ${cssChampionSize(5)}
   min-width: 0;
-
-  box-sizing: border-box;
 `;
 
 const cssChampionListPadding = (size: string) => {
   return css`
     ${List} {
-      margin: calc(4.5% - ${size}) calc(4% - ${size}) 0;
       padding: 0 0 0 ${size};
+      margin: calc(4.5% - ${size}) calc(4% - ${size}) 0;
     }
 
     ${Item} {
