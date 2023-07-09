@@ -11,10 +11,12 @@
     "test": "vitest",
     "test:run": "vitest run",
     "coverage": "vitest run --coverage",
-    "lint": "eslint --ext .ts,.tsx .",
-    "lint:fix": "eslint --ext .ts,.tsx . --fix",
-    "lint:css": "stylelint './src/**/*.{ts,tsx}'",
-    "typecheck": "tsc --noEmit"
+    "lint:js": "eslint --ext .ts,.tsx .",
+    "lint:css": "stylelint '**/*.{css,ts,tsx}'",
+    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md,html}\"",
+    "format:fix": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,html}\"",
+    "typecheck": "tsc --noEmit",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.0.8",
@@ -28,7 +30,7 @@
     "react-redux": "^8.1.0",
     "react-router-dom": "^6.13.0",
     "react-select": "^5.7.3",
-    "styled-components": "^6.0.0-rc.3"
+    "styled-components": "^6.0.3"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.0.2",
@@ -51,12 +53,15 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
+    "husky": "^8.0.0",
     "jsdom": "^22.1.0",
+    "lint-staged": "^13.2.3",
     "postcss-styled-syntax": "^0.4.0",
     "prettier": "^2.8.8",
     "stylelint": "^15.10.0",
     "stylelint-config-recess-order": "^4.2.0",
     "stylelint-config-standard": "^34.0.0",
+    "stylelint-prettier": "^3.0.0",
     "typescript": "^5.1.0",
     "vite": "^4.3.9",
     "vitest": "^0.32.4"
