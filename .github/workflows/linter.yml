@@ -27,10 +27,7 @@ jobs:
           npm run lint:js
           npm run lint:css
 
-      - name: Run testing
-        run: npm run test:run
-
-      - name: Test & publish code coverage
+      - name: Code Climate Coverage Action
         uses: paambaati/codeclimate-action@v5.0.0
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
