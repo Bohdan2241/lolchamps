@@ -29,4 +29,4 @@ jobs:
         uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          files: ./coverage/coverage-summary.json
+          files: /home/runner/work/lolchamps/lolchamps/coverage/coverage-summary.json
