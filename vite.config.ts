@@ -13,7 +13,8 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: ['./src/utils/setupTests.ts'],
     coverage: {
-      provider: 'istanbul',
+      provider: 'v8',
+      reporter: ['text', 'json-summary', 'html'],
     },
   },
 });
