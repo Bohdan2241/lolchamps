@@ -1,5 +1,10 @@
 {
+  "trailingComma": "es5",
+  "tabWidth": 2,
+  "semi": true,
   "singleQuote": true,
+  "printWidth": 80,
+  "endOfLine": "lf",
   "importOrder": [
     "^@core/(.*)$",
     "",
@@ -9,10 +14,6 @@
     "",
     "^[./]"
   ],
-  "importOrderParserPlugins": [
-    "typescript",
-    "jsx",
-    "decorators-legacy"
-  ],
+  "importOrderParserPlugins": ["typescript", "jsx", "decorators-legacy"],
   "importOrderTypeScriptVersion": "5.0.0"
 }
