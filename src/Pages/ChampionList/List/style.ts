@@ -6,7 +6,7 @@ const CHAMPION_PADDING = '3.2%';
 const CHAMPION_PADDING_MAX = '20px';
 
 export const Wrapper = styled.section`
-  max-width: ${BASE_WIDTH + 'px'};
+  max-width: ${BASE_WIDTH}px;
   margin: 0 auto;
 `;
 
@@ -22,7 +22,7 @@ export const List = styled.div`
 `;
 
 const cssChampionSize = (itemsPerRow: number) => {
-  const percentage = 100 / itemsPerRow + '%';
+  const percentage = `${100 / itemsPerRow}%`;
 
   return css`
     flex: 1 1 ${percentage};

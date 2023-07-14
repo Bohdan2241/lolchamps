@@ -23,7 +23,7 @@ const Home = () => {
       </Helmet>
       <Wrapper>
         <ForegroundVideoWrapper>
-          <Video src={heroVideo} autoPlay muted loop playsInline></Video>
+          <Video src={heroVideo} autoPlay muted loop playsInline />
         </ForegroundVideoWrapper>
         <ForegroundInner>
           <ForegroundRow>

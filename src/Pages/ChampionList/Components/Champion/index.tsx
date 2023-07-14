@@ -32,7 +32,7 @@ const Section: React.FC<Props> = ({
       delay={animationDelay}
     >
       <ImageContainer>
-        <img src={getChampionLargeImageLink(id, ImageSize.MEDIUM)} />
+        <img src={getChampionLargeImageLink(id, ImageSize.MEDIUM)} alt="" />
       </ImageContainer>
       <Name>
         <Text>{name}</Text>

@@ -106,8 +106,8 @@ const Section: React.FC<Props> = ({ champions, onSelectActiveChampions }) => {
       <Nav>
         <Select
           options={championOptions}
-          isClearable={true}
-          isSearchable={true}
+          isClearable
+          isSearchable
           defaultValue={null}
           styles={difficultySelectStyles} // TODO: add styles
           value={searchValue}
@@ -147,7 +147,7 @@ const Section: React.FC<Props> = ({ champions, onSelectActiveChampions }) => {
             label: t(o.label),
           }))}
           value={difficultyValue}
-          isClearable={true}
+          isClearable
           isSearchable={false}
           styles={difficultySelectStyles}
           placeholder={t('champion-difficulty.all-difficulties')}

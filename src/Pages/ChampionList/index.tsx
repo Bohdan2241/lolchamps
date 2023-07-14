@@ -48,10 +48,7 @@ const ChampionList: React.FC<Props> = ({ champions }) => {
         <title>{t('champion-list-page.title')}</title>
       </Helmet>
       <Wrapper>
-        <GiantTitle
-          text={t('section.champion-list.title')}
-          $toggleContrast={true}
-        />
+        <GiantTitle text={t('section.champion-list.title')} $toggleContrast />
         <Introduction>{t('section.champion-list.description')}</Introduction>
         <Body>
           <Nav

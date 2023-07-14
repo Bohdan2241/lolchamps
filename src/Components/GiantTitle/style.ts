@@ -96,7 +96,7 @@ export const Description = styled.p<{
 
   opacity: 0;
   transition: opacity 500ms ease-out
-    ${({ transitionDelay }) => transitionDelay + 'ms'};
+    ${({ transitionDelay }) => `${transitionDelay}ms`};
 
   ${({ visible }) =>
     visible &&

@@ -7,6 +7,7 @@ import {
 } from '../../assets/styles/theme';
 import { rem } from '../../utils/style';
 
+// eslint-disable-next-line import/prefer-default-export
 export const Button = styled.button<{ selected: boolean; disabled: boolean }>`
   padding: 5.5px;
   font-size: ${rem(12)};

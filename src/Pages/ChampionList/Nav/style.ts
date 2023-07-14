@@ -78,6 +78,7 @@ export const difficultySelectStyles: StylesConfig = {
         ? `${COLOR_BACKGROUND_DARK_BLUE}`
         : 'rgb(0 102 128 / 50%)',
     },
+    // eslint-disable-next-line no-nested-ternary
     backgroundColor: props.isSelected
       ? `${COLOR_BACKGROUND_DARK_BLUE}`
       : props.isFocused

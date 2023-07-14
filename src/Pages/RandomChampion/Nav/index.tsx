@@ -90,15 +90,17 @@ const Section: React.FC<Props> = ({
         />
       </div>
       <div>
-        <label htmlFor="countInput">Number of times to render:</label>
-        <input
-          id="countInput"
-          type="number"
-          min={1}
-          max={MAX_RANDOM_CHAMPS}
-          value={renderCount}
-          onChange={handleCountChange}
-        />
+        <label htmlFor="countInput">
+          Number of times to render:
+          <input
+            id="countInput"
+            type="number"
+            min={1}
+            max={MAX_RANDOM_CHAMPS}
+            value={renderCount}
+            onChange={handleCountChange}
+          />
+        </label>
       </div>
       <Roles>
         {Object.values(ChampionRole).map((role) => (

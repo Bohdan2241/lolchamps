@@ -9,15 +9,15 @@ type Props = {
 };
 
 const List: React.FC<Props> = ({ randomChampions }) => {
+  if (randomChampions.length === 0) {
+    return <CardTemplate defaultImage={DefaultCardImage} isDefault />;
+  }
+
   return (
     <>
-      {randomChampions.length === 0 ? (
-        <CardTemplate defaultImage={DefaultCardImage} isDefault={true} />
-      ) : (
-        randomChampions.map(({ id, name }) => (
-          <CardTemplate name={name} id={id} key={id} />
-        ))
-      )}
+      {randomChampions.map(({ id, name }) => (
+        <CardTemplate name={name} id={id} key={id} />
+      ))}
     </>
   );
 };

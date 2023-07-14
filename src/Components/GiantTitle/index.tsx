@@ -1,7 +1,7 @@
 import React, { useEffect, useImperativeHandle, useRef, useState } from 'react';
 
 import { easing } from '../../utils/style';
-import Reveal from '../Reveal';
+import RevealComponent from '../Reveal';
 import { Description, Heading, Intro, Title, Wrapper } from './style';
 
 interface Props {
@@ -46,11 +46,10 @@ const GiantTitle = React.forwardRef<HTMLDivElement, Props>(
 
     if (lines.length > 1) {
       // set first line to the intro, and second line to the title
-      intro = lines[0];
-      title = lines[1];
+      [intro, title] = lines;
     } else {
       // when only one line, set line to title, with no intro
-      title = lines[0];
+      [title] = lines;
     }
 
     return (
@@ -58,29 +57,29 @@ const GiantTitle = React.forwardRef<HTMLDivElement, Props>(
         <Heading>
           {intro && (
             <Intro>
-              <Reveal
+              <RevealComponent
                 inline
                 isActive={hasEntered}
-                showDir={'nw'}
+                showDir="nw"
                 transitionDuration={2800}
                 transitionDelay={100 + transitionDelay}
                 transitionTiming={easing.easeOutQuart}
               >
                 <span>{intro}</span>
-              </Reveal>
+              </RevealComponent>
             </Intro>
           )}
           <Title>
-            <Reveal
+            <RevealComponent
               inline
               isActive={hasEntered}
-              showDir={'se'}
+              showDir="se"
               transitionDuration={2000}
               transitionDelay={transitionDelay}
               transitionTiming={easing.easeOutQuart}
             >
               <span ref={titleRef}>{title}</span>
-            </Reveal>
+            </RevealComponent>
           </Title>
         </Heading>
 

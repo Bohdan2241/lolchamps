@@ -36,6 +36,8 @@ const Champion = () => {
       </>
     );
   }
+
+  return null;
 };
 
 export default Champion;

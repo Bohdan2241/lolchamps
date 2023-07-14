@@ -152,6 +152,7 @@ const hideSW = css`
   animation-name: ${animateHideSW};
 `;
 
+// eslint-disable-next-line import/prefer-default-export
 export const RevealWrapper = styled.div`
   &.absolute {
     position: absolute;

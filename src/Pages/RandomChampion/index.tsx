@@ -34,10 +34,7 @@ const RandomChampion: React.FC<Props> = ({ champions }) => {
         <title>{t('random-champion-page.title')}</title>
       </Helmet>
       <Section>
-        <GiantTitle
-          text={t('section.random-champion.title')}
-          $toggleContrast={true}
-        />
+        <GiantTitle text={t('section.random-champion.title')} $toggleContrast />
 
         <Nav
           champions={champions}

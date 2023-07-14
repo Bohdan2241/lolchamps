@@ -3,8 +3,8 @@ import React from 'react';
 import { Button } from './style';
 
 type Props = {
-  selected?: boolean;
-  disabled?: boolean;
+  selected: boolean;
+  disabled: boolean;
   onClick: () => void;
   text: string;
 };

@@ -57,6 +57,8 @@ const CardTemplate: React.FC<Props> = ({
       </Wrapper>
     );
   }
+
+  return null;
 };
 
 export default CardTemplate;

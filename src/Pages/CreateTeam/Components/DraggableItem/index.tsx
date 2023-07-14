@@ -14,7 +14,7 @@ const SidebarItem: React.FC<Props> = ({ id }) => {
   const championImageLink = getChampionImageLink(id, ImageSize.SMALL);
 
   const { attributes, listeners, setNodeRef, transform } = useDraggable({
-    id: id,
+    id,
     data: { championImageLink },
   });
 
@@ -28,7 +28,7 @@ const SidebarItem: React.FC<Props> = ({ id }) => {
       {...listeners}
       {...attributes}
     >
-      <img src={getChampionImageLink(id, ImageSize.SMALL)} />
+      <img src={getChampionImageLink(id, ImageSize.SMALL)} alt="" />
     </Item>
   );
 };

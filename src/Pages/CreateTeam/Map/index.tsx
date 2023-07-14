@@ -17,6 +17,7 @@ const Map: React.FC<Props> = ({ lanes }) => {
       <BackgroundImage src={map1440} />
 
       {Object.values(ChampionLane).map((lane, i) => (
+        // eslint-disable-next-line react/no-array-index-key
         <DroppableArea key={i} lane={lane} src={lanes[lane]} />
       ))}
     </Wrapper>
