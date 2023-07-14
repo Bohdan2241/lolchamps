@@ -5,7 +5,7 @@ import { MemoryRouter } from 'react-router-dom';
 import { describe, it } from 'vitest';
 
 import { App } from './App';
-import { store } from './store';
+import store from './store';
 
 describe('App', () => {
   it('should render not found page if invalid path', async () => {

@@ -3,7 +3,7 @@ import { setupListeners } from '@reduxjs/toolkit/query';
 
 import { championApi } from './services/champion';
 
-export const store = configureStore({
+const store = configureStore({
   reducer: {
     [championApi.reducerPath]: championApi.reducer,
   },
@@ -12,3 +12,5 @@ export const store = configureStore({
 });
 
 setupListeners(store.dispatch);
+
+export default store;

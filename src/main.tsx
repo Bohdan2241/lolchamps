@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 
 import { WrappedApp } from './App';
 import { GlobalStyle } from './assets/styles/style';
-import { store } from './store';
+import store from './store';
 
 import './i18n';
 
