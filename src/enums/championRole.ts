@@ -1,4 +1,4 @@
-export enum ChampionRole {
+enum ChampionRole {
   ASSASSIN = 'Assassin',
   FIGHTER = 'Fighter',
   MAGE = 'Mage',

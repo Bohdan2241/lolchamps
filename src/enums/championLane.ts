@@ -1,4 +1,4 @@
-export enum ChampionLane {
+enum ChampionLane {
   TOP = 'Top',
   JUNGLE = 'Jungle',
   MID = 'Mid',
